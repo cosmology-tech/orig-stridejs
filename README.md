@@ -22,12 +22,12 @@ const {
 
 ### Initializing the Stargate Client
 
-Use `getSigningStrideClient` to get your `SigningStargateClient`, with the Stride proto/amino messages full-loaded. No need to manually add amino types, just require and initialize the client:
+Use `getSigningStridelabsClient` to get your `SigningStargateClient`, with the Stride proto/amino messages full-loaded. No need to manually add amino types, just require and initialize the client:
 
 ```js
-import { getSigningStrideClient } from 'stridejs';
+import { getSigningStridelabsClient } from 'stridejs';
 
-const client = await getSigningStrideClient({
+const client = await getSigningStridelabsClient({
   rpcEndpoint,
   signer // OfflineSigner
 });
