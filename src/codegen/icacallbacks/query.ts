@@ -1,29 +1,51 @@
-import { PageRequest, PageResponse } from "../cosmos/base/query/v1beta1/pagination";
-import { Params } from "./params";
-import { CallbackData } from "./callback_data";
+import { PageRequest, PageRequestSDKType, PageResponse, PageResponseSDKType } from "../cosmos/base/query/v1beta1/pagination";
+import { Params, ParamsSDKType } from "./params";
+import { CallbackData, CallbackDataSDKType } from "./callback_data";
 import * as _m0 from "protobufjs/minimal";
-import { DeepPartial, isSet } from "@osmonauts/helpers";
-
+import { DeepPartial } from "@osmonauts/helpers";
 /** QueryParamsRequest is request type for the Query/Params RPC method. */
-export interface QueryParamsRequest {}
 
+export interface QueryParamsRequest {}
+/** QueryParamsRequest is request type for the Query/Params RPC method. */
+
+export interface QueryParamsRequestSDKType {}
 /** QueryParamsResponse is response type for the Query/Params RPC method. */
+
 export interface QueryParamsResponse {
   /** params holds all the parameters of this module. */
   params: Params;
 }
+/** QueryParamsResponse is response type for the Query/Params RPC method. */
+
+export interface QueryParamsResponseSDKType {
+  /** params holds all the parameters of this module. */
+  params: ParamsSDKType;
+}
 export interface QueryGetCallbackDataRequest {
+  callbackKey: string;
+}
+export interface QueryGetCallbackDataRequestSDKType {
   callbackKey: string;
 }
 export interface QueryGetCallbackDataResponse {
   callbackData: CallbackData;
 }
+export interface QueryGetCallbackDataResponseSDKType {
+  callbackData: CallbackDataSDKType;
+}
 export interface QueryAllCallbackDataRequest {
   pagination?: PageRequest;
+}
+export interface QueryAllCallbackDataRequestSDKType {
+  pagination?: PageRequestSDKType;
 }
 export interface QueryAllCallbackDataResponse {
   callbackData: CallbackData[];
   pagination?: PageResponse;
+}
+export interface QueryAllCallbackDataResponseSDKType {
+  callbackData: CallbackDataSDKType[];
+  pagination?: PageResponseSDKType;
 }
 
 function createBaseQueryParamsRequest(): QueryParamsRequest {
@@ -53,15 +75,6 @@ export const QueryParamsRequest = {
     return message;
   },
 
-  fromJSON(_: any): QueryParamsRequest {
-    return {};
-  },
-
-  toJSON(_: QueryParamsRequest): unknown {
-    const obj: any = {};
-    return obj;
-  },
-
   fromPartial(_: DeepPartial<QueryParamsRequest>): QueryParamsRequest {
     const message = createBaseQueryParamsRequest();
     return message;
@@ -84,7 +97,7 @@ export const QueryParamsResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): QueryParamsResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): QueryParamsResponseSDKType {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryParamsResponse();
@@ -104,18 +117,6 @@ export const QueryParamsResponse = {
     }
 
     return message;
-  },
-
-  fromJSON(object: any): QueryParamsResponse {
-    return {
-      params: isSet(object.params) ? Params.fromJSON(object.params) : undefined
-    };
-  },
-
-  toJSON(message: QueryParamsResponse): unknown {
-    const obj: any = {};
-    message.params !== undefined && (obj.params = message.params ? Params.toJSON(message.params) : undefined);
-    return obj;
   },
 
   fromPartial(object: DeepPartial<QueryParamsResponse>): QueryParamsResponse {
@@ -163,18 +164,6 @@ export const QueryGetCallbackDataRequest = {
     return message;
   },
 
-  fromJSON(object: any): QueryGetCallbackDataRequest {
-    return {
-      callbackKey: isSet(object.callbackKey) ? String(object.callbackKey) : ""
-    };
-  },
-
-  toJSON(message: QueryGetCallbackDataRequest): unknown {
-    const obj: any = {};
-    message.callbackKey !== undefined && (obj.callbackKey = message.callbackKey);
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<QueryGetCallbackDataRequest>): QueryGetCallbackDataRequest {
     const message = createBaseQueryGetCallbackDataRequest();
     message.callbackKey = object.callbackKey ?? "";
@@ -198,7 +187,7 @@ export const QueryGetCallbackDataResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetCallbackDataResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetCallbackDataResponseSDKType {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetCallbackDataResponse();
@@ -218,18 +207,6 @@ export const QueryGetCallbackDataResponse = {
     }
 
     return message;
-  },
-
-  fromJSON(object: any): QueryGetCallbackDataResponse {
-    return {
-      callbackData: isSet(object.callbackData) ? CallbackData.fromJSON(object.callbackData) : undefined
-    };
-  },
-
-  toJSON(message: QueryGetCallbackDataResponse): unknown {
-    const obj: any = {};
-    message.callbackData !== undefined && (obj.callbackData = message.callbackData ? CallbackData.toJSON(message.callbackData) : undefined);
-    return obj;
   },
 
   fromPartial(object: DeepPartial<QueryGetCallbackDataResponse>): QueryGetCallbackDataResponse {
@@ -277,18 +254,6 @@ export const QueryAllCallbackDataRequest = {
     return message;
   },
 
-  fromJSON(object: any): QueryAllCallbackDataRequest {
-    return {
-      pagination: isSet(object.pagination) ? PageRequest.fromJSON(object.pagination) : undefined
-    };
-  },
-
-  toJSON(message: QueryAllCallbackDataRequest): unknown {
-    const obj: any = {};
-    message.pagination !== undefined && (obj.pagination = message.pagination ? PageRequest.toJSON(message.pagination) : undefined);
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<QueryAllCallbackDataRequest>): QueryAllCallbackDataRequest {
     const message = createBaseQueryAllCallbackDataRequest();
     message.pagination = object.pagination !== undefined && object.pagination !== null ? PageRequest.fromPartial(object.pagination) : undefined;
@@ -317,7 +282,7 @@ export const QueryAllCallbackDataResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllCallbackDataResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllCallbackDataResponseSDKType {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryAllCallbackDataResponse();
@@ -341,26 +306,6 @@ export const QueryAllCallbackDataResponse = {
     }
 
     return message;
-  },
-
-  fromJSON(object: any): QueryAllCallbackDataResponse {
-    return {
-      callbackData: Array.isArray(object?.callbackData) ? object.callbackData.map((e: any) => CallbackData.fromJSON(e)) : [],
-      pagination: isSet(object.pagination) ? PageResponse.fromJSON(object.pagination) : undefined
-    };
-  },
-
-  toJSON(message: QueryAllCallbackDataResponse): unknown {
-    const obj: any = {};
-
-    if (message.callbackData) {
-      obj.callbackData = message.callbackData.map(e => e ? CallbackData.toJSON(e) : undefined);
-    } else {
-      obj.callbackData = [];
-    }
-
-    message.pagination !== undefined && (obj.pagination = message.pagination ? PageResponse.toJSON(message.pagination) : undefined);
-    return obj;
   },
 
   fromPartial(object: DeepPartial<QueryAllCallbackDataResponse>): QueryAllCallbackDataResponse {

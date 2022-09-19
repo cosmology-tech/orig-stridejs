@@ -1,9 +1,6 @@
-import { PageRequest, PageResponse } from "../cosmos/base/query/v1beta1/pagination";
-import { Params } from "./params";
-import { CallbackData } from "./callback_data";
-import { LCDClient } from "@osmonauts/lcd";
 import { setPaginationParams } from "@osmonauts/helpers";
-import { QueryParamsRequest, QueryParamsResponse, QueryGetCallbackDataRequest, QueryGetCallbackDataResponse, QueryAllCallbackDataRequest, QueryAllCallbackDataResponse } from "./query";
+import { LCDClient } from "@osmonauts/lcd";
+import { QueryParamsRequest, QueryParamsResponseSDKType, QueryGetCallbackDataRequest, QueryGetCallbackDataResponseSDKType, QueryAllCallbackDataRequest, QueryAllCallbackDataResponseSDKType } from "./query";
 export class LCDQueryClient extends LCDClient {
   constructor({
     restEndpoint
@@ -14,23 +11,26 @@ export class LCDQueryClient extends LCDClient {
       restEndpoint
     });
   }
-
   /* Parameters queries the parameters of the module. */
-  async params(_params: QueryParamsRequest = {}): Promise<QueryParamsResponse> {
+
+
+  async params(_params: QueryParamsRequest = {}): Promise<QueryParamsResponseSDKType> {
     const endpoint = `Stride-Labs/stride/icacallbacks/params`;
-    return await this.request<QueryParamsResponse>(endpoint);
+    return await this.get<QueryParamsResponseSDKType>(endpoint);
   }
-
   /* Queries a CallbackData by index. */
-  async callbackData(params: QueryGetCallbackDataRequest): Promise<QueryGetCallbackDataResponse> {
-    const endpoint = `Stride-Labs/stride/icacallbacks/callback_data/${params.callbackKey}`;
-    return await this.request<QueryGetCallbackDataResponse>(endpoint);
-  }
 
+
+  async callbackData(params: QueryGetCallbackDataRequest): Promise<QueryGetCallbackDataResponseSDKType> {
+    const endpoint = `Stride-Labs/stride/icacallbacks/callback_data/${params.callbackKey}`;
+    return await this.get<QueryGetCallbackDataResponseSDKType>(endpoint);
+  }
   /* Queries a list of CallbackData items. */
+
+
   async callbackDataAll(params: QueryAllCallbackDataRequest = {
     pagination: undefined
-  }): Promise<QueryAllCallbackDataResponse> {
+  }): Promise<QueryAllCallbackDataResponseSDKType> {
     const options: any = {
       params: {}
     };
@@ -40,7 +40,7 @@ export class LCDQueryClient extends LCDClient {
     }
 
     const endpoint = `Stride-Labs/stride/icacallbacks/callback_data`;
-    return await this.request<QueryAllCallbackDataResponse>(endpoint, options);
+    return await this.get<QueryAllCallbackDataResponseSDKType>(endpoint, options);
   }
 
 }

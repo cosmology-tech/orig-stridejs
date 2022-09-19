@@ -1,6 +1,14 @@
 import * as _m0 from "protobufjs/minimal";
-import { Long, isSet, bytesFromBase64, base64FromBytes, DeepPartial } from "@osmonauts/helpers";
+import { Long, DeepPartial } from "@osmonauts/helpers";
 export interface CallbackData {
+  callbackKey: string;
+  portId: string;
+  channelId: string;
+  sequence: Long;
+  callbackId: string;
+  callbackArgs: Uint8Array;
+}
+export interface CallbackDataSDKType {
   callbackKey: string;
   portId: string;
   channelId: string;
@@ -89,28 +97,6 @@ export const CallbackData = {
     }
 
     return message;
-  },
-
-  fromJSON(object: any): CallbackData {
-    return {
-      callbackKey: isSet(object.callbackKey) ? String(object.callbackKey) : "",
-      portId: isSet(object.portId) ? String(object.portId) : "",
-      channelId: isSet(object.channelId) ? String(object.channelId) : "",
-      sequence: isSet(object.sequence) ? Long.fromString(object.sequence) : Long.UZERO,
-      callbackId: isSet(object.callbackId) ? String(object.callbackId) : "",
-      callbackArgs: isSet(object.callbackArgs) ? bytesFromBase64(object.callbackArgs) : new Uint8Array()
-    };
-  },
-
-  toJSON(message: CallbackData): unknown {
-    const obj: any = {};
-    message.callbackKey !== undefined && (obj.callbackKey = message.callbackKey);
-    message.portId !== undefined && (obj.portId = message.portId);
-    message.channelId !== undefined && (obj.channelId = message.channelId);
-    message.sequence !== undefined && (obj.sequence = (message.sequence || Long.UZERO).toString());
-    message.callbackId !== undefined && (obj.callbackId = message.callbackId);
-    message.callbackArgs !== undefined && (obj.callbackArgs = base64FromBytes(message.callbackArgs !== undefined ? message.callbackArgs : new Uint8Array()));
-    return obj;
   },
 
   fromPartial(object: DeepPartial<CallbackData>): CallbackData {

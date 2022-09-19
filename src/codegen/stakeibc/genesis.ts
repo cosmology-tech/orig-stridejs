@@ -1,29 +1,50 @@
-import { Params } from "./params";
-import { ICAAccount } from "./ica_account";
-import { HostZone } from "./host_zone";
-import { EpochTracker } from "./epoch_tracker";
+import { Params, ParamsSDKType } from "./params";
+import { ICAAccount, ICAAccountSDKType } from "./ica_account";
+import { HostZone, HostZoneSDKType } from "./host_zone";
+import { EpochTracker, EpochTrackerSDKType } from "./epoch_tracker";
 import * as _m0 from "protobufjs/minimal";
-import { isSet, DeepPartial, Long, isObject } from "@osmonauts/helpers";
+import { DeepPartial, Long } from "@osmonauts/helpers";
 export interface GenesisState_DenomToHostZoneEntry {
   key: string;
   value: string;
 }
-
+export interface GenesisState_DenomToHostZoneEntrySDKType {
+  key: string;
+  value: string;
+}
 /** GenesisState defines the stakeibc module's genesis state. */
+
 export interface GenesisState {
   params: Params;
-  port_id: string;
-
+  portId: string;
   /** list of zones that are registered by the protocol */
+
   iCAAccount: ICAAccount;
   hostZoneList: HostZone[];
   hostZoneCount: Long;
-
   /** stores a map from hostZone base denom to hostZone */
+
   denomToHostZone: {
     [key: string]: string;
   };
   epochTrackerList: EpochTracker[];
+}
+/** GenesisState defines the stakeibc module's genesis state. */
+
+export interface GenesisStateSDKType {
+  params: ParamsSDKType;
+  port_id: string;
+  /** list of zones that are registered by the protocol */
+
+  iCAAccount: ICAAccountSDKType;
+  hostZoneList: HostZoneSDKType[];
+  hostZoneCount: Long;
+  /** stores a map from hostZone base denom to hostZone */
+
+  denomToHostZone: {
+    [key: string]: string;
+  };
+  epochTrackerList: EpochTrackerSDKType[];
 }
 
 function createBaseGenesisState_DenomToHostZoneEntry(): GenesisState_DenomToHostZoneEntry {
@@ -72,20 +93,6 @@ export const GenesisState_DenomToHostZoneEntry = {
     return message;
   },
 
-  fromJSON(object: any): GenesisState_DenomToHostZoneEntry {
-    return {
-      key: isSet(object.key) ? String(object.key) : "",
-      value: isSet(object.value) ? String(object.value) : ""
-    };
-  },
-
-  toJSON(message: GenesisState_DenomToHostZoneEntry): unknown {
-    const obj: any = {};
-    message.key !== undefined && (obj.key = message.key);
-    message.value !== undefined && (obj.value = message.value);
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<GenesisState_DenomToHostZoneEntry>): GenesisState_DenomToHostZoneEntry {
     const message = createBaseGenesisState_DenomToHostZoneEntry();
     message.key = object.key ?? "";
@@ -98,7 +105,7 @@ export const GenesisState_DenomToHostZoneEntry = {
 function createBaseGenesisState(): GenesisState {
   return {
     params: undefined,
-    port_id: "",
+    portId: "",
     iCAAccount: undefined,
     hostZoneList: [],
     hostZoneCount: Long.UZERO,
@@ -113,8 +120,8 @@ export const GenesisState = {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
 
-    if (message.port_id !== "") {
-      writer.uint32(18).string(message.port_id);
+    if (message.portId !== "") {
+      writer.uint32(18).string(message.portId);
     }
 
     if (message.iCAAccount !== undefined) {
@@ -157,7 +164,7 @@ export const GenesisState = {
           break;
 
         case 2:
-          message.port_id = reader.string();
+          message.portId = reader.string();
           break;
 
         case 4:
@@ -194,57 +201,10 @@ export const GenesisState = {
     return message;
   },
 
-  fromJSON(object: any): GenesisState {
-    return {
-      params: isSet(object.params) ? Params.fromJSON(object.params) : undefined,
-      port_id: isSet(object.port_id) ? String(object.port_id) : "",
-      iCAAccount: isSet(object.iCAAccount) ? ICAAccount.fromJSON(object.iCAAccount) : undefined,
-      hostZoneList: Array.isArray(object?.hostZoneList) ? object.hostZoneList.map((e: any) => HostZone.fromJSON(e)) : [],
-      hostZoneCount: isSet(object.hostZoneCount) ? Long.fromString(object.hostZoneCount) : Long.UZERO,
-      denomToHostZone: isObject(object.denomToHostZone) ? Object.entries(object.denomToHostZone).reduce<{
-        [key: string]: string;
-      }>((acc, [key, value]) => {
-        acc[key] = String(value);
-        return acc;
-      }, {}) : {},
-      epochTrackerList: Array.isArray(object?.epochTrackerList) ? object.epochTrackerList.map((e: any) => EpochTracker.fromJSON(e)) : []
-    };
-  },
-
-  toJSON(message: GenesisState): unknown {
-    const obj: any = {};
-    message.params !== undefined && (obj.params = message.params ? Params.toJSON(message.params) : undefined);
-    message.port_id !== undefined && (obj.port_id = message.port_id);
-    message.iCAAccount !== undefined && (obj.iCAAccount = message.iCAAccount ? ICAAccount.toJSON(message.iCAAccount) : undefined);
-
-    if (message.hostZoneList) {
-      obj.hostZoneList = message.hostZoneList.map(e => e ? HostZone.toJSON(e) : undefined);
-    } else {
-      obj.hostZoneList = [];
-    }
-
-    message.hostZoneCount !== undefined && (obj.hostZoneCount = (message.hostZoneCount || Long.UZERO).toString());
-    obj.denomToHostZone = {};
-
-    if (message.denomToHostZone) {
-      Object.entries(message.denomToHostZone).forEach(([k, v]) => {
-        obj.denomToHostZone[k] = v;
-      });
-    }
-
-    if (message.epochTrackerList) {
-      obj.epochTrackerList = message.epochTrackerList.map(e => e ? EpochTracker.toJSON(e) : undefined);
-    } else {
-      obj.epochTrackerList = [];
-    }
-
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<GenesisState>): GenesisState {
     const message = createBaseGenesisState();
     message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
-    message.port_id = object.port_id ?? "";
+    message.portId = object.portId ?? "";
     message.iCAAccount = object.iCAAccount !== undefined && object.iCAAccount !== null ? ICAAccount.fromPartial(object.iCAAccount) : undefined;
     message.hostZoneList = object.hostZoneList?.map(e => HostZone.fromPartial(e)) || [];
     message.hostZoneCount = object.hostZoneCount !== undefined && object.hostZoneCount !== null ? Long.fromValue(object.hostZoneCount) : Long.UZERO;

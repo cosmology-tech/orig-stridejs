@@ -1,10 +1,10 @@
 import { LCDClient } from "@osmonauts/lcd";
-import { QueryEpochsInfoRequest, QueryEpochsInfoResponse, QueryCurrentEpochRequest, QueryCurrentEpochResponse, QueryEpochInfoRequest, QueryEpochInfoResponse } from "./query";
+import { QueryEpochsInfoRequest, QueryEpochsInfoResponseSDKType, QueryCurrentEpochRequest, QueryCurrentEpochResponseSDKType, QueryEpochInfoRequest, QueryEpochInfoResponseSDKType } from "./query";
 export declare class LCDQueryClient extends LCDClient {
     constructor({ restEndpoint }: {
         restEndpoint: string;
     });
-    epochInfos(params?: QueryEpochsInfoRequest): Promise<QueryEpochsInfoResponse>;
-    currentEpoch(params: QueryCurrentEpochRequest): Promise<QueryCurrentEpochResponse>;
-    epochInfo(params: QueryEpochInfoRequest): Promise<QueryEpochInfoResponse>;
+    epochInfos(params?: QueryEpochsInfoRequest): Promise<QueryEpochsInfoResponseSDKType>;
+    currentEpoch(params: QueryCurrentEpochRequest): Promise<QueryCurrentEpochResponseSDKType>;
+    epochInfo(params: QueryEpochInfoRequest): Promise<QueryEpochInfoResponseSDKType>;
 }

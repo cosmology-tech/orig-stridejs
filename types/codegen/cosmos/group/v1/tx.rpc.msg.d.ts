@@ -1,37 +1,37 @@
 import { Rpc } from "@osmonauts/helpers";
-import { MsgCreateGroup, MsgCreateGroupResponse, MsgUpdateGroupMembers, MsgUpdateGroupMembersResponse, MsgUpdateGroupAdmin, MsgUpdateGroupAdminResponse, MsgUpdateGroupMetadata, MsgUpdateGroupMetadataResponse, MsgCreateGroupPolicy, MsgCreateGroupPolicyResponse, MsgCreateGroupWithPolicy, MsgCreateGroupWithPolicyResponse, MsgUpdateGroupPolicyAdmin, MsgUpdateGroupPolicyAdminResponse, MsgUpdateGroupPolicyDecisionPolicy, MsgUpdateGroupPolicyDecisionPolicyResponse, MsgUpdateGroupPolicyMetadata, MsgUpdateGroupPolicyMetadataResponse, MsgSubmitProposal, MsgSubmitProposalResponse, MsgWithdrawProposal, MsgWithdrawProposalResponse, MsgVote, MsgVoteResponse, MsgExec, MsgExecResponse, MsgLeaveGroup, MsgLeaveGroupResponse } from "./tx";
+import { MsgCreateGroup, MsgCreateGroupResponseSDKType, MsgUpdateGroupMembers, MsgUpdateGroupMembersResponseSDKType, MsgUpdateGroupAdmin, MsgUpdateGroupAdminResponseSDKType, MsgUpdateGroupMetadata, MsgUpdateGroupMetadataResponseSDKType, MsgCreateGroupPolicy, MsgCreateGroupPolicyResponseSDKType, MsgCreateGroupWithPolicy, MsgCreateGroupWithPolicyResponseSDKType, MsgUpdateGroupPolicyAdmin, MsgUpdateGroupPolicyAdminResponseSDKType, MsgUpdateGroupPolicyDecisionPolicy, MsgUpdateGroupPolicyDecisionPolicyResponseSDKType, MsgUpdateGroupPolicyMetadata, MsgUpdateGroupPolicyMetadataResponseSDKType, MsgSubmitProposal, MsgSubmitProposalResponseSDKType, MsgWithdrawProposal, MsgWithdrawProposalResponseSDKType, MsgVote, MsgVoteResponseSDKType, MsgExec, MsgExecResponseSDKType, MsgLeaveGroup, MsgLeaveGroupResponseSDKType } from "./tx";
 /** Msg defines the RPC service */
 export interface Msg {
-    createGroup(request: MsgCreateGroup): Promise<MsgCreateGroupResponse>;
-    updateGroupMembers(request: MsgUpdateGroupMembers): Promise<MsgUpdateGroupMembersResponse>;
-    updateGroupAdmin(request: MsgUpdateGroupAdmin): Promise<MsgUpdateGroupAdminResponse>;
-    updateGroupMetadata(request: MsgUpdateGroupMetadata): Promise<MsgUpdateGroupMetadataResponse>;
-    createGroupPolicy(request: MsgCreateGroupPolicy): Promise<MsgCreateGroupPolicyResponse>;
-    createGroupWithPolicy(request: MsgCreateGroupWithPolicy): Promise<MsgCreateGroupWithPolicyResponse>;
-    updateGroupPolicyAdmin(request: MsgUpdateGroupPolicyAdmin): Promise<MsgUpdateGroupPolicyAdminResponse>;
-    updateGroupPolicyDecisionPolicy(request: MsgUpdateGroupPolicyDecisionPolicy): Promise<MsgUpdateGroupPolicyDecisionPolicyResponse>;
-    updateGroupPolicyMetadata(request: MsgUpdateGroupPolicyMetadata): Promise<MsgUpdateGroupPolicyMetadataResponse>;
-    submitProposal(request: MsgSubmitProposal): Promise<MsgSubmitProposalResponse>;
-    withdrawProposal(request: MsgWithdrawProposal): Promise<MsgWithdrawProposalResponse>;
-    vote(request: MsgVote): Promise<MsgVoteResponse>;
-    exec(request: MsgExec): Promise<MsgExecResponse>;
-    leaveGroup(request: MsgLeaveGroup): Promise<MsgLeaveGroupResponse>;
+    createGroup(request: MsgCreateGroup): Promise<MsgCreateGroupResponseSDKType>;
+    updateGroupMembers(request: MsgUpdateGroupMembers): Promise<MsgUpdateGroupMembersResponseSDKType>;
+    updateGroupAdmin(request: MsgUpdateGroupAdmin): Promise<MsgUpdateGroupAdminResponseSDKType>;
+    updateGroupMetadata(request: MsgUpdateGroupMetadata): Promise<MsgUpdateGroupMetadataResponseSDKType>;
+    createGroupPolicy(request: MsgCreateGroupPolicy): Promise<MsgCreateGroupPolicyResponseSDKType>;
+    createGroupWithPolicy(request: MsgCreateGroupWithPolicy): Promise<MsgCreateGroupWithPolicyResponseSDKType>;
+    updateGroupPolicyAdmin(request: MsgUpdateGroupPolicyAdmin): Promise<MsgUpdateGroupPolicyAdminResponseSDKType>;
+    updateGroupPolicyDecisionPolicy(request: MsgUpdateGroupPolicyDecisionPolicy): Promise<MsgUpdateGroupPolicyDecisionPolicyResponseSDKType>;
+    updateGroupPolicyMetadata(request: MsgUpdateGroupPolicyMetadata): Promise<MsgUpdateGroupPolicyMetadataResponseSDKType>;
+    submitProposal(request: MsgSubmitProposal): Promise<MsgSubmitProposalResponseSDKType>;
+    withdrawProposal(request: MsgWithdrawProposal): Promise<MsgWithdrawProposalResponseSDKType>;
+    vote(request: MsgVote): Promise<MsgVoteResponseSDKType>;
+    exec(request: MsgExec): Promise<MsgExecResponseSDKType>;
+    leaveGroup(request: MsgLeaveGroup): Promise<MsgLeaveGroupResponseSDKType>;
 }
 export declare class MsgClientImpl implements Msg {
     private readonly rpc;
     constructor(rpc: Rpc);
-    createGroup(request: MsgCreateGroup): Promise<MsgCreateGroupResponse>;
-    updateGroupMembers(request: MsgUpdateGroupMembers): Promise<MsgUpdateGroupMembersResponse>;
-    updateGroupAdmin(request: MsgUpdateGroupAdmin): Promise<MsgUpdateGroupAdminResponse>;
-    updateGroupMetadata(request: MsgUpdateGroupMetadata): Promise<MsgUpdateGroupMetadataResponse>;
-    createGroupPolicy(request: MsgCreateGroupPolicy): Promise<MsgCreateGroupPolicyResponse>;
-    createGroupWithPolicy(request: MsgCreateGroupWithPolicy): Promise<MsgCreateGroupWithPolicyResponse>;
-    updateGroupPolicyAdmin(request: MsgUpdateGroupPolicyAdmin): Promise<MsgUpdateGroupPolicyAdminResponse>;
-    updateGroupPolicyDecisionPolicy(request: MsgUpdateGroupPolicyDecisionPolicy): Promise<MsgUpdateGroupPolicyDecisionPolicyResponse>;
-    updateGroupPolicyMetadata(request: MsgUpdateGroupPolicyMetadata): Promise<MsgUpdateGroupPolicyMetadataResponse>;
-    submitProposal(request: MsgSubmitProposal): Promise<MsgSubmitProposalResponse>;
-    withdrawProposal(request: MsgWithdrawProposal): Promise<MsgWithdrawProposalResponse>;
-    vote(request: MsgVote): Promise<MsgVoteResponse>;
-    exec(request: MsgExec): Promise<MsgExecResponse>;
-    leaveGroup(request: MsgLeaveGroup): Promise<MsgLeaveGroupResponse>;
+    createGroup(request: MsgCreateGroup): Promise<MsgCreateGroupResponseSDKType>;
+    updateGroupMembers(request: MsgUpdateGroupMembers): Promise<MsgUpdateGroupMembersResponseSDKType>;
+    updateGroupAdmin(request: MsgUpdateGroupAdmin): Promise<MsgUpdateGroupAdminResponseSDKType>;
+    updateGroupMetadata(request: MsgUpdateGroupMetadata): Promise<MsgUpdateGroupMetadataResponseSDKType>;
+    createGroupPolicy(request: MsgCreateGroupPolicy): Promise<MsgCreateGroupPolicyResponseSDKType>;
+    createGroupWithPolicy(request: MsgCreateGroupWithPolicy): Promise<MsgCreateGroupWithPolicyResponseSDKType>;
+    updateGroupPolicyAdmin(request: MsgUpdateGroupPolicyAdmin): Promise<MsgUpdateGroupPolicyAdminResponseSDKType>;
+    updateGroupPolicyDecisionPolicy(request: MsgUpdateGroupPolicyDecisionPolicy): Promise<MsgUpdateGroupPolicyDecisionPolicyResponseSDKType>;
+    updateGroupPolicyMetadata(request: MsgUpdateGroupPolicyMetadata): Promise<MsgUpdateGroupPolicyMetadataResponseSDKType>;
+    submitProposal(request: MsgSubmitProposal): Promise<MsgSubmitProposalResponseSDKType>;
+    withdrawProposal(request: MsgWithdrawProposal): Promise<MsgWithdrawProposalResponseSDKType>;
+    vote(request: MsgVote): Promise<MsgVoteResponseSDKType>;
+    exec(request: MsgExec): Promise<MsgExecResponseSDKType>;
+    leaveGroup(request: MsgLeaveGroup): Promise<MsgLeaveGroupResponseSDKType>;
 }

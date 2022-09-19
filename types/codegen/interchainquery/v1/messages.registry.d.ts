@@ -15,18 +15,6 @@ export declare const MessageComposer: {
             value: MsgSubmitQueryResponse;
         };
     };
-    toJSON: {
-        submitQueryResponse(value: MsgSubmitQueryResponse): {
-            typeUrl: string;
-            value: unknown;
-        };
-    };
-    fromJSON: {
-        submitQueryResponse(value: any): {
-            typeUrl: string;
-            value: MsgSubmitQueryResponse;
-        };
-    };
     fromPartial: {
         submitQueryResponse(value: MsgSubmitQueryResponse): {
             typeUrl: string;

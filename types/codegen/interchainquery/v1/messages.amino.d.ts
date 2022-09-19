@@ -20,7 +20,7 @@ export interface AminoMsgSubmitQueryResponse extends AminoMsg {
 export declare const AminoConverter: {
     "/stride.interchainquery.MsgSubmitQueryResponse": {
         aminoType: string;
-        toAmino: ({ chain_id, query_id, result, proof_ops, height, from_address }: MsgSubmitQueryResponse) => AminoMsgSubmitQueryResponse["value"];
+        toAmino: ({ chainId, queryId, result, proofOps, height, fromAddress }: MsgSubmitQueryResponse) => AminoMsgSubmitQueryResponse["value"];
         fromAmino: ({ chain_id, query_id, result, proof_ops, height, from_address }: AminoMsgSubmitQueryResponse["value"]) => MsgSubmitQueryResponse;
     };
 };

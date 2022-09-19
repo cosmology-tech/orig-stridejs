@@ -1,31 +1,64 @@
-import { ICAAccountType, iCAAccountTypeFromJSON, iCAAccountTypeToJSON } from "./ica_account";
+import { ICAAccountType, ICAAccountTypeSDKType } from "./ica_account";
 import * as _m0 from "protobufjs/minimal";
-import { Long, isSet, DeepPartial } from "@osmonauts/helpers";
+import { Long, DeepPartial } from "@osmonauts/helpers";
 export interface MsgLiquidStake {
   creator: string;
   amount: Long;
-
   /** TODO(TEST-86): Update Denom -> HostDenom */
+
+  hostDenom: string;
+}
+export interface MsgLiquidStakeSDKType {
+  creator: string;
+  amount: Long;
+  /** TODO(TEST-86): Update Denom -> HostDenom */
+
   host_denom: string;
 }
 export interface MsgLiquidStakeResponse {}
+export interface MsgLiquidStakeResponseSDKType {}
 export interface MsgClearBalance {
+  creator: string;
+  chainId: string;
+  amount: Long;
+  channel: string;
+}
+export interface MsgClearBalanceSDKType {
   creator: string;
   chain_id: string;
   amount: Long;
   channel: string;
 }
 export interface MsgClearBalanceResponse {}
+export interface MsgClearBalanceResponseSDKType {}
 export interface MsgRedeemStake {
   creator: string;
   amount: Long;
   hostZone: string;
   receiver: string;
 }
+export interface MsgRedeemStakeSDKType {
+  creator: string;
+  amount: Long;
+  hostZone: string;
+  receiver: string;
+}
 export interface MsgRedeemStakeResponse {}
-
+export interface MsgRedeemStakeResponseSDKType {}
 /** next: 13 */
+
 export interface MsgRegisterHostZone {
+  connectionId: string;
+  bech32prefix: string;
+  hostDenom: string;
+  ibcDenom: string;
+  creator: string;
+  transferChannelId: string;
+  unbondingFrequency: Long;
+}
+/** next: 13 */
+
+export interface MsgRegisterHostZoneSDKType {
   connection_id: string;
   bech32prefix: string;
   host_denom: string;
@@ -34,24 +67,42 @@ export interface MsgRegisterHostZone {
   transfer_channel_id: string;
   unbonding_frequency: Long;
 }
-
 /** TODO(TEST-53): Remove this pre-launch (no need for clients to create / interact with ICAs) */
+
 export interface MsgRegisterHostZoneResponse {}
+/** TODO(TEST-53): Remove this pre-launch (no need for clients to create / interact with ICAs) */
+
+export interface MsgRegisterHostZoneResponseSDKType {}
 export interface MsgClaimUndelegatedTokens {
   creator: string;
-
   /** UserUnbondingRecords are keyed on {chain_id}.{epoch}.{sender} */
+
+  hostZoneId: string;
+  epoch: Long;
+  sender: string;
+}
+export interface MsgClaimUndelegatedTokensSDKType {
+  creator: string;
+  /** UserUnbondingRecords are keyed on {chain_id}.{epoch}.{sender} */
+
   hostZoneId: string;
   epoch: Long;
   sender: string;
 }
 export interface MsgClaimUndelegatedTokensResponse {}
+export interface MsgClaimUndelegatedTokensResponseSDKType {}
 export interface MsgRebalanceValidators {
   creator: string;
   hostZone: string;
   numRebalance: Long;
 }
+export interface MsgRebalanceValidatorsSDKType {
+  creator: string;
+  hostZone: string;
+  numRebalance: Long;
+}
 export interface MsgRebalanceValidatorsResponse {}
+export interface MsgRebalanceValidatorsResponseSDKType {}
 export interface MsgAddValidator {
   creator: string;
   hostZone: string;
@@ -60,38 +111,72 @@ export interface MsgAddValidator {
   commission: Long;
   weight: Long;
 }
+export interface MsgAddValidatorSDKType {
+  creator: string;
+  hostZone: string;
+  name: string;
+  address: string;
+  commission: Long;
+  weight: Long;
+}
 export interface MsgAddValidatorResponse {}
+export interface MsgAddValidatorResponseSDKType {}
 export interface MsgChangeValidatorWeight {
   creator: string;
   hostZone: string;
   valAddr: string;
   weight: Long;
 }
+export interface MsgChangeValidatorWeightSDKType {
+  creator: string;
+  hostZone: string;
+  valAddr: string;
+  weight: Long;
+}
 export interface MsgChangeValidatorWeightResponse {}
+export interface MsgChangeValidatorWeightResponseSDKType {}
 export interface MsgDeleteValidator {
   creator: string;
   hostZone: string;
   valAddr: string;
 }
+export interface MsgDeleteValidatorSDKType {
+  creator: string;
+  hostZone: string;
+  valAddr: string;
+}
 export interface MsgDeleteValidatorResponse {}
+export interface MsgDeleteValidatorResponseSDKType {}
 export interface MsgRestoreInterchainAccount {
   creator: string;
   chainId: string;
   accountType: ICAAccountType;
 }
+export interface MsgRestoreInterchainAccountSDKType {
+  creator: string;
+  chainId: string;
+  accountType: ICAAccountTypeSDKType;
+}
 export interface MsgRestoreInterchainAccountResponse {}
+export interface MsgRestoreInterchainAccountResponseSDKType {}
 export interface MsgUpdateValidatorSharesExchRate {
   creator: string;
   chainId: string;
   valoper: string;
 }
+export interface MsgUpdateValidatorSharesExchRateSDKType {
+  creator: string;
+  chainId: string;
+  valoper: string;
+}
 export interface MsgUpdateValidatorSharesExchRateResponse {}
+export interface MsgUpdateValidatorSharesExchRateResponseSDKType {}
 
 function createBaseMsgLiquidStake(): MsgLiquidStake {
   return {
     creator: "",
     amount: Long.UZERO,
-    host_denom: ""
+    hostDenom: ""
   };
 }
 
@@ -105,8 +190,8 @@ export const MsgLiquidStake = {
       writer.uint32(16).uint64(message.amount);
     }
 
-    if (message.host_denom !== "") {
-      writer.uint32(26).string(message.host_denom);
+    if (message.hostDenom !== "") {
+      writer.uint32(26).string(message.hostDenom);
     }
 
     return writer;
@@ -130,7 +215,7 @@ export const MsgLiquidStake = {
           break;
 
         case 3:
-          message.host_denom = reader.string();
+          message.hostDenom = reader.string();
           break;
 
         default:
@@ -142,27 +227,11 @@ export const MsgLiquidStake = {
     return message;
   },
 
-  fromJSON(object: any): MsgLiquidStake {
-    return {
-      creator: isSet(object.creator) ? String(object.creator) : "",
-      amount: isSet(object.amount) ? Long.fromString(object.amount) : Long.UZERO,
-      host_denom: isSet(object.host_denom) ? String(object.host_denom) : ""
-    };
-  },
-
-  toJSON(message: MsgLiquidStake): unknown {
-    const obj: any = {};
-    message.creator !== undefined && (obj.creator = message.creator);
-    message.amount !== undefined && (obj.amount = (message.amount || Long.UZERO).toString());
-    message.host_denom !== undefined && (obj.host_denom = message.host_denom);
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<MsgLiquidStake>): MsgLiquidStake {
     const message = createBaseMsgLiquidStake();
     message.creator = object.creator ?? "";
     message.amount = object.amount !== undefined && object.amount !== null ? Long.fromValue(object.amount) : Long.UZERO;
-    message.host_denom = object.host_denom ?? "";
+    message.hostDenom = object.hostDenom ?? "";
     return message;
   }
 
@@ -177,7 +246,7 @@ export const MsgLiquidStakeResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgLiquidStakeResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): MsgLiquidStakeResponseSDKType {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgLiquidStakeResponse();
@@ -195,15 +264,6 @@ export const MsgLiquidStakeResponse = {
     return message;
   },
 
-  fromJSON(_: any): MsgLiquidStakeResponse {
-    return {};
-  },
-
-  toJSON(_: MsgLiquidStakeResponse): unknown {
-    const obj: any = {};
-    return obj;
-  },
-
   fromPartial(_: DeepPartial<MsgLiquidStakeResponse>): MsgLiquidStakeResponse {
     const message = createBaseMsgLiquidStakeResponse();
     return message;
@@ -214,7 +274,7 @@ export const MsgLiquidStakeResponse = {
 function createBaseMsgClearBalance(): MsgClearBalance {
   return {
     creator: "",
-    chain_id: "",
+    chainId: "",
     amount: Long.UZERO,
     channel: ""
   };
@@ -226,8 +286,8 @@ export const MsgClearBalance = {
       writer.uint32(10).string(message.creator);
     }
 
-    if (message.chain_id !== "") {
-      writer.uint32(18).string(message.chain_id);
+    if (message.chainId !== "") {
+      writer.uint32(18).string(message.chainId);
     }
 
     if (!message.amount.isZero()) {
@@ -255,7 +315,7 @@ export const MsgClearBalance = {
           break;
 
         case 2:
-          message.chain_id = reader.string();
+          message.chainId = reader.string();
           break;
 
         case 3:
@@ -275,28 +335,10 @@ export const MsgClearBalance = {
     return message;
   },
 
-  fromJSON(object: any): MsgClearBalance {
-    return {
-      creator: isSet(object.creator) ? String(object.creator) : "",
-      chain_id: isSet(object.chain_id) ? String(object.chain_id) : "",
-      amount: isSet(object.amount) ? Long.fromString(object.amount) : Long.UZERO,
-      channel: isSet(object.channel) ? String(object.channel) : ""
-    };
-  },
-
-  toJSON(message: MsgClearBalance): unknown {
-    const obj: any = {};
-    message.creator !== undefined && (obj.creator = message.creator);
-    message.chain_id !== undefined && (obj.chain_id = message.chain_id);
-    message.amount !== undefined && (obj.amount = (message.amount || Long.UZERO).toString());
-    message.channel !== undefined && (obj.channel = message.channel);
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<MsgClearBalance>): MsgClearBalance {
     const message = createBaseMsgClearBalance();
     message.creator = object.creator ?? "";
-    message.chain_id = object.chain_id ?? "";
+    message.chainId = object.chainId ?? "";
     message.amount = object.amount !== undefined && object.amount !== null ? Long.fromValue(object.amount) : Long.UZERO;
     message.channel = object.channel ?? "";
     return message;
@@ -313,7 +355,7 @@ export const MsgClearBalanceResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgClearBalanceResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): MsgClearBalanceResponseSDKType {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgClearBalanceResponse();
@@ -329,15 +371,6 @@ export const MsgClearBalanceResponse = {
     }
 
     return message;
-  },
-
-  fromJSON(_: any): MsgClearBalanceResponse {
-    return {};
-  },
-
-  toJSON(_: MsgClearBalanceResponse): unknown {
-    const obj: any = {};
-    return obj;
   },
 
   fromPartial(_: DeepPartial<MsgClearBalanceResponse>): MsgClearBalanceResponse {
@@ -411,24 +444,6 @@ export const MsgRedeemStake = {
     return message;
   },
 
-  fromJSON(object: any): MsgRedeemStake {
-    return {
-      creator: isSet(object.creator) ? String(object.creator) : "",
-      amount: isSet(object.amount) ? Long.fromString(object.amount) : Long.UZERO,
-      hostZone: isSet(object.hostZone) ? String(object.hostZone) : "",
-      receiver: isSet(object.receiver) ? String(object.receiver) : ""
-    };
-  },
-
-  toJSON(message: MsgRedeemStake): unknown {
-    const obj: any = {};
-    message.creator !== undefined && (obj.creator = message.creator);
-    message.amount !== undefined && (obj.amount = (message.amount || Long.UZERO).toString());
-    message.hostZone !== undefined && (obj.hostZone = message.hostZone);
-    message.receiver !== undefined && (obj.receiver = message.receiver);
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<MsgRedeemStake>): MsgRedeemStake {
     const message = createBaseMsgRedeemStake();
     message.creator = object.creator ?? "";
@@ -449,7 +464,7 @@ export const MsgRedeemStakeResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgRedeemStakeResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): MsgRedeemStakeResponseSDKType {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgRedeemStakeResponse();
@@ -467,15 +482,6 @@ export const MsgRedeemStakeResponse = {
     return message;
   },
 
-  fromJSON(_: any): MsgRedeemStakeResponse {
-    return {};
-  },
-
-  toJSON(_: MsgRedeemStakeResponse): unknown {
-    const obj: any = {};
-    return obj;
-  },
-
   fromPartial(_: DeepPartial<MsgRedeemStakeResponse>): MsgRedeemStakeResponse {
     const message = createBaseMsgRedeemStakeResponse();
     return message;
@@ -485,44 +491,44 @@ export const MsgRedeemStakeResponse = {
 
 function createBaseMsgRegisterHostZone(): MsgRegisterHostZone {
   return {
-    connection_id: "",
+    connectionId: "",
     bech32prefix: "",
-    host_denom: "",
-    ibc_denom: "",
+    hostDenom: "",
+    ibcDenom: "",
     creator: "",
-    transfer_channel_id: "",
-    unbonding_frequency: Long.UZERO
+    transferChannelId: "",
+    unbondingFrequency: Long.UZERO
   };
 }
 
 export const MsgRegisterHostZone = {
   encode(message: MsgRegisterHostZone, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
-    if (message.connection_id !== "") {
-      writer.uint32(18).string(message.connection_id);
+    if (message.connectionId !== "") {
+      writer.uint32(18).string(message.connectionId);
     }
 
     if (message.bech32prefix !== "") {
       writer.uint32(98).string(message.bech32prefix);
     }
 
-    if (message.host_denom !== "") {
-      writer.uint32(34).string(message.host_denom);
+    if (message.hostDenom !== "") {
+      writer.uint32(34).string(message.hostDenom);
     }
 
-    if (message.ibc_denom !== "") {
-      writer.uint32(42).string(message.ibc_denom);
+    if (message.ibcDenom !== "") {
+      writer.uint32(42).string(message.ibcDenom);
     }
 
     if (message.creator !== "") {
       writer.uint32(50).string(message.creator);
     }
 
-    if (message.transfer_channel_id !== "") {
-      writer.uint32(82).string(message.transfer_channel_id);
+    if (message.transferChannelId !== "") {
+      writer.uint32(82).string(message.transferChannelId);
     }
 
-    if (!message.unbonding_frequency.isZero()) {
-      writer.uint32(88).uint64(message.unbonding_frequency);
+    if (!message.unbondingFrequency.isZero()) {
+      writer.uint32(88).uint64(message.unbondingFrequency);
     }
 
     return writer;
@@ -538,7 +544,7 @@ export const MsgRegisterHostZone = {
 
       switch (tag >>> 3) {
         case 2:
-          message.connection_id = reader.string();
+          message.connectionId = reader.string();
           break;
 
         case 12:
@@ -546,11 +552,11 @@ export const MsgRegisterHostZone = {
           break;
 
         case 4:
-          message.host_denom = reader.string();
+          message.hostDenom = reader.string();
           break;
 
         case 5:
-          message.ibc_denom = reader.string();
+          message.ibcDenom = reader.string();
           break;
 
         case 6:
@@ -558,11 +564,11 @@ export const MsgRegisterHostZone = {
           break;
 
         case 10:
-          message.transfer_channel_id = reader.string();
+          message.transferChannelId = reader.string();
           break;
 
         case 11:
-          message.unbonding_frequency = (reader.uint64() as Long);
+          message.unbondingFrequency = (reader.uint64() as Long);
           break;
 
         default:
@@ -574,39 +580,15 @@ export const MsgRegisterHostZone = {
     return message;
   },
 
-  fromJSON(object: any): MsgRegisterHostZone {
-    return {
-      connection_id: isSet(object.connection_id) ? String(object.connection_id) : "",
-      bech32prefix: isSet(object.bech32prefix) ? String(object.bech32prefix) : "",
-      host_denom: isSet(object.host_denom) ? String(object.host_denom) : "",
-      ibc_denom: isSet(object.ibc_denom) ? String(object.ibc_denom) : "",
-      creator: isSet(object.creator) ? String(object.creator) : "",
-      transfer_channel_id: isSet(object.transfer_channel_id) ? String(object.transfer_channel_id) : "",
-      unbonding_frequency: isSet(object.unbonding_frequency) ? Long.fromString(object.unbonding_frequency) : Long.UZERO
-    };
-  },
-
-  toJSON(message: MsgRegisterHostZone): unknown {
-    const obj: any = {};
-    message.connection_id !== undefined && (obj.connection_id = message.connection_id);
-    message.bech32prefix !== undefined && (obj.bech32prefix = message.bech32prefix);
-    message.host_denom !== undefined && (obj.host_denom = message.host_denom);
-    message.ibc_denom !== undefined && (obj.ibc_denom = message.ibc_denom);
-    message.creator !== undefined && (obj.creator = message.creator);
-    message.transfer_channel_id !== undefined && (obj.transfer_channel_id = message.transfer_channel_id);
-    message.unbonding_frequency !== undefined && (obj.unbonding_frequency = (message.unbonding_frequency || Long.UZERO).toString());
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<MsgRegisterHostZone>): MsgRegisterHostZone {
     const message = createBaseMsgRegisterHostZone();
-    message.connection_id = object.connection_id ?? "";
+    message.connectionId = object.connectionId ?? "";
     message.bech32prefix = object.bech32prefix ?? "";
-    message.host_denom = object.host_denom ?? "";
-    message.ibc_denom = object.ibc_denom ?? "";
+    message.hostDenom = object.hostDenom ?? "";
+    message.ibcDenom = object.ibcDenom ?? "";
     message.creator = object.creator ?? "";
-    message.transfer_channel_id = object.transfer_channel_id ?? "";
-    message.unbonding_frequency = object.unbonding_frequency !== undefined && object.unbonding_frequency !== null ? Long.fromValue(object.unbonding_frequency) : Long.UZERO;
+    message.transferChannelId = object.transferChannelId ?? "";
+    message.unbondingFrequency = object.unbondingFrequency !== undefined && object.unbondingFrequency !== null ? Long.fromValue(object.unbondingFrequency) : Long.UZERO;
     return message;
   }
 
@@ -621,7 +603,7 @@ export const MsgRegisterHostZoneResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgRegisterHostZoneResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): MsgRegisterHostZoneResponseSDKType {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgRegisterHostZoneResponse();
@@ -637,15 +619,6 @@ export const MsgRegisterHostZoneResponse = {
     }
 
     return message;
-  },
-
-  fromJSON(_: any): MsgRegisterHostZoneResponse {
-    return {};
-  },
-
-  toJSON(_: MsgRegisterHostZoneResponse): unknown {
-    const obj: any = {};
-    return obj;
   },
 
   fromPartial(_: DeepPartial<MsgRegisterHostZoneResponse>): MsgRegisterHostZoneResponse {
@@ -719,24 +692,6 @@ export const MsgClaimUndelegatedTokens = {
     return message;
   },
 
-  fromJSON(object: any): MsgClaimUndelegatedTokens {
-    return {
-      creator: isSet(object.creator) ? String(object.creator) : "",
-      hostZoneId: isSet(object.hostZoneId) ? String(object.hostZoneId) : "",
-      epoch: isSet(object.epoch) ? Long.fromString(object.epoch) : Long.UZERO,
-      sender: isSet(object.sender) ? String(object.sender) : ""
-    };
-  },
-
-  toJSON(message: MsgClaimUndelegatedTokens): unknown {
-    const obj: any = {};
-    message.creator !== undefined && (obj.creator = message.creator);
-    message.hostZoneId !== undefined && (obj.hostZoneId = message.hostZoneId);
-    message.epoch !== undefined && (obj.epoch = (message.epoch || Long.UZERO).toString());
-    message.sender !== undefined && (obj.sender = message.sender);
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<MsgClaimUndelegatedTokens>): MsgClaimUndelegatedTokens {
     const message = createBaseMsgClaimUndelegatedTokens();
     message.creator = object.creator ?? "";
@@ -757,7 +712,7 @@ export const MsgClaimUndelegatedTokensResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgClaimUndelegatedTokensResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): MsgClaimUndelegatedTokensResponseSDKType {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgClaimUndelegatedTokensResponse();
@@ -773,15 +728,6 @@ export const MsgClaimUndelegatedTokensResponse = {
     }
 
     return message;
-  },
-
-  fromJSON(_: any): MsgClaimUndelegatedTokensResponse {
-    return {};
-  },
-
-  toJSON(_: MsgClaimUndelegatedTokensResponse): unknown {
-    const obj: any = {};
-    return obj;
   },
 
   fromPartial(_: DeepPartial<MsgClaimUndelegatedTokensResponse>): MsgClaimUndelegatedTokensResponse {
@@ -846,22 +792,6 @@ export const MsgRebalanceValidators = {
     return message;
   },
 
-  fromJSON(object: any): MsgRebalanceValidators {
-    return {
-      creator: isSet(object.creator) ? String(object.creator) : "",
-      hostZone: isSet(object.hostZone) ? String(object.hostZone) : "",
-      numRebalance: isSet(object.numRebalance) ? Long.fromString(object.numRebalance) : Long.UZERO
-    };
-  },
-
-  toJSON(message: MsgRebalanceValidators): unknown {
-    const obj: any = {};
-    message.creator !== undefined && (obj.creator = message.creator);
-    message.hostZone !== undefined && (obj.hostZone = message.hostZone);
-    message.numRebalance !== undefined && (obj.numRebalance = (message.numRebalance || Long.UZERO).toString());
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<MsgRebalanceValidators>): MsgRebalanceValidators {
     const message = createBaseMsgRebalanceValidators();
     message.creator = object.creator ?? "";
@@ -881,7 +811,7 @@ export const MsgRebalanceValidatorsResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgRebalanceValidatorsResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): MsgRebalanceValidatorsResponseSDKType {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgRebalanceValidatorsResponse();
@@ -897,15 +827,6 @@ export const MsgRebalanceValidatorsResponse = {
     }
 
     return message;
-  },
-
-  fromJSON(_: any): MsgRebalanceValidatorsResponse {
-    return {};
-  },
-
-  toJSON(_: MsgRebalanceValidatorsResponse): unknown {
-    const obj: any = {};
-    return obj;
   },
 
   fromPartial(_: DeepPartial<MsgRebalanceValidatorsResponse>): MsgRebalanceValidatorsResponse {
@@ -997,28 +918,6 @@ export const MsgAddValidator = {
     return message;
   },
 
-  fromJSON(object: any): MsgAddValidator {
-    return {
-      creator: isSet(object.creator) ? String(object.creator) : "",
-      hostZone: isSet(object.hostZone) ? String(object.hostZone) : "",
-      name: isSet(object.name) ? String(object.name) : "",
-      address: isSet(object.address) ? String(object.address) : "",
-      commission: isSet(object.commission) ? Long.fromString(object.commission) : Long.UZERO,
-      weight: isSet(object.weight) ? Long.fromString(object.weight) : Long.UZERO
-    };
-  },
-
-  toJSON(message: MsgAddValidator): unknown {
-    const obj: any = {};
-    message.creator !== undefined && (obj.creator = message.creator);
-    message.hostZone !== undefined && (obj.hostZone = message.hostZone);
-    message.name !== undefined && (obj.name = message.name);
-    message.address !== undefined && (obj.address = message.address);
-    message.commission !== undefined && (obj.commission = (message.commission || Long.UZERO).toString());
-    message.weight !== undefined && (obj.weight = (message.weight || Long.UZERO).toString());
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<MsgAddValidator>): MsgAddValidator {
     const message = createBaseMsgAddValidator();
     message.creator = object.creator ?? "";
@@ -1041,7 +940,7 @@ export const MsgAddValidatorResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgAddValidatorResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): MsgAddValidatorResponseSDKType {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgAddValidatorResponse();
@@ -1057,15 +956,6 @@ export const MsgAddValidatorResponse = {
     }
 
     return message;
-  },
-
-  fromJSON(_: any): MsgAddValidatorResponse {
-    return {};
-  },
-
-  toJSON(_: MsgAddValidatorResponse): unknown {
-    const obj: any = {};
-    return obj;
   },
 
   fromPartial(_: DeepPartial<MsgAddValidatorResponse>): MsgAddValidatorResponse {
@@ -1139,24 +1029,6 @@ export const MsgChangeValidatorWeight = {
     return message;
   },
 
-  fromJSON(object: any): MsgChangeValidatorWeight {
-    return {
-      creator: isSet(object.creator) ? String(object.creator) : "",
-      hostZone: isSet(object.hostZone) ? String(object.hostZone) : "",
-      valAddr: isSet(object.valAddr) ? String(object.valAddr) : "",
-      weight: isSet(object.weight) ? Long.fromString(object.weight) : Long.UZERO
-    };
-  },
-
-  toJSON(message: MsgChangeValidatorWeight): unknown {
-    const obj: any = {};
-    message.creator !== undefined && (obj.creator = message.creator);
-    message.hostZone !== undefined && (obj.hostZone = message.hostZone);
-    message.valAddr !== undefined && (obj.valAddr = message.valAddr);
-    message.weight !== undefined && (obj.weight = (message.weight || Long.UZERO).toString());
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<MsgChangeValidatorWeight>): MsgChangeValidatorWeight {
     const message = createBaseMsgChangeValidatorWeight();
     message.creator = object.creator ?? "";
@@ -1177,7 +1049,7 @@ export const MsgChangeValidatorWeightResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgChangeValidatorWeightResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): MsgChangeValidatorWeightResponseSDKType {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgChangeValidatorWeightResponse();
@@ -1193,15 +1065,6 @@ export const MsgChangeValidatorWeightResponse = {
     }
 
     return message;
-  },
-
-  fromJSON(_: any): MsgChangeValidatorWeightResponse {
-    return {};
-  },
-
-  toJSON(_: MsgChangeValidatorWeightResponse): unknown {
-    const obj: any = {};
-    return obj;
   },
 
   fromPartial(_: DeepPartial<MsgChangeValidatorWeightResponse>): MsgChangeValidatorWeightResponse {
@@ -1266,22 +1129,6 @@ export const MsgDeleteValidator = {
     return message;
   },
 
-  fromJSON(object: any): MsgDeleteValidator {
-    return {
-      creator: isSet(object.creator) ? String(object.creator) : "",
-      hostZone: isSet(object.hostZone) ? String(object.hostZone) : "",
-      valAddr: isSet(object.valAddr) ? String(object.valAddr) : ""
-    };
-  },
-
-  toJSON(message: MsgDeleteValidator): unknown {
-    const obj: any = {};
-    message.creator !== undefined && (obj.creator = message.creator);
-    message.hostZone !== undefined && (obj.hostZone = message.hostZone);
-    message.valAddr !== undefined && (obj.valAddr = message.valAddr);
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<MsgDeleteValidator>): MsgDeleteValidator {
     const message = createBaseMsgDeleteValidator();
     message.creator = object.creator ?? "";
@@ -1301,7 +1148,7 @@ export const MsgDeleteValidatorResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgDeleteValidatorResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): MsgDeleteValidatorResponseSDKType {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgDeleteValidatorResponse();
@@ -1317,15 +1164,6 @@ export const MsgDeleteValidatorResponse = {
     }
 
     return message;
-  },
-
-  fromJSON(_: any): MsgDeleteValidatorResponse {
-    return {};
-  },
-
-  toJSON(_: MsgDeleteValidatorResponse): unknown {
-    const obj: any = {};
-    return obj;
   },
 
   fromPartial(_: DeepPartial<MsgDeleteValidatorResponse>): MsgDeleteValidatorResponse {
@@ -1390,22 +1228,6 @@ export const MsgRestoreInterchainAccount = {
     return message;
   },
 
-  fromJSON(object: any): MsgRestoreInterchainAccount {
-    return {
-      creator: isSet(object.creator) ? String(object.creator) : "",
-      chainId: isSet(object.chainId) ? String(object.chainId) : "",
-      accountType: isSet(object.accountType) ? iCAAccountTypeFromJSON(object.accountType) : 0
-    };
-  },
-
-  toJSON(message: MsgRestoreInterchainAccount): unknown {
-    const obj: any = {};
-    message.creator !== undefined && (obj.creator = message.creator);
-    message.chainId !== undefined && (obj.chainId = message.chainId);
-    message.accountType !== undefined && (obj.accountType = iCAAccountTypeToJSON(message.accountType));
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<MsgRestoreInterchainAccount>): MsgRestoreInterchainAccount {
     const message = createBaseMsgRestoreInterchainAccount();
     message.creator = object.creator ?? "";
@@ -1425,7 +1247,7 @@ export const MsgRestoreInterchainAccountResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgRestoreInterchainAccountResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): MsgRestoreInterchainAccountResponseSDKType {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgRestoreInterchainAccountResponse();
@@ -1441,15 +1263,6 @@ export const MsgRestoreInterchainAccountResponse = {
     }
 
     return message;
-  },
-
-  fromJSON(_: any): MsgRestoreInterchainAccountResponse {
-    return {};
-  },
-
-  toJSON(_: MsgRestoreInterchainAccountResponse): unknown {
-    const obj: any = {};
-    return obj;
   },
 
   fromPartial(_: DeepPartial<MsgRestoreInterchainAccountResponse>): MsgRestoreInterchainAccountResponse {
@@ -1514,22 +1327,6 @@ export const MsgUpdateValidatorSharesExchRate = {
     return message;
   },
 
-  fromJSON(object: any): MsgUpdateValidatorSharesExchRate {
-    return {
-      creator: isSet(object.creator) ? String(object.creator) : "",
-      chainId: isSet(object.chainId) ? String(object.chainId) : "",
-      valoper: isSet(object.valoper) ? String(object.valoper) : ""
-    };
-  },
-
-  toJSON(message: MsgUpdateValidatorSharesExchRate): unknown {
-    const obj: any = {};
-    message.creator !== undefined && (obj.creator = message.creator);
-    message.chainId !== undefined && (obj.chainId = message.chainId);
-    message.valoper !== undefined && (obj.valoper = message.valoper);
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<MsgUpdateValidatorSharesExchRate>): MsgUpdateValidatorSharesExchRate {
     const message = createBaseMsgUpdateValidatorSharesExchRate();
     message.creator = object.creator ?? "";
@@ -1549,7 +1346,7 @@ export const MsgUpdateValidatorSharesExchRateResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgUpdateValidatorSharesExchRateResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): MsgUpdateValidatorSharesExchRateResponseSDKType {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgUpdateValidatorSharesExchRateResponse();
@@ -1565,15 +1362,6 @@ export const MsgUpdateValidatorSharesExchRateResponse = {
     }
 
     return message;
-  },
-
-  fromJSON(_: any): MsgUpdateValidatorSharesExchRateResponse {
-    return {};
-  },
-
-  toJSON(_: MsgUpdateValidatorSharesExchRateResponse): unknown {
-    const obj: any = {};
-    return obj;
   },
 
   fromPartial(_: DeepPartial<MsgUpdateValidatorSharesExchRateResponse>): MsgUpdateValidatorSharesExchRateResponse {

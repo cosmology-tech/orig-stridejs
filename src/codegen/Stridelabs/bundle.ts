@@ -4,11 +4,11 @@ import * as _148 from "../icacallbacks/packet";
 import * as _149 from "../icacallbacks/params";
 import * as _150 from "../icacallbacks/query";
 import * as _151 from "../icacallbacks/tx";
-import * as _273 from "../icacallbacks/query.lcd";
-import * as _274 from "../icacallbacks/query.rpc.query";
-import * as _289 from "./lcd";
-import * as _290 from "./rpc.query";
-import * as _291 from "./rpc.tx";
+import * as _275 from "../icacallbacks/query.lcd";
+import * as _276 from "../icacallbacks/query.rpc.query";
+import * as _291 from "./lcd";
+import * as _292 from "./rpc.query";
+import * as _293 from "./rpc.tx";
 export namespace stridelabs {
   export namespace stride {
     export const icacallbacks = { ..._146,
@@ -17,12 +17,12 @@ export namespace stridelabs {
       ..._149,
       ..._150,
       ..._151,
-      ..._273,
-      ..._274
+      ..._275,
+      ..._276
     };
   }
-  export const ClientFactory = { ..._289,
-    ..._290,
-    ..._291
+  export const ClientFactory = { ..._291,
+    ..._292,
+    ..._293
   };
 }

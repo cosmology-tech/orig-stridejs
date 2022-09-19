@@ -1,6 +1,12 @@
 import * as _m0 from "protobufjs/minimal";
-import { Long, isSet, DeepPartial } from "@osmonauts/helpers";
+import { Long, DeepPartial } from "@osmonauts/helpers";
 export interface EpochTracker {
+  epochIdentifier: string;
+  epochNumber: Long;
+  nextEpochStartTime: Long;
+  duration: Long;
+}
+export interface EpochTrackerSDKType {
   epochIdentifier: string;
   epochNumber: Long;
   nextEpochStartTime: Long;
@@ -69,24 +75,6 @@ export const EpochTracker = {
     }
 
     return message;
-  },
-
-  fromJSON(object: any): EpochTracker {
-    return {
-      epochIdentifier: isSet(object.epochIdentifier) ? String(object.epochIdentifier) : "",
-      epochNumber: isSet(object.epochNumber) ? Long.fromString(object.epochNumber) : Long.UZERO,
-      nextEpochStartTime: isSet(object.nextEpochStartTime) ? Long.fromString(object.nextEpochStartTime) : Long.UZERO,
-      duration: isSet(object.duration) ? Long.fromString(object.duration) : Long.UZERO
-    };
-  },
-
-  toJSON(message: EpochTracker): unknown {
-    const obj: any = {};
-    message.epochIdentifier !== undefined && (obj.epochIdentifier = message.epochIdentifier);
-    message.epochNumber !== undefined && (obj.epochNumber = (message.epochNumber || Long.UZERO).toString());
-    message.nextEpochStartTime !== undefined && (obj.nextEpochStartTime = (message.nextEpochStartTime || Long.UZERO).toString());
-    message.duration !== undefined && (obj.duration = (message.duration || Long.UZERO).toString());
-    return obj;
   },
 
   fromPartial(object: DeepPartial<EpochTracker>): EpochTracker {

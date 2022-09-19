@@ -1,12 +1,6 @@
-import { PageRequest, PageResponse } from "../cosmos/base/query/v1beta1/pagination";
-import { Params } from "./params";
-import { Validator } from "./validator";
-import { ICAAccount } from "./ica_account";
-import { HostZone } from "./host_zone";
-import { EpochTracker } from "./epoch_tracker";
-import { LCDClient } from "@osmonauts/lcd";
 import { setPaginationParams } from "@osmonauts/helpers";
-import { QueryParamsRequest, QueryParamsResponse, QueryGetValidatorsRequest, QueryGetValidatorsResponse, QueryGetICAAccountRequest, QueryGetICAAccountResponse, QueryGetHostZoneRequest, QueryGetHostZoneResponse, QueryAllHostZoneRequest, QueryAllHostZoneResponse, QueryModuleAddressRequest, QueryModuleAddressResponse, QueryInterchainAccountFromAddressRequest, QueryInterchainAccountFromAddressResponse, QueryGetEpochTrackerRequest, QueryGetEpochTrackerResponse, QueryAllEpochTrackerRequest, QueryAllEpochTrackerResponse } from "./query";
+import { LCDClient } from "@osmonauts/lcd";
+import { QueryParamsRequest, QueryParamsResponseSDKType, QueryGetValidatorsRequest, QueryGetValidatorsResponseSDKType, QueryGetICAAccountRequest, QueryGetICAAccountResponseSDKType, QueryGetHostZoneRequest, QueryGetHostZoneResponseSDKType, QueryAllHostZoneRequest, QueryAllHostZoneResponseSDKType, QueryModuleAddressRequest, QueryModuleAddressResponseSDKType, QueryGetEpochTrackerRequest, QueryGetEpochTrackerResponseSDKType, QueryAllEpochTrackerRequest, QueryAllEpochTrackerResponseSDKType } from "./query";
 export class LCDQueryClient extends LCDClient {
   constructor({
     restEndpoint
@@ -17,35 +11,40 @@ export class LCDQueryClient extends LCDClient {
       restEndpoint
     });
   }
-
   /* Parameters queries the parameters of the module. */
-  async params(_params: QueryParamsRequest = {}): Promise<QueryParamsResponse> {
+
+
+  async params(_params: QueryParamsRequest = {}): Promise<QueryParamsResponseSDKType> {
     const endpoint = `Stridelabs/stride/stakeibc/params`;
-    return await this.request<QueryParamsResponse>(endpoint);
+    return await this.get<QueryParamsResponseSDKType>(endpoint);
   }
-
   /* Queries a Validator by host zone. */
-  async validators(params: QueryGetValidatorsRequest): Promise<QueryGetValidatorsResponse> {
-    const endpoint = `Stride-Labs/stride/stakeibc/validators/${params.chain_id}`;
-    return await this.request<QueryGetValidatorsResponse>(endpoint);
-  }
 
+
+  async validators(params: QueryGetValidatorsRequest): Promise<QueryGetValidatorsResponseSDKType> {
+    const endpoint = `Stride-Labs/stride/stakeibc/validators/${params.chainId}`;
+    return await this.get<QueryGetValidatorsResponseSDKType>(endpoint);
+  }
   /* Queries a ICAAccount by index. */
-  async iCAAccount(_params: QueryGetICAAccountRequest = {}): Promise<QueryGetICAAccountResponse> {
+
+
+  async iCAAccount(_params: QueryGetICAAccountRequest = {}): Promise<QueryGetICAAccountResponseSDKType> {
     const endpoint = `Stride-Labs/stride/stakeibc/ica_account`;
-    return await this.request<QueryGetICAAccountResponse>(endpoint);
+    return await this.get<QueryGetICAAccountResponseSDKType>(endpoint);
   }
-
   /* Queries a HostZone by id. */
-  async hostZone(params: QueryGetHostZoneRequest): Promise<QueryGetHostZoneResponse> {
-    const endpoint = `Stride-Labs/stride/stakeibc/host_zone/${params.chain_id}`;
-    return await this.request<QueryGetHostZoneResponse>(endpoint);
-  }
 
+
+  async hostZone(params: QueryGetHostZoneRequest): Promise<QueryGetHostZoneResponseSDKType> {
+    const endpoint = `Stride-Labs/stride/stakeibc/host_zone/${params.chainId}`;
+    return await this.get<QueryGetHostZoneResponseSDKType>(endpoint);
+  }
   /* Queries a list of HostZone items. */
+
+
   async hostZoneAll(params: QueryAllHostZoneRequest = {
     pagination: undefined
-  }): Promise<QueryAllHostZoneResponse> {
+  }): Promise<QueryAllHostZoneResponseSDKType> {
     const options: any = {
       params: {}
     };
@@ -55,25 +54,28 @@ export class LCDQueryClient extends LCDClient {
     }
 
     const endpoint = `Stride-Labs/stride/stakeibc/host_zone`;
-    return await this.request<QueryAllHostZoneResponse>(endpoint, options);
+    return await this.get<QueryAllHostZoneResponseSDKType>(endpoint, options);
   }
-
   /* Queries a list of ModuleAddress items. */
-  async moduleAddress(params: QueryModuleAddressRequest): Promise<QueryModuleAddressResponse> {
+
+
+  async moduleAddress(params: QueryModuleAddressRequest): Promise<QueryModuleAddressResponseSDKType> {
     const endpoint = `Stride-Labs/stride/stakeibc/module_address/${params.name}`;
-    return await this.request<QueryModuleAddressResponse>(endpoint);
+    return await this.get<QueryModuleAddressResponseSDKType>(endpoint);
   }
-
   /* Queries a EpochTracker by index. */
-  async epochTracker(params: QueryGetEpochTrackerRequest): Promise<QueryGetEpochTrackerResponse> {
-    const endpoint = `Stride-Labs/stride/stakeibc/epoch_tracker/${params.epochIdentifier}`;
-    return await this.request<QueryGetEpochTrackerResponse>(endpoint);
-  }
 
+
+  async epochTracker(params: QueryGetEpochTrackerRequest): Promise<QueryGetEpochTrackerResponseSDKType> {
+    const endpoint = `Stride-Labs/stride/stakeibc/epoch_tracker/${params.epochIdentifier}`;
+    return await this.get<QueryGetEpochTrackerResponseSDKType>(endpoint);
+  }
   /* Queries a list of EpochTracker items. */
+
+
   async epochTrackerAll(params: QueryAllEpochTrackerRequest = {
     pagination: undefined
-  }): Promise<QueryAllEpochTrackerResponse> {
+  }): Promise<QueryAllEpochTrackerResponseSDKType> {
     const options: any = {
       params: {}
     };
@@ -83,7 +85,7 @@ export class LCDQueryClient extends LCDClient {
     }
 
     const endpoint = `Stride-Labs/stride/stakeibc/epoch_tracker`;
-    return await this.request<QueryAllEpochTrackerResponse>(endpoint, options);
+    return await this.get<QueryAllEpochTrackerResponseSDKType>(endpoint, options);
   }
 
 }

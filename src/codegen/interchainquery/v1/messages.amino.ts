@@ -1,4 +1,3 @@
-import { ProofOps, ProofOp } from "../../tendermint/crypto/proof";
 import { AminoMsg } from "@cosmjs/amino";
 import { Long } from "@osmonauts/helpers";
 import { MsgSubmitQueryResponse } from "./messages";
@@ -23,26 +22,26 @@ export const AminoConverter = {
   "/stride.interchainquery.MsgSubmitQueryResponse": {
     aminoType: "/stride.interchainquery.MsgSubmitQueryResponse",
     toAmino: ({
-      chain_id,
-      query_id,
+      chainId,
+      queryId,
       result,
-      proof_ops,
+      proofOps,
       height,
-      from_address
+      fromAddress
     }: MsgSubmitQueryResponse): AminoMsgSubmitQueryResponse["value"] => {
       return {
-        chain_id,
-        query_id,
+        chain_id: chainId,
+        query_id: queryId,
         result,
         proof_ops: {
-          ops: proof_ops.ops.map(el0 => ({
+          ops: proofOps.ops.map(el0 => ({
             type: el0.type,
             key: el0.key,
             data: el0.data
           }))
         },
         height: height.toString(),
-        from_address
+        from_address: fromAddress
       };
     },
     fromAmino: ({
@@ -54,10 +53,10 @@ export const AminoConverter = {
       from_address
     }: AminoMsgSubmitQueryResponse["value"]): MsgSubmitQueryResponse => {
       return {
-        chain_id,
-        query_id,
+        chainId: chain_id,
+        queryId: query_id,
         result,
-        proof_ops: {
+        proofOps: {
           ops: proof_ops.ops.map(el1 => ({
             type: el1.type,
             key: el1.key,
@@ -65,7 +64,7 @@ export const AminoConverter = {
           }))
         },
         height: Long.fromString(height),
-        from_address
+        fromAddress: from_address
       };
     }
   }

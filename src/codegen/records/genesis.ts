@@ -1,6 +1,14 @@
 import * as _m0 from "protobufjs/minimal";
-import { Long, isSet, DeepPartial } from "@osmonauts/helpers";
+import { Long, DeepPartial } from "@osmonauts/helpers";
 export enum DepositRecord_Status {
+  /** TRANSFER - pending transfer to delegate account */
+  TRANSFER = 0,
+
+  /** STAKE - pending staking on delegate account */
+  STAKE = 1,
+  UNRECOGNIZED = -1,
+}
+export enum DepositRecord_StatusSDKType {
   /** TRANSFER - pending transfer to delegate account */
   TRANSFER = 0,
 
@@ -41,6 +49,11 @@ export enum DepositRecord_Source {
   WITHDRAWAL_ICA = 1,
   UNRECOGNIZED = -1,
 }
+export enum DepositRecord_SourceSDKType {
+  STRIDE = 0,
+  WITHDRAWAL_ICA = 1,
+  UNRECOGNIZED = -1,
+}
 export function depositRecord_SourceFromJSON(object: any): DepositRecord_Source {
   switch (object) {
     case 0:
@@ -70,6 +83,17 @@ export function depositRecord_SourceToJSON(object: DepositRecord_Source): string
   }
 }
 export enum HostZoneUnbonding_Status {
+  /** BONDED - tokens bonded on delegate account */
+  BONDED = 0,
+
+  /** UNBONDED - unbonding completed on delegate account */
+  UNBONDED = 1,
+
+  /** TRANSFERRED - transfer success */
+  TRANSFERRED = 2,
+  UNRECOGNIZED = -1,
+}
+export enum HostZoneUnbonding_StatusSDKType {
   /** BONDED - tokens bonded on delegate account */
   BONDED = 0,
 
@@ -126,13 +150,31 @@ export interface UserRedemptionRecord {
   epochNumber: Long;
   claimIsPending: boolean;
 }
-
+export interface UserRedemptionRecordSDKType {
+  /** {chain_id}.{epoch}.{sender} */
+  id: string;
+  sender: string;
+  receiver: string;
+  amount: Long;
+  denom: string;
+  hostZoneId: string;
+  epochNumber: Long;
+  claimIsPending: boolean;
+}
 /** Params defines the parameters for the module. */
+
 export interface Params {}
+/** Params defines the parameters for the module. */
+
+export interface ParamsSDKType {}
 export interface RecordsPacketData {
   noData?: NoData;
 }
+export interface RecordsPacketDataSDKType {
+  noData?: NoDataSDKType;
+}
 export interface NoData {}
+export interface NoDataSDKType {}
 export interface DepositRecord {
   id: Long;
   amount: Long;
@@ -141,6 +183,15 @@ export interface DepositRecord {
   status: DepositRecord_Status;
   depositEpochNumber: Long;
   source: DepositRecord_Source;
+}
+export interface DepositRecordSDKType {
+  id: Long;
+  amount: Long;
+  denom: string;
+  hostZoneId: string;
+  status: DepositRecord_StatusSDKType;
+  depositEpochNumber: Long;
+  source: DepositRecord_SourceSDKType;
 }
 export interface HostZoneUnbonding {
   stTokenAmount: Long;
@@ -151,22 +202,49 @@ export interface HostZoneUnbonding {
   status: HostZoneUnbonding_Status;
   userRedemptionRecords: string[];
 }
+export interface HostZoneUnbondingSDKType {
+  stTokenAmount: Long;
+  nativeTokenAmount: Long;
+  denom: string;
+  hostZoneId: string;
+  unbondingTime: Long;
+  status: HostZoneUnbonding_StatusSDKType;
+  userRedemptionRecords: string[];
+}
 export interface EpochUnbondingRecord {
   epochNumber: Long;
   hostZoneUnbondings: HostZoneUnbonding[];
 }
-
+export interface EpochUnbondingRecordSDKType {
+  epochNumber: Long;
+  hostZoneUnbondings: HostZoneUnbondingSDKType[];
+}
 /**
  * GenesisState defines the recordπs module's genesis state.
  * next id: 9
  */
+
 export interface GenesisState {
   params: Params;
-  port_id: string;
+  portId: string;
   userRedemptionRecordList: UserRedemptionRecord[];
   userRedemptionRecordCount: Long;
   epochUnbondingRecordList: EpochUnbondingRecord[];
   depositRecordList: DepositRecord[];
+  depositRecordCount: Long;
+}
+/**
+ * GenesisState defines the recordπs module's genesis state.
+ * next id: 9
+ */
+
+export interface GenesisStateSDKType {
+  params: ParamsSDKType;
+  port_id: string;
+  userRedemptionRecordList: UserRedemptionRecordSDKType[];
+  userRedemptionRecordCount: Long;
+  epochUnbondingRecordList: EpochUnbondingRecordSDKType[];
+  depositRecordList: DepositRecordSDKType[];
   depositRecordCount: Long;
 }
 
@@ -270,32 +348,6 @@ export const UserRedemptionRecord = {
     return message;
   },
 
-  fromJSON(object: any): UserRedemptionRecord {
-    return {
-      id: isSet(object.id) ? String(object.id) : "",
-      sender: isSet(object.sender) ? String(object.sender) : "",
-      receiver: isSet(object.receiver) ? String(object.receiver) : "",
-      amount: isSet(object.amount) ? Long.fromString(object.amount) : Long.UZERO,
-      denom: isSet(object.denom) ? String(object.denom) : "",
-      hostZoneId: isSet(object.hostZoneId) ? String(object.hostZoneId) : "",
-      epochNumber: isSet(object.epochNumber) ? Long.fromString(object.epochNumber) : Long.UZERO,
-      claimIsPending: isSet(object.claimIsPending) ? Boolean(object.claimIsPending) : false
-    };
-  },
-
-  toJSON(message: UserRedemptionRecord): unknown {
-    const obj: any = {};
-    message.id !== undefined && (obj.id = message.id);
-    message.sender !== undefined && (obj.sender = message.sender);
-    message.receiver !== undefined && (obj.receiver = message.receiver);
-    message.amount !== undefined && (obj.amount = (message.amount || Long.UZERO).toString());
-    message.denom !== undefined && (obj.denom = message.denom);
-    message.hostZoneId !== undefined && (obj.hostZoneId = message.hostZoneId);
-    message.epochNumber !== undefined && (obj.epochNumber = (message.epochNumber || Long.UZERO).toString());
-    message.claimIsPending !== undefined && (obj.claimIsPending = message.claimIsPending);
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<UserRedemptionRecord>): UserRedemptionRecord {
     const message = createBaseUserRedemptionRecord();
     message.id = object.id ?? "";
@@ -336,15 +388,6 @@ export const Params = {
     }
 
     return message;
-  },
-
-  fromJSON(_: any): Params {
-    return {};
-  },
-
-  toJSON(_: Params): unknown {
-    const obj: any = {};
-    return obj;
   },
 
   fromPartial(_: DeepPartial<Params>): Params {
@@ -391,18 +434,6 @@ export const RecordsPacketData = {
     return message;
   },
 
-  fromJSON(object: any): RecordsPacketData {
-    return {
-      noData: isSet(object.noData) ? NoData.fromJSON(object.noData) : undefined
-    };
-  },
-
-  toJSON(message: RecordsPacketData): unknown {
-    const obj: any = {};
-    message.noData !== undefined && (obj.noData = message.noData ? NoData.toJSON(message.noData) : undefined);
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<RecordsPacketData>): RecordsPacketData {
     const message = createBaseRecordsPacketData();
     message.noData = object.noData !== undefined && object.noData !== null ? NoData.fromPartial(object.noData) : undefined;
@@ -436,15 +467,6 @@ export const NoData = {
     }
 
     return message;
-  },
-
-  fromJSON(_: any): NoData {
-    return {};
-  },
-
-  toJSON(_: NoData): unknown {
-    const obj: any = {};
-    return obj;
   },
 
   fromPartial(_: DeepPartial<NoData>): NoData {
@@ -543,30 +565,6 @@ export const DepositRecord = {
     }
 
     return message;
-  },
-
-  fromJSON(object: any): DepositRecord {
-    return {
-      id: isSet(object.id) ? Long.fromString(object.id) : Long.UZERO,
-      amount: isSet(object.amount) ? Long.fromString(object.amount) : Long.ZERO,
-      denom: isSet(object.denom) ? String(object.denom) : "",
-      hostZoneId: isSet(object.hostZoneId) ? String(object.hostZoneId) : "",
-      status: isSet(object.status) ? depositRecord_StatusFromJSON(object.status) : 0,
-      depositEpochNumber: isSet(object.depositEpochNumber) ? Long.fromString(object.depositEpochNumber) : Long.UZERO,
-      source: isSet(object.source) ? depositRecord_SourceFromJSON(object.source) : 0
-    };
-  },
-
-  toJSON(message: DepositRecord): unknown {
-    const obj: any = {};
-    message.id !== undefined && (obj.id = (message.id || Long.UZERO).toString());
-    message.amount !== undefined && (obj.amount = (message.amount || Long.ZERO).toString());
-    message.denom !== undefined && (obj.denom = message.denom);
-    message.hostZoneId !== undefined && (obj.hostZoneId = message.hostZoneId);
-    message.status !== undefined && (obj.status = depositRecord_StatusToJSON(message.status));
-    message.depositEpochNumber !== undefined && (obj.depositEpochNumber = (message.depositEpochNumber || Long.UZERO).toString());
-    message.source !== undefined && (obj.source = depositRecord_SourceToJSON(message.source));
-    return obj;
   },
 
   fromPartial(object: DeepPartial<DepositRecord>): DepositRecord {
@@ -674,36 +672,6 @@ export const HostZoneUnbonding = {
     return message;
   },
 
-  fromJSON(object: any): HostZoneUnbonding {
-    return {
-      stTokenAmount: isSet(object.stTokenAmount) ? Long.fromString(object.stTokenAmount) : Long.UZERO,
-      nativeTokenAmount: isSet(object.nativeTokenAmount) ? Long.fromString(object.nativeTokenAmount) : Long.UZERO,
-      denom: isSet(object.denom) ? String(object.denom) : "",
-      hostZoneId: isSet(object.hostZoneId) ? String(object.hostZoneId) : "",
-      unbondingTime: isSet(object.unbondingTime) ? Long.fromString(object.unbondingTime) : Long.UZERO,
-      status: isSet(object.status) ? hostZoneUnbonding_StatusFromJSON(object.status) : 0,
-      userRedemptionRecords: Array.isArray(object?.userRedemptionRecords) ? object.userRedemptionRecords.map((e: any) => String(e)) : []
-    };
-  },
-
-  toJSON(message: HostZoneUnbonding): unknown {
-    const obj: any = {};
-    message.stTokenAmount !== undefined && (obj.stTokenAmount = (message.stTokenAmount || Long.UZERO).toString());
-    message.nativeTokenAmount !== undefined && (obj.nativeTokenAmount = (message.nativeTokenAmount || Long.UZERO).toString());
-    message.denom !== undefined && (obj.denom = message.denom);
-    message.hostZoneId !== undefined && (obj.hostZoneId = message.hostZoneId);
-    message.unbondingTime !== undefined && (obj.unbondingTime = (message.unbondingTime || Long.UZERO).toString());
-    message.status !== undefined && (obj.status = hostZoneUnbonding_StatusToJSON(message.status));
-
-    if (message.userRedemptionRecords) {
-      obj.userRedemptionRecords = message.userRedemptionRecords.map(e => e);
-    } else {
-      obj.userRedemptionRecords = [];
-    }
-
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<HostZoneUnbonding>): HostZoneUnbonding {
     const message = createBaseHostZoneUnbonding();
     message.stTokenAmount = object.stTokenAmount !== undefined && object.stTokenAmount !== null ? Long.fromValue(object.stTokenAmount) : Long.UZERO;
@@ -764,26 +732,6 @@ export const EpochUnbondingRecord = {
     return message;
   },
 
-  fromJSON(object: any): EpochUnbondingRecord {
-    return {
-      epochNumber: isSet(object.epochNumber) ? Long.fromString(object.epochNumber) : Long.UZERO,
-      hostZoneUnbondings: Array.isArray(object?.hostZoneUnbondings) ? object.hostZoneUnbondings.map((e: any) => HostZoneUnbonding.fromJSON(e)) : []
-    };
-  },
-
-  toJSON(message: EpochUnbondingRecord): unknown {
-    const obj: any = {};
-    message.epochNumber !== undefined && (obj.epochNumber = (message.epochNumber || Long.UZERO).toString());
-
-    if (message.hostZoneUnbondings) {
-      obj.hostZoneUnbondings = message.hostZoneUnbondings.map(e => e ? HostZoneUnbonding.toJSON(e) : undefined);
-    } else {
-      obj.hostZoneUnbondings = [];
-    }
-
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<EpochUnbondingRecord>): EpochUnbondingRecord {
     const message = createBaseEpochUnbondingRecord();
     message.epochNumber = object.epochNumber !== undefined && object.epochNumber !== null ? Long.fromValue(object.epochNumber) : Long.UZERO;
@@ -796,7 +744,7 @@ export const EpochUnbondingRecord = {
 function createBaseGenesisState(): GenesisState {
   return {
     params: undefined,
-    port_id: "",
+    portId: "",
     userRedemptionRecordList: [],
     userRedemptionRecordCount: Long.UZERO,
     epochUnbondingRecordList: [],
@@ -811,8 +759,8 @@ export const GenesisState = {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
 
-    if (message.port_id !== "") {
-      writer.uint32(18).string(message.port_id);
+    if (message.portId !== "") {
+      writer.uint32(18).string(message.portId);
     }
 
     for (const v of message.userRedemptionRecordList) {
@@ -852,7 +800,7 @@ export const GenesisState = {
           break;
 
         case 2:
-          message.port_id = reader.string();
+          message.portId = reader.string();
           break;
 
         case 3:
@@ -884,51 +832,10 @@ export const GenesisState = {
     return message;
   },
 
-  fromJSON(object: any): GenesisState {
-    return {
-      params: isSet(object.params) ? Params.fromJSON(object.params) : undefined,
-      port_id: isSet(object.port_id) ? String(object.port_id) : "",
-      userRedemptionRecordList: Array.isArray(object?.userRedemptionRecordList) ? object.userRedemptionRecordList.map((e: any) => UserRedemptionRecord.fromJSON(e)) : [],
-      userRedemptionRecordCount: isSet(object.userRedemptionRecordCount) ? Long.fromString(object.userRedemptionRecordCount) : Long.UZERO,
-      epochUnbondingRecordList: Array.isArray(object?.epochUnbondingRecordList) ? object.epochUnbondingRecordList.map((e: any) => EpochUnbondingRecord.fromJSON(e)) : [],
-      depositRecordList: Array.isArray(object?.depositRecordList) ? object.depositRecordList.map((e: any) => DepositRecord.fromJSON(e)) : [],
-      depositRecordCount: isSet(object.depositRecordCount) ? Long.fromString(object.depositRecordCount) : Long.UZERO
-    };
-  },
-
-  toJSON(message: GenesisState): unknown {
-    const obj: any = {};
-    message.params !== undefined && (obj.params = message.params ? Params.toJSON(message.params) : undefined);
-    message.port_id !== undefined && (obj.port_id = message.port_id);
-
-    if (message.userRedemptionRecordList) {
-      obj.userRedemptionRecordList = message.userRedemptionRecordList.map(e => e ? UserRedemptionRecord.toJSON(e) : undefined);
-    } else {
-      obj.userRedemptionRecordList = [];
-    }
-
-    message.userRedemptionRecordCount !== undefined && (obj.userRedemptionRecordCount = (message.userRedemptionRecordCount || Long.UZERO).toString());
-
-    if (message.epochUnbondingRecordList) {
-      obj.epochUnbondingRecordList = message.epochUnbondingRecordList.map(e => e ? EpochUnbondingRecord.toJSON(e) : undefined);
-    } else {
-      obj.epochUnbondingRecordList = [];
-    }
-
-    if (message.depositRecordList) {
-      obj.depositRecordList = message.depositRecordList.map(e => e ? DepositRecord.toJSON(e) : undefined);
-    } else {
-      obj.depositRecordList = [];
-    }
-
-    message.depositRecordCount !== undefined && (obj.depositRecordCount = (message.depositRecordCount || Long.UZERO).toString());
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<GenesisState>): GenesisState {
     const message = createBaseGenesisState();
     message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
-    message.port_id = object.port_id ?? "";
+    message.portId = object.portId ?? "";
     message.userRedemptionRecordList = object.userRedemptionRecordList?.map(e => UserRedemptionRecord.fromPartial(e)) || [];
     message.userRedemptionRecordCount = object.userRedemptionRecordCount !== undefined && object.userRedemptionRecordCount !== null ? Long.fromValue(object.userRedemptionRecordCount) : Long.UZERO;
     message.epochUnbondingRecordList = object.epochUnbondingRecordList?.map(e => EpochUnbondingRecord.fromPartial(e)) || [];

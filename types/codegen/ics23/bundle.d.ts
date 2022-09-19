@@ -5,19 +5,19 @@ export declare const ics23: {
     lengthOpFromJSON(object: any): _0.LengthOp;
     lengthOpToJSON(object: _0.LengthOp): string;
     HashOp: typeof _0.HashOp;
+    HashOpSDKType: typeof _0.HashOpSDKType;
     LengthOp: typeof _0.LengthOp;
+    LengthOpSDKType: typeof _0.LengthOpSDKType;
     ExistenceProof: {
         encode(message: _0.ExistenceProof, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
         decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _0.ExistenceProof;
-        fromJSON(object: any): _0.ExistenceProof;
-        toJSON(message: _0.ExistenceProof): unknown;
         fromPartial(object: {
             key?: Uint8Array;
             value?: Uint8Array;
             leaf?: {
                 hash?: _0.HashOp;
-                prehash_key?: _0.HashOp;
-                prehash_value?: _0.HashOp;
+                prehashKey?: _0.HashOp;
+                prehashValue?: _0.HashOp;
                 length?: _0.LengthOp;
                 prefix?: Uint8Array;
             };
@@ -31,8 +31,6 @@ export declare const ics23: {
     NonExistenceProof: {
         encode(message: _0.NonExistenceProof, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
         decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _0.NonExistenceProof;
-        fromJSON(object: any): _0.NonExistenceProof;
-        toJSON(message: _0.NonExistenceProof): unknown;
         fromPartial(object: {
             key?: Uint8Array;
             left?: {
@@ -40,8 +38,8 @@ export declare const ics23: {
                 value?: Uint8Array;
                 leaf?: {
                     hash?: _0.HashOp;
-                    prehash_key?: _0.HashOp;
-                    prehash_value?: _0.HashOp;
+                    prehashKey?: _0.HashOp;
+                    prehashValue?: _0.HashOp;
                     length?: _0.LengthOp;
                     prefix?: Uint8Array;
                 };
@@ -56,8 +54,8 @@ export declare const ics23: {
                 value?: Uint8Array;
                 leaf?: {
                     hash?: _0.HashOp;
-                    prehash_key?: _0.HashOp;
-                    prehash_value?: _0.HashOp;
+                    prehashKey?: _0.HashOp;
+                    prehashValue?: _0.HashOp;
                     length?: _0.LengthOp;
                     prefix?: Uint8Array;
                 };
@@ -72,16 +70,14 @@ export declare const ics23: {
     CommitmentProof: {
         encode(message: _0.CommitmentProof, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
         decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _0.CommitmentProof;
-        fromJSON(object: any): _0.CommitmentProof;
-        toJSON(message: _0.CommitmentProof): unknown;
         fromPartial(object: {
             exist?: {
                 key?: Uint8Array;
                 value?: Uint8Array;
                 leaf?: {
                     hash?: _0.HashOp;
-                    prehash_key?: _0.HashOp;
-                    prehash_value?: _0.HashOp;
+                    prehashKey?: _0.HashOp;
+                    prehashValue?: _0.HashOp;
                     length?: _0.LengthOp;
                     prefix?: Uint8Array;
                 };
@@ -98,8 +94,8 @@ export declare const ics23: {
                     value?: Uint8Array;
                     leaf?: {
                         hash?: _0.HashOp;
-                        prehash_key?: _0.HashOp;
-                        prehash_value?: _0.HashOp;
+                        prehashKey?: _0.HashOp;
+                        prehashValue?: _0.HashOp;
                         length?: _0.LengthOp;
                         prefix?: Uint8Array;
                     };
@@ -114,8 +110,8 @@ export declare const ics23: {
                     value?: Uint8Array;
                     leaf?: {
                         hash?: _0.HashOp;
-                        prehash_key?: _0.HashOp;
-                        prehash_value?: _0.HashOp;
+                        prehashKey?: _0.HashOp;
+                        prehashValue?: _0.HashOp;
                         length?: _0.LengthOp;
                         prefix?: Uint8Array;
                     };
@@ -133,8 +129,8 @@ export declare const ics23: {
                         value?: Uint8Array;
                         leaf?: {
                             hash?: _0.HashOp;
-                            prehash_key?: _0.HashOp;
-                            prehash_value?: _0.HashOp;
+                            prehashKey?: _0.HashOp;
+                            prehashValue?: _0.HashOp;
                             length?: _0.LengthOp;
                             prefix?: Uint8Array;
                         };
@@ -151,8 +147,8 @@ export declare const ics23: {
                             value?: Uint8Array;
                             leaf?: {
                                 hash?: _0.HashOp;
-                                prehash_key?: _0.HashOp;
-                                prehash_value?: _0.HashOp;
+                                prehashKey?: _0.HashOp;
+                                prehashValue?: _0.HashOp;
                                 length?: _0.LengthOp;
                                 prefix?: Uint8Array;
                             };
@@ -167,8 +163,8 @@ export declare const ics23: {
                             value?: Uint8Array;
                             leaf?: {
                                 hash?: _0.HashOp;
-                                prehash_key?: _0.HashOp;
-                                prehash_value?: _0.HashOp;
+                                prehashKey?: _0.HashOp;
+                                prehashValue?: _0.HashOp;
                                 length?: _0.LengthOp;
                                 prefix?: Uint8Array;
                             };
@@ -188,8 +184,8 @@ export declare const ics23: {
                         value?: Uint8Array;
                         leaf?: {
                             hash?: _0.HashOp;
-                            prehash_key?: _0.HashOp;
-                            prehash_value?: _0.HashOp;
+                            prehashKey?: _0.HashOp;
+                            prehashValue?: _0.HashOp;
                             length?: _0.LengthOp;
                             prefix?: Uint8Array;
                         };
@@ -202,8 +198,8 @@ export declare const ics23: {
                             value?: Uint8Array;
                             leaf?: {
                                 hash?: _0.HashOp;
-                                prehash_key?: _0.HashOp;
-                                prehash_value?: _0.HashOp;
+                                prehashKey?: _0.HashOp;
+                                prehashValue?: _0.HashOp;
                                 length?: _0.LengthOp;
                                 prefix?: Uint8Array;
                             };
@@ -214,8 +210,8 @@ export declare const ics23: {
                             value?: Uint8Array;
                             leaf?: {
                                 hash?: _0.HashOp;
-                                prehash_key?: _0.HashOp;
-                                prehash_value?: _0.HashOp;
+                                prehashKey?: _0.HashOp;
+                                prehashValue?: _0.HashOp;
                                 length?: _0.LengthOp;
                                 prefix?: Uint8Array;
                             };
@@ -223,7 +219,7 @@ export declare const ics23: {
                         };
                     };
                 }[];
-                lookup_inners?: {
+                lookupInners?: {
                     hash?: _0.HashOp;
                     prefix?: Uint8Array;
                     suffix?: Uint8Array;
@@ -234,12 +230,10 @@ export declare const ics23: {
     LeafOp: {
         encode(message: _0.LeafOp, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
         decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _0.LeafOp;
-        fromJSON(object: any): _0.LeafOp;
-        toJSON(message: _0.LeafOp): unknown;
         fromPartial(object: {
             hash?: _0.HashOp;
-            prehash_key?: _0.HashOp;
-            prehash_value?: _0.HashOp;
+            prehashKey?: _0.HashOp;
+            prehashValue?: _0.HashOp;
             length?: _0.LengthOp;
             prefix?: Uint8Array;
         }): _0.LeafOp;
@@ -247,8 +241,6 @@ export declare const ics23: {
     InnerOp: {
         encode(message: _0.InnerOp, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
         decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _0.InnerOp;
-        fromJSON(object: any): _0.InnerOp;
-        toJSON(message: _0.InnerOp): unknown;
         fromPartial(object: {
             hash?: _0.HashOp;
             prefix?: Uint8Array;
@@ -258,47 +250,41 @@ export declare const ics23: {
     ProofSpec: {
         encode(message: _0.ProofSpec, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
         decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _0.ProofSpec;
-        fromJSON(object: any): _0.ProofSpec;
-        toJSON(message: _0.ProofSpec): unknown;
         fromPartial(object: {
-            leaf_spec?: {
+            leafSpec?: {
                 hash?: _0.HashOp;
-                prehash_key?: _0.HashOp;
-                prehash_value?: _0.HashOp;
+                prehashKey?: _0.HashOp;
+                prehashValue?: _0.HashOp;
                 length?: _0.LengthOp;
                 prefix?: Uint8Array;
             };
-            inner_spec?: {
-                child_order?: number[];
-                child_size?: number;
-                min_prefix_length?: number;
-                max_prefix_length?: number;
-                empty_child?: Uint8Array;
+            innerSpec?: {
+                childOrder?: number[];
+                childSize?: number;
+                minPrefixLength?: number;
+                maxPrefixLength?: number;
+                emptyChild?: Uint8Array;
                 hash?: _0.HashOp;
             };
-            max_depth?: number;
-            min_depth?: number;
+            maxDepth?: number;
+            minDepth?: number;
         }): _0.ProofSpec;
     };
     InnerSpec: {
         encode(message: _0.InnerSpec, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
         decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _0.InnerSpec;
-        fromJSON(object: any): _0.InnerSpec;
-        toJSON(message: _0.InnerSpec): unknown;
         fromPartial(object: {
-            child_order?: number[];
-            child_size?: number;
-            min_prefix_length?: number;
-            max_prefix_length?: number;
-            empty_child?: Uint8Array;
+            childOrder?: number[];
+            childSize?: number;
+            minPrefixLength?: number;
+            maxPrefixLength?: number;
+            emptyChild?: Uint8Array;
             hash?: _0.HashOp;
         }): _0.InnerSpec;
     };
     BatchProof: {
         encode(message: _0.BatchProof, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
         decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _0.BatchProof;
-        fromJSON(object: any): _0.BatchProof;
-        toJSON(message: _0.BatchProof): unknown;
         fromPartial(object: {
             entries?: {
                 exist?: {
@@ -306,8 +292,8 @@ export declare const ics23: {
                     value?: Uint8Array;
                     leaf?: {
                         hash?: _0.HashOp;
-                        prehash_key?: _0.HashOp;
-                        prehash_value?: _0.HashOp;
+                        prehashKey?: _0.HashOp;
+                        prehashValue?: _0.HashOp;
                         length?: _0.LengthOp;
                         prefix?: Uint8Array;
                     };
@@ -324,8 +310,8 @@ export declare const ics23: {
                         value?: Uint8Array;
                         leaf?: {
                             hash?: _0.HashOp;
-                            prehash_key?: _0.HashOp;
-                            prehash_value?: _0.HashOp;
+                            prehashKey?: _0.HashOp;
+                            prehashValue?: _0.HashOp;
                             length?: _0.LengthOp;
                             prefix?: Uint8Array;
                         };
@@ -340,8 +326,8 @@ export declare const ics23: {
                         value?: Uint8Array;
                         leaf?: {
                             hash?: _0.HashOp;
-                            prehash_key?: _0.HashOp;
-                            prehash_value?: _0.HashOp;
+                            prehashKey?: _0.HashOp;
+                            prehashValue?: _0.HashOp;
                             length?: _0.LengthOp;
                             prefix?: Uint8Array;
                         };
@@ -358,16 +344,14 @@ export declare const ics23: {
     BatchEntry: {
         encode(message: _0.BatchEntry, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
         decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _0.BatchEntry;
-        fromJSON(object: any): _0.BatchEntry;
-        toJSON(message: _0.BatchEntry): unknown;
         fromPartial(object: {
             exist?: {
                 key?: Uint8Array;
                 value?: Uint8Array;
                 leaf?: {
                     hash?: _0.HashOp;
-                    prehash_key?: _0.HashOp;
-                    prehash_value?: _0.HashOp;
+                    prehashKey?: _0.HashOp;
+                    prehashValue?: _0.HashOp;
                     length?: _0.LengthOp;
                     prefix?: Uint8Array;
                 };
@@ -384,8 +368,8 @@ export declare const ics23: {
                     value?: Uint8Array;
                     leaf?: {
                         hash?: _0.HashOp;
-                        prehash_key?: _0.HashOp;
-                        prehash_value?: _0.HashOp;
+                        prehashKey?: _0.HashOp;
+                        prehashValue?: _0.HashOp;
                         length?: _0.LengthOp;
                         prefix?: Uint8Array;
                     };
@@ -400,8 +384,8 @@ export declare const ics23: {
                     value?: Uint8Array;
                     leaf?: {
                         hash?: _0.HashOp;
-                        prehash_key?: _0.HashOp;
-                        prehash_value?: _0.HashOp;
+                        prehashKey?: _0.HashOp;
+                        prehashValue?: _0.HashOp;
                         length?: _0.LengthOp;
                         prefix?: Uint8Array;
                     };
@@ -417,8 +401,6 @@ export declare const ics23: {
     CompressedBatchProof: {
         encode(message: _0.CompressedBatchProof, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
         decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _0.CompressedBatchProof;
-        fromJSON(object: any): _0.CompressedBatchProof;
-        toJSON(message: _0.CompressedBatchProof): unknown;
         fromPartial(object: {
             entries?: {
                 exist?: {
@@ -426,8 +408,8 @@ export declare const ics23: {
                     value?: Uint8Array;
                     leaf?: {
                         hash?: _0.HashOp;
-                        prehash_key?: _0.HashOp;
-                        prehash_value?: _0.HashOp;
+                        prehashKey?: _0.HashOp;
+                        prehashValue?: _0.HashOp;
                         length?: _0.LengthOp;
                         prefix?: Uint8Array;
                     };
@@ -440,8 +422,8 @@ export declare const ics23: {
                         value?: Uint8Array;
                         leaf?: {
                             hash?: _0.HashOp;
-                            prehash_key?: _0.HashOp;
-                            prehash_value?: _0.HashOp;
+                            prehashKey?: _0.HashOp;
+                            prehashValue?: _0.HashOp;
                             length?: _0.LengthOp;
                             prefix?: Uint8Array;
                         };
@@ -452,8 +434,8 @@ export declare const ics23: {
                         value?: Uint8Array;
                         leaf?: {
                             hash?: _0.HashOp;
-                            prehash_key?: _0.HashOp;
-                            prehash_value?: _0.HashOp;
+                            prehashKey?: _0.HashOp;
+                            prehashValue?: _0.HashOp;
                             length?: _0.LengthOp;
                             prefix?: Uint8Array;
                         };
@@ -461,7 +443,7 @@ export declare const ics23: {
                     };
                 };
             }[];
-            lookup_inners?: {
+            lookupInners?: {
                 hash?: _0.HashOp;
                 prefix?: Uint8Array;
                 suffix?: Uint8Array;
@@ -471,16 +453,14 @@ export declare const ics23: {
     CompressedBatchEntry: {
         encode(message: _0.CompressedBatchEntry, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
         decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _0.CompressedBatchEntry;
-        fromJSON(object: any): _0.CompressedBatchEntry;
-        toJSON(message: _0.CompressedBatchEntry): unknown;
         fromPartial(object: {
             exist?: {
                 key?: Uint8Array;
                 value?: Uint8Array;
                 leaf?: {
                     hash?: _0.HashOp;
-                    prehash_key?: _0.HashOp;
-                    prehash_value?: _0.HashOp;
+                    prehashKey?: _0.HashOp;
+                    prehashValue?: _0.HashOp;
                     length?: _0.LengthOp;
                     prefix?: Uint8Array;
                 };
@@ -493,8 +473,8 @@ export declare const ics23: {
                     value?: Uint8Array;
                     leaf?: {
                         hash?: _0.HashOp;
-                        prehash_key?: _0.HashOp;
-                        prehash_value?: _0.HashOp;
+                        prehashKey?: _0.HashOp;
+                        prehashValue?: _0.HashOp;
                         length?: _0.LengthOp;
                         prefix?: Uint8Array;
                     };
@@ -505,8 +485,8 @@ export declare const ics23: {
                     value?: Uint8Array;
                     leaf?: {
                         hash?: _0.HashOp;
-                        prehash_key?: _0.HashOp;
-                        prehash_value?: _0.HashOp;
+                        prehashKey?: _0.HashOp;
+                        prehashValue?: _0.HashOp;
                         length?: _0.LengthOp;
                         prefix?: Uint8Array;
                     };
@@ -518,15 +498,13 @@ export declare const ics23: {
     CompressedExistenceProof: {
         encode(message: _0.CompressedExistenceProof, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
         decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _0.CompressedExistenceProof;
-        fromJSON(object: any): _0.CompressedExistenceProof;
-        toJSON(message: _0.CompressedExistenceProof): unknown;
         fromPartial(object: {
             key?: Uint8Array;
             value?: Uint8Array;
             leaf?: {
                 hash?: _0.HashOp;
-                prehash_key?: _0.HashOp;
-                prehash_value?: _0.HashOp;
+                prehashKey?: _0.HashOp;
+                prehashValue?: _0.HashOp;
                 length?: _0.LengthOp;
                 prefix?: Uint8Array;
             };
@@ -536,8 +514,6 @@ export declare const ics23: {
     CompressedNonExistenceProof: {
         encode(message: _0.CompressedNonExistenceProof, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
         decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _0.CompressedNonExistenceProof;
-        fromJSON(object: any): _0.CompressedNonExistenceProof;
-        toJSON(message: _0.CompressedNonExistenceProof): unknown;
         fromPartial(object: {
             key?: Uint8Array;
             left?: {
@@ -545,8 +521,8 @@ export declare const ics23: {
                 value?: Uint8Array;
                 leaf?: {
                     hash?: _0.HashOp;
-                    prehash_key?: _0.HashOp;
-                    prehash_value?: _0.HashOp;
+                    prehashKey?: _0.HashOp;
+                    prehashValue?: _0.HashOp;
                     length?: _0.LengthOp;
                     prefix?: Uint8Array;
                 };
@@ -557,8 +533,8 @@ export declare const ics23: {
                 value?: Uint8Array;
                 leaf?: {
                     hash?: _0.HashOp;
-                    prehash_key?: _0.HashOp;
-                    prehash_value?: _0.HashOp;
+                    prehashKey?: _0.HashOp;
+                    prehashValue?: _0.HashOp;
                     length?: _0.LengthOp;
                     prefix?: Uint8Array;
                 };

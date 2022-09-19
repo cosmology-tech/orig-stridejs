@@ -1,78 +1,140 @@
-import { PageRequest, PageResponse } from "../cosmos/base/query/v1beta1/pagination";
-import { Params } from "./params";
-import { Validator } from "./validator";
-import { ICAAccount } from "./ica_account";
-import { HostZone } from "./host_zone";
-import { EpochTracker } from "./epoch_tracker";
+import { PageRequest, PageRequestSDKType, PageResponse, PageResponseSDKType } from "../cosmos/base/query/v1beta1/pagination";
+import { Params, ParamsSDKType } from "./params";
+import { Validator, ValidatorSDKType } from "./validator";
+import { ICAAccount, ICAAccountSDKType } from "./ica_account";
+import { HostZone, HostZoneSDKType } from "./host_zone";
+import { EpochTracker, EpochTrackerSDKType } from "./epoch_tracker";
 import * as _m0 from "protobufjs/minimal";
-import { isSet, DeepPartial } from "@osmonauts/helpers";
-
+import { DeepPartial } from "@osmonauts/helpers";
 /** QueryInterchainAccountFromAddressRequest is the request type for the Query/InterchainAccountAddress RPC */
+
 export interface QueryInterchainAccountFromAddressRequest {
+  owner: string;
+  connectionId: string;
+}
+/** QueryInterchainAccountFromAddressRequest is the request type for the Query/InterchainAccountAddress RPC */
+
+export interface QueryInterchainAccountFromAddressRequestSDKType {
   owner: string;
   connection_id: string;
 }
-
 /** QueryInterchainAccountFromAddressResponse the response type for the Query/InterchainAccountAddress RPC */
+
 export interface QueryInterchainAccountFromAddressResponse {
+  interchainAccountAddress: string;
+}
+/** QueryInterchainAccountFromAddressResponse the response type for the Query/InterchainAccountAddress RPC */
+
+export interface QueryInterchainAccountFromAddressResponseSDKType {
   interchain_account_address: string;
 }
-
 /** QueryParamsRequest is request type for the Query/Params RPC method. */
-export interface QueryParamsRequest {}
 
+export interface QueryParamsRequest {}
+/** QueryParamsRequest is request type for the Query/Params RPC method. */
+
+export interface QueryParamsRequestSDKType {}
 /** QueryParamsResponse is response type for the Query/Params RPC method. */
+
 export interface QueryParamsResponse {
   /** params holds all the parameters of this module. */
   params: Params;
 }
+/** QueryParamsResponse is response type for the Query/Params RPC method. */
+
+export interface QueryParamsResponseSDKType {
+  /** params holds all the parameters of this module. */
+  params: ParamsSDKType;
+}
 export interface QueryGetValidatorsRequest {
+  chainId: string;
+}
+export interface QueryGetValidatorsRequestSDKType {
   chain_id: string;
 }
 export interface QueryGetValidatorsResponse {
   validators: Validator[];
 }
+export interface QueryGetValidatorsResponseSDKType {
+  validators: ValidatorSDKType[];
+}
 export interface QueryGetICAAccountRequest {}
+export interface QueryGetICAAccountRequestSDKType {}
 export interface QueryGetICAAccountResponse {
   ICAAccount: ICAAccount;
 }
+export interface QueryGetICAAccountResponseSDKType {
+  ICAAccount: ICAAccountSDKType;
+}
 export interface QueryGetHostZoneRequest {
+  chainId: string;
+}
+export interface QueryGetHostZoneRequestSDKType {
   chain_id: string;
 }
 export interface QueryGetHostZoneResponse {
   HostZone: HostZone;
 }
+export interface QueryGetHostZoneResponseSDKType {
+  HostZone: HostZoneSDKType;
+}
 export interface QueryAllHostZoneRequest {
   pagination?: PageRequest;
+}
+export interface QueryAllHostZoneRequestSDKType {
+  pagination?: PageRequestSDKType;
 }
 export interface QueryAllHostZoneResponse {
   HostZone: HostZone[];
   pagination?: PageResponse;
 }
+export interface QueryAllHostZoneResponseSDKType {
+  HostZone: HostZoneSDKType[];
+  pagination?: PageResponseSDKType;
+}
 export interface QueryModuleAddressRequest {
+  name: string;
+}
+export interface QueryModuleAddressRequestSDKType {
   name: string;
 }
 export interface QueryModuleAddressResponse {
   addr: string;
 }
+export interface QueryModuleAddressResponseSDKType {
+  addr: string;
+}
 export interface QueryGetEpochTrackerRequest {
+  epochIdentifier: string;
+}
+export interface QueryGetEpochTrackerRequestSDKType {
   epochIdentifier: string;
 }
 export interface QueryGetEpochTrackerResponse {
   epochTracker: EpochTracker;
 }
+export interface QueryGetEpochTrackerResponseSDKType {
+  epochTracker: EpochTrackerSDKType;
+}
 export interface QueryAllEpochTrackerRequest {
   pagination?: PageRequest;
+}
+export interface QueryAllEpochTrackerRequestSDKType {
+  pagination?: PageRequestSDKType;
 }
 export interface QueryAllEpochTrackerResponse {
   epochTracker: EpochTracker[];
   pagination?: PageResponse;
 }
+export interface QueryAllEpochTrackerResponseSDKType {
+  epochTracker: EpochTrackerSDKType[];
+  pagination?: PageResponseSDKType;
+}
 
 function createBaseQueryInterchainAccountFromAddressRequest(): QueryInterchainAccountFromAddressRequest {
   return {
     owner: "",
-    connection_id: ""
+    connectionId: ""
   };
 }
 
@@ -82,8 +144,8 @@ export const QueryInterchainAccountFromAddressRequest = {
       writer.uint32(10).string(message.owner);
     }
 
-    if (message.connection_id !== "") {
-      writer.uint32(18).string(message.connection_id);
+    if (message.connectionId !== "") {
+      writer.uint32(18).string(message.connectionId);
     }
 
     return writer;
@@ -103,7 +165,7 @@ export const QueryInterchainAccountFromAddressRequest = {
           break;
 
         case 2:
-          message.connection_id = reader.string();
+          message.connectionId = reader.string();
           break;
 
         default:
@@ -115,24 +177,10 @@ export const QueryInterchainAccountFromAddressRequest = {
     return message;
   },
 
-  fromJSON(object: any): QueryInterchainAccountFromAddressRequest {
-    return {
-      owner: isSet(object.owner) ? String(object.owner) : "",
-      connection_id: isSet(object.connection_id) ? String(object.connection_id) : ""
-    };
-  },
-
-  toJSON(message: QueryInterchainAccountFromAddressRequest): unknown {
-    const obj: any = {};
-    message.owner !== undefined && (obj.owner = message.owner);
-    message.connection_id !== undefined && (obj.connection_id = message.connection_id);
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<QueryInterchainAccountFromAddressRequest>): QueryInterchainAccountFromAddressRequest {
     const message = createBaseQueryInterchainAccountFromAddressRequest();
     message.owner = object.owner ?? "";
-    message.connection_id = object.connection_id ?? "";
+    message.connectionId = object.connectionId ?? "";
     return message;
   }
 
@@ -140,20 +188,20 @@ export const QueryInterchainAccountFromAddressRequest = {
 
 function createBaseQueryInterchainAccountFromAddressResponse(): QueryInterchainAccountFromAddressResponse {
   return {
-    interchain_account_address: ""
+    interchainAccountAddress: ""
   };
 }
 
 export const QueryInterchainAccountFromAddressResponse = {
   encode(message: QueryInterchainAccountFromAddressResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
-    if (message.interchain_account_address !== "") {
-      writer.uint32(10).string(message.interchain_account_address);
+    if (message.interchainAccountAddress !== "") {
+      writer.uint32(10).string(message.interchainAccountAddress);
     }
 
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): QueryInterchainAccountFromAddressResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): QueryInterchainAccountFromAddressResponseSDKType {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryInterchainAccountFromAddressResponse();
@@ -163,7 +211,7 @@ export const QueryInterchainAccountFromAddressResponse = {
 
       switch (tag >>> 3) {
         case 1:
-          message.interchain_account_address = reader.string();
+          message.interchainAccountAddress = reader.string();
           break;
 
         default:
@@ -175,21 +223,9 @@ export const QueryInterchainAccountFromAddressResponse = {
     return message;
   },
 
-  fromJSON(object: any): QueryInterchainAccountFromAddressResponse {
-    return {
-      interchain_account_address: isSet(object.interchain_account_address) ? String(object.interchain_account_address) : ""
-    };
-  },
-
-  toJSON(message: QueryInterchainAccountFromAddressResponse): unknown {
-    const obj: any = {};
-    message.interchain_account_address !== undefined && (obj.interchain_account_address = message.interchain_account_address);
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<QueryInterchainAccountFromAddressResponse>): QueryInterchainAccountFromAddressResponse {
     const message = createBaseQueryInterchainAccountFromAddressResponse();
-    message.interchain_account_address = object.interchain_account_address ?? "";
+    message.interchainAccountAddress = object.interchainAccountAddress ?? "";
     return message;
   }
 
@@ -222,15 +258,6 @@ export const QueryParamsRequest = {
     return message;
   },
 
-  fromJSON(_: any): QueryParamsRequest {
-    return {};
-  },
-
-  toJSON(_: QueryParamsRequest): unknown {
-    const obj: any = {};
-    return obj;
-  },
-
   fromPartial(_: DeepPartial<QueryParamsRequest>): QueryParamsRequest {
     const message = createBaseQueryParamsRequest();
     return message;
@@ -253,7 +280,7 @@ export const QueryParamsResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): QueryParamsResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): QueryParamsResponseSDKType {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryParamsResponse();
@@ -275,18 +302,6 @@ export const QueryParamsResponse = {
     return message;
   },
 
-  fromJSON(object: any): QueryParamsResponse {
-    return {
-      params: isSet(object.params) ? Params.fromJSON(object.params) : undefined
-    };
-  },
-
-  toJSON(message: QueryParamsResponse): unknown {
-    const obj: any = {};
-    message.params !== undefined && (obj.params = message.params ? Params.toJSON(message.params) : undefined);
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<QueryParamsResponse>): QueryParamsResponse {
     const message = createBaseQueryParamsResponse();
     message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
@@ -297,14 +312,14 @@ export const QueryParamsResponse = {
 
 function createBaseQueryGetValidatorsRequest(): QueryGetValidatorsRequest {
   return {
-    chain_id: ""
+    chainId: ""
   };
 }
 
 export const QueryGetValidatorsRequest = {
   encode(message: QueryGetValidatorsRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
-    if (message.chain_id !== "") {
-      writer.uint32(10).string(message.chain_id);
+    if (message.chainId !== "") {
+      writer.uint32(10).string(message.chainId);
     }
 
     return writer;
@@ -320,7 +335,7 @@ export const QueryGetValidatorsRequest = {
 
       switch (tag >>> 3) {
         case 1:
-          message.chain_id = reader.string();
+          message.chainId = reader.string();
           break;
 
         default:
@@ -332,21 +347,9 @@ export const QueryGetValidatorsRequest = {
     return message;
   },
 
-  fromJSON(object: any): QueryGetValidatorsRequest {
-    return {
-      chain_id: isSet(object.chain_id) ? String(object.chain_id) : ""
-    };
-  },
-
-  toJSON(message: QueryGetValidatorsRequest): unknown {
-    const obj: any = {};
-    message.chain_id !== undefined && (obj.chain_id = message.chain_id);
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<QueryGetValidatorsRequest>): QueryGetValidatorsRequest {
     const message = createBaseQueryGetValidatorsRequest();
-    message.chain_id = object.chain_id ?? "";
+    message.chainId = object.chainId ?? "";
     return message;
   }
 
@@ -367,7 +370,7 @@ export const QueryGetValidatorsResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetValidatorsResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetValidatorsResponseSDKType {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetValidatorsResponse();
@@ -387,24 +390,6 @@ export const QueryGetValidatorsResponse = {
     }
 
     return message;
-  },
-
-  fromJSON(object: any): QueryGetValidatorsResponse {
-    return {
-      validators: Array.isArray(object?.validators) ? object.validators.map((e: any) => Validator.fromJSON(e)) : []
-    };
-  },
-
-  toJSON(message: QueryGetValidatorsResponse): unknown {
-    const obj: any = {};
-
-    if (message.validators) {
-      obj.validators = message.validators.map(e => e ? Validator.toJSON(e) : undefined);
-    } else {
-      obj.validators = [];
-    }
-
-    return obj;
   },
 
   fromPartial(object: DeepPartial<QueryGetValidatorsResponse>): QueryGetValidatorsResponse {
@@ -442,15 +427,6 @@ export const QueryGetICAAccountRequest = {
     return message;
   },
 
-  fromJSON(_: any): QueryGetICAAccountRequest {
-    return {};
-  },
-
-  toJSON(_: QueryGetICAAccountRequest): unknown {
-    const obj: any = {};
-    return obj;
-  },
-
   fromPartial(_: DeepPartial<QueryGetICAAccountRequest>): QueryGetICAAccountRequest {
     const message = createBaseQueryGetICAAccountRequest();
     return message;
@@ -473,7 +449,7 @@ export const QueryGetICAAccountResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetICAAccountResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetICAAccountResponseSDKType {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetICAAccountResponse();
@@ -495,18 +471,6 @@ export const QueryGetICAAccountResponse = {
     return message;
   },
 
-  fromJSON(object: any): QueryGetICAAccountResponse {
-    return {
-      ICAAccount: isSet(object.ICAAccount) ? ICAAccount.fromJSON(object.ICAAccount) : undefined
-    };
-  },
-
-  toJSON(message: QueryGetICAAccountResponse): unknown {
-    const obj: any = {};
-    message.ICAAccount !== undefined && (obj.ICAAccount = message.ICAAccount ? ICAAccount.toJSON(message.ICAAccount) : undefined);
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<QueryGetICAAccountResponse>): QueryGetICAAccountResponse {
     const message = createBaseQueryGetICAAccountResponse();
     message.ICAAccount = object.ICAAccount !== undefined && object.ICAAccount !== null ? ICAAccount.fromPartial(object.ICAAccount) : undefined;
@@ -517,14 +481,14 @@ export const QueryGetICAAccountResponse = {
 
 function createBaseQueryGetHostZoneRequest(): QueryGetHostZoneRequest {
   return {
-    chain_id: ""
+    chainId: ""
   };
 }
 
 export const QueryGetHostZoneRequest = {
   encode(message: QueryGetHostZoneRequest, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
-    if (message.chain_id !== "") {
-      writer.uint32(10).string(message.chain_id);
+    if (message.chainId !== "") {
+      writer.uint32(10).string(message.chainId);
     }
 
     return writer;
@@ -540,7 +504,7 @@ export const QueryGetHostZoneRequest = {
 
       switch (tag >>> 3) {
         case 1:
-          message.chain_id = reader.string();
+          message.chainId = reader.string();
           break;
 
         default:
@@ -552,21 +516,9 @@ export const QueryGetHostZoneRequest = {
     return message;
   },
 
-  fromJSON(object: any): QueryGetHostZoneRequest {
-    return {
-      chain_id: isSet(object.chain_id) ? String(object.chain_id) : ""
-    };
-  },
-
-  toJSON(message: QueryGetHostZoneRequest): unknown {
-    const obj: any = {};
-    message.chain_id !== undefined && (obj.chain_id = message.chain_id);
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<QueryGetHostZoneRequest>): QueryGetHostZoneRequest {
     const message = createBaseQueryGetHostZoneRequest();
-    message.chain_id = object.chain_id ?? "";
+    message.chainId = object.chainId ?? "";
     return message;
   }
 
@@ -587,7 +539,7 @@ export const QueryGetHostZoneResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetHostZoneResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetHostZoneResponseSDKType {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetHostZoneResponse();
@@ -607,18 +559,6 @@ export const QueryGetHostZoneResponse = {
     }
 
     return message;
-  },
-
-  fromJSON(object: any): QueryGetHostZoneResponse {
-    return {
-      HostZone: isSet(object.HostZone) ? HostZone.fromJSON(object.HostZone) : undefined
-    };
-  },
-
-  toJSON(message: QueryGetHostZoneResponse): unknown {
-    const obj: any = {};
-    message.HostZone !== undefined && (obj.HostZone = message.HostZone ? HostZone.toJSON(message.HostZone) : undefined);
-    return obj;
   },
 
   fromPartial(object: DeepPartial<QueryGetHostZoneResponse>): QueryGetHostZoneResponse {
@@ -666,18 +606,6 @@ export const QueryAllHostZoneRequest = {
     return message;
   },
 
-  fromJSON(object: any): QueryAllHostZoneRequest {
-    return {
-      pagination: isSet(object.pagination) ? PageRequest.fromJSON(object.pagination) : undefined
-    };
-  },
-
-  toJSON(message: QueryAllHostZoneRequest): unknown {
-    const obj: any = {};
-    message.pagination !== undefined && (obj.pagination = message.pagination ? PageRequest.toJSON(message.pagination) : undefined);
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<QueryAllHostZoneRequest>): QueryAllHostZoneRequest {
     const message = createBaseQueryAllHostZoneRequest();
     message.pagination = object.pagination !== undefined && object.pagination !== null ? PageRequest.fromPartial(object.pagination) : undefined;
@@ -706,7 +634,7 @@ export const QueryAllHostZoneResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllHostZoneResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllHostZoneResponseSDKType {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryAllHostZoneResponse();
@@ -730,26 +658,6 @@ export const QueryAllHostZoneResponse = {
     }
 
     return message;
-  },
-
-  fromJSON(object: any): QueryAllHostZoneResponse {
-    return {
-      HostZone: Array.isArray(object?.HostZone) ? object.HostZone.map((e: any) => HostZone.fromJSON(e)) : [],
-      pagination: isSet(object.pagination) ? PageResponse.fromJSON(object.pagination) : undefined
-    };
-  },
-
-  toJSON(message: QueryAllHostZoneResponse): unknown {
-    const obj: any = {};
-
-    if (message.HostZone) {
-      obj.HostZone = message.HostZone.map(e => e ? HostZone.toJSON(e) : undefined);
-    } else {
-      obj.HostZone = [];
-    }
-
-    message.pagination !== undefined && (obj.pagination = message.pagination ? PageResponse.toJSON(message.pagination) : undefined);
-    return obj;
   },
 
   fromPartial(object: DeepPartial<QueryAllHostZoneResponse>): QueryAllHostZoneResponse {
@@ -798,18 +706,6 @@ export const QueryModuleAddressRequest = {
     return message;
   },
 
-  fromJSON(object: any): QueryModuleAddressRequest {
-    return {
-      name: isSet(object.name) ? String(object.name) : ""
-    };
-  },
-
-  toJSON(message: QueryModuleAddressRequest): unknown {
-    const obj: any = {};
-    message.name !== undefined && (obj.name = message.name);
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<QueryModuleAddressRequest>): QueryModuleAddressRequest {
     const message = createBaseQueryModuleAddressRequest();
     message.name = object.name ?? "";
@@ -833,7 +729,7 @@ export const QueryModuleAddressResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): QueryModuleAddressResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): QueryModuleAddressResponseSDKType {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryModuleAddressResponse();
@@ -853,18 +749,6 @@ export const QueryModuleAddressResponse = {
     }
 
     return message;
-  },
-
-  fromJSON(object: any): QueryModuleAddressResponse {
-    return {
-      addr: isSet(object.addr) ? String(object.addr) : ""
-    };
-  },
-
-  toJSON(message: QueryModuleAddressResponse): unknown {
-    const obj: any = {};
-    message.addr !== undefined && (obj.addr = message.addr);
-    return obj;
   },
 
   fromPartial(object: DeepPartial<QueryModuleAddressResponse>): QueryModuleAddressResponse {
@@ -912,18 +796,6 @@ export const QueryGetEpochTrackerRequest = {
     return message;
   },
 
-  fromJSON(object: any): QueryGetEpochTrackerRequest {
-    return {
-      epochIdentifier: isSet(object.epochIdentifier) ? String(object.epochIdentifier) : ""
-    };
-  },
-
-  toJSON(message: QueryGetEpochTrackerRequest): unknown {
-    const obj: any = {};
-    message.epochIdentifier !== undefined && (obj.epochIdentifier = message.epochIdentifier);
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<QueryGetEpochTrackerRequest>): QueryGetEpochTrackerRequest {
     const message = createBaseQueryGetEpochTrackerRequest();
     message.epochIdentifier = object.epochIdentifier ?? "";
@@ -947,7 +819,7 @@ export const QueryGetEpochTrackerResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetEpochTrackerResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetEpochTrackerResponseSDKType {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetEpochTrackerResponse();
@@ -967,18 +839,6 @@ export const QueryGetEpochTrackerResponse = {
     }
 
     return message;
-  },
-
-  fromJSON(object: any): QueryGetEpochTrackerResponse {
-    return {
-      epochTracker: isSet(object.epochTracker) ? EpochTracker.fromJSON(object.epochTracker) : undefined
-    };
-  },
-
-  toJSON(message: QueryGetEpochTrackerResponse): unknown {
-    const obj: any = {};
-    message.epochTracker !== undefined && (obj.epochTracker = message.epochTracker ? EpochTracker.toJSON(message.epochTracker) : undefined);
-    return obj;
   },
 
   fromPartial(object: DeepPartial<QueryGetEpochTrackerResponse>): QueryGetEpochTrackerResponse {
@@ -1026,18 +886,6 @@ export const QueryAllEpochTrackerRequest = {
     return message;
   },
 
-  fromJSON(object: any): QueryAllEpochTrackerRequest {
-    return {
-      pagination: isSet(object.pagination) ? PageRequest.fromJSON(object.pagination) : undefined
-    };
-  },
-
-  toJSON(message: QueryAllEpochTrackerRequest): unknown {
-    const obj: any = {};
-    message.pagination !== undefined && (obj.pagination = message.pagination ? PageRequest.toJSON(message.pagination) : undefined);
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<QueryAllEpochTrackerRequest>): QueryAllEpochTrackerRequest {
     const message = createBaseQueryAllEpochTrackerRequest();
     message.pagination = object.pagination !== undefined && object.pagination !== null ? PageRequest.fromPartial(object.pagination) : undefined;
@@ -1066,7 +914,7 @@ export const QueryAllEpochTrackerResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllEpochTrackerResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllEpochTrackerResponseSDKType {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryAllEpochTrackerResponse();
@@ -1090,26 +938,6 @@ export const QueryAllEpochTrackerResponse = {
     }
 
     return message;
-  },
-
-  fromJSON(object: any): QueryAllEpochTrackerResponse {
-    return {
-      epochTracker: Array.isArray(object?.epochTracker) ? object.epochTracker.map((e: any) => EpochTracker.fromJSON(e)) : [],
-      pagination: isSet(object.pagination) ? PageResponse.fromJSON(object.pagination) : undefined
-    };
-  },
-
-  toJSON(message: QueryAllEpochTrackerResponse): unknown {
-    const obj: any = {};
-
-    if (message.epochTracker) {
-      obj.epochTracker = message.epochTracker.map(e => e ? EpochTracker.toJSON(e) : undefined);
-    } else {
-      obj.epochTracker = [];
-    }
-
-    message.pagination !== undefined && (obj.pagination = message.pagination ? PageResponse.toJSON(message.pagination) : undefined);
-    return obj;
   },
 
   fromPartial(object: DeepPartial<QueryAllEpochTrackerResponse>): QueryAllEpochTrackerResponse {

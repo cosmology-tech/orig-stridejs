@@ -1,8 +1,13 @@
 import * as _m0 from "protobufjs/minimal";
-import { Long, isSet, DeepPartial } from "@osmonauts/helpers";
-
+import { Long, DeepPartial } from "@osmonauts/helpers";
 /** ---------------------- Transfer Callback ---------------------- // */
+
 export interface TransferCallback {
+  depositRecordId: Long;
+}
+/** ---------------------- Transfer Callback ---------------------- // */
+
+export interface TransferCallbackSDKType {
   depositRecordId: Long;
 }
 
@@ -41,18 +46,6 @@ export const TransferCallback = {
     }
 
     return message;
-  },
-
-  fromJSON(object: any): TransferCallback {
-    return {
-      depositRecordId: isSet(object.depositRecordId) ? Long.fromString(object.depositRecordId) : Long.UZERO
-    };
-  },
-
-  toJSON(message: TransferCallback): unknown {
-    const obj: any = {};
-    message.depositRecordId !== undefined && (obj.depositRecordId = (message.depositRecordId || Long.UZERO).toString());
-    return obj;
   },
 
   fromPartial(object: DeepPartial<TransferCallback>): TransferCallback {

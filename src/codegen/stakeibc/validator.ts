@@ -1,6 +1,11 @@
 import * as _m0 from "protobufjs/minimal";
-import { Long, isSet, DeepPartial } from "@osmonauts/helpers";
+import { Long, DeepPartial } from "@osmonauts/helpers";
 export enum Validator_ValidatorStatus {
+  Active = 0,
+  Inactive = 1,
+  UNRECOGNIZED = -1,
+}
+export enum Validator_ValidatorStatusSDKType {
   Active = 0,
   Inactive = 1,
   UNRECOGNIZED = -1,
@@ -37,6 +42,10 @@ export interface ValidatorExchangeRate {
   internalTokensToSharesRate: string;
   epochNumber: Long;
 }
+export interface ValidatorExchangeRateSDKType {
+  internalTokensToSharesRate: string;
+  epochNumber: Long;
+}
 export interface Validator {
   name: string;
   address: string;
@@ -45,6 +54,15 @@ export interface Validator {
   delegationAmt: Long;
   weight: Long;
   internalExchangeRate: ValidatorExchangeRate;
+}
+export interface ValidatorSDKType {
+  name: string;
+  address: string;
+  status: Validator_ValidatorStatusSDKType;
+  commissionRate: Long;
+  delegationAmt: Long;
+  weight: Long;
+  internalExchangeRate: ValidatorExchangeRateSDKType;
 }
 
 function createBaseValidatorExchangeRate(): ValidatorExchangeRate {
@@ -91,20 +109,6 @@ export const ValidatorExchangeRate = {
     }
 
     return message;
-  },
-
-  fromJSON(object: any): ValidatorExchangeRate {
-    return {
-      internalTokensToSharesRate: isSet(object.internalTokensToSharesRate) ? String(object.internalTokensToSharesRate) : "",
-      epochNumber: isSet(object.epochNumber) ? Long.fromString(object.epochNumber) : Long.UZERO
-    };
-  },
-
-  toJSON(message: ValidatorExchangeRate): unknown {
-    const obj: any = {};
-    message.internalTokensToSharesRate !== undefined && (obj.internalTokensToSharesRate = message.internalTokensToSharesRate);
-    message.epochNumber !== undefined && (obj.epochNumber = (message.epochNumber || Long.UZERO).toString());
-    return obj;
   },
 
   fromPartial(object: DeepPartial<ValidatorExchangeRate>): ValidatorExchangeRate {
@@ -205,30 +209,6 @@ export const Validator = {
     }
 
     return message;
-  },
-
-  fromJSON(object: any): Validator {
-    return {
-      name: isSet(object.name) ? String(object.name) : "",
-      address: isSet(object.address) ? String(object.address) : "",
-      status: isSet(object.status) ? validator_ValidatorStatusFromJSON(object.status) : 0,
-      commissionRate: isSet(object.commissionRate) ? Long.fromString(object.commissionRate) : Long.UZERO,
-      delegationAmt: isSet(object.delegationAmt) ? Long.fromString(object.delegationAmt) : Long.UZERO,
-      weight: isSet(object.weight) ? Long.fromString(object.weight) : Long.UZERO,
-      internalExchangeRate: isSet(object.internalExchangeRate) ? ValidatorExchangeRate.fromJSON(object.internalExchangeRate) : undefined
-    };
-  },
-
-  toJSON(message: Validator): unknown {
-    const obj: any = {};
-    message.name !== undefined && (obj.name = message.name);
-    message.address !== undefined && (obj.address = message.address);
-    message.status !== undefined && (obj.status = validator_ValidatorStatusToJSON(message.status));
-    message.commissionRate !== undefined && (obj.commissionRate = (message.commissionRate || Long.UZERO).toString());
-    message.delegationAmt !== undefined && (obj.delegationAmt = (message.delegationAmt || Long.UZERO).toString());
-    message.weight !== undefined && (obj.weight = (message.weight || Long.UZERO).toString());
-    message.internalExchangeRate !== undefined && (obj.internalExchangeRate = message.internalExchangeRate ? ValidatorExchangeRate.toJSON(message.internalExchangeRate) : undefined);
-    return obj;
   },
 
   fromPartial(object: DeepPartial<Validator>): Validator {

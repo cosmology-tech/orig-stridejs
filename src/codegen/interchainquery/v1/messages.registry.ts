@@ -1,4 +1,3 @@
-import { ProofOps } from "../../tendermint/crypto/proof";
 import { GeneratedType, Registry } from "@cosmjs/proto-signing";
 import { MsgSubmitQueryResponse } from "./messages";
 export const registry: ReadonlyArray<[string, GeneratedType]> = [["/stride.interchainquery.MsgSubmitQueryResponse", MsgSubmitQueryResponse]];
@@ -22,24 +21,6 @@ export const MessageComposer = {
       return {
         typeUrl: "/stride.interchainquery.MsgSubmitQueryResponse",
         value
-      };
-    }
-
-  },
-  toJSON: {
-    submitQueryResponse(value: MsgSubmitQueryResponse) {
-      return {
-        typeUrl: "/stride.interchainquery.MsgSubmitQueryResponse",
-        value: MsgSubmitQueryResponse.toJSON(value)
-      };
-    }
-
-  },
-  fromJSON: {
-    submitQueryResponse(value: any) {
-      return {
-        typeUrl: "/stride.interchainquery.MsgSubmitQueryResponse",
-        value: MsgSubmitQueryResponse.fromJSON(value)
       };
     }
 

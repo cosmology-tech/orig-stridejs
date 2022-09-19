@@ -12,7 +12,7 @@ telescope({
   options: {
     prototypes: {
       parser: {
-        keepCase: true
+        keepCase: false
       },
       includePackageVar: false,
       typingsFormat: {
@@ -22,7 +22,50 @@ telescope({
       }
     },
     aminoEncoding: {
-      enabled: true
+      enabled: true,
+      exceptions: {
+        '/Stridelabs.stride.stakeibc.MsgLiquidStake': {
+          aminoType: 'stakeibc/LiquidStake'
+        },
+
+        '/Stridelabs.stride.stakeibc.MsgRedeemStake': {
+          aminoType: 'stakeibc/RedeemStake'
+        },
+
+        '/Stridelabs.stride.stakeibc.MsgRegisterHostZone': {
+          aminoType: 'stakeibc/RegisterHostZone'
+        },
+
+        '/Stridelabs.stride.stakeibc.MsgClaimUndelegatedTokens': {
+          aminoType: 'stakeibc/ClaimUndelegatedTokens'
+        },
+
+        '/Stridelabs.stride.stakeibc.MsgRebalanceValidators': {
+          aminoType: 'stakeibc/RebalanceValidators'
+        },
+
+        '/Stridelabs.stride.stakeibc.MsgAddValidator': {
+          aminoType: 'stakeibc/AddValidator'
+        },
+        '/Stridelabs.stride.stakeibc.MsgChangeValidatorWeight': {
+          aminoType: 'stakeibc/ChangeValidatorWeight'
+        },
+        '/Stridelabs.stride.stakeibc.MsgDeleteValidator': {
+          aminoType: 'stakeibc/DeleteValidator'
+        },
+
+        '/Stridelabs.stride.stakeibc.MsgRestoreInterchainAccount': {
+          aminoType: 'stakeibc/RestoreInterchainAccount'
+        },
+
+        '/Stridelabs.stride.stakeibc.MsgUpdateValidatorSharesExchRate': {
+          aminoType: 'stakeibc/UpdateValidatorSharesExchRate'
+        }
+
+        // '/Stridelabs.stride.stakeibc.MsgClearBalance': {
+        //   aminoType: 'still-no-defined'
+        // },
+      }
     },
     lcdClients: {
       enabled: true

@@ -1,8 +1,11 @@
 import * as _m0 from "protobufjs/minimal";
 import { DeepPartial } from "@osmonauts/helpers";
-
 /** Params defines the parameters for the module. */
+
 export interface Params {}
+/** Params defines the parameters for the module. */
+
+export interface ParamsSDKType {}
 
 function createBaseParams(): Params {
   return {};
@@ -29,15 +32,6 @@ export const Params = {
     }
 
     return message;
-  },
-
-  fromJSON(_: any): Params {
-    return {};
-  },
-
-  toJSON(_: Params): unknown {
-    const obj: any = {};
-    return obj;
   },
 
   fromPartial(_: DeepPartial<Params>): Params {

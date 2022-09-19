@@ -1,9 +1,14 @@
-import { Validator } from "./validator";
+import { Validator, ValidatorSDKType } from "./validator";
 import * as _m0 from "protobufjs/minimal";
-import { Long, isSet, DeepPartial } from "@osmonauts/helpers";
+import { Long, DeepPartial } from "@osmonauts/helpers";
 export interface Delegation {
   delegateAcctAddress: string;
   validator: Validator;
+  amt: Long;
+}
+export interface DelegationSDKType {
+  delegateAcctAddress: string;
+  validator: ValidatorSDKType;
   amt: Long;
 }
 
@@ -60,22 +65,6 @@ export const Delegation = {
     }
 
     return message;
-  },
-
-  fromJSON(object: any): Delegation {
-    return {
-      delegateAcctAddress: isSet(object.delegateAcctAddress) ? String(object.delegateAcctAddress) : "",
-      validator: isSet(object.validator) ? Validator.fromJSON(object.validator) : undefined,
-      amt: isSet(object.amt) ? Long.fromString(object.amt) : Long.ZERO
-    };
-  },
-
-  toJSON(message: Delegation): unknown {
-    const obj: any = {};
-    message.delegateAcctAddress !== undefined && (obj.delegateAcctAddress = message.delegateAcctAddress);
-    message.validator !== undefined && (obj.validator = message.validator ? Validator.toJSON(message.validator) : undefined);
-    message.amt !== undefined && (obj.amt = (message.amt || Long.ZERO).toString());
-    return obj;
   },
 
   fromPartial(object: DeepPartial<Delegation>): Delegation {

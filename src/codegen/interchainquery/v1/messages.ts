@@ -1,58 +1,74 @@
-import { ProofOps } from "../../tendermint/crypto/proof";
+import { ProofOps, ProofOpsSDKType } from "../../tendermint/crypto/proof";
 import * as _m0 from "protobufjs/minimal";
-import { Long, isSet, bytesFromBase64, base64FromBytes, DeepPartial } from "@osmonauts/helpers";
-
+import { Long, DeepPartial } from "@osmonauts/helpers";
 /** MsgSubmitQueryResponse represents a message type to fulfil a query request. */
+
 export interface MsgSubmitQueryResponse {
+  chainId: string;
+  queryId: string;
+  result: Uint8Array;
+  proofOps: ProofOps;
+  height: Long;
+  fromAddress: string;
+}
+/** MsgSubmitQueryResponse represents a message type to fulfil a query request. */
+
+export interface MsgSubmitQueryResponseSDKType {
   chain_id: string;
   query_id: string;
   result: Uint8Array;
-  proof_ops: ProofOps;
+  proof_ops: ProofOpsSDKType;
   height: Long;
   from_address: string;
 }
-
 /**
  * MsgSubmitQueryResponseResponse defines the MsgSubmitQueryResponse response
  * type.
  */
+
 export interface MsgSubmitQueryResponseResponse {}
+/**
+ * MsgSubmitQueryResponseResponse defines the MsgSubmitQueryResponse response
+ * type.
+ */
+
+export interface MsgSubmitQueryResponseResponseSDKType {}
 
 function createBaseMsgSubmitQueryResponse(): MsgSubmitQueryResponse {
   return {
-    chain_id: "",
-    query_id: "",
+    chainId: "",
+    queryId: "",
     result: new Uint8Array(),
-    proof_ops: undefined,
+    proofOps: undefined,
     height: Long.ZERO,
-    from_address: ""
+    fromAddress: ""
   };
 }
 
 export const MsgSubmitQueryResponse = {
   encode(message: MsgSubmitQueryResponse, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
-    if (message.chain_id !== "") {
-      writer.uint32(10).string(message.chain_id);
+    if (message.chainId !== "") {
+      writer.uint32(10).string(message.chainId);
     }
 
-    if (message.query_id !== "") {
-      writer.uint32(18).string(message.query_id);
+    if (message.queryId !== "") {
+      writer.uint32(18).string(message.queryId);
     }
 
     if (message.result.length !== 0) {
       writer.uint32(26).bytes(message.result);
     }
 
-    if (message.proof_ops !== undefined) {
-      ProofOps.encode(message.proof_ops, writer.uint32(34).fork()).ldelim();
+    if (message.proofOps !== undefined) {
+      ProofOps.encode(message.proofOps, writer.uint32(34).fork()).ldelim();
     }
 
     if (!message.height.isZero()) {
       writer.uint32(40).int64(message.height);
     }
 
-    if (message.from_address !== "") {
-      writer.uint32(50).string(message.from_address);
+    if (message.fromAddress !== "") {
+      writer.uint32(50).string(message.fromAddress);
     }
 
     return writer;
@@ -68,11 +84,11 @@ export const MsgSubmitQueryResponse = {
 
       switch (tag >>> 3) {
         case 1:
-          message.chain_id = reader.string();
+          message.chainId = reader.string();
           break;
 
         case 2:
-          message.query_id = reader.string();
+          message.queryId = reader.string();
           break;
 
         case 3:
@@ -80,7 +96,7 @@ export const MsgSubmitQueryResponse = {
           break;
 
         case 4:
-          message.proof_ops = ProofOps.decode(reader, reader.uint32());
+          message.proofOps = ProofOps.decode(reader, reader.uint32());
           break;
 
         case 5:
@@ -88,7 +104,7 @@ export const MsgSubmitQueryResponse = {
           break;
 
         case 6:
-          message.from_address = reader.string();
+          message.fromAddress = reader.string();
           break;
 
         default:
@@ -100,36 +116,14 @@ export const MsgSubmitQueryResponse = {
     return message;
   },
 
-  fromJSON(object: any): MsgSubmitQueryResponse {
-    return {
-      chain_id: isSet(object.chain_id) ? String(object.chain_id) : "",
-      query_id: isSet(object.query_id) ? String(object.query_id) : "",
-      result: isSet(object.result) ? bytesFromBase64(object.result) : new Uint8Array(),
-      proof_ops: isSet(object.proof_ops) ? ProofOps.fromJSON(object.proof_ops) : undefined,
-      height: isSet(object.height) ? Long.fromString(object.height) : Long.ZERO,
-      from_address: isSet(object.from_address) ? String(object.from_address) : ""
-    };
-  },
-
-  toJSON(message: MsgSubmitQueryResponse): unknown {
-    const obj: any = {};
-    message.chain_id !== undefined && (obj.chain_id = message.chain_id);
-    message.query_id !== undefined && (obj.query_id = message.query_id);
-    message.result !== undefined && (obj.result = base64FromBytes(message.result !== undefined ? message.result : new Uint8Array()));
-    message.proof_ops !== undefined && (obj.proof_ops = message.proof_ops ? ProofOps.toJSON(message.proof_ops) : undefined);
-    message.height !== undefined && (obj.height = (message.height || Long.ZERO).toString());
-    message.from_address !== undefined && (obj.from_address = message.from_address);
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<MsgSubmitQueryResponse>): MsgSubmitQueryResponse {
     const message = createBaseMsgSubmitQueryResponse();
-    message.chain_id = object.chain_id ?? "";
-    message.query_id = object.query_id ?? "";
+    message.chainId = object.chainId ?? "";
+    message.queryId = object.queryId ?? "";
     message.result = object.result ?? new Uint8Array();
-    message.proof_ops = object.proof_ops !== undefined && object.proof_ops !== null ? ProofOps.fromPartial(object.proof_ops) : undefined;
+    message.proofOps = object.proofOps !== undefined && object.proofOps !== null ? ProofOps.fromPartial(object.proofOps) : undefined;
     message.height = object.height !== undefined && object.height !== null ? Long.fromValue(object.height) : Long.ZERO;
-    message.from_address = object.from_address ?? "";
+    message.fromAddress = object.fromAddress ?? "";
     return message;
   }
 
@@ -144,7 +138,7 @@ export const MsgSubmitQueryResponseResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgSubmitQueryResponseResponse {
+  decode(input: _m0.Reader | Uint8Array, length?: number): MsgSubmitQueryResponseResponseSDKType {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSubmitQueryResponseResponse();
@@ -160,15 +154,6 @@ export const MsgSubmitQueryResponseResponse = {
     }
 
     return message;
-  },
-
-  fromJSON(_: any): MsgSubmitQueryResponseResponse {
-    return {};
-  },
-
-  toJSON(_: MsgSubmitQueryResponseResponse): unknown {
-    const obj: any = {};
-    return obj;
   },
 
   fromPartial(_: DeepPartial<MsgSubmitQueryResponseResponse>): MsgSubmitQueryResponseResponse {

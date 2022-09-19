@@ -1,9 +1,13 @@
 import * as _m0 from "protobufjs/minimal";
-import { isSet, DeepPartial } from "@osmonauts/helpers";
+import { DeepPartial } from "@osmonauts/helpers";
 export interface IcacallbacksPacketData {
   noData?: NoData;
 }
+export interface IcacallbacksPacketDataSDKType {
+  noData?: NoDataSDKType;
+}
 export interface NoData {}
+export interface NoDataSDKType {}
 
 function createBaseIcacallbacksPacketData(): IcacallbacksPacketData {
   return {
@@ -42,18 +46,6 @@ export const IcacallbacksPacketData = {
     return message;
   },
 
-  fromJSON(object: any): IcacallbacksPacketData {
-    return {
-      noData: isSet(object.noData) ? NoData.fromJSON(object.noData) : undefined
-    };
-  },
-
-  toJSON(message: IcacallbacksPacketData): unknown {
-    const obj: any = {};
-    message.noData !== undefined && (obj.noData = message.noData ? NoData.toJSON(message.noData) : undefined);
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<IcacallbacksPacketData>): IcacallbacksPacketData {
     const message = createBaseIcacallbacksPacketData();
     message.noData = object.noData !== undefined && object.noData !== null ? NoData.fromPartial(object.noData) : undefined;
@@ -87,15 +79,6 @@ export const NoData = {
     }
 
     return message;
-  },
-
-  fromJSON(_: any): NoData {
-    return {};
-  },
-
-  toJSON(_: NoData): unknown {
-    const obj: any = {};
-    return obj;
   },
 
   fromPartial(_: DeepPartial<NoData>): NoData {

@@ -1,6 +1,10 @@
 import * as _m0 from "protobufjs/minimal";
-import { isSet, DeepPartial } from "@osmonauts/helpers";
+import { DeepPartial } from "@osmonauts/helpers";
 export interface MinValidatorRequirements {
+  commissionRate: number;
+  uptime: number;
+}
+export interface MinValidatorRequirementsSDKType {
   commissionRate: number;
   uptime: number;
 }
@@ -49,20 +53,6 @@ export const MinValidatorRequirements = {
     }
 
     return message;
-  },
-
-  fromJSON(object: any): MinValidatorRequirements {
-    return {
-      commissionRate: isSet(object.commissionRate) ? Number(object.commissionRate) : 0,
-      uptime: isSet(object.uptime) ? Number(object.uptime) : 0
-    };
-  },
-
-  toJSON(message: MinValidatorRequirements): unknown {
-    const obj: any = {};
-    message.commissionRate !== undefined && (obj.commissionRate = Math.round(message.commissionRate));
-    message.uptime !== undefined && (obj.uptime = Math.round(message.uptime));
-    return obj;
   },
 
   fromPartial(object: DeepPartial<MinValidatorRequirements>): MinValidatorRequirements {

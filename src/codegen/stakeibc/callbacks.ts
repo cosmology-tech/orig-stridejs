@@ -1,9 +1,15 @@
-import { Coin } from "../cosmos/base/v1beta1/coin";
+import { Coin, CoinSDKType } from "../cosmos/base/v1beta1/coin";
 import * as _m0 from "protobufjs/minimal";
-import { Long, isSet, DeepPartial } from "@osmonauts/helpers";
-
+import { Long, DeepPartial } from "@osmonauts/helpers";
 /** ---------------------- Delegation Callbacks ---------------------- // */
+
 export interface SplitDelegation {
+  validator: string;
+  amount: Long;
+}
+/** ---------------------- Delegation Callbacks ---------------------- // */
+
+export interface SplitDelegationSDKType {
   validator: string;
   amount: Long;
 }
@@ -12,27 +18,56 @@ export interface DelegateCallback {
   depositRecordId: Long;
   splitDelegations: SplitDelegation[];
 }
+export interface DelegateCallbackSDKType {
+  hostZoneId: string;
+  depositRecordId: Long;
+  splitDelegations: SplitDelegationSDKType[];
+}
 export interface ClaimCallback {
   userRedemptionRecordId: string;
   chainId: string;
   epochNumber: Long;
 }
-
+export interface ClaimCallbackSDKType {
+  userRedemptionRecordId: string;
+  chainId: string;
+  epochNumber: Long;
+}
 /** ---------------------- Reinvest Callback ---------------------- // */
+
 export interface ReinvestCallback {
   reinvestAmount: Coin;
   hostZoneId: string;
 }
+/** ---------------------- Reinvest Callback ---------------------- // */
 
+export interface ReinvestCallbackSDKType {
+  reinvestAmount: CoinSDKType;
+  hostZoneId: string;
+}
 /** ---------------------- Undelegation Callbacks ---------------------- // */
+
 export interface UndelegateCallback {
   hostZoneId: string;
   splitDelegations: SplitDelegation[];
   epochUnbondingRecordIds: Long[];
 }
+/** ---------------------- Undelegation Callbacks ---------------------- // */
 
+export interface UndelegateCallbackSDKType {
+  hostZoneId: string;
+  splitDelegations: SplitDelegationSDKType[];
+  epochUnbondingRecordIds: Long[];
+}
 /** ---------------------- Redemption Callbacks ---------------------- // */
+
 export interface RedemptionCallback {
+  hostZoneId: string;
+  epochUnbondingRecordIds: Long[];
+}
+/** ---------------------- Redemption Callbacks ---------------------- // */
+
+export interface RedemptionCallbackSDKType {
   hostZoneId: string;
   epochUnbondingRecordIds: Long[];
 }
@@ -81,20 +116,6 @@ export const SplitDelegation = {
     }
 
     return message;
-  },
-
-  fromJSON(object: any): SplitDelegation {
-    return {
-      validator: isSet(object.validator) ? String(object.validator) : "",
-      amount: isSet(object.amount) ? Long.fromString(object.amount) : Long.UZERO
-    };
-  },
-
-  toJSON(message: SplitDelegation): unknown {
-    const obj: any = {};
-    message.validator !== undefined && (obj.validator = message.validator);
-    message.amount !== undefined && (obj.amount = (message.amount || Long.UZERO).toString());
-    return obj;
   },
 
   fromPartial(object: DeepPartial<SplitDelegation>): SplitDelegation {
@@ -159,28 +180,6 @@ export const DelegateCallback = {
     }
 
     return message;
-  },
-
-  fromJSON(object: any): DelegateCallback {
-    return {
-      hostZoneId: isSet(object.hostZoneId) ? String(object.hostZoneId) : "",
-      depositRecordId: isSet(object.depositRecordId) ? Long.fromString(object.depositRecordId) : Long.UZERO,
-      splitDelegations: Array.isArray(object?.splitDelegations) ? object.splitDelegations.map((e: any) => SplitDelegation.fromJSON(e)) : []
-    };
-  },
-
-  toJSON(message: DelegateCallback): unknown {
-    const obj: any = {};
-    message.hostZoneId !== undefined && (obj.hostZoneId = message.hostZoneId);
-    message.depositRecordId !== undefined && (obj.depositRecordId = (message.depositRecordId || Long.UZERO).toString());
-
-    if (message.splitDelegations) {
-      obj.splitDelegations = message.splitDelegations.map(e => e ? SplitDelegation.toJSON(e) : undefined);
-    } else {
-      obj.splitDelegations = [];
-    }
-
-    return obj;
   },
 
   fromPartial(object: DeepPartial<DelegateCallback>): DelegateCallback {
@@ -248,22 +247,6 @@ export const ClaimCallback = {
     return message;
   },
 
-  fromJSON(object: any): ClaimCallback {
-    return {
-      userRedemptionRecordId: isSet(object.userRedemptionRecordId) ? String(object.userRedemptionRecordId) : "",
-      chainId: isSet(object.chainId) ? String(object.chainId) : "",
-      epochNumber: isSet(object.epochNumber) ? Long.fromString(object.epochNumber) : Long.UZERO
-    };
-  },
-
-  toJSON(message: ClaimCallback): unknown {
-    const obj: any = {};
-    message.userRedemptionRecordId !== undefined && (obj.userRedemptionRecordId = message.userRedemptionRecordId);
-    message.chainId !== undefined && (obj.chainId = message.chainId);
-    message.epochNumber !== undefined && (obj.epochNumber = (message.epochNumber || Long.UZERO).toString());
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<ClaimCallback>): ClaimCallback {
     const message = createBaseClaimCallback();
     message.userRedemptionRecordId = object.userRedemptionRecordId ?? "";
@@ -318,20 +301,6 @@ export const ReinvestCallback = {
     }
 
     return message;
-  },
-
-  fromJSON(object: any): ReinvestCallback {
-    return {
-      reinvestAmount: isSet(object.reinvestAmount) ? Coin.fromJSON(object.reinvestAmount) : undefined,
-      hostZoneId: isSet(object.hostZoneId) ? String(object.hostZoneId) : ""
-    };
-  },
-
-  toJSON(message: ReinvestCallback): unknown {
-    const obj: any = {};
-    message.reinvestAmount !== undefined && (obj.reinvestAmount = message.reinvestAmount ? Coin.toJSON(message.reinvestAmount) : undefined);
-    message.hostZoneId !== undefined && (obj.hostZoneId = message.hostZoneId);
-    return obj;
   },
 
   fromPartial(object: DeepPartial<ReinvestCallback>): ReinvestCallback {
@@ -410,33 +379,6 @@ export const UndelegateCallback = {
     return message;
   },
 
-  fromJSON(object: any): UndelegateCallback {
-    return {
-      hostZoneId: isSet(object.hostZoneId) ? String(object.hostZoneId) : "",
-      splitDelegations: Array.isArray(object?.splitDelegations) ? object.splitDelegations.map((e: any) => SplitDelegation.fromJSON(e)) : [],
-      epochUnbondingRecordIds: Array.isArray(object?.epochUnbondingRecordIds) ? object.epochUnbondingRecordIds.map((e: any) => Long.fromString(e)) : []
-    };
-  },
-
-  toJSON(message: UndelegateCallback): unknown {
-    const obj: any = {};
-    message.hostZoneId !== undefined && (obj.hostZoneId = message.hostZoneId);
-
-    if (message.splitDelegations) {
-      obj.splitDelegations = message.splitDelegations.map(e => e ? SplitDelegation.toJSON(e) : undefined);
-    } else {
-      obj.splitDelegations = [];
-    }
-
-    if (message.epochUnbondingRecordIds) {
-      obj.epochUnbondingRecordIds = message.epochUnbondingRecordIds.map(e => (e || Long.UZERO).toString());
-    } else {
-      obj.epochUnbondingRecordIds = [];
-    }
-
-    return obj;
-  },
-
   fromPartial(object: DeepPartial<UndelegateCallback>): UndelegateCallback {
     const message = createBaseUndelegateCallback();
     message.hostZoneId = object.hostZoneId ?? "";
@@ -503,26 +445,6 @@ export const RedemptionCallback = {
     }
 
     return message;
-  },
-
-  fromJSON(object: any): RedemptionCallback {
-    return {
-      hostZoneId: isSet(object.hostZoneId) ? String(object.hostZoneId) : "",
-      epochUnbondingRecordIds: Array.isArray(object?.epochUnbondingRecordIds) ? object.epochUnbondingRecordIds.map((e: any) => Long.fromString(e)) : []
-    };
-  },
-
-  toJSON(message: RedemptionCallback): unknown {
-    const obj: any = {};
-    message.hostZoneId !== undefined && (obj.hostZoneId = message.hostZoneId);
-
-    if (message.epochUnbondingRecordIds) {
-      obj.epochUnbondingRecordIds = message.epochUnbondingRecordIds.map(e => (e || Long.UZERO).toString());
-    } else {
-      obj.epochUnbondingRecordIds = [];
-    }
-
-    return obj;
   },
 
   fromPartial(object: DeepPartial<RedemptionCallback>): RedemptionCallback {

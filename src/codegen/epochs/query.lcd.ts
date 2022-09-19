@@ -1,8 +1,6 @@
-import { PageRequest, PageResponse } from "../cosmos/base/query/v1beta1/pagination";
-import { EpochInfo } from "./genesis";
-import { LCDClient } from "@osmonauts/lcd";
 import { setPaginationParams } from "@osmonauts/helpers";
-import { QueryEpochsInfoRequest, QueryEpochsInfoResponse, QueryCurrentEpochRequest, QueryCurrentEpochResponse, QueryEpochInfoRequest, QueryEpochInfoResponse } from "./query";
+import { LCDClient } from "@osmonauts/lcd";
+import { QueryEpochsInfoRequest, QueryEpochsInfoResponseSDKType, QueryCurrentEpochRequest, QueryCurrentEpochResponseSDKType, QueryEpochInfoRequest, QueryEpochInfoResponseSDKType } from "./query";
 export class LCDQueryClient extends LCDClient {
   constructor({
     restEndpoint
@@ -13,11 +11,12 @@ export class LCDQueryClient extends LCDClient {
       restEndpoint
     });
   }
-
   /* EpochInfos provide running epochInfos */
+
+
   async epochInfos(params: QueryEpochsInfoRequest = {
     pagination: undefined
-  }): Promise<QueryEpochsInfoResponse> {
+  }): Promise<QueryEpochsInfoResponseSDKType> {
     const options: any = {
       params: {}
     };
@@ -27,11 +26,12 @@ export class LCDQueryClient extends LCDClient {
     }
 
     const endpoint = `Stridelabs/stride/epochs`;
-    return await this.request<QueryEpochsInfoResponse>(endpoint, options);
+    return await this.get<QueryEpochsInfoResponseSDKType>(endpoint, options);
   }
-
   /* CurrentEpoch provide current epoch of specified identifier */
-  async currentEpoch(params: QueryCurrentEpochRequest): Promise<QueryCurrentEpochResponse> {
+
+
+  async currentEpoch(params: QueryCurrentEpochRequest): Promise<QueryCurrentEpochResponseSDKType> {
     const options: any = {
       params: {}
     };
@@ -41,11 +41,12 @@ export class LCDQueryClient extends LCDClient {
     }
 
     const endpoint = `Stridelabs/stride/epochs/current_epoch`;
-    return await this.request<QueryCurrentEpochResponse>(endpoint, options);
+    return await this.get<QueryCurrentEpochResponseSDKType>(endpoint, options);
   }
-
   /* CurrentEpoch provide current epoch of specified identifier */
-  async epochInfo(params: QueryEpochInfoRequest): Promise<QueryEpochInfoResponse> {
+
+
+  async epochInfo(params: QueryEpochInfoRequest): Promise<QueryEpochInfoResponseSDKType> {
     const options: any = {
       params: {}
     };
@@ -55,7 +56,7 @@ export class LCDQueryClient extends LCDClient {
     }
 
     const endpoint = `Stridelabs/stride/epochs/epoch_info`;
-    return await this.request<QueryEpochInfoResponse>(endpoint, options);
+    return await this.get<QueryEpochInfoResponseSDKType>(endpoint, options);
   }
 
 }

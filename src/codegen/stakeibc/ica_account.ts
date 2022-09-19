@@ -1,7 +1,14 @@
-import { Delegation } from "./delegation";
+import { Delegation, DelegationSDKType } from "./delegation";
 import * as _m0 from "protobufjs/minimal";
-import { isSet, DeepPartial } from "@osmonauts/helpers";
+import { DeepPartial } from "@osmonauts/helpers";
 export enum ICAAccountType {
+  DELEGATION = 0,
+  FEE = 1,
+  WITHDRAWAL = 2,
+  REDEMPTION = 3,
+  UNRECOGNIZED = -1,
+}
+export enum ICAAccountTypeSDKType {
   DELEGATION = 0,
   FEE = 1,
   WITHDRAWAL = 2,
@@ -50,12 +57,19 @@ export function iCAAccountTypeToJSON(object: ICAAccountType): string {
       return "UNKNOWN";
   }
 }
-
 /** TODO(TEST-XX): Update these fields to be more useful (e.g. balances should be coins, maybe store port name directly) */
+
 export interface ICAAccount {
   address: string;
   delegations: Delegation[];
   target: ICAAccountType;
+}
+/** TODO(TEST-XX): Update these fields to be more useful (e.g. balances should be coins, maybe store port name directly) */
+
+export interface ICAAccountSDKType {
+  address: string;
+  delegations: DelegationSDKType[];
+  target: ICAAccountTypeSDKType;
 }
 
 function createBaseICAAccount(): ICAAccount {
@@ -111,28 +125,6 @@ export const ICAAccount = {
     }
 
     return message;
-  },
-
-  fromJSON(object: any): ICAAccount {
-    return {
-      address: isSet(object.address) ? String(object.address) : "",
-      delegations: Array.isArray(object?.delegations) ? object.delegations.map((e: any) => Delegation.fromJSON(e)) : [],
-      target: isSet(object.target) ? iCAAccountTypeFromJSON(object.target) : 0
-    };
-  },
-
-  toJSON(message: ICAAccount): unknown {
-    const obj: any = {};
-    message.address !== undefined && (obj.address = message.address);
-
-    if (message.delegations) {
-      obj.delegations = message.delegations.map(e => e ? Delegation.toJSON(e) : undefined);
-    } else {
-      obj.delegations = [];
-    }
-
-    message.target !== undefined && (obj.target = iCAAccountTypeToJSON(message.target));
-    return obj;
   },
 
   fromPartial(object: DeepPartial<ICAAccount>): ICAAccount {
