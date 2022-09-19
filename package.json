@@ -37,11 +37,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pyramation/stridejs"
+    "url": "https://github.com/cosmology-tech/stridejs"
   },
   "keywords": [],
   "bugs": {
-    "url": "https://github.com/pyramation/stridejs/issues"
+    "url": "https://github.com/cosmology-tech/stridejs/issues"
   },
   "devDependencies": {
     "@babel/cli": "7.18.10",
