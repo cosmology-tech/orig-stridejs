@@ -34,6 +34,6 @@ export declare const MsgSubmitEvidence: {
 };
 export declare const MsgSubmitEvidenceResponse: {
     encode(message: MsgSubmitEvidenceResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgSubmitEvidenceResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgSubmitEvidenceResponse;
     fromPartial(object: DeepPartial<MsgSubmitEvidenceResponse>): MsgSubmitEvidenceResponse;
 };

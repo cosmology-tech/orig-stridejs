@@ -65,7 +65,7 @@ export declare const QueryEvidenceRequest: {
 };
 export declare const QueryEvidenceResponse: {
     encode(message: QueryEvidenceResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryEvidenceResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryEvidenceResponse;
     fromPartial(object: DeepPartial<QueryEvidenceResponse>): QueryEvidenceResponse;
 };
 export declare const QueryAllEvidenceRequest: {
@@ -75,6 +75,6 @@ export declare const QueryAllEvidenceRequest: {
 };
 export declare const QueryAllEvidenceResponse: {
     encode(message: QueryAllEvidenceResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllEvidenceResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllEvidenceResponse;
     fromPartial(object: DeepPartial<QueryAllEvidenceResponse>): QueryAllEvidenceResponse;
 };

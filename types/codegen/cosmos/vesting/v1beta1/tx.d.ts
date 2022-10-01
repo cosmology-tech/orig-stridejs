@@ -93,7 +93,7 @@ export declare const MsgCreateVestingAccount: {
 };
 export declare const MsgCreateVestingAccountResponse: {
     encode(_: MsgCreateVestingAccountResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgCreateVestingAccountResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgCreateVestingAccountResponse;
     fromPartial(_: DeepPartial<MsgCreateVestingAccountResponse>): MsgCreateVestingAccountResponse;
 };
 export declare const MsgCreatePermanentLockedAccount: {
@@ -103,7 +103,7 @@ export declare const MsgCreatePermanentLockedAccount: {
 };
 export declare const MsgCreatePermanentLockedAccountResponse: {
     encode(_: MsgCreatePermanentLockedAccountResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgCreatePermanentLockedAccountResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgCreatePermanentLockedAccountResponse;
     fromPartial(_: DeepPartial<MsgCreatePermanentLockedAccountResponse>): MsgCreatePermanentLockedAccountResponse;
 };
 export declare const MsgCreatePeriodicVestingAccount: {
@@ -113,6 +113,6 @@ export declare const MsgCreatePeriodicVestingAccount: {
 };
 export declare const MsgCreatePeriodicVestingAccountResponse: {
     encode(_: MsgCreatePeriodicVestingAccountResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgCreatePeriodicVestingAccountResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgCreatePeriodicVestingAccountResponse;
     fromPartial(_: DeepPartial<MsgCreatePeriodicVestingAccountResponse>): MsgCreatePeriodicVestingAccountResponse;
 };

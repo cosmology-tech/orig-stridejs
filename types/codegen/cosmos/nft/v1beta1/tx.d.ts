@@ -35,6 +35,6 @@ export declare const MsgSend: {
 };
 export declare const MsgSendResponse: {
     encode(_: MsgSendResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgSendResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgSendResponse;
     fromPartial(_: DeepPartial<MsgSendResponse>): MsgSendResponse;
 };

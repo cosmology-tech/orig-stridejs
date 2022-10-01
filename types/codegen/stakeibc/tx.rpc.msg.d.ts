@@ -1,31 +1,31 @@
 import { Rpc } from "@osmonauts/helpers";
-import { MsgLiquidStake, MsgLiquidStakeResponseSDKType, MsgRedeemStake, MsgRedeemStakeResponseSDKType, MsgRegisterHostZone, MsgRegisterHostZoneResponseSDKType, MsgClaimUndelegatedTokens, MsgClaimUndelegatedTokensResponseSDKType, MsgRebalanceValidators, MsgRebalanceValidatorsResponseSDKType, MsgAddValidator, MsgAddValidatorResponseSDKType, MsgChangeValidatorWeight, MsgChangeValidatorWeightResponseSDKType, MsgDeleteValidator, MsgDeleteValidatorResponseSDKType, MsgRestoreInterchainAccount, MsgRestoreInterchainAccountResponseSDKType, MsgUpdateValidatorSharesExchRate, MsgUpdateValidatorSharesExchRateResponseSDKType, MsgClearBalance, MsgClearBalanceResponseSDKType } from "./tx";
+import { MsgLiquidStake, MsgLiquidStakeResponse, MsgRedeemStake, MsgRedeemStakeResponse, MsgRegisterHostZone, MsgRegisterHostZoneResponse, MsgClaimUndelegatedTokens, MsgClaimUndelegatedTokensResponse, MsgRebalanceValidators, MsgRebalanceValidatorsResponse, MsgAddValidator, MsgAddValidatorResponse, MsgChangeValidatorWeight, MsgChangeValidatorWeightResponse, MsgDeleteValidator, MsgDeleteValidatorResponse, MsgRestoreInterchainAccount, MsgRestoreInterchainAccountResponse, MsgUpdateValidatorSharesExchRate, MsgUpdateValidatorSharesExchRateResponse, MsgClearBalance, MsgClearBalanceResponse } from "./tx";
 /** Msg defines the RPC service */
 export interface Msg {
-    liquidStake(request: MsgLiquidStake): Promise<MsgLiquidStakeResponseSDKType>;
-    redeemStake(request: MsgRedeemStake): Promise<MsgRedeemStakeResponseSDKType>;
-    registerHostZone(request: MsgRegisterHostZone): Promise<MsgRegisterHostZoneResponseSDKType>;
-    claimUndelegatedTokens(request: MsgClaimUndelegatedTokens): Promise<MsgClaimUndelegatedTokensResponseSDKType>;
-    rebalanceValidators(request: MsgRebalanceValidators): Promise<MsgRebalanceValidatorsResponseSDKType>;
-    addValidator(request: MsgAddValidator): Promise<MsgAddValidatorResponseSDKType>;
-    changeValidatorWeight(request: MsgChangeValidatorWeight): Promise<MsgChangeValidatorWeightResponseSDKType>;
-    deleteValidator(request: MsgDeleteValidator): Promise<MsgDeleteValidatorResponseSDKType>;
-    restoreInterchainAccount(request: MsgRestoreInterchainAccount): Promise<MsgRestoreInterchainAccountResponseSDKType>;
-    updateValidatorSharesExchRate(request: MsgUpdateValidatorSharesExchRate): Promise<MsgUpdateValidatorSharesExchRateResponseSDKType>;
-    clearBalance(request: MsgClearBalance): Promise<MsgClearBalanceResponseSDKType>;
+    liquidStake(request: MsgLiquidStake): Promise<MsgLiquidStakeResponse>;
+    redeemStake(request: MsgRedeemStake): Promise<MsgRedeemStakeResponse>;
+    registerHostZone(request: MsgRegisterHostZone): Promise<MsgRegisterHostZoneResponse>;
+    claimUndelegatedTokens(request: MsgClaimUndelegatedTokens): Promise<MsgClaimUndelegatedTokensResponse>;
+    rebalanceValidators(request: MsgRebalanceValidators): Promise<MsgRebalanceValidatorsResponse>;
+    addValidator(request: MsgAddValidator): Promise<MsgAddValidatorResponse>;
+    changeValidatorWeight(request: MsgChangeValidatorWeight): Promise<MsgChangeValidatorWeightResponse>;
+    deleteValidator(request: MsgDeleteValidator): Promise<MsgDeleteValidatorResponse>;
+    restoreInterchainAccount(request: MsgRestoreInterchainAccount): Promise<MsgRestoreInterchainAccountResponse>;
+    updateValidatorSharesExchRate(request: MsgUpdateValidatorSharesExchRate): Promise<MsgUpdateValidatorSharesExchRateResponse>;
+    clearBalance(request: MsgClearBalance): Promise<MsgClearBalanceResponse>;
 }
 export declare class MsgClientImpl implements Msg {
     private readonly rpc;
     constructor(rpc: Rpc);
-    liquidStake(request: MsgLiquidStake): Promise<MsgLiquidStakeResponseSDKType>;
-    redeemStake(request: MsgRedeemStake): Promise<MsgRedeemStakeResponseSDKType>;
-    registerHostZone(request: MsgRegisterHostZone): Promise<MsgRegisterHostZoneResponseSDKType>;
-    claimUndelegatedTokens(request: MsgClaimUndelegatedTokens): Promise<MsgClaimUndelegatedTokensResponseSDKType>;
-    rebalanceValidators(request: MsgRebalanceValidators): Promise<MsgRebalanceValidatorsResponseSDKType>;
-    addValidator(request: MsgAddValidator): Promise<MsgAddValidatorResponseSDKType>;
-    changeValidatorWeight(request: MsgChangeValidatorWeight): Promise<MsgChangeValidatorWeightResponseSDKType>;
-    deleteValidator(request: MsgDeleteValidator): Promise<MsgDeleteValidatorResponseSDKType>;
-    restoreInterchainAccount(request: MsgRestoreInterchainAccount): Promise<MsgRestoreInterchainAccountResponseSDKType>;
-    updateValidatorSharesExchRate(request: MsgUpdateValidatorSharesExchRate): Promise<MsgUpdateValidatorSharesExchRateResponseSDKType>;
-    clearBalance(request: MsgClearBalance): Promise<MsgClearBalanceResponseSDKType>;
+    liquidStake(request: MsgLiquidStake): Promise<MsgLiquidStakeResponse>;
+    redeemStake(request: MsgRedeemStake): Promise<MsgRedeemStakeResponse>;
+    registerHostZone(request: MsgRegisterHostZone): Promise<MsgRegisterHostZoneResponse>;
+    claimUndelegatedTokens(request: MsgClaimUndelegatedTokens): Promise<MsgClaimUndelegatedTokensResponse>;
+    rebalanceValidators(request: MsgRebalanceValidators): Promise<MsgRebalanceValidatorsResponse>;
+    addValidator(request: MsgAddValidator): Promise<MsgAddValidatorResponse>;
+    changeValidatorWeight(request: MsgChangeValidatorWeight): Promise<MsgChangeValidatorWeightResponse>;
+    deleteValidator(request: MsgDeleteValidator): Promise<MsgDeleteValidatorResponse>;
+    restoreInterchainAccount(request: MsgRestoreInterchainAccount): Promise<MsgRestoreInterchainAccountResponse>;
+    updateValidatorSharesExchRate(request: MsgUpdateValidatorSharesExchRate): Promise<MsgUpdateValidatorSharesExchRateResponse>;
+    clearBalance(request: MsgClearBalance): Promise<MsgClearBalanceResponse>;
 }

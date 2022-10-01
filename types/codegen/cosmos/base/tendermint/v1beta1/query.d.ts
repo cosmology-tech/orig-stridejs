@@ -182,7 +182,7 @@ export declare const GetValidatorSetByHeightRequest: {
 };
 export declare const GetValidatorSetByHeightResponse: {
     encode(message: GetValidatorSetByHeightResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): GetValidatorSetByHeightResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): GetValidatorSetByHeightResponse;
     fromPartial(object: DeepPartial<GetValidatorSetByHeightResponse>): GetValidatorSetByHeightResponse;
 };
 export declare const GetLatestValidatorSetRequest: {
@@ -192,7 +192,7 @@ export declare const GetLatestValidatorSetRequest: {
 };
 export declare const GetLatestValidatorSetResponse: {
     encode(message: GetLatestValidatorSetResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): GetLatestValidatorSetResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): GetLatestValidatorSetResponse;
     fromPartial(object: DeepPartial<GetLatestValidatorSetResponse>): GetLatestValidatorSetResponse;
 };
 export declare const Validator: {
@@ -207,7 +207,7 @@ export declare const GetBlockByHeightRequest: {
 };
 export declare const GetBlockByHeightResponse: {
     encode(message: GetBlockByHeightResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): GetBlockByHeightResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): GetBlockByHeightResponse;
     fromPartial(object: DeepPartial<GetBlockByHeightResponse>): GetBlockByHeightResponse;
 };
 export declare const GetLatestBlockRequest: {
@@ -217,7 +217,7 @@ export declare const GetLatestBlockRequest: {
 };
 export declare const GetLatestBlockResponse: {
     encode(message: GetLatestBlockResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): GetLatestBlockResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): GetLatestBlockResponse;
     fromPartial(object: DeepPartial<GetLatestBlockResponse>): GetLatestBlockResponse;
 };
 export declare const GetSyncingRequest: {
@@ -227,7 +227,7 @@ export declare const GetSyncingRequest: {
 };
 export declare const GetSyncingResponse: {
     encode(message: GetSyncingResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): GetSyncingResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): GetSyncingResponse;
     fromPartial(object: DeepPartial<GetSyncingResponse>): GetSyncingResponse;
 };
 export declare const GetNodeInfoRequest: {
@@ -237,7 +237,7 @@ export declare const GetNodeInfoRequest: {
 };
 export declare const GetNodeInfoResponse: {
     encode(message: GetNodeInfoResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): GetNodeInfoResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): GetNodeInfoResponse;
     fromPartial(object: DeepPartial<GetNodeInfoResponse>): GetNodeInfoResponse;
 };
 export declare const VersionInfo: {

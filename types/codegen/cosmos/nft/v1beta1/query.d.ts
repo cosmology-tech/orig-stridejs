@@ -137,7 +137,7 @@ export declare const QueryBalanceRequest: {
 };
 export declare const QueryBalanceResponse: {
     encode(message: QueryBalanceResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryBalanceResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryBalanceResponse;
     fromPartial(object: DeepPartial<QueryBalanceResponse>): QueryBalanceResponse;
 };
 export declare const QueryOwnerRequest: {
@@ -147,7 +147,7 @@ export declare const QueryOwnerRequest: {
 };
 export declare const QueryOwnerResponse: {
     encode(message: QueryOwnerResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryOwnerResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryOwnerResponse;
     fromPartial(object: DeepPartial<QueryOwnerResponse>): QueryOwnerResponse;
 };
 export declare const QuerySupplyRequest: {
@@ -157,7 +157,7 @@ export declare const QuerySupplyRequest: {
 };
 export declare const QuerySupplyResponse: {
     encode(message: QuerySupplyResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QuerySupplyResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QuerySupplyResponse;
     fromPartial(object: DeepPartial<QuerySupplyResponse>): QuerySupplyResponse;
 };
 export declare const QueryNFTsRequest: {
@@ -167,7 +167,7 @@ export declare const QueryNFTsRequest: {
 };
 export declare const QueryNFTsResponse: {
     encode(message: QueryNFTsResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryNFTsResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryNFTsResponse;
     fromPartial(object: DeepPartial<QueryNFTsResponse>): QueryNFTsResponse;
 };
 export declare const QueryNFTRequest: {
@@ -177,7 +177,7 @@ export declare const QueryNFTRequest: {
 };
 export declare const QueryNFTResponse: {
     encode(message: QueryNFTResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryNFTResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryNFTResponse;
     fromPartial(object: DeepPartial<QueryNFTResponse>): QueryNFTResponse;
 };
 export declare const QueryClassRequest: {
@@ -187,7 +187,7 @@ export declare const QueryClassRequest: {
 };
 export declare const QueryClassResponse: {
     encode(message: QueryClassResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryClassResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryClassResponse;
     fromPartial(object: DeepPartial<QueryClassResponse>): QueryClassResponse;
 };
 export declare const QueryClassesRequest: {
@@ -197,6 +197,6 @@ export declare const QueryClassesRequest: {
 };
 export declare const QueryClassesResponse: {
     encode(message: QueryClassesResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryClassesResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryClassesResponse;
     fromPartial(object: DeepPartial<QueryClassesResponse>): QueryClassesResponse;
 };

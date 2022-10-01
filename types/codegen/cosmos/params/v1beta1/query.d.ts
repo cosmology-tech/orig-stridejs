@@ -74,7 +74,7 @@ export declare const QueryParamsRequest: {
 };
 export declare const QueryParamsResponse: {
     encode(message: QueryParamsResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryParamsResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryParamsResponse;
     fromPartial(object: DeepPartial<QueryParamsResponse>): QueryParamsResponse;
 };
 export declare const QuerySubspacesRequest: {
@@ -84,7 +84,7 @@ export declare const QuerySubspacesRequest: {
 };
 export declare const QuerySubspacesResponse: {
     encode(message: QuerySubspacesResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QuerySubspacesResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QuerySubspacesResponse;
     fromPartial(object: DeepPartial<QuerySubspacesResponse>): QuerySubspacesResponse;
 };
 export declare const Subspace: {

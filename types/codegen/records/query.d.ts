@@ -127,7 +127,7 @@ export declare const QueryParamsRequest: {
 };
 export declare const QueryParamsResponse: {
     encode(message: QueryParamsResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryParamsResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryParamsResponse;
     fromPartial(object: DeepPartial<QueryParamsResponse>): QueryParamsResponse;
 };
 export declare const QueryGetDepositRecordRequest: {
@@ -137,7 +137,7 @@ export declare const QueryGetDepositRecordRequest: {
 };
 export declare const QueryGetDepositRecordResponse: {
     encode(message: QueryGetDepositRecordResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetDepositRecordResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetDepositRecordResponse;
     fromPartial(object: DeepPartial<QueryGetDepositRecordResponse>): QueryGetDepositRecordResponse;
 };
 export declare const QueryAllDepositRecordRequest: {
@@ -147,7 +147,7 @@ export declare const QueryAllDepositRecordRequest: {
 };
 export declare const QueryAllDepositRecordResponse: {
     encode(message: QueryAllDepositRecordResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllDepositRecordResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllDepositRecordResponse;
     fromPartial(object: DeepPartial<QueryAllDepositRecordResponse>): QueryAllDepositRecordResponse;
 };
 export declare const QueryGetUserRedemptionRecordRequest: {
@@ -157,7 +157,7 @@ export declare const QueryGetUserRedemptionRecordRequest: {
 };
 export declare const QueryGetUserRedemptionRecordResponse: {
     encode(message: QueryGetUserRedemptionRecordResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetUserRedemptionRecordResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetUserRedemptionRecordResponse;
     fromPartial(object: DeepPartial<QueryGetUserRedemptionRecordResponse>): QueryGetUserRedemptionRecordResponse;
 };
 export declare const QueryAllUserRedemptionRecordRequest: {
@@ -167,7 +167,7 @@ export declare const QueryAllUserRedemptionRecordRequest: {
 };
 export declare const QueryAllUserRedemptionRecordResponse: {
     encode(message: QueryAllUserRedemptionRecordResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllUserRedemptionRecordResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllUserRedemptionRecordResponse;
     fromPartial(object: DeepPartial<QueryAllUserRedemptionRecordResponse>): QueryAllUserRedemptionRecordResponse;
 };
 export declare const QueryAllUserRedemptionRecordForUserRequest: {
@@ -177,7 +177,7 @@ export declare const QueryAllUserRedemptionRecordForUserRequest: {
 };
 export declare const QueryAllUserRedemptionRecordForUserResponse: {
     encode(message: QueryAllUserRedemptionRecordForUserResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllUserRedemptionRecordForUserResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllUserRedemptionRecordForUserResponse;
     fromPartial(object: DeepPartial<QueryAllUserRedemptionRecordForUserResponse>): QueryAllUserRedemptionRecordForUserResponse;
 };
 export declare const QueryGetEpochUnbondingRecordRequest: {
@@ -187,7 +187,7 @@ export declare const QueryGetEpochUnbondingRecordRequest: {
 };
 export declare const QueryGetEpochUnbondingRecordResponse: {
     encode(message: QueryGetEpochUnbondingRecordResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetEpochUnbondingRecordResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetEpochUnbondingRecordResponse;
     fromPartial(object: DeepPartial<QueryGetEpochUnbondingRecordResponse>): QueryGetEpochUnbondingRecordResponse;
 };
 export declare const QueryAllEpochUnbondingRecordRequest: {
@@ -197,6 +197,6 @@ export declare const QueryAllEpochUnbondingRecordRequest: {
 };
 export declare const QueryAllEpochUnbondingRecordResponse: {
     encode(message: QueryAllEpochUnbondingRecordResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllEpochUnbondingRecordResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllEpochUnbondingRecordResponse;
     fromPartial(object: DeepPartial<QueryAllEpochUnbondingRecordResponse>): QueryAllEpochUnbondingRecordResponse;
 };

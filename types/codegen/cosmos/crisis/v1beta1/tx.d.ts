@@ -25,6 +25,6 @@ export declare const MsgVerifyInvariant: {
 };
 export declare const MsgVerifyInvariantResponse: {
     encode(_: MsgVerifyInvariantResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgVerifyInvariantResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgVerifyInvariantResponse;
     fromPartial(_: DeepPartial<MsgVerifyInvariantResponse>): MsgVerifyInvariantResponse;
 };

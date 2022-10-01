@@ -337,7 +337,7 @@ export declare const QueryGroupInfoRequest: {
 };
 export declare const QueryGroupInfoResponse: {
     encode(message: QueryGroupInfoResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGroupInfoResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGroupInfoResponse;
     fromPartial(object: DeepPartial<QueryGroupInfoResponse>): QueryGroupInfoResponse;
 };
 export declare const QueryGroupPolicyInfoRequest: {
@@ -347,7 +347,7 @@ export declare const QueryGroupPolicyInfoRequest: {
 };
 export declare const QueryGroupPolicyInfoResponse: {
     encode(message: QueryGroupPolicyInfoResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGroupPolicyInfoResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGroupPolicyInfoResponse;
     fromPartial(object: DeepPartial<QueryGroupPolicyInfoResponse>): QueryGroupPolicyInfoResponse;
 };
 export declare const QueryGroupMembersRequest: {
@@ -357,7 +357,7 @@ export declare const QueryGroupMembersRequest: {
 };
 export declare const QueryGroupMembersResponse: {
     encode(message: QueryGroupMembersResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGroupMembersResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGroupMembersResponse;
     fromPartial(object: DeepPartial<QueryGroupMembersResponse>): QueryGroupMembersResponse;
 };
 export declare const QueryGroupsByAdminRequest: {
@@ -367,7 +367,7 @@ export declare const QueryGroupsByAdminRequest: {
 };
 export declare const QueryGroupsByAdminResponse: {
     encode(message: QueryGroupsByAdminResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGroupsByAdminResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGroupsByAdminResponse;
     fromPartial(object: DeepPartial<QueryGroupsByAdminResponse>): QueryGroupsByAdminResponse;
 };
 export declare const QueryGroupPoliciesByGroupRequest: {
@@ -377,7 +377,7 @@ export declare const QueryGroupPoliciesByGroupRequest: {
 };
 export declare const QueryGroupPoliciesByGroupResponse: {
     encode(message: QueryGroupPoliciesByGroupResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGroupPoliciesByGroupResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGroupPoliciesByGroupResponse;
     fromPartial(object: DeepPartial<QueryGroupPoliciesByGroupResponse>): QueryGroupPoliciesByGroupResponse;
 };
 export declare const QueryGroupPoliciesByAdminRequest: {
@@ -387,7 +387,7 @@ export declare const QueryGroupPoliciesByAdminRequest: {
 };
 export declare const QueryGroupPoliciesByAdminResponse: {
     encode(message: QueryGroupPoliciesByAdminResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGroupPoliciesByAdminResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGroupPoliciesByAdminResponse;
     fromPartial(object: DeepPartial<QueryGroupPoliciesByAdminResponse>): QueryGroupPoliciesByAdminResponse;
 };
 export declare const QueryProposalRequest: {
@@ -397,7 +397,7 @@ export declare const QueryProposalRequest: {
 };
 export declare const QueryProposalResponse: {
     encode(message: QueryProposalResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryProposalResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryProposalResponse;
     fromPartial(object: DeepPartial<QueryProposalResponse>): QueryProposalResponse;
 };
 export declare const QueryProposalsByGroupPolicyRequest: {
@@ -407,7 +407,7 @@ export declare const QueryProposalsByGroupPolicyRequest: {
 };
 export declare const QueryProposalsByGroupPolicyResponse: {
     encode(message: QueryProposalsByGroupPolicyResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryProposalsByGroupPolicyResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryProposalsByGroupPolicyResponse;
     fromPartial(object: DeepPartial<QueryProposalsByGroupPolicyResponse>): QueryProposalsByGroupPolicyResponse;
 };
 export declare const QueryVoteByProposalVoterRequest: {
@@ -417,7 +417,7 @@ export declare const QueryVoteByProposalVoterRequest: {
 };
 export declare const QueryVoteByProposalVoterResponse: {
     encode(message: QueryVoteByProposalVoterResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryVoteByProposalVoterResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryVoteByProposalVoterResponse;
     fromPartial(object: DeepPartial<QueryVoteByProposalVoterResponse>): QueryVoteByProposalVoterResponse;
 };
 export declare const QueryVotesByProposalRequest: {
@@ -427,7 +427,7 @@ export declare const QueryVotesByProposalRequest: {
 };
 export declare const QueryVotesByProposalResponse: {
     encode(message: QueryVotesByProposalResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryVotesByProposalResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryVotesByProposalResponse;
     fromPartial(object: DeepPartial<QueryVotesByProposalResponse>): QueryVotesByProposalResponse;
 };
 export declare const QueryVotesByVoterRequest: {
@@ -437,7 +437,7 @@ export declare const QueryVotesByVoterRequest: {
 };
 export declare const QueryVotesByVoterResponse: {
     encode(message: QueryVotesByVoterResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryVotesByVoterResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryVotesByVoterResponse;
     fromPartial(object: DeepPartial<QueryVotesByVoterResponse>): QueryVotesByVoterResponse;
 };
 export declare const QueryGroupsByMemberRequest: {
@@ -447,7 +447,7 @@ export declare const QueryGroupsByMemberRequest: {
 };
 export declare const QueryGroupsByMemberResponse: {
     encode(message: QueryGroupsByMemberResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGroupsByMemberResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGroupsByMemberResponse;
     fromPartial(object: DeepPartial<QueryGroupsByMemberResponse>): QueryGroupsByMemberResponse;
 };
 export declare const QueryTallyResultRequest: {
@@ -457,6 +457,6 @@ export declare const QueryTallyResultRequest: {
 };
 export declare const QueryTallyResultResponse: {
     encode(message: QueryTallyResultResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryTallyResultResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryTallyResultResponse;
     fromPartial(object: DeepPartial<QueryTallyResultResponse>): QueryTallyResultResponse;
 };

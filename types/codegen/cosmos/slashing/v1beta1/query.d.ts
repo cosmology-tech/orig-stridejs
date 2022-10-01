@@ -87,7 +87,7 @@ export declare const QueryParamsRequest: {
 };
 export declare const QueryParamsResponse: {
     encode(message: QueryParamsResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryParamsResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryParamsResponse;
     fromPartial(object: DeepPartial<QueryParamsResponse>): QueryParamsResponse;
 };
 export declare const QuerySigningInfoRequest: {
@@ -97,7 +97,7 @@ export declare const QuerySigningInfoRequest: {
 };
 export declare const QuerySigningInfoResponse: {
     encode(message: QuerySigningInfoResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QuerySigningInfoResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QuerySigningInfoResponse;
     fromPartial(object: DeepPartial<QuerySigningInfoResponse>): QuerySigningInfoResponse;
 };
 export declare const QuerySigningInfosRequest: {
@@ -107,6 +107,6 @@ export declare const QuerySigningInfosRequest: {
 };
 export declare const QuerySigningInfosResponse: {
     encode(message: QuerySigningInfosResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QuerySigningInfosResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QuerySigningInfosResponse;
     fromPartial(object: DeepPartial<QuerySigningInfosResponse>): QuerySigningInfosResponse;
 };

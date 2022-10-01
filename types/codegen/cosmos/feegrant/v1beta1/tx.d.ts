@@ -58,7 +58,7 @@ export declare const MsgGrantAllowance: {
 };
 export declare const MsgGrantAllowanceResponse: {
     encode(_: MsgGrantAllowanceResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgGrantAllowanceResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgGrantAllowanceResponse;
     fromPartial(_: DeepPartial<MsgGrantAllowanceResponse>): MsgGrantAllowanceResponse;
 };
 export declare const MsgRevokeAllowance: {
@@ -68,6 +68,6 @@ export declare const MsgRevokeAllowance: {
 };
 export declare const MsgRevokeAllowanceResponse: {
     encode(_: MsgRevokeAllowanceResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgRevokeAllowanceResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgRevokeAllowanceResponse;
     fromPartial(_: DeepPartial<MsgRevokeAllowanceResponse>): MsgRevokeAllowanceResponse;
 };

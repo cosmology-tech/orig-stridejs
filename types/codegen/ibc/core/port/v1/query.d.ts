@@ -48,6 +48,6 @@ export declare const QueryAppVersionRequest: {
 };
 export declare const QueryAppVersionResponse: {
     encode(message: QueryAppVersionResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAppVersionResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAppVersionResponse;
     fromPartial(object: DeepPartial<QueryAppVersionResponse>): QueryAppVersionResponse;
 };

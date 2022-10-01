@@ -192,7 +192,7 @@ export declare const MsgLiquidStake: {
 };
 export declare const MsgLiquidStakeResponse: {
     encode(_: MsgLiquidStakeResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgLiquidStakeResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgLiquidStakeResponse;
     fromPartial(_: DeepPartial<MsgLiquidStakeResponse>): MsgLiquidStakeResponse;
 };
 export declare const MsgClearBalance: {
@@ -202,7 +202,7 @@ export declare const MsgClearBalance: {
 };
 export declare const MsgClearBalanceResponse: {
     encode(_: MsgClearBalanceResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgClearBalanceResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgClearBalanceResponse;
     fromPartial(_: DeepPartial<MsgClearBalanceResponse>): MsgClearBalanceResponse;
 };
 export declare const MsgRedeemStake: {
@@ -212,7 +212,7 @@ export declare const MsgRedeemStake: {
 };
 export declare const MsgRedeemStakeResponse: {
     encode(_: MsgRedeemStakeResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgRedeemStakeResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgRedeemStakeResponse;
     fromPartial(_: DeepPartial<MsgRedeemStakeResponse>): MsgRedeemStakeResponse;
 };
 export declare const MsgRegisterHostZone: {
@@ -222,7 +222,7 @@ export declare const MsgRegisterHostZone: {
 };
 export declare const MsgRegisterHostZoneResponse: {
     encode(_: MsgRegisterHostZoneResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgRegisterHostZoneResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgRegisterHostZoneResponse;
     fromPartial(_: DeepPartial<MsgRegisterHostZoneResponse>): MsgRegisterHostZoneResponse;
 };
 export declare const MsgClaimUndelegatedTokens: {
@@ -232,7 +232,7 @@ export declare const MsgClaimUndelegatedTokens: {
 };
 export declare const MsgClaimUndelegatedTokensResponse: {
     encode(_: MsgClaimUndelegatedTokensResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgClaimUndelegatedTokensResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgClaimUndelegatedTokensResponse;
     fromPartial(_: DeepPartial<MsgClaimUndelegatedTokensResponse>): MsgClaimUndelegatedTokensResponse;
 };
 export declare const MsgRebalanceValidators: {
@@ -242,7 +242,7 @@ export declare const MsgRebalanceValidators: {
 };
 export declare const MsgRebalanceValidatorsResponse: {
     encode(_: MsgRebalanceValidatorsResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgRebalanceValidatorsResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgRebalanceValidatorsResponse;
     fromPartial(_: DeepPartial<MsgRebalanceValidatorsResponse>): MsgRebalanceValidatorsResponse;
 };
 export declare const MsgAddValidator: {
@@ -252,7 +252,7 @@ export declare const MsgAddValidator: {
 };
 export declare const MsgAddValidatorResponse: {
     encode(_: MsgAddValidatorResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgAddValidatorResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgAddValidatorResponse;
     fromPartial(_: DeepPartial<MsgAddValidatorResponse>): MsgAddValidatorResponse;
 };
 export declare const MsgChangeValidatorWeight: {
@@ -262,7 +262,7 @@ export declare const MsgChangeValidatorWeight: {
 };
 export declare const MsgChangeValidatorWeightResponse: {
     encode(_: MsgChangeValidatorWeightResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgChangeValidatorWeightResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgChangeValidatorWeightResponse;
     fromPartial(_: DeepPartial<MsgChangeValidatorWeightResponse>): MsgChangeValidatorWeightResponse;
 };
 export declare const MsgDeleteValidator: {
@@ -272,7 +272,7 @@ export declare const MsgDeleteValidator: {
 };
 export declare const MsgDeleteValidatorResponse: {
     encode(_: MsgDeleteValidatorResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgDeleteValidatorResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgDeleteValidatorResponse;
     fromPartial(_: DeepPartial<MsgDeleteValidatorResponse>): MsgDeleteValidatorResponse;
 };
 export declare const MsgRestoreInterchainAccount: {
@@ -282,7 +282,7 @@ export declare const MsgRestoreInterchainAccount: {
 };
 export declare const MsgRestoreInterchainAccountResponse: {
     encode(_: MsgRestoreInterchainAccountResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgRestoreInterchainAccountResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgRestoreInterchainAccountResponse;
     fromPartial(_: DeepPartial<MsgRestoreInterchainAccountResponse>): MsgRestoreInterchainAccountResponse;
 };
 export declare const MsgUpdateValidatorSharesExchRate: {
@@ -292,6 +292,6 @@ export declare const MsgUpdateValidatorSharesExchRate: {
 };
 export declare const MsgUpdateValidatorSharesExchRateResponse: {
     encode(_: MsgUpdateValidatorSharesExchRateResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgUpdateValidatorSharesExchRateResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgUpdateValidatorSharesExchRateResponse;
     fromPartial(_: DeepPartial<MsgUpdateValidatorSharesExchRateResponse>): MsgUpdateValidatorSharesExchRateResponse;
 };

@@ -52,7 +52,7 @@ export declare const QueryParamsRequest: {
 };
 export declare const QueryParamsResponse: {
     encode(message: QueryParamsResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryParamsResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryParamsResponse;
     fromPartial(object: DeepPartial<QueryParamsResponse>): QueryParamsResponse;
 };
 export declare const QueryGetCallbackDataRequest: {
@@ -62,7 +62,7 @@ export declare const QueryGetCallbackDataRequest: {
 };
 export declare const QueryGetCallbackDataResponse: {
     encode(message: QueryGetCallbackDataResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetCallbackDataResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetCallbackDataResponse;
     fromPartial(object: DeepPartial<QueryGetCallbackDataResponse>): QueryGetCallbackDataResponse;
 };
 export declare const QueryAllCallbackDataRequest: {
@@ -72,6 +72,6 @@ export declare const QueryAllCallbackDataRequest: {
 };
 export declare const QueryAllCallbackDataResponse: {
     encode(message: QueryAllCallbackDataResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllCallbackDataResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllCallbackDataResponse;
     fromPartial(object: DeepPartial<QueryAllCallbackDataResponse>): QueryAllCallbackDataResponse;
 };

@@ -1,29 +1,32 @@
 import { setPaginationParams } from "@osmonauts/helpers";
 import { LCDClient } from "@osmonauts/lcd";
 import { QueryParamsRequest, QueryParamsResponseSDKType, QueryGetCallbackDataRequest, QueryGetCallbackDataResponseSDKType, QueryAllCallbackDataRequest, QueryAllCallbackDataResponseSDKType } from "./query";
-export class LCDQueryClient extends LCDClient {
+export class LCDQueryClient {
+  req: LCDClient;
+
   constructor({
-    restEndpoint
+    requestClient
   }: {
-    restEndpoint: string;
+    requestClient: LCDClient;
   }) {
-    super({
-      restEndpoint
-    });
+    this.req = requestClient;
+    this.params = this.params.bind(this);
+    this.callbackData = this.callbackData.bind(this);
+    this.callbackDataAll = this.callbackDataAll.bind(this);
   }
   /* Parameters queries the parameters of the module. */
 
 
   async params(_params: QueryParamsRequest = {}): Promise<QueryParamsResponseSDKType> {
     const endpoint = `Stride-Labs/stride/icacallbacks/params`;
-    return await this.get<QueryParamsResponseSDKType>(endpoint);
+    return await this.req.get<QueryParamsResponseSDKType>(endpoint);
   }
   /* Queries a CallbackData by index. */
 
 
   async callbackData(params: QueryGetCallbackDataRequest): Promise<QueryGetCallbackDataResponseSDKType> {
     const endpoint = `Stride-Labs/stride/icacallbacks/callback_data/${params.callbackKey}`;
-    return await this.get<QueryGetCallbackDataResponseSDKType>(endpoint);
+    return await this.req.get<QueryGetCallbackDataResponseSDKType>(endpoint);
   }
   /* Queries a list of CallbackData items. */
 
@@ -40,7 +43,7 @@ export class LCDQueryClient extends LCDClient {
     }
 
     const endpoint = `Stride-Labs/stride/icacallbacks/callback_data`;
-    return await this.get<QueryAllCallbackDataResponseSDKType>(endpoint, options);
+    return await this.req.get<QueryAllCallbackDataResponseSDKType>(endpoint, options);
   }
 
 }

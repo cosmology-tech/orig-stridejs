@@ -42,9 +42,9 @@ export declare namespace ibc {
                 MsgClientImpl: typeof _271.MsgClientImpl;
                 QueryClientImpl: typeof _266.QueryClientImpl;
                 createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
-                    denomTrace(request: _123.QueryDenomTraceRequest): Promise<_123.QueryDenomTraceResponseSDKType>;
-                    denomTraces(request?: _123.QueryDenomTracesRequest): Promise<_123.QueryDenomTracesResponseSDKType>;
-                    params(request?: _123.QueryParamsRequest): Promise<_123.QueryParamsResponseSDKType>;
+                    denomTrace(request: _123.QueryDenomTraceRequest): Promise<_123.QueryDenomTraceResponse>;
+                    denomTraces(request?: _123.QueryDenomTracesRequest): Promise<_123.QueryDenomTracesResponse>;
+                    params(request?: _123.QueryParamsRequest): Promise<_123.QueryParamsResponse>;
                 };
                 LCDQueryClient: typeof _262.LCDQueryClient;
                 registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
@@ -119,7 +119,7 @@ export declare namespace ibc {
                 };
                 MsgTransferResponse: {
                     encode(_: _125.MsgTransferResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _125.MsgTransferResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _125.MsgTransferResponse;
                     fromPartial(_: {}): _125.MsgTransferResponse;
                 };
                 DenomTrace: {
@@ -147,7 +147,7 @@ export declare namespace ibc {
                 };
                 QueryDenomTraceResponse: {
                     encode(message: _123.QueryDenomTraceResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _123.QueryDenomTraceResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _123.QueryDenomTraceResponse;
                     fromPartial(object: {
                         denomTrace?: {
                             path?: string;
@@ -170,7 +170,7 @@ export declare namespace ibc {
                 };
                 QueryDenomTracesResponse: {
                     encode(message: _123.QueryDenomTracesResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _123.QueryDenomTracesResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _123.QueryDenomTracesResponse;
                     fromPartial(object: {
                         denomTraces?: {
                             path?: string;
@@ -189,7 +189,7 @@ export declare namespace ibc {
                 };
                 QueryParamsResponse: {
                     encode(message: _123.QueryParamsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _123.QueryParamsResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _123.QueryParamsResponse;
                     fromPartial(object: {
                         params?: {
                             sendEnabled?: boolean;
@@ -233,19 +233,19 @@ export declare namespace ibc {
                 MsgClientImpl: typeof _272.MsgClientImpl;
                 QueryClientImpl: typeof _267.QueryClientImpl;
                 createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
-                    channel(request: _129.QueryChannelRequest): Promise<_129.QueryChannelResponseSDKType>;
-                    channels(request?: _129.QueryChannelsRequest): Promise<_129.QueryChannelsResponseSDKType>;
-                    connectionChannels(request: _129.QueryConnectionChannelsRequest): Promise<_129.QueryConnectionChannelsResponseSDKType>;
-                    channelClientState(request: _129.QueryChannelClientStateRequest): Promise<_129.QueryChannelClientStateResponseSDKType>;
-                    channelConsensusState(request: _129.QueryChannelConsensusStateRequest): Promise<_129.QueryChannelConsensusStateResponseSDKType>;
-                    packetCommitment(request: _129.QueryPacketCommitmentRequest): Promise<_129.QueryPacketCommitmentResponseSDKType>;
-                    packetCommitments(request: _129.QueryPacketCommitmentsRequest): Promise<_129.QueryPacketCommitmentsResponseSDKType>;
-                    packetReceipt(request: _129.QueryPacketReceiptRequest): Promise<_129.QueryPacketReceiptResponseSDKType>;
-                    packetAcknowledgement(request: _129.QueryPacketAcknowledgementRequest): Promise<_129.QueryPacketAcknowledgementResponseSDKType>;
-                    packetAcknowledgements(request: _129.QueryPacketAcknowledgementsRequest): Promise<_129.QueryPacketAcknowledgementsResponseSDKType>;
-                    unreceivedPackets(request: _129.QueryUnreceivedPacketsRequest): Promise<_129.QueryUnreceivedPacketsResponseSDKType>;
-                    unreceivedAcks(request: _129.QueryUnreceivedAcksRequest): Promise<_129.QueryUnreceivedAcksResponseSDKType>;
-                    nextSequenceReceive(request: _129.QueryNextSequenceReceiveRequest): Promise<_129.QueryNextSequenceReceiveResponseSDKType>;
+                    channel(request: _129.QueryChannelRequest): Promise<_129.QueryChannelResponse>;
+                    channels(request?: _129.QueryChannelsRequest): Promise<_129.QueryChannelsResponse>;
+                    connectionChannels(request: _129.QueryConnectionChannelsRequest): Promise<_129.QueryConnectionChannelsResponse>;
+                    channelClientState(request: _129.QueryChannelClientStateRequest): Promise<_129.QueryChannelClientStateResponse>;
+                    channelConsensusState(request: _129.QueryChannelConsensusStateRequest): Promise<_129.QueryChannelConsensusStateResponse>;
+                    packetCommitment(request: _129.QueryPacketCommitmentRequest): Promise<_129.QueryPacketCommitmentResponse>;
+                    packetCommitments(request: _129.QueryPacketCommitmentsRequest): Promise<_129.QueryPacketCommitmentsResponse>;
+                    packetReceipt(request: _129.QueryPacketReceiptRequest): Promise<_129.QueryPacketReceiptResponse>;
+                    packetAcknowledgement(request: _129.QueryPacketAcknowledgementRequest): Promise<_129.QueryPacketAcknowledgementResponse>;
+                    packetAcknowledgements(request: _129.QueryPacketAcknowledgementsRequest): Promise<_129.QueryPacketAcknowledgementsResponse>;
+                    unreceivedPackets(request: _129.QueryUnreceivedPacketsRequest): Promise<_129.QueryUnreceivedPacketsResponse>;
+                    unreceivedAcks(request: _129.QueryUnreceivedAcksRequest): Promise<_129.QueryUnreceivedAcksResponse>;
+                    nextSequenceReceive(request: _129.QueryNextSequenceReceiveRequest): Promise<_129.QueryNextSequenceReceiveResponse>;
                 };
                 LCDQueryClient: typeof _263.LCDQueryClient;
                 registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
@@ -678,7 +678,7 @@ export declare namespace ibc {
                 };
                 MsgChannelOpenInitResponse: {
                     encode(_: _130.MsgChannelOpenInitResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _130.MsgChannelOpenInitResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _130.MsgChannelOpenInitResponse;
                     fromPartial(_: {}): _130.MsgChannelOpenInitResponse;
                 };
                 MsgChannelOpenTry: {
@@ -708,7 +708,7 @@ export declare namespace ibc {
                 };
                 MsgChannelOpenTryResponse: {
                     encode(_: _130.MsgChannelOpenTryResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _130.MsgChannelOpenTryResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _130.MsgChannelOpenTryResponse;
                     fromPartial(_: {}): _130.MsgChannelOpenTryResponse;
                 };
                 MsgChannelOpenAck: {
@@ -729,7 +729,7 @@ export declare namespace ibc {
                 };
                 MsgChannelOpenAckResponse: {
                     encode(_: _130.MsgChannelOpenAckResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _130.MsgChannelOpenAckResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _130.MsgChannelOpenAckResponse;
                     fromPartial(_: {}): _130.MsgChannelOpenAckResponse;
                 };
                 MsgChannelOpenConfirm: {
@@ -748,7 +748,7 @@ export declare namespace ibc {
                 };
                 MsgChannelOpenConfirmResponse: {
                     encode(_: _130.MsgChannelOpenConfirmResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _130.MsgChannelOpenConfirmResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _130.MsgChannelOpenConfirmResponse;
                     fromPartial(_: {}): _130.MsgChannelOpenConfirmResponse;
                 };
                 MsgChannelCloseInit: {
@@ -762,7 +762,7 @@ export declare namespace ibc {
                 };
                 MsgChannelCloseInitResponse: {
                     encode(_: _130.MsgChannelCloseInitResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _130.MsgChannelCloseInitResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _130.MsgChannelCloseInitResponse;
                     fromPartial(_: {}): _130.MsgChannelCloseInitResponse;
                 };
                 MsgChannelCloseConfirm: {
@@ -781,7 +781,7 @@ export declare namespace ibc {
                 };
                 MsgChannelCloseConfirmResponse: {
                     encode(_: _130.MsgChannelCloseConfirmResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _130.MsgChannelCloseConfirmResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _130.MsgChannelCloseConfirmResponse;
                     fromPartial(_: {}): _130.MsgChannelCloseConfirmResponse;
                 };
                 MsgRecvPacket: {
@@ -811,7 +811,7 @@ export declare namespace ibc {
                 };
                 MsgRecvPacketResponse: {
                     encode(_: _130.MsgRecvPacketResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _130.MsgRecvPacketResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _130.MsgRecvPacketResponse;
                     fromPartial(_: {}): _130.MsgRecvPacketResponse;
                 };
                 MsgTimeout: {
@@ -842,7 +842,7 @@ export declare namespace ibc {
                 };
                 MsgTimeoutResponse: {
                     encode(_: _130.MsgTimeoutResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _130.MsgTimeoutResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _130.MsgTimeoutResponse;
                     fromPartial(_: {}): _130.MsgTimeoutResponse;
                 };
                 MsgTimeoutOnClose: {
@@ -874,7 +874,7 @@ export declare namespace ibc {
                 };
                 MsgTimeoutOnCloseResponse: {
                     encode(_: _130.MsgTimeoutOnCloseResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _130.MsgTimeoutOnCloseResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _130.MsgTimeoutOnCloseResponse;
                     fromPartial(_: {}): _130.MsgTimeoutOnCloseResponse;
                 };
                 MsgAcknowledgement: {
@@ -905,7 +905,7 @@ export declare namespace ibc {
                 };
                 MsgAcknowledgementResponse: {
                     encode(_: _130.MsgAcknowledgementResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _130.MsgAcknowledgementResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _130.MsgAcknowledgementResponse;
                     fromPartial(_: {}): _130.MsgAcknowledgementResponse;
                 };
                 QueryChannelRequest: {
@@ -918,7 +918,7 @@ export declare namespace ibc {
                 };
                 QueryChannelResponse: {
                     encode(message: _129.QueryChannelResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _129.QueryChannelResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _129.QueryChannelResponse;
                     fromPartial(object: {
                         channel?: {
                             state?: _127.State;
@@ -952,7 +952,7 @@ export declare namespace ibc {
                 };
                 QueryChannelsResponse: {
                     encode(message: _129.QueryChannelsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _129.QueryChannelsResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _129.QueryChannelsResponse;
                     fromPartial(object: {
                         channels?: {
                             state?: _127.State;
@@ -992,7 +992,7 @@ export declare namespace ibc {
                 };
                 QueryConnectionChannelsResponse: {
                     encode(message: _129.QueryConnectionChannelsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _129.QueryConnectionChannelsResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _129.QueryConnectionChannelsResponse;
                     fromPartial(object: {
                         channels?: {
                             state?: _127.State;
@@ -1026,7 +1026,7 @@ export declare namespace ibc {
                 };
                 QueryChannelClientStateResponse: {
                     encode(message: _129.QueryChannelClientStateResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _129.QueryChannelClientStateResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _129.QueryChannelClientStateResponse;
                     fromPartial(object: {
                         identifiedClientState?: {
                             clientId?: string;
@@ -1054,7 +1054,7 @@ export declare namespace ibc {
                 };
                 QueryChannelConsensusStateResponse: {
                     encode(message: _129.QueryChannelConsensusStateResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _129.QueryChannelConsensusStateResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _129.QueryChannelConsensusStateResponse;
                     fromPartial(object: {
                         consensusState?: {
                             typeUrl?: string;
@@ -1079,7 +1079,7 @@ export declare namespace ibc {
                 };
                 QueryPacketCommitmentResponse: {
                     encode(message: _129.QueryPacketCommitmentResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _129.QueryPacketCommitmentResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _129.QueryPacketCommitmentResponse;
                     fromPartial(object: {
                         commitment?: Uint8Array;
                         proof?: Uint8Array;
@@ -1106,7 +1106,7 @@ export declare namespace ibc {
                 };
                 QueryPacketCommitmentsResponse: {
                     encode(message: _129.QueryPacketCommitmentsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _129.QueryPacketCommitmentsResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _129.QueryPacketCommitmentsResponse;
                     fromPartial(object: {
                         commitments?: {
                             portId?: string;
@@ -1135,7 +1135,7 @@ export declare namespace ibc {
                 };
                 QueryPacketReceiptResponse: {
                     encode(message: _129.QueryPacketReceiptResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _129.QueryPacketReceiptResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _129.QueryPacketReceiptResponse;
                     fromPartial(object: {
                         received?: boolean;
                         proof?: Uint8Array;
@@ -1156,7 +1156,7 @@ export declare namespace ibc {
                 };
                 QueryPacketAcknowledgementResponse: {
                     encode(message: _129.QueryPacketAcknowledgementResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _129.QueryPacketAcknowledgementResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _129.QueryPacketAcknowledgementResponse;
                     fromPartial(object: {
                         acknowledgement?: Uint8Array;
                         proof?: Uint8Array;
@@ -1184,7 +1184,7 @@ export declare namespace ibc {
                 };
                 QueryPacketAcknowledgementsResponse: {
                     encode(message: _129.QueryPacketAcknowledgementsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _129.QueryPacketAcknowledgementsResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _129.QueryPacketAcknowledgementsResponse;
                     fromPartial(object: {
                         acknowledgements?: {
                             portId?: string;
@@ -1213,7 +1213,7 @@ export declare namespace ibc {
                 };
                 QueryUnreceivedPacketsResponse: {
                     encode(message: _129.QueryUnreceivedPacketsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _129.QueryUnreceivedPacketsResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _129.QueryUnreceivedPacketsResponse;
                     fromPartial(object: {
                         sequences?: any[];
                         height?: {
@@ -1233,7 +1233,7 @@ export declare namespace ibc {
                 };
                 QueryUnreceivedAcksResponse: {
                     encode(message: _129.QueryUnreceivedAcksResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _129.QueryUnreceivedAcksResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _129.QueryUnreceivedAcksResponse;
                     fromPartial(object: {
                         sequences?: any[];
                         height?: {
@@ -1252,7 +1252,7 @@ export declare namespace ibc {
                 };
                 QueryNextSequenceReceiveResponse: {
                     encode(message: _129.QueryNextSequenceReceiveResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _129.QueryNextSequenceReceiveResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _129.QueryNextSequenceReceiveResponse;
                     fromPartial(object: {
                         nextSequenceReceive?: any;
                         proof?: Uint8Array;
@@ -1411,14 +1411,14 @@ export declare namespace ibc {
                 MsgClientImpl: typeof _273.MsgClientImpl;
                 QueryClientImpl: typeof _268.QueryClientImpl;
                 createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
-                    clientState(request: _133.QueryClientStateRequest): Promise<_133.QueryClientStateResponseSDKType>;
-                    clientStates(request?: _133.QueryClientStatesRequest): Promise<_133.QueryClientStatesResponseSDKType>;
-                    consensusState(request: _133.QueryConsensusStateRequest): Promise<_133.QueryConsensusStateResponseSDKType>;
-                    consensusStates(request: _133.QueryConsensusStatesRequest): Promise<_133.QueryConsensusStatesResponseSDKType>;
-                    clientStatus(request: _133.QueryClientStatusRequest): Promise<_133.QueryClientStatusResponseSDKType>;
-                    clientParams(request?: _133.QueryClientParamsRequest): Promise<_133.QueryClientParamsResponseSDKType>;
-                    upgradedClientState(request?: _133.QueryUpgradedClientStateRequest): Promise<_133.QueryUpgradedClientStateResponseSDKType>;
-                    upgradedConsensusState(request?: _133.QueryUpgradedConsensusStateRequest): Promise<_133.QueryUpgradedConsensusStateResponseSDKType>;
+                    clientState(request: _133.QueryClientStateRequest): Promise<_133.QueryClientStateResponse>;
+                    clientStates(request?: _133.QueryClientStatesRequest): Promise<_133.QueryClientStatesResponse>;
+                    consensusState(request: _133.QueryConsensusStateRequest): Promise<_133.QueryConsensusStateResponse>;
+                    consensusStates(request: _133.QueryConsensusStatesRequest): Promise<_133.QueryConsensusStatesResponse>;
+                    clientStatus(request: _133.QueryClientStatusRequest): Promise<_133.QueryClientStatusResponse>;
+                    clientParams(request?: _133.QueryClientParamsRequest): Promise<_133.QueryClientParamsResponse>;
+                    upgradedClientState(request?: _133.QueryUpgradedClientStateRequest): Promise<_133.QueryUpgradedClientStateResponse>;
+                    upgradedConsensusState(request?: _133.QueryUpgradedConsensusStateRequest): Promise<_133.QueryUpgradedConsensusStateResponse>;
                 };
                 LCDQueryClient: typeof _264.LCDQueryClient;
                 registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
@@ -1592,7 +1592,7 @@ export declare namespace ibc {
                 };
                 MsgCreateClientResponse: {
                     encode(_: _134.MsgCreateClientResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _134.MsgCreateClientResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _134.MsgCreateClientResponse;
                     fromPartial(_: {}): _134.MsgCreateClientResponse;
                 };
                 MsgUpdateClient: {
@@ -1609,7 +1609,7 @@ export declare namespace ibc {
                 };
                 MsgUpdateClientResponse: {
                     encode(_: _134.MsgUpdateClientResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _134.MsgUpdateClientResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _134.MsgUpdateClientResponse;
                     fromPartial(_: {}): _134.MsgUpdateClientResponse;
                 };
                 MsgUpgradeClient: {
@@ -1632,7 +1632,7 @@ export declare namespace ibc {
                 };
                 MsgUpgradeClientResponse: {
                     encode(_: _134.MsgUpgradeClientResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _134.MsgUpgradeClientResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _134.MsgUpgradeClientResponse;
                     fromPartial(_: {}): _134.MsgUpgradeClientResponse;
                 };
                 MsgSubmitMisbehaviour: {
@@ -1649,7 +1649,7 @@ export declare namespace ibc {
                 };
                 MsgSubmitMisbehaviourResponse: {
                     encode(_: _134.MsgSubmitMisbehaviourResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _134.MsgSubmitMisbehaviourResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _134.MsgSubmitMisbehaviourResponse;
                     fromPartial(_: {}): _134.MsgSubmitMisbehaviourResponse;
                 };
                 QueryClientStateRequest: {
@@ -1661,7 +1661,7 @@ export declare namespace ibc {
                 };
                 QueryClientStateResponse: {
                     encode(message: _133.QueryClientStateResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _133.QueryClientStateResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _133.QueryClientStateResponse;
                     fromPartial(object: {
                         clientState?: {
                             typeUrl?: string;
@@ -1689,7 +1689,7 @@ export declare namespace ibc {
                 };
                 QueryClientStatesResponse: {
                     encode(message: _133.QueryClientStatesResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _133.QueryClientStatesResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _133.QueryClientStatesResponse;
                     fromPartial(object: {
                         clientStates?: {
                             clientId?: string;
@@ -1716,7 +1716,7 @@ export declare namespace ibc {
                 };
                 QueryConsensusStateResponse: {
                     encode(message: _133.QueryConsensusStateResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _133.QueryConsensusStateResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _133.QueryConsensusStateResponse;
                     fromPartial(object: {
                         consensusState?: {
                             typeUrl?: string;
@@ -1745,7 +1745,7 @@ export declare namespace ibc {
                 };
                 QueryConsensusStatesResponse: {
                     encode(message: _133.QueryConsensusStatesResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _133.QueryConsensusStatesResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _133.QueryConsensusStatesResponse;
                     fromPartial(object: {
                         consensusStates?: {
                             height?: {
@@ -1772,7 +1772,7 @@ export declare namespace ibc {
                 };
                 QueryClientStatusResponse: {
                     encode(message: _133.QueryClientStatusResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _133.QueryClientStatusResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _133.QueryClientStatusResponse;
                     fromPartial(object: {
                         status?: string;
                     }): _133.QueryClientStatusResponse;
@@ -1784,7 +1784,7 @@ export declare namespace ibc {
                 };
                 QueryClientParamsResponse: {
                     encode(message: _133.QueryClientParamsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _133.QueryClientParamsResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _133.QueryClientParamsResponse;
                     fromPartial(object: {
                         params?: {
                             allowedClients?: string[];
@@ -1798,7 +1798,7 @@ export declare namespace ibc {
                 };
                 QueryUpgradedClientStateResponse: {
                     encode(message: _133.QueryUpgradedClientStateResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _133.QueryUpgradedClientStateResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _133.QueryUpgradedClientStateResponse;
                     fromPartial(object: {
                         upgradedClientState?: {
                             typeUrl?: string;
@@ -1813,7 +1813,7 @@ export declare namespace ibc {
                 };
                 QueryUpgradedConsensusStateResponse: {
                     encode(message: _133.QueryUpgradedConsensusStateResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _133.QueryUpgradedConsensusStateResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _133.QueryUpgradedConsensusStateResponse;
                     fromPartial(object: {
                         upgradedConsensusState?: {
                             typeUrl?: string;
@@ -2161,11 +2161,11 @@ export declare namespace ibc {
                 MsgClientImpl: typeof _274.MsgClientImpl;
                 QueryClientImpl: typeof _269.QueryClientImpl;
                 createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
-                    connection(request: _138.QueryConnectionRequest): Promise<_138.QueryConnectionResponseSDKType>;
-                    connections(request?: _138.QueryConnectionsRequest): Promise<_138.QueryConnectionsResponseSDKType>;
-                    clientConnections(request: _138.QueryClientConnectionsRequest): Promise<_138.QueryClientConnectionsResponseSDKType>;
-                    connectionClientState(request: _138.QueryConnectionClientStateRequest): Promise<_138.QueryConnectionClientStateResponseSDKType>;
-                    connectionConsensusState(request: _138.QueryConnectionConsensusStateRequest): Promise<_138.QueryConnectionConsensusStateResponseSDKType>;
+                    connection(request: _138.QueryConnectionRequest): Promise<_138.QueryConnectionResponse>;
+                    connections(request?: _138.QueryConnectionsRequest): Promise<_138.QueryConnectionsResponse>;
+                    clientConnections(request: _138.QueryClientConnectionsRequest): Promise<_138.QueryClientConnectionsResponse>;
+                    connectionClientState(request: _138.QueryConnectionClientStateRequest): Promise<_138.QueryConnectionClientStateResponse>;
+                    connectionConsensusState(request: _138.QueryConnectionConsensusStateRequest): Promise<_138.QueryConnectionConsensusStateResponse>;
                 };
                 LCDQueryClient: typeof _265.LCDQueryClient;
                 registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
@@ -2394,7 +2394,7 @@ export declare namespace ibc {
                 };
                 MsgConnectionOpenInitResponse: {
                     encode(_: _139.MsgConnectionOpenInitResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _139.MsgConnectionOpenInitResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _139.MsgConnectionOpenInitResponse;
                     fromPartial(_: {}): _139.MsgConnectionOpenInitResponse;
                 };
                 MsgConnectionOpenTry: {
@@ -2435,7 +2435,7 @@ export declare namespace ibc {
                 };
                 MsgConnectionOpenTryResponse: {
                     encode(_: _139.MsgConnectionOpenTryResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _139.MsgConnectionOpenTryResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _139.MsgConnectionOpenTryResponse;
                     fromPartial(_: {}): _139.MsgConnectionOpenTryResponse;
                 };
                 MsgConnectionOpenAck: {
@@ -2468,7 +2468,7 @@ export declare namespace ibc {
                 };
                 MsgConnectionOpenAckResponse: {
                     encode(_: _139.MsgConnectionOpenAckResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _139.MsgConnectionOpenAckResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _139.MsgConnectionOpenAckResponse;
                     fromPartial(_: {}): _139.MsgConnectionOpenAckResponse;
                 };
                 MsgConnectionOpenConfirm: {
@@ -2486,7 +2486,7 @@ export declare namespace ibc {
                 };
                 MsgConnectionOpenConfirmResponse: {
                     encode(_: _139.MsgConnectionOpenConfirmResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _139.MsgConnectionOpenConfirmResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _139.MsgConnectionOpenConfirmResponse;
                     fromPartial(_: {}): _139.MsgConnectionOpenConfirmResponse;
                 };
                 QueryConnectionRequest: {
@@ -2498,7 +2498,7 @@ export declare namespace ibc {
                 };
                 QueryConnectionResponse: {
                     encode(message: _138.QueryConnectionResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _138.QueryConnectionResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _138.QueryConnectionResponse;
                     fromPartial(object: {
                         connection?: {
                             clientId?: string;
@@ -2538,7 +2538,7 @@ export declare namespace ibc {
                 };
                 QueryConnectionsResponse: {
                     encode(message: _138.QueryConnectionsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _138.QueryConnectionsResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _138.QueryConnectionsResponse;
                     fromPartial(object: {
                         connections?: {
                             id?: string;
@@ -2576,7 +2576,7 @@ export declare namespace ibc {
                 };
                 QueryClientConnectionsResponse: {
                     encode(message: _138.QueryClientConnectionsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _138.QueryClientConnectionsResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _138.QueryClientConnectionsResponse;
                     fromPartial(object: {
                         connectionPaths?: string[];
                         proof?: Uint8Array;
@@ -2595,7 +2595,7 @@ export declare namespace ibc {
                 };
                 QueryConnectionClientStateResponse: {
                     encode(message: _138.QueryConnectionClientStateResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _138.QueryConnectionClientStateResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _138.QueryConnectionClientStateResponse;
                     fromPartial(object: {
                         identifiedClientState?: {
                             clientId?: string;
@@ -2622,7 +2622,7 @@ export declare namespace ibc {
                 };
                 QueryConnectionConsensusStateResponse: {
                     encode(message: _138.QueryConnectionConsensusStateResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _138.QueryConnectionConsensusStateResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _138.QueryConnectionConsensusStateResponse;
                     fromPartial(object: {
                         consensusState?: {
                             typeUrl?: string;
@@ -2759,7 +2759,7 @@ export declare namespace ibc {
             const v1: {
                 QueryClientImpl: typeof _270.QueryClientImpl;
                 createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
-                    appVersion(request: _140.QueryAppVersionRequest): Promise<_140.QueryAppVersionResponseSDKType>;
+                    appVersion(request: _140.QueryAppVersionRequest): Promise<_140.QueryAppVersionResponse>;
                 };
                 QueryAppVersionRequest: {
                     encode(message: _140.QueryAppVersionRequest, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
@@ -2777,7 +2777,7 @@ export declare namespace ibc {
                 };
                 QueryAppVersionResponse: {
                     encode(message: _140.QueryAppVersionResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _140.QueryAppVersionResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _140.QueryAppVersionResponse;
                     fromPartial(object: {
                         portId?: string;
                         version?: string;
@@ -3762,182 +3762,182 @@ export declare namespace ibc {
             cosmos: {
                 app: {
                     v1alpha1: {
-                        config(request?: import("../cosmos/app/v1alpha1/query").QueryConfigRequest): Promise<import("../cosmos/app/v1alpha1/query").QueryConfigResponseSDKType>;
+                        config(request?: import("../cosmos/app/v1alpha1/query").QueryConfigRequest): Promise<import("../cosmos/app/v1alpha1/query").QueryConfigResponse>;
                     };
                 };
                 auth: {
                     v1beta1: {
-                        accounts(request?: import("../cosmos/auth/v1beta1/query").QueryAccountsRequest): Promise<import("../cosmos/auth/v1beta1/query").QueryAccountsResponseSDKType>;
-                        account(request: import("../cosmos/auth/v1beta1/query").QueryAccountRequest): Promise<import("../cosmos/auth/v1beta1/query").QueryAccountResponseSDKType>;
-                        params(request?: import("../cosmos/auth/v1beta1/query").QueryParamsRequest): Promise<import("../cosmos/auth/v1beta1/query").QueryParamsResponseSDKType>;
-                        moduleAccounts(request?: import("../cosmos/auth/v1beta1/query").QueryModuleAccountsRequest): Promise<import("../cosmos/auth/v1beta1/query").QueryModuleAccountsResponseSDKType>;
-                        bech32Prefix(request?: import("../cosmos/auth/v1beta1/query").Bech32PrefixRequest): Promise<import("../cosmos/auth/v1beta1/query").Bech32PrefixResponseSDKType>;
-                        addressBytesToString(request: import("../cosmos/auth/v1beta1/query").AddressBytesToStringRequest): Promise<import("../cosmos/auth/v1beta1/query").AddressBytesToStringResponseSDKType>;
-                        addressStringToBytes(request: import("../cosmos/auth/v1beta1/query").AddressStringToBytesRequest): Promise<import("../cosmos/auth/v1beta1/query").AddressStringToBytesResponseSDKType>;
+                        accounts(request?: import("../cosmos/auth/v1beta1/query").QueryAccountsRequest): Promise<import("../cosmos/auth/v1beta1/query").QueryAccountsResponse>;
+                        account(request: import("../cosmos/auth/v1beta1/query").QueryAccountRequest): Promise<import("../cosmos/auth/v1beta1/query").QueryAccountResponse>;
+                        params(request?: import("../cosmos/auth/v1beta1/query").QueryParamsRequest): Promise<import("../cosmos/auth/v1beta1/query").QueryParamsResponse>;
+                        moduleAccounts(request?: import("../cosmos/auth/v1beta1/query").QueryModuleAccountsRequest): Promise<import("../cosmos/auth/v1beta1/query").QueryModuleAccountsResponse>;
+                        bech32Prefix(request?: import("../cosmos/auth/v1beta1/query").Bech32PrefixRequest): Promise<import("../cosmos/auth/v1beta1/query").Bech32PrefixResponse>;
+                        addressBytesToString(request: import("../cosmos/auth/v1beta1/query").AddressBytesToStringRequest): Promise<import("../cosmos/auth/v1beta1/query").AddressBytesToStringResponse>;
+                        addressStringToBytes(request: import("../cosmos/auth/v1beta1/query").AddressStringToBytesRequest): Promise<import("../cosmos/auth/v1beta1/query").AddressStringToBytesResponse>;
                     };
                 };
                 authz: {
                     v1beta1: {
-                        grants(request: import("../cosmos/authz/v1beta1/query").QueryGrantsRequest): Promise<import("../cosmos/authz/v1beta1/query").QueryGrantsResponseSDKType>;
-                        granterGrants(request: import("../cosmos/authz/v1beta1/query").QueryGranterGrantsRequest): Promise<import("../cosmos/authz/v1beta1/query").QueryGranterGrantsResponseSDKType>;
-                        granteeGrants(request: import("../cosmos/authz/v1beta1/query").QueryGranteeGrantsRequest): Promise<import("../cosmos/authz/v1beta1/query").QueryGranteeGrantsResponseSDKType>;
+                        grants(request: import("../cosmos/authz/v1beta1/query").QueryGrantsRequest): Promise<import("../cosmos/authz/v1beta1/query").QueryGrantsResponse>;
+                        granterGrants(request: import("../cosmos/authz/v1beta1/query").QueryGranterGrantsRequest): Promise<import("../cosmos/authz/v1beta1/query").QueryGranterGrantsResponse>;
+                        granteeGrants(request: import("../cosmos/authz/v1beta1/query").QueryGranteeGrantsRequest): Promise<import("../cosmos/authz/v1beta1/query").QueryGranteeGrantsResponse>;
                     };
                 };
                 bank: {
                     v1beta1: {
-                        balance(request: import("../cosmos/bank/v1beta1/query").QueryBalanceRequest): Promise<import("../cosmos/bank/v1beta1/query").QueryBalanceResponseSDKType>;
-                        allBalances(request: import("../cosmos/bank/v1beta1/query").QueryAllBalancesRequest): Promise<import("../cosmos/bank/v1beta1/query").QueryAllBalancesResponseSDKType>;
-                        spendableBalances(request: import("../cosmos/bank/v1beta1/query").QuerySpendableBalancesRequest): Promise<import("../cosmos/bank/v1beta1/query").QuerySpendableBalancesResponseSDKType>;
-                        totalSupply(request?: import("../cosmos/bank/v1beta1/query").QueryTotalSupplyRequest): Promise<import("../cosmos/bank/v1beta1/query").QueryTotalSupplyResponseSDKType>;
-                        supplyOf(request: import("../cosmos/bank/v1beta1/query").QuerySupplyOfRequest): Promise<import("../cosmos/bank/v1beta1/query").QuerySupplyOfResponseSDKType>;
-                        params(request?: import("../cosmos/bank/v1beta1/query").QueryParamsRequest): Promise<import("../cosmos/bank/v1beta1/query").QueryParamsResponseSDKType>;
-                        denomMetadata(request: import("../cosmos/bank/v1beta1/query").QueryDenomMetadataRequest): Promise<import("../cosmos/bank/v1beta1/query").QueryDenomMetadataResponseSDKType>;
-                        denomsMetadata(request?: import("../cosmos/bank/v1beta1/query").QueryDenomsMetadataRequest): Promise<import("../cosmos/bank/v1beta1/query").QueryDenomsMetadataResponseSDKType>;
-                        denomOwners(request: import("../cosmos/bank/v1beta1/query").QueryDenomOwnersRequest): Promise<import("../cosmos/bank/v1beta1/query").QueryDenomOwnersResponseSDKType>;
+                        balance(request: import("../cosmos/bank/v1beta1/query").QueryBalanceRequest): Promise<import("../cosmos/bank/v1beta1/query").QueryBalanceResponse>;
+                        allBalances(request: import("../cosmos/bank/v1beta1/query").QueryAllBalancesRequest): Promise<import("../cosmos/bank/v1beta1/query").QueryAllBalancesResponse>;
+                        spendableBalances(request: import("../cosmos/bank/v1beta1/query").QuerySpendableBalancesRequest): Promise<import("../cosmos/bank/v1beta1/query").QuerySpendableBalancesResponse>;
+                        totalSupply(request?: import("../cosmos/bank/v1beta1/query").QueryTotalSupplyRequest): Promise<import("../cosmos/bank/v1beta1/query").QueryTotalSupplyResponse>;
+                        supplyOf(request: import("../cosmos/bank/v1beta1/query").QuerySupplyOfRequest): Promise<import("../cosmos/bank/v1beta1/query").QuerySupplyOfResponse>;
+                        params(request?: import("../cosmos/bank/v1beta1/query").QueryParamsRequest): Promise<import("../cosmos/bank/v1beta1/query").QueryParamsResponse>;
+                        denomMetadata(request: import("../cosmos/bank/v1beta1/query").QueryDenomMetadataRequest): Promise<import("../cosmos/bank/v1beta1/query").QueryDenomMetadataResponse>;
+                        denomsMetadata(request?: import("../cosmos/bank/v1beta1/query").QueryDenomsMetadataRequest): Promise<import("../cosmos/bank/v1beta1/query").QueryDenomsMetadataResponse>;
+                        denomOwners(request: import("../cosmos/bank/v1beta1/query").QueryDenomOwnersRequest): Promise<import("../cosmos/bank/v1beta1/query").QueryDenomOwnersResponse>;
                     };
                 };
                 base: {
                     tendermint: {
                         v1beta1: {
-                            getNodeInfo(request?: import("../cosmos/base/tendermint/v1beta1/query").GetNodeInfoRequest): Promise<import("../cosmos/base/tendermint/v1beta1/query").GetNodeInfoResponseSDKType>;
-                            getSyncing(request?: import("../cosmos/base/tendermint/v1beta1/query").GetSyncingRequest): Promise<import("../cosmos/base/tendermint/v1beta1/query").GetSyncingResponseSDKType>;
-                            getLatestBlock(request?: import("../cosmos/base/tendermint/v1beta1/query").GetLatestBlockRequest): Promise<import("../cosmos/base/tendermint/v1beta1/query").GetLatestBlockResponseSDKType>;
-                            getBlockByHeight(request: import("../cosmos/base/tendermint/v1beta1/query").GetBlockByHeightRequest): Promise<import("../cosmos/base/tendermint/v1beta1/query").GetBlockByHeightResponseSDKType>;
-                            getLatestValidatorSet(request?: import("../cosmos/base/tendermint/v1beta1/query").GetLatestValidatorSetRequest): Promise<import("../cosmos/base/tendermint/v1beta1/query").GetLatestValidatorSetResponseSDKType>;
-                            getValidatorSetByHeight(request: import("../cosmos/base/tendermint/v1beta1/query").GetValidatorSetByHeightRequest): Promise<import("../cosmos/base/tendermint/v1beta1/query").GetValidatorSetByHeightResponseSDKType>;
+                            getNodeInfo(request?: import("../cosmos/base/tendermint/v1beta1/query").GetNodeInfoRequest): Promise<import("../cosmos/base/tendermint/v1beta1/query").GetNodeInfoResponse>;
+                            getSyncing(request?: import("../cosmos/base/tendermint/v1beta1/query").GetSyncingRequest): Promise<import("../cosmos/base/tendermint/v1beta1/query").GetSyncingResponse>;
+                            getLatestBlock(request?: import("../cosmos/base/tendermint/v1beta1/query").GetLatestBlockRequest): Promise<import("../cosmos/base/tendermint/v1beta1/query").GetLatestBlockResponse>;
+                            getBlockByHeight(request: import("../cosmos/base/tendermint/v1beta1/query").GetBlockByHeightRequest): Promise<import("../cosmos/base/tendermint/v1beta1/query").GetBlockByHeightResponse>;
+                            getLatestValidatorSet(request?: import("../cosmos/base/tendermint/v1beta1/query").GetLatestValidatorSetRequest): Promise<import("../cosmos/base/tendermint/v1beta1/query").GetLatestValidatorSetResponse>;
+                            getValidatorSetByHeight(request: import("../cosmos/base/tendermint/v1beta1/query").GetValidatorSetByHeightRequest): Promise<import("../cosmos/base/tendermint/v1beta1/query").GetValidatorSetByHeightResponse>;
                         };
                     };
                 };
                 distribution: {
                     v1beta1: {
-                        params(request?: import("../cosmos/distribution/v1beta1/query").QueryParamsRequest): Promise<import("../cosmos/distribution/v1beta1/query").QueryParamsResponseSDKType>;
-                        validatorOutstandingRewards(request: import("../cosmos/distribution/v1beta1/query").QueryValidatorOutstandingRewardsRequest): Promise<import("../cosmos/distribution/v1beta1/query").QueryValidatorOutstandingRewardsResponseSDKType>;
-                        validatorCommission(request: import("../cosmos/distribution/v1beta1/query").QueryValidatorCommissionRequest): Promise<import("../cosmos/distribution/v1beta1/query").QueryValidatorCommissionResponseSDKType>;
-                        validatorSlashes(request: import("../cosmos/distribution/v1beta1/query").QueryValidatorSlashesRequest): Promise<import("../cosmos/distribution/v1beta1/query").QueryValidatorSlashesResponseSDKType>;
-                        delegationRewards(request: import("../cosmos/distribution/v1beta1/query").QueryDelegationRewardsRequest): Promise<import("../cosmos/distribution/v1beta1/query").QueryDelegationRewardsResponseSDKType>;
-                        delegationTotalRewards(request: import("../cosmos/distribution/v1beta1/query").QueryDelegationTotalRewardsRequest): Promise<import("../cosmos/distribution/v1beta1/query").QueryDelegationTotalRewardsResponseSDKType>;
-                        delegatorValidators(request: import("../cosmos/distribution/v1beta1/query").QueryDelegatorValidatorsRequest): Promise<import("../cosmos/distribution/v1beta1/query").QueryDelegatorValidatorsResponseSDKType>;
-                        delegatorWithdrawAddress(request: import("../cosmos/distribution/v1beta1/query").QueryDelegatorWithdrawAddressRequest): Promise<import("../cosmos/distribution/v1beta1/query").QueryDelegatorWithdrawAddressResponseSDKType>;
-                        communityPool(request?: import("../cosmos/distribution/v1beta1/query").QueryCommunityPoolRequest): Promise<import("../cosmos/distribution/v1beta1/query").QueryCommunityPoolResponseSDKType>;
+                        params(request?: import("../cosmos/distribution/v1beta1/query").QueryParamsRequest): Promise<import("../cosmos/distribution/v1beta1/query").QueryParamsResponse>;
+                        validatorOutstandingRewards(request: import("../cosmos/distribution/v1beta1/query").QueryValidatorOutstandingRewardsRequest): Promise<import("../cosmos/distribution/v1beta1/query").QueryValidatorOutstandingRewardsResponse>;
+                        validatorCommission(request: import("../cosmos/distribution/v1beta1/query").QueryValidatorCommissionRequest): Promise<import("../cosmos/distribution/v1beta1/query").QueryValidatorCommissionResponse>;
+                        validatorSlashes(request: import("../cosmos/distribution/v1beta1/query").QueryValidatorSlashesRequest): Promise<import("../cosmos/distribution/v1beta1/query").QueryValidatorSlashesResponse>;
+                        delegationRewards(request: import("../cosmos/distribution/v1beta1/query").QueryDelegationRewardsRequest): Promise<import("../cosmos/distribution/v1beta1/query").QueryDelegationRewardsResponse>;
+                        delegationTotalRewards(request: import("../cosmos/distribution/v1beta1/query").QueryDelegationTotalRewardsRequest): Promise<import("../cosmos/distribution/v1beta1/query").QueryDelegationTotalRewardsResponse>;
+                        delegatorValidators(request: import("../cosmos/distribution/v1beta1/query").QueryDelegatorValidatorsRequest): Promise<import("../cosmos/distribution/v1beta1/query").QueryDelegatorValidatorsResponse>;
+                        delegatorWithdrawAddress(request: import("../cosmos/distribution/v1beta1/query").QueryDelegatorWithdrawAddressRequest): Promise<import("../cosmos/distribution/v1beta1/query").QueryDelegatorWithdrawAddressResponse>;
+                        communityPool(request?: import("../cosmos/distribution/v1beta1/query").QueryCommunityPoolRequest): Promise<import("../cosmos/distribution/v1beta1/query").QueryCommunityPoolResponse>;
                     };
                 };
                 evidence: {
                     v1beta1: {
-                        evidence(request: import("../cosmos/evidence/v1beta1/query").QueryEvidenceRequest): Promise<import("../cosmos/evidence/v1beta1/query").QueryEvidenceResponseSDKType>;
-                        allEvidence(request?: import("../cosmos/evidence/v1beta1/query").QueryAllEvidenceRequest): Promise<import("../cosmos/evidence/v1beta1/query").QueryAllEvidenceResponseSDKType>;
+                        evidence(request: import("../cosmos/evidence/v1beta1/query").QueryEvidenceRequest): Promise<import("../cosmos/evidence/v1beta1/query").QueryEvidenceResponse>;
+                        allEvidence(request?: import("../cosmos/evidence/v1beta1/query").QueryAllEvidenceRequest): Promise<import("../cosmos/evidence/v1beta1/query").QueryAllEvidenceResponse>;
                     };
                 };
                 feegrant: {
                     v1beta1: {
-                        allowance(request: import("../cosmos/feegrant/v1beta1/query").QueryAllowanceRequest): Promise<import("../cosmos/feegrant/v1beta1/query").QueryAllowanceResponseSDKType>;
-                        allowances(request: import("../cosmos/feegrant/v1beta1/query").QueryAllowancesRequest): Promise<import("../cosmos/feegrant/v1beta1/query").QueryAllowancesResponseSDKType>;
-                        allowancesByGranter(request: import("../cosmos/feegrant/v1beta1/query").QueryAllowancesByGranterRequest): Promise<import("../cosmos/feegrant/v1beta1/query").QueryAllowancesByGranterResponseSDKType>;
+                        allowance(request: import("../cosmos/feegrant/v1beta1/query").QueryAllowanceRequest): Promise<import("../cosmos/feegrant/v1beta1/query").QueryAllowanceResponse>;
+                        allowances(request: import("../cosmos/feegrant/v1beta1/query").QueryAllowancesRequest): Promise<import("../cosmos/feegrant/v1beta1/query").QueryAllowancesResponse>;
+                        allowancesByGranter(request: import("../cosmos/feegrant/v1beta1/query").QueryAllowancesByGranterRequest): Promise<import("../cosmos/feegrant/v1beta1/query").QueryAllowancesByGranterResponse>;
                     };
                 };
                 gov: {
                     v1: {
-                        proposal(request: import("../cosmos/gov/v1/query").QueryProposalRequest): Promise<import("../cosmos/gov/v1/query").QueryProposalResponseSDKType>;
-                        proposals(request: import("../cosmos/gov/v1/query").QueryProposalsRequest): Promise<import("../cosmos/gov/v1/query").QueryProposalsResponseSDKType>;
-                        vote(request: import("../cosmos/gov/v1/query").QueryVoteRequest): Promise<import("../cosmos/gov/v1/query").QueryVoteResponseSDKType>;
-                        votes(request: import("../cosmos/gov/v1/query").QueryVotesRequest): Promise<import("../cosmos/gov/v1/query").QueryVotesResponseSDKType>;
-                        params(request: import("../cosmos/gov/v1/query").QueryParamsRequest): Promise<import("../cosmos/gov/v1/query").QueryParamsResponseSDKType>;
-                        deposit(request: import("../cosmos/gov/v1/query").QueryDepositRequest): Promise<import("../cosmos/gov/v1/query").QueryDepositResponseSDKType>;
-                        deposits(request: import("../cosmos/gov/v1/query").QueryDepositsRequest): Promise<import("../cosmos/gov/v1/query").QueryDepositsResponseSDKType>;
-                        tallyResult(request: import("../cosmos/gov/v1/query").QueryTallyResultRequest): Promise<import("../cosmos/gov/v1/query").QueryTallyResultResponseSDKType>;
+                        proposal(request: import("../cosmos/gov/v1/query").QueryProposalRequest): Promise<import("../cosmos/gov/v1/query").QueryProposalResponse>;
+                        proposals(request: import("../cosmos/gov/v1/query").QueryProposalsRequest): Promise<import("../cosmos/gov/v1/query").QueryProposalsResponse>;
+                        vote(request: import("../cosmos/gov/v1/query").QueryVoteRequest): Promise<import("../cosmos/gov/v1/query").QueryVoteResponse>;
+                        votes(request: import("../cosmos/gov/v1/query").QueryVotesRequest): Promise<import("../cosmos/gov/v1/query").QueryVotesResponse>;
+                        params(request: import("../cosmos/gov/v1/query").QueryParamsRequest): Promise<import("../cosmos/gov/v1/query").QueryParamsResponse>;
+                        deposit(request: import("../cosmos/gov/v1/query").QueryDepositRequest): Promise<import("../cosmos/gov/v1/query").QueryDepositResponse>;
+                        deposits(request: import("../cosmos/gov/v1/query").QueryDepositsRequest): Promise<import("../cosmos/gov/v1/query").QueryDepositsResponse>;
+                        tallyResult(request: import("../cosmos/gov/v1/query").QueryTallyResultRequest): Promise<import("../cosmos/gov/v1/query").QueryTallyResultResponse>;
                     };
                     v1beta1: {
-                        proposal(request: import("../cosmos/gov/v1beta1/query").QueryProposalRequest): Promise<import("../cosmos/gov/v1beta1/query").QueryProposalResponseSDKType>;
-                        proposals(request: import("../cosmos/gov/v1beta1/query").QueryProposalsRequest): Promise<import("../cosmos/gov/v1beta1/query").QueryProposalsResponseSDKType>;
-                        vote(request: import("../cosmos/gov/v1beta1/query").QueryVoteRequest): Promise<import("../cosmos/gov/v1beta1/query").QueryVoteResponseSDKType>;
-                        votes(request: import("../cosmos/gov/v1beta1/query").QueryVotesRequest): Promise<import("../cosmos/gov/v1beta1/query").QueryVotesResponseSDKType>;
-                        params(request: import("../cosmos/gov/v1beta1/query").QueryParamsRequest): Promise<import("../cosmos/gov/v1beta1/query").QueryParamsResponseSDKType>;
-                        deposit(request: import("../cosmos/gov/v1beta1/query").QueryDepositRequest): Promise<import("../cosmos/gov/v1beta1/query").QueryDepositResponseSDKType>;
-                        deposits(request: import("../cosmos/gov/v1beta1/query").QueryDepositsRequest): Promise<import("../cosmos/gov/v1beta1/query").QueryDepositsResponseSDKType>;
-                        tallyResult(request: import("../cosmos/gov/v1beta1/query").QueryTallyResultRequest): Promise<import("../cosmos/gov/v1beta1/query").QueryTallyResultResponseSDKType>;
+                        proposal(request: import("../cosmos/gov/v1beta1/query").QueryProposalRequest): Promise<import("../cosmos/gov/v1beta1/query").QueryProposalResponse>;
+                        proposals(request: import("../cosmos/gov/v1beta1/query").QueryProposalsRequest): Promise<import("../cosmos/gov/v1beta1/query").QueryProposalsResponse>;
+                        vote(request: import("../cosmos/gov/v1beta1/query").QueryVoteRequest): Promise<import("../cosmos/gov/v1beta1/query").QueryVoteResponse>;
+                        votes(request: import("../cosmos/gov/v1beta1/query").QueryVotesRequest): Promise<import("../cosmos/gov/v1beta1/query").QueryVotesResponse>;
+                        params(request: import("../cosmos/gov/v1beta1/query").QueryParamsRequest): Promise<import("../cosmos/gov/v1beta1/query").QueryParamsResponse>;
+                        deposit(request: import("../cosmos/gov/v1beta1/query").QueryDepositRequest): Promise<import("../cosmos/gov/v1beta1/query").QueryDepositResponse>;
+                        deposits(request: import("../cosmos/gov/v1beta1/query").QueryDepositsRequest): Promise<import("../cosmos/gov/v1beta1/query").QueryDepositsResponse>;
+                        tallyResult(request: import("../cosmos/gov/v1beta1/query").QueryTallyResultRequest): Promise<import("../cosmos/gov/v1beta1/query").QueryTallyResultResponse>;
                     };
                 };
                 group: {
                     v1: {
-                        groupInfo(request: import("../cosmos/group/v1/query").QueryGroupInfoRequest): Promise<import("../cosmos/group/v1/query").QueryGroupInfoResponseSDKType>;
-                        groupPolicyInfo(request: import("../cosmos/group/v1/query").QueryGroupPolicyInfoRequest): Promise<import("../cosmos/group/v1/query").QueryGroupPolicyInfoResponseSDKType>;
-                        groupMembers(request: import("../cosmos/group/v1/query").QueryGroupMembersRequest): Promise<import("../cosmos/group/v1/query").QueryGroupMembersResponseSDKType>;
-                        groupsByAdmin(request: import("../cosmos/group/v1/query").QueryGroupsByAdminRequest): Promise<import("../cosmos/group/v1/query").QueryGroupsByAdminResponseSDKType>;
-                        groupPoliciesByGroup(request: import("../cosmos/group/v1/query").QueryGroupPoliciesByGroupRequest): Promise<import("../cosmos/group/v1/query").QueryGroupPoliciesByGroupResponseSDKType>;
-                        groupPoliciesByAdmin(request: import("../cosmos/group/v1/query").QueryGroupPoliciesByAdminRequest): Promise<import("../cosmos/group/v1/query").QueryGroupPoliciesByAdminResponseSDKType>;
-                        proposal(request: import("../cosmos/group/v1/query").QueryProposalRequest): Promise<import("../cosmos/group/v1/query").QueryProposalResponseSDKType>;
-                        proposalsByGroupPolicy(request: import("../cosmos/group/v1/query").QueryProposalsByGroupPolicyRequest): Promise<import("../cosmos/group/v1/query").QueryProposalsByGroupPolicyResponseSDKType>;
-                        voteByProposalVoter(request: import("../cosmos/group/v1/query").QueryVoteByProposalVoterRequest): Promise<import("../cosmos/group/v1/query").QueryVoteByProposalVoterResponseSDKType>;
-                        votesByProposal(request: import("../cosmos/group/v1/query").QueryVotesByProposalRequest): Promise<import("../cosmos/group/v1/query").QueryVotesByProposalResponseSDKType>;
-                        votesByVoter(request: import("../cosmos/group/v1/query").QueryVotesByVoterRequest): Promise<import("../cosmos/group/v1/query").QueryVotesByVoterResponseSDKType>;
-                        groupsByMember(request: import("../cosmos/group/v1/query").QueryGroupsByMemberRequest): Promise<import("../cosmos/group/v1/query").QueryGroupsByMemberResponseSDKType>;
-                        tallyResult(request: import("../cosmos/group/v1/query").QueryTallyResultRequest): Promise<import("../cosmos/group/v1/query").QueryTallyResultResponseSDKType>;
+                        groupInfo(request: import("../cosmos/group/v1/query").QueryGroupInfoRequest): Promise<import("../cosmos/group/v1/query").QueryGroupInfoResponse>;
+                        groupPolicyInfo(request: import("../cosmos/group/v1/query").QueryGroupPolicyInfoRequest): Promise<import("../cosmos/group/v1/query").QueryGroupPolicyInfoResponse>;
+                        groupMembers(request: import("../cosmos/group/v1/query").QueryGroupMembersRequest): Promise<import("../cosmos/group/v1/query").QueryGroupMembersResponse>;
+                        groupsByAdmin(request: import("../cosmos/group/v1/query").QueryGroupsByAdminRequest): Promise<import("../cosmos/group/v1/query").QueryGroupsByAdminResponse>;
+                        groupPoliciesByGroup(request: import("../cosmos/group/v1/query").QueryGroupPoliciesByGroupRequest): Promise<import("../cosmos/group/v1/query").QueryGroupPoliciesByGroupResponse>;
+                        groupPoliciesByAdmin(request: import("../cosmos/group/v1/query").QueryGroupPoliciesByAdminRequest): Promise<import("../cosmos/group/v1/query").QueryGroupPoliciesByAdminResponse>;
+                        proposal(request: import("../cosmos/group/v1/query").QueryProposalRequest): Promise<import("../cosmos/group/v1/query").QueryProposalResponse>;
+                        proposalsByGroupPolicy(request: import("../cosmos/group/v1/query").QueryProposalsByGroupPolicyRequest): Promise<import("../cosmos/group/v1/query").QueryProposalsByGroupPolicyResponse>;
+                        voteByProposalVoter(request: import("../cosmos/group/v1/query").QueryVoteByProposalVoterRequest): Promise<import("../cosmos/group/v1/query").QueryVoteByProposalVoterResponse>;
+                        votesByProposal(request: import("../cosmos/group/v1/query").QueryVotesByProposalRequest): Promise<import("../cosmos/group/v1/query").QueryVotesByProposalResponse>;
+                        votesByVoter(request: import("../cosmos/group/v1/query").QueryVotesByVoterRequest): Promise<import("../cosmos/group/v1/query").QueryVotesByVoterResponse>;
+                        groupsByMember(request: import("../cosmos/group/v1/query").QueryGroupsByMemberRequest): Promise<import("../cosmos/group/v1/query").QueryGroupsByMemberResponse>;
+                        tallyResult(request: import("../cosmos/group/v1/query").QueryTallyResultRequest): Promise<import("../cosmos/group/v1/query").QueryTallyResultResponse>;
                     };
                 };
                 mint: {
                     v1beta1: {
-                        params(request?: import("../cosmos/mint/v1beta1/query").QueryParamsRequest): Promise<import("../cosmos/mint/v1beta1/query").QueryParamsResponseSDKType>;
-                        inflation(request?: import("../cosmos/mint/v1beta1/query").QueryInflationRequest): Promise<import("../cosmos/mint/v1beta1/query").QueryInflationResponseSDKType>;
-                        annualProvisions(request?: import("../cosmos/mint/v1beta1/query").QueryAnnualProvisionsRequest): Promise<import("../cosmos/mint/v1beta1/query").QueryAnnualProvisionsResponseSDKType>;
+                        params(request?: import("../cosmos/mint/v1beta1/query").QueryParamsRequest): Promise<import("../cosmos/mint/v1beta1/query").QueryParamsResponse>;
+                        inflation(request?: import("../cosmos/mint/v1beta1/query").QueryInflationRequest): Promise<import("../cosmos/mint/v1beta1/query").QueryInflationResponse>;
+                        annualProvisions(request?: import("../cosmos/mint/v1beta1/query").QueryAnnualProvisionsRequest): Promise<import("../cosmos/mint/v1beta1/query").QueryAnnualProvisionsResponse>;
                     };
                 };
                 nft: {
                     v1beta1: {
-                        balance(request: import("../cosmos/nft/v1beta1/query").QueryBalanceRequest): Promise<import("../cosmos/nft/v1beta1/query").QueryBalanceResponseSDKType>;
-                        owner(request: import("../cosmos/nft/v1beta1/query").QueryOwnerRequest): Promise<import("../cosmos/nft/v1beta1/query").QueryOwnerResponseSDKType>;
-                        supply(request: import("../cosmos/nft/v1beta1/query").QuerySupplyRequest): Promise<import("../cosmos/nft/v1beta1/query").QuerySupplyResponseSDKType>;
-                        nFTs(request: import("../cosmos/nft/v1beta1/query").QueryNFTsRequest): Promise<import("../cosmos/nft/v1beta1/query").QueryNFTsResponseSDKType>;
-                        nFT(request: import("../cosmos/nft/v1beta1/query").QueryNFTRequest): Promise<import("../cosmos/nft/v1beta1/query").QueryNFTResponseSDKType>;
-                        class(request: import("../cosmos/nft/v1beta1/query").QueryClassRequest): Promise<import("../cosmos/nft/v1beta1/query").QueryClassResponseSDKType>;
-                        classes(request?: import("../cosmos/nft/v1beta1/query").QueryClassesRequest): Promise<import("../cosmos/nft/v1beta1/query").QueryClassesResponseSDKType>;
+                        balance(request: import("../cosmos/nft/v1beta1/query").QueryBalanceRequest): Promise<import("../cosmos/nft/v1beta1/query").QueryBalanceResponse>;
+                        owner(request: import("../cosmos/nft/v1beta1/query").QueryOwnerRequest): Promise<import("../cosmos/nft/v1beta1/query").QueryOwnerResponse>;
+                        supply(request: import("../cosmos/nft/v1beta1/query").QuerySupplyRequest): Promise<import("../cosmos/nft/v1beta1/query").QuerySupplyResponse>;
+                        nFTs(request: import("../cosmos/nft/v1beta1/query").QueryNFTsRequest): Promise<import("../cosmos/nft/v1beta1/query").QueryNFTsResponse>;
+                        nFT(request: import("../cosmos/nft/v1beta1/query").QueryNFTRequest): Promise<import("../cosmos/nft/v1beta1/query").QueryNFTResponse>;
+                        class(request: import("../cosmos/nft/v1beta1/query").QueryClassRequest): Promise<import("../cosmos/nft/v1beta1/query").QueryClassResponse>;
+                        classes(request?: import("../cosmos/nft/v1beta1/query").QueryClassesRequest): Promise<import("../cosmos/nft/v1beta1/query").QueryClassesResponse>;
                     };
                 };
                 params: {
                     v1beta1: {
-                        params(request: import("../cosmos/params/v1beta1/query").QueryParamsRequest): Promise<import("../cosmos/params/v1beta1/query").QueryParamsResponseSDKType>;
-                        subspaces(request?: import("../cosmos/params/v1beta1/query").QuerySubspacesRequest): Promise<import("../cosmos/params/v1beta1/query").QuerySubspacesResponseSDKType>;
+                        params(request: import("../cosmos/params/v1beta1/query").QueryParamsRequest): Promise<import("../cosmos/params/v1beta1/query").QueryParamsResponse>;
+                        subspaces(request?: import("../cosmos/params/v1beta1/query").QuerySubspacesRequest): Promise<import("../cosmos/params/v1beta1/query").QuerySubspacesResponse>;
                     };
                 };
                 slashing: {
                     v1beta1: {
-                        params(request?: import("../cosmos/slashing/v1beta1/query").QueryParamsRequest): Promise<import("../cosmos/slashing/v1beta1/query").QueryParamsResponseSDKType>;
-                        signingInfo(request: import("../cosmos/slashing/v1beta1/query").QuerySigningInfoRequest): Promise<import("../cosmos/slashing/v1beta1/query").QuerySigningInfoResponseSDKType>;
-                        signingInfos(request?: import("../cosmos/slashing/v1beta1/query").QuerySigningInfosRequest): Promise<import("../cosmos/slashing/v1beta1/query").QuerySigningInfosResponseSDKType>;
+                        params(request?: import("../cosmos/slashing/v1beta1/query").QueryParamsRequest): Promise<import("../cosmos/slashing/v1beta1/query").QueryParamsResponse>;
+                        signingInfo(request: import("../cosmos/slashing/v1beta1/query").QuerySigningInfoRequest): Promise<import("../cosmos/slashing/v1beta1/query").QuerySigningInfoResponse>;
+                        signingInfos(request?: import("../cosmos/slashing/v1beta1/query").QuerySigningInfosRequest): Promise<import("../cosmos/slashing/v1beta1/query").QuerySigningInfosResponse>;
                     };
                 };
                 staking: {
                     v1beta1: {
-                        validators(request: import("../cosmos/staking/v1beta1/query").QueryValidatorsRequest): Promise<import("../cosmos/staking/v1beta1/query").QueryValidatorsResponseSDKType>;
-                        validator(request: import("../cosmos/staking/v1beta1/query").QueryValidatorRequest): Promise<import("../cosmos/staking/v1beta1/query").QueryValidatorResponseSDKType>;
-                        validatorDelegations(request: import("../cosmos/staking/v1beta1/query").QueryValidatorDelegationsRequest): Promise<import("../cosmos/staking/v1beta1/query").QueryValidatorDelegationsResponseSDKType>;
-                        validatorUnbondingDelegations(request: import("../cosmos/staking/v1beta1/query").QueryValidatorUnbondingDelegationsRequest): Promise<import("../cosmos/staking/v1beta1/query").QueryValidatorUnbondingDelegationsResponseSDKType>;
-                        delegation(request: import("../cosmos/staking/v1beta1/query").QueryDelegationRequest): Promise<import("../cosmos/staking/v1beta1/query").QueryDelegationResponseSDKType>;
-                        unbondingDelegation(request: import("../cosmos/staking/v1beta1/query").QueryUnbondingDelegationRequest): Promise<import("../cosmos/staking/v1beta1/query").QueryUnbondingDelegationResponseSDKType>;
-                        delegatorDelegations(request: import("../cosmos/staking/v1beta1/query").QueryDelegatorDelegationsRequest): Promise<import("../cosmos/staking/v1beta1/query").QueryDelegatorDelegationsResponseSDKType>;
-                        delegatorUnbondingDelegations(request: import("../cosmos/staking/v1beta1/query").QueryDelegatorUnbondingDelegationsRequest): Promise<import("../cosmos/staking/v1beta1/query").QueryDelegatorUnbondingDelegationsResponseSDKType>;
-                        redelegations(request: import("../cosmos/staking/v1beta1/query").QueryRedelegationsRequest): Promise<import("../cosmos/staking/v1beta1/query").QueryRedelegationsResponseSDKType>;
-                        delegatorValidators(request: import("../cosmos/staking/v1beta1/query").QueryDelegatorValidatorsRequest): Promise<import("../cosmos/staking/v1beta1/query").QueryDelegatorValidatorsResponseSDKType>;
-                        delegatorValidator(request: import("../cosmos/staking/v1beta1/query").QueryDelegatorValidatorRequest): Promise<import("../cosmos/staking/v1beta1/query").QueryDelegatorValidatorResponseSDKType>;
-                        historicalInfo(request: import("../cosmos/staking/v1beta1/query").QueryHistoricalInfoRequest): Promise<import("../cosmos/staking/v1beta1/query").QueryHistoricalInfoResponseSDKType>;
-                        pool(request?: import("../cosmos/staking/v1beta1/query").QueryPoolRequest): Promise<import("../cosmos/staking/v1beta1/query").QueryPoolResponseSDKType>;
-                        params(request?: import("../cosmos/staking/v1beta1/query").QueryParamsRequest): Promise<import("../cosmos/staking/v1beta1/query").QueryParamsResponseSDKType>;
+                        validators(request: import("../cosmos/staking/v1beta1/query").QueryValidatorsRequest): Promise<import("../cosmos/staking/v1beta1/query").QueryValidatorsResponse>;
+                        validator(request: import("../cosmos/staking/v1beta1/query").QueryValidatorRequest): Promise<import("../cosmos/staking/v1beta1/query").QueryValidatorResponse>;
+                        validatorDelegations(request: import("../cosmos/staking/v1beta1/query").QueryValidatorDelegationsRequest): Promise<import("../cosmos/staking/v1beta1/query").QueryValidatorDelegationsResponse>;
+                        validatorUnbondingDelegations(request: import("../cosmos/staking/v1beta1/query").QueryValidatorUnbondingDelegationsRequest): Promise<import("../cosmos/staking/v1beta1/query").QueryValidatorUnbondingDelegationsResponse>;
+                        delegation(request: import("../cosmos/staking/v1beta1/query").QueryDelegationRequest): Promise<import("../cosmos/staking/v1beta1/query").QueryDelegationResponse>;
+                        unbondingDelegation(request: import("../cosmos/staking/v1beta1/query").QueryUnbondingDelegationRequest): Promise<import("../cosmos/staking/v1beta1/query").QueryUnbondingDelegationResponse>;
+                        delegatorDelegations(request: import("../cosmos/staking/v1beta1/query").QueryDelegatorDelegationsRequest): Promise<import("../cosmos/staking/v1beta1/query").QueryDelegatorDelegationsResponse>;
+                        delegatorUnbondingDelegations(request: import("../cosmos/staking/v1beta1/query").QueryDelegatorUnbondingDelegationsRequest): Promise<import("../cosmos/staking/v1beta1/query").QueryDelegatorUnbondingDelegationsResponse>;
+                        redelegations(request: import("../cosmos/staking/v1beta1/query").QueryRedelegationsRequest): Promise<import("../cosmos/staking/v1beta1/query").QueryRedelegationsResponse>;
+                        delegatorValidators(request: import("../cosmos/staking/v1beta1/query").QueryDelegatorValidatorsRequest): Promise<import("../cosmos/staking/v1beta1/query").QueryDelegatorValidatorsResponse>;
+                        delegatorValidator(request: import("../cosmos/staking/v1beta1/query").QueryDelegatorValidatorRequest): Promise<import("../cosmos/staking/v1beta1/query").QueryDelegatorValidatorResponse>;
+                        historicalInfo(request: import("../cosmos/staking/v1beta1/query").QueryHistoricalInfoRequest): Promise<import("../cosmos/staking/v1beta1/query").QueryHistoricalInfoResponse>;
+                        pool(request?: import("../cosmos/staking/v1beta1/query").QueryPoolRequest): Promise<import("../cosmos/staking/v1beta1/query").QueryPoolResponse>;
+                        params(request?: import("../cosmos/staking/v1beta1/query").QueryParamsRequest): Promise<import("../cosmos/staking/v1beta1/query").QueryParamsResponse>;
                     };
                 };
                 tx: {
                     v1beta1: {
-                        simulate(request: import("../cosmos/tx/v1beta1/service").SimulateRequest): Promise<import("../cosmos/tx/v1beta1/service").SimulateResponseSDKType>;
-                        getTx(request: import("../cosmos/tx/v1beta1/service").GetTxRequest): Promise<import("../cosmos/tx/v1beta1/service").GetTxResponseSDKType>;
-                        broadcastTx(request: import("../cosmos/tx/v1beta1/service").BroadcastTxRequest): Promise<import("../cosmos/tx/v1beta1/service").BroadcastTxResponseSDKType>;
-                        getTxsEvent(request: import("../cosmos/tx/v1beta1/service").GetTxsEventRequest): Promise<import("../cosmos/tx/v1beta1/service").GetTxsEventResponseSDKType>;
-                        getBlockWithTxs(request: import("../cosmos/tx/v1beta1/service").GetBlockWithTxsRequest): Promise<import("../cosmos/tx/v1beta1/service").GetBlockWithTxsResponseSDKType>;
+                        simulate(request: import("../cosmos/tx/v1beta1/service").SimulateRequest): Promise<import("../cosmos/tx/v1beta1/service").SimulateResponse>;
+                        getTx(request: import("../cosmos/tx/v1beta1/service").GetTxRequest): Promise<import("../cosmos/tx/v1beta1/service").GetTxResponse>;
+                        broadcastTx(request: import("../cosmos/tx/v1beta1/service").BroadcastTxRequest): Promise<import("../cosmos/tx/v1beta1/service").BroadcastTxResponse>;
+                        getTxsEvent(request: import("../cosmos/tx/v1beta1/service").GetTxsEventRequest): Promise<import("../cosmos/tx/v1beta1/service").GetTxsEventResponse>;
+                        getBlockWithTxs(request: import("../cosmos/tx/v1beta1/service").GetBlockWithTxsRequest): Promise<import("../cosmos/tx/v1beta1/service").GetBlockWithTxsResponse>;
                     };
                 };
                 upgrade: {
                     v1beta1: {
-                        currentPlan(request?: import("../cosmos/upgrade/v1beta1/query").QueryCurrentPlanRequest): Promise<import("../cosmos/upgrade/v1beta1/query").QueryCurrentPlanResponseSDKType>;
-                        appliedPlan(request: import("../cosmos/upgrade/v1beta1/query").QueryAppliedPlanRequest): Promise<import("../cosmos/upgrade/v1beta1/query").QueryAppliedPlanResponseSDKType>;
-                        upgradedConsensusState(request: import("../cosmos/upgrade/v1beta1/query").QueryUpgradedConsensusStateRequest): Promise<import("../cosmos/upgrade/v1beta1/query").QueryUpgradedConsensusStateResponseSDKType>;
-                        moduleVersions(request: import("../cosmos/upgrade/v1beta1/query").QueryModuleVersionsRequest): Promise<import("../cosmos/upgrade/v1beta1/query").QueryModuleVersionsResponseSDKType>;
-                        authority(request?: import("../cosmos/upgrade/v1beta1/query").QueryAuthorityRequest): Promise<import("../cosmos/upgrade/v1beta1/query").QueryAuthorityResponseSDKType>;
+                        currentPlan(request?: import("../cosmos/upgrade/v1beta1/query").QueryCurrentPlanRequest): Promise<import("../cosmos/upgrade/v1beta1/query").QueryCurrentPlanResponse>;
+                        appliedPlan(request: import("../cosmos/upgrade/v1beta1/query").QueryAppliedPlanRequest): Promise<import("../cosmos/upgrade/v1beta1/query").QueryAppliedPlanResponse>;
+                        upgradedConsensusState(request: import("../cosmos/upgrade/v1beta1/query").QueryUpgradedConsensusStateRequest): Promise<import("../cosmos/upgrade/v1beta1/query").QueryUpgradedConsensusStateResponse>;
+                        moduleVersions(request: import("../cosmos/upgrade/v1beta1/query").QueryModuleVersionsRequest): Promise<import("../cosmos/upgrade/v1beta1/query").QueryModuleVersionsResponse>;
+                        authority(request?: import("../cosmos/upgrade/v1beta1/query").QueryAuthorityRequest): Promise<import("../cosmos/upgrade/v1beta1/query").QueryAuthorityResponse>;
                     };
                 };
             };
@@ -3945,54 +3945,54 @@ export declare namespace ibc {
                 applications: {
                     transfer: {
                         v1: {
-                            denomTrace(request: _123.QueryDenomTraceRequest): Promise<_123.QueryDenomTraceResponseSDKType>;
-                            denomTraces(request?: _123.QueryDenomTracesRequest): Promise<_123.QueryDenomTracesResponseSDKType>;
-                            params(request?: _123.QueryParamsRequest): Promise<_123.QueryParamsResponseSDKType>;
+                            denomTrace(request: _123.QueryDenomTraceRequest): Promise<_123.QueryDenomTraceResponse>;
+                            denomTraces(request?: _123.QueryDenomTracesRequest): Promise<_123.QueryDenomTracesResponse>;
+                            params(request?: _123.QueryParamsRequest): Promise<_123.QueryParamsResponse>;
                         };
                     };
                 };
                 core: {
                     channel: {
                         v1: {
-                            channel(request: _129.QueryChannelRequest): Promise<_129.QueryChannelResponseSDKType>;
-                            channels(request?: _129.QueryChannelsRequest): Promise<_129.QueryChannelsResponseSDKType>;
-                            connectionChannels(request: _129.QueryConnectionChannelsRequest): Promise<_129.QueryConnectionChannelsResponseSDKType>;
-                            channelClientState(request: _129.QueryChannelClientStateRequest): Promise<_129.QueryChannelClientStateResponseSDKType>;
-                            channelConsensusState(request: _129.QueryChannelConsensusStateRequest): Promise<_129.QueryChannelConsensusStateResponseSDKType>;
-                            packetCommitment(request: _129.QueryPacketCommitmentRequest): Promise<_129.QueryPacketCommitmentResponseSDKType>;
-                            packetCommitments(request: _129.QueryPacketCommitmentsRequest): Promise<_129.QueryPacketCommitmentsResponseSDKType>;
-                            packetReceipt(request: _129.QueryPacketReceiptRequest): Promise<_129.QueryPacketReceiptResponseSDKType>;
-                            packetAcknowledgement(request: _129.QueryPacketAcknowledgementRequest): Promise<_129.QueryPacketAcknowledgementResponseSDKType>;
-                            packetAcknowledgements(request: _129.QueryPacketAcknowledgementsRequest): Promise<_129.QueryPacketAcknowledgementsResponseSDKType>;
-                            unreceivedPackets(request: _129.QueryUnreceivedPacketsRequest): Promise<_129.QueryUnreceivedPacketsResponseSDKType>;
-                            unreceivedAcks(request: _129.QueryUnreceivedAcksRequest): Promise<_129.QueryUnreceivedAcksResponseSDKType>;
-                            nextSequenceReceive(request: _129.QueryNextSequenceReceiveRequest): Promise<_129.QueryNextSequenceReceiveResponseSDKType>;
+                            channel(request: _129.QueryChannelRequest): Promise<_129.QueryChannelResponse>;
+                            channels(request?: _129.QueryChannelsRequest): Promise<_129.QueryChannelsResponse>;
+                            connectionChannels(request: _129.QueryConnectionChannelsRequest): Promise<_129.QueryConnectionChannelsResponse>;
+                            channelClientState(request: _129.QueryChannelClientStateRequest): Promise<_129.QueryChannelClientStateResponse>;
+                            channelConsensusState(request: _129.QueryChannelConsensusStateRequest): Promise<_129.QueryChannelConsensusStateResponse>;
+                            packetCommitment(request: _129.QueryPacketCommitmentRequest): Promise<_129.QueryPacketCommitmentResponse>;
+                            packetCommitments(request: _129.QueryPacketCommitmentsRequest): Promise<_129.QueryPacketCommitmentsResponse>;
+                            packetReceipt(request: _129.QueryPacketReceiptRequest): Promise<_129.QueryPacketReceiptResponse>;
+                            packetAcknowledgement(request: _129.QueryPacketAcknowledgementRequest): Promise<_129.QueryPacketAcknowledgementResponse>;
+                            packetAcknowledgements(request: _129.QueryPacketAcknowledgementsRequest): Promise<_129.QueryPacketAcknowledgementsResponse>;
+                            unreceivedPackets(request: _129.QueryUnreceivedPacketsRequest): Promise<_129.QueryUnreceivedPacketsResponse>;
+                            unreceivedAcks(request: _129.QueryUnreceivedAcksRequest): Promise<_129.QueryUnreceivedAcksResponse>;
+                            nextSequenceReceive(request: _129.QueryNextSequenceReceiveRequest): Promise<_129.QueryNextSequenceReceiveResponse>;
                         };
                     };
                     client: {
                         v1: {
-                            clientState(request: _133.QueryClientStateRequest): Promise<_133.QueryClientStateResponseSDKType>;
-                            clientStates(request?: _133.QueryClientStatesRequest): Promise<_133.QueryClientStatesResponseSDKType>;
-                            consensusState(request: _133.QueryConsensusStateRequest): Promise<_133.QueryConsensusStateResponseSDKType>;
-                            consensusStates(request: _133.QueryConsensusStatesRequest): Promise<_133.QueryConsensusStatesResponseSDKType>;
-                            clientStatus(request: _133.QueryClientStatusRequest): Promise<_133.QueryClientStatusResponseSDKType>;
-                            clientParams(request?: _133.QueryClientParamsRequest): Promise<_133.QueryClientParamsResponseSDKType>;
-                            upgradedClientState(request?: _133.QueryUpgradedClientStateRequest): Promise<_133.QueryUpgradedClientStateResponseSDKType>;
-                            upgradedConsensusState(request?: _133.QueryUpgradedConsensusStateRequest): Promise<_133.QueryUpgradedConsensusStateResponseSDKType>;
+                            clientState(request: _133.QueryClientStateRequest): Promise<_133.QueryClientStateResponse>;
+                            clientStates(request?: _133.QueryClientStatesRequest): Promise<_133.QueryClientStatesResponse>;
+                            consensusState(request: _133.QueryConsensusStateRequest): Promise<_133.QueryConsensusStateResponse>;
+                            consensusStates(request: _133.QueryConsensusStatesRequest): Promise<_133.QueryConsensusStatesResponse>;
+                            clientStatus(request: _133.QueryClientStatusRequest): Promise<_133.QueryClientStatusResponse>;
+                            clientParams(request?: _133.QueryClientParamsRequest): Promise<_133.QueryClientParamsResponse>;
+                            upgradedClientState(request?: _133.QueryUpgradedClientStateRequest): Promise<_133.QueryUpgradedClientStateResponse>;
+                            upgradedConsensusState(request?: _133.QueryUpgradedConsensusStateRequest): Promise<_133.QueryUpgradedConsensusStateResponse>;
                         };
                     };
                     connection: {
                         v1: {
-                            connection(request: _138.QueryConnectionRequest): Promise<_138.QueryConnectionResponseSDKType>;
-                            connections(request?: _138.QueryConnectionsRequest): Promise<_138.QueryConnectionsResponseSDKType>;
-                            clientConnections(request: _138.QueryClientConnectionsRequest): Promise<_138.QueryClientConnectionsResponseSDKType>;
-                            connectionClientState(request: _138.QueryConnectionClientStateRequest): Promise<_138.QueryConnectionClientStateResponseSDKType>;
-                            connectionConsensusState(request: _138.QueryConnectionConsensusStateRequest): Promise<_138.QueryConnectionConsensusStateResponseSDKType>;
+                            connection(request: _138.QueryConnectionRequest): Promise<_138.QueryConnectionResponse>;
+                            connections(request?: _138.QueryConnectionsRequest): Promise<_138.QueryConnectionsResponse>;
+                            clientConnections(request: _138.QueryClientConnectionsRequest): Promise<_138.QueryClientConnectionsResponse>;
+                            connectionClientState(request: _138.QueryConnectionClientStateRequest): Promise<_138.QueryConnectionClientStateResponse>;
+                            connectionConsensusState(request: _138.QueryConnectionConsensusStateRequest): Promise<_138.QueryConnectionConsensusStateResponse>;
                         };
                     };
                     port: {
                         v1: {
-                            appVersion(request: _140.QueryAppVersionRequest): Promise<_140.QueryAppVersionResponseSDKType>;
+                            appVersion(request: _140.QueryAppVersionRequest): Promise<_140.QueryAppVersionResponse>;
                         };
                     };
                 };

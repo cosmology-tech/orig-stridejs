@@ -143,7 +143,7 @@ export declare namespace cosmos {
         const v1alpha1: {
             QueryClientImpl: typeof _213.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
-                config(request?: _4.QueryConfigRequest): Promise<_4.QueryConfigResponseSDKType>;
+                config(request?: _4.QueryConfigRequest): Promise<_4.QueryConfigResponse>;
             };
             QueryConfigRequest: {
                 encode(_: _4.QueryConfigRequest, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
@@ -152,7 +152,7 @@ export declare namespace cosmos {
             };
             QueryConfigResponse: {
                 encode(message: _4.QueryConfigResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _4.QueryConfigResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _4.QueryConfigResponse;
                 fromPartial(object: {
                     config?: {
                         modules?: {
@@ -224,13 +224,13 @@ export declare namespace cosmos {
         const v1beta1: {
             QueryClientImpl: typeof _214.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
-                accounts(request?: _7.QueryAccountsRequest): Promise<_7.QueryAccountsResponseSDKType>;
-                account(request: _7.QueryAccountRequest): Promise<_7.QueryAccountResponseSDKType>;
-                params(request?: _7.QueryParamsRequest): Promise<_7.QueryParamsResponseSDKType>;
-                moduleAccounts(request?: _7.QueryModuleAccountsRequest): Promise<_7.QueryModuleAccountsResponseSDKType>;
-                bech32Prefix(request?: _7.Bech32PrefixRequest): Promise<_7.Bech32PrefixResponseSDKType>;
-                addressBytesToString(request: _7.AddressBytesToStringRequest): Promise<_7.AddressBytesToStringResponseSDKType>;
-                addressStringToBytes(request: _7.AddressStringToBytesRequest): Promise<_7.AddressStringToBytesResponseSDKType>;
+                accounts(request?: _7.QueryAccountsRequest): Promise<_7.QueryAccountsResponse>;
+                account(request: _7.QueryAccountRequest): Promise<_7.QueryAccountResponse>;
+                params(request?: _7.QueryParamsRequest): Promise<_7.QueryParamsResponse>;
+                moduleAccounts(request?: _7.QueryModuleAccountsRequest): Promise<_7.QueryModuleAccountsResponse>;
+                bech32Prefix(request?: _7.Bech32PrefixRequest): Promise<_7.Bech32PrefixResponse>;
+                addressBytesToString(request: _7.AddressBytesToStringRequest): Promise<_7.AddressBytesToStringResponse>;
+                addressStringToBytes(request: _7.AddressStringToBytesRequest): Promise<_7.AddressStringToBytesResponse>;
             };
             LCDQueryClient: typeof _196.LCDQueryClient;
             QueryAccountsRequest: {
@@ -248,7 +248,7 @@ export declare namespace cosmos {
             };
             QueryAccountsResponse: {
                 encode(message: _7.QueryAccountsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _7.QueryAccountsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _7.QueryAccountsResponse;
                 fromPartial(object: {
                     accounts?: {
                         typeUrl?: string;
@@ -274,7 +274,7 @@ export declare namespace cosmos {
             };
             QueryParamsResponse: {
                 encode(message: _7.QueryParamsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _7.QueryParamsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _7.QueryParamsResponse;
                 fromPartial(object: {
                     params?: {
                         maxMemoCharacters?: any;
@@ -287,7 +287,7 @@ export declare namespace cosmos {
             };
             QueryAccountResponse: {
                 encode(message: _7.QueryAccountResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _7.QueryAccountResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _7.QueryAccountResponse;
                 fromPartial(object: {
                     account?: {
                         typeUrl?: string;
@@ -302,7 +302,7 @@ export declare namespace cosmos {
             };
             QueryModuleAccountsResponse: {
                 encode(message: _7.QueryModuleAccountsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _7.QueryModuleAccountsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _7.QueryModuleAccountsResponse;
                 fromPartial(object: {
                     accounts?: {
                         typeUrl?: string;
@@ -317,7 +317,7 @@ export declare namespace cosmos {
             };
             Bech32PrefixResponse: {
                 encode(message: _7.Bech32PrefixResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _7.Bech32PrefixResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _7.Bech32PrefixResponse;
                 fromPartial(object: {
                     bech32Prefix?: string;
                 }): _7.Bech32PrefixResponse;
@@ -331,7 +331,7 @@ export declare namespace cosmos {
             };
             AddressBytesToStringResponse: {
                 encode(message: _7.AddressBytesToStringResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _7.AddressBytesToStringResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _7.AddressBytesToStringResponse;
                 fromPartial(object: {
                     addressString?: string;
                 }): _7.AddressBytesToStringResponse;
@@ -345,7 +345,7 @@ export declare namespace cosmos {
             };
             AddressStringToBytesResponse: {
                 encode(message: _7.AddressStringToBytesResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _7.AddressStringToBytesResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _7.AddressStringToBytesResponse;
                 fromPartial(object: {
                     addressBytes?: Uint8Array;
                 }): _7.AddressStringToBytesResponse;
@@ -415,9 +415,9 @@ export declare namespace cosmos {
             MsgClientImpl: typeof _231.MsgClientImpl;
             QueryClientImpl: typeof _215.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
-                grants(request: _11.QueryGrantsRequest): Promise<_11.QueryGrantsResponseSDKType>;
-                granterGrants(request: _11.QueryGranterGrantsRequest): Promise<_11.QueryGranterGrantsResponseSDKType>;
-                granteeGrants(request: _11.QueryGranteeGrantsRequest): Promise<_11.QueryGranteeGrantsResponseSDKType>;
+                grants(request: _11.QueryGrantsRequest): Promise<_11.QueryGrantsResponse>;
+                granterGrants(request: _11.QueryGranterGrantsRequest): Promise<_11.QueryGranterGrantsResponse>;
+                granteeGrants(request: _11.QueryGranteeGrantsRequest): Promise<_11.QueryGranteeGrantsResponse>;
             };
             LCDQueryClient: typeof _197.LCDQueryClient;
             registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
@@ -546,7 +546,7 @@ export declare namespace cosmos {
             };
             MsgExecResponse: {
                 encode(message: _12.MsgExecResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _12.MsgExecResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _12.MsgExecResponse;
                 fromPartial(object: {
                     results?: Uint8Array[];
                 }): _12.MsgExecResponse;
@@ -564,7 +564,7 @@ export declare namespace cosmos {
             };
             MsgGrantResponse: {
                 encode(_: _12.MsgGrantResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _12.MsgGrantResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _12.MsgGrantResponse;
                 fromPartial(_: {}): _12.MsgGrantResponse;
             };
             MsgRevoke: {
@@ -578,7 +578,7 @@ export declare namespace cosmos {
             };
             MsgRevokeResponse: {
                 encode(_: _12.MsgRevokeResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _12.MsgRevokeResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _12.MsgRevokeResponse;
                 fromPartial(_: {}): _12.MsgRevokeResponse;
             };
             QueryGrantsRequest: {
@@ -599,7 +599,7 @@ export declare namespace cosmos {
             };
             QueryGrantsResponse: {
                 encode(message: _11.QueryGrantsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _11.QueryGrantsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _11.QueryGrantsResponse;
                 fromPartial(object: {
                     grants?: {
                         authorization?: {
@@ -630,7 +630,7 @@ export declare namespace cosmos {
             };
             QueryGranterGrantsResponse: {
                 encode(message: _11.QueryGranterGrantsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _11.QueryGranterGrantsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _11.QueryGranterGrantsResponse;
                 fromPartial(object: {
                     grants?: {
                         granter?: string;
@@ -663,7 +663,7 @@ export declare namespace cosmos {
             };
             QueryGranteeGrantsResponse: {
                 encode(message: _11.QueryGranteeGrantsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _11.QueryGranteeGrantsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _11.QueryGranteeGrantsResponse;
                 fromPartial(object: {
                     grants?: {
                         granter?: string;
@@ -758,15 +758,15 @@ export declare namespace cosmos {
             MsgClientImpl: typeof _232.MsgClientImpl;
             QueryClientImpl: typeof _216.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
-                balance(request: _16.QueryBalanceRequest): Promise<_16.QueryBalanceResponseSDKType>;
-                allBalances(request: _16.QueryAllBalancesRequest): Promise<_16.QueryAllBalancesResponseSDKType>;
-                spendableBalances(request: _16.QuerySpendableBalancesRequest): Promise<_16.QuerySpendableBalancesResponseSDKType>;
-                totalSupply(request?: _16.QueryTotalSupplyRequest): Promise<_16.QueryTotalSupplyResponseSDKType>;
-                supplyOf(request: _16.QuerySupplyOfRequest): Promise<_16.QuerySupplyOfResponseSDKType>;
-                params(request?: _16.QueryParamsRequest): Promise<_16.QueryParamsResponseSDKType>;
-                denomMetadata(request: _16.QueryDenomMetadataRequest): Promise<_16.QueryDenomMetadataResponseSDKType>;
-                denomsMetadata(request?: _16.QueryDenomsMetadataRequest): Promise<_16.QueryDenomsMetadataResponseSDKType>;
-                denomOwners(request: _16.QueryDenomOwnersRequest): Promise<_16.QueryDenomOwnersResponseSDKType>;
+                balance(request: _16.QueryBalanceRequest): Promise<_16.QueryBalanceResponse>;
+                allBalances(request: _16.QueryAllBalancesRequest): Promise<_16.QueryAllBalancesResponse>;
+                spendableBalances(request: _16.QuerySpendableBalancesRequest): Promise<_16.QuerySpendableBalancesResponse>;
+                totalSupply(request?: _16.QueryTotalSupplyRequest): Promise<_16.QueryTotalSupplyResponse>;
+                supplyOf(request: _16.QuerySupplyOfRequest): Promise<_16.QuerySupplyOfResponse>;
+                params(request?: _16.QueryParamsRequest): Promise<_16.QueryParamsResponse>;
+                denomMetadata(request: _16.QueryDenomMetadataRequest): Promise<_16.QueryDenomMetadataResponse>;
+                denomsMetadata(request?: _16.QueryDenomsMetadataRequest): Promise<_16.QueryDenomsMetadataResponse>;
+                denomOwners(request: _16.QueryDenomOwnersRequest): Promise<_16.QueryDenomOwnersResponse>;
             };
             LCDQueryClient: typeof _198.LCDQueryClient;
             registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
@@ -873,7 +873,7 @@ export declare namespace cosmos {
             };
             MsgSendResponse: {
                 encode(_: _17.MsgSendResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _17.MsgSendResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _17.MsgSendResponse;
                 fromPartial(_: {}): _17.MsgSendResponse;
             };
             MsgMultiSend: {
@@ -898,7 +898,7 @@ export declare namespace cosmos {
             };
             MsgMultiSendResponse: {
                 encode(_: _17.MsgMultiSendResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _17.MsgMultiSendResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _17.MsgMultiSendResponse;
                 fromPartial(_: {}): _17.MsgMultiSendResponse;
             };
             QueryBalanceRequest: {
@@ -911,7 +911,7 @@ export declare namespace cosmos {
             };
             QueryBalanceResponse: {
                 encode(message: _16.QueryBalanceResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _16.QueryBalanceResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _16.QueryBalanceResponse;
                 fromPartial(object: {
                     balance?: {
                         denom?: string;
@@ -935,7 +935,7 @@ export declare namespace cosmos {
             };
             QueryAllBalancesResponse: {
                 encode(message: _16.QueryAllBalancesResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _16.QueryAllBalancesResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _16.QueryAllBalancesResponse;
                 fromPartial(object: {
                     balances?: {
                         denom?: string;
@@ -963,7 +963,7 @@ export declare namespace cosmos {
             };
             QuerySpendableBalancesResponse: {
                 encode(message: _16.QuerySpendableBalancesResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _16.QuerySpendableBalancesResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _16.QuerySpendableBalancesResponse;
                 fromPartial(object: {
                     balances?: {
                         denom?: string;
@@ -990,7 +990,7 @@ export declare namespace cosmos {
             };
             QueryTotalSupplyResponse: {
                 encode(message: _16.QueryTotalSupplyResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _16.QueryTotalSupplyResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _16.QueryTotalSupplyResponse;
                 fromPartial(object: {
                     supply?: {
                         denom?: string;
@@ -1011,7 +1011,7 @@ export declare namespace cosmos {
             };
             QuerySupplyOfResponse: {
                 encode(message: _16.QuerySupplyOfResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _16.QuerySupplyOfResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _16.QuerySupplyOfResponse;
                 fromPartial(object: {
                     amount?: {
                         denom?: string;
@@ -1026,7 +1026,7 @@ export declare namespace cosmos {
             };
             QueryParamsResponse: {
                 encode(message: _16.QueryParamsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _16.QueryParamsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _16.QueryParamsResponse;
                 fromPartial(object: {
                     params?: {
                         sendEnabled?: {
@@ -1052,7 +1052,7 @@ export declare namespace cosmos {
             };
             QueryDenomsMetadataResponse: {
                 encode(message: _16.QueryDenomsMetadataResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _16.QueryDenomsMetadataResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _16.QueryDenomsMetadataResponse;
                 fromPartial(object: {
                     metadatas?: {
                         description?: string;
@@ -1083,7 +1083,7 @@ export declare namespace cosmos {
             };
             QueryDenomMetadataResponse: {
                 encode(message: _16.QueryDenomMetadataResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _16.QueryDenomMetadataResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _16.QueryDenomMetadataResponse;
                 fromPartial(object: {
                     metadata?: {
                         description?: string;
@@ -1128,7 +1128,7 @@ export declare namespace cosmos {
             };
             QueryDenomOwnersResponse: {
                 encode(message: _16.QueryDenomOwnersResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _16.QueryDenomOwnersResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _16.QueryDenomOwnersResponse;
                 fromPartial(object: {
                     denomOwners?: {
                         address?: string;
@@ -1536,7 +1536,7 @@ export declare namespace cosmos {
                 };
                 ListAllInterfacesResponse: {
                     encode(message: _21.ListAllInterfacesResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _21.ListAllInterfacesResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _21.ListAllInterfacesResponse;
                     fromPartial(object: {
                         interfaceNames?: string[];
                     }): _21.ListAllInterfacesResponse;
@@ -1550,7 +1550,7 @@ export declare namespace cosmos {
                 };
                 ListImplementationsResponse: {
                     encode(message: _21.ListImplementationsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _21.ListImplementationsResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _21.ListImplementationsResponse;
                     fromPartial(object: {
                         implementationMessageNames?: string[];
                     }): _21.ListImplementationsResponse;
@@ -1711,7 +1711,7 @@ export declare namespace cosmos {
                 };
                 GetAuthnDescriptorResponse: {
                     encode(message: _22.GetAuthnDescriptorResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _22.GetAuthnDescriptorResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _22.GetAuthnDescriptorResponse;
                     fromPartial(object: {
                         authn?: {
                             signModes?: {
@@ -1729,7 +1729,7 @@ export declare namespace cosmos {
                 };
                 GetChainDescriptorResponse: {
                     encode(message: _22.GetChainDescriptorResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _22.GetChainDescriptorResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _22.GetChainDescriptorResponse;
                     fromPartial(object: {
                         chain?: {
                             id?: string;
@@ -1743,7 +1743,7 @@ export declare namespace cosmos {
                 };
                 GetCodecDescriptorResponse: {
                     encode(message: _22.GetCodecDescriptorResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _22.GetCodecDescriptorResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _22.GetCodecDescriptorResponse;
                     fromPartial(object: {
                         codec?: {
                             interfaces?: {
@@ -1767,7 +1767,7 @@ export declare namespace cosmos {
                 };
                 GetConfigurationDescriptorResponse: {
                     encode(message: _22.GetConfigurationDescriptorResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _22.GetConfigurationDescriptorResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _22.GetConfigurationDescriptorResponse;
                     fromPartial(object: {
                         config?: {
                             bech32AccountAddressPrefix?: string;
@@ -1781,7 +1781,7 @@ export declare namespace cosmos {
                 };
                 GetQueryServicesDescriptorResponse: {
                     encode(message: _22.GetQueryServicesDescriptorResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _22.GetQueryServicesDescriptorResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _22.GetQueryServicesDescriptorResponse;
                     fromPartial(object: {
                         queries?: {
                             queryServices?: {
@@ -1802,7 +1802,7 @@ export declare namespace cosmos {
                 };
                 GetTxDescriptorResponse: {
                     encode(message: _22.GetTxDescriptorResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _22.GetTxDescriptorResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _22.GetTxDescriptorResponse;
                     fromPartial(object: {
                         tx?: {
                             fullname?: string;
@@ -1999,12 +1999,12 @@ export declare namespace cosmos {
             const v1beta1: {
                 QueryClientImpl: typeof _217.QueryClientImpl;
                 createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
-                    getNodeInfo(request?: _26.GetNodeInfoRequest): Promise<_26.GetNodeInfoResponseSDKType>;
-                    getSyncing(request?: _26.GetSyncingRequest): Promise<_26.GetSyncingResponseSDKType>;
-                    getLatestBlock(request?: _26.GetLatestBlockRequest): Promise<_26.GetLatestBlockResponseSDKType>;
-                    getBlockByHeight(request: _26.GetBlockByHeightRequest): Promise<_26.GetBlockByHeightResponseSDKType>;
-                    getLatestValidatorSet(request?: _26.GetLatestValidatorSetRequest): Promise<_26.GetLatestValidatorSetResponseSDKType>;
-                    getValidatorSetByHeight(request: _26.GetValidatorSetByHeightRequest): Promise<_26.GetValidatorSetByHeightResponseSDKType>;
+                    getNodeInfo(request?: _26.GetNodeInfoRequest): Promise<_26.GetNodeInfoResponse>;
+                    getSyncing(request?: _26.GetSyncingRequest): Promise<_26.GetSyncingResponse>;
+                    getLatestBlock(request?: _26.GetLatestBlockRequest): Promise<_26.GetLatestBlockResponse>;
+                    getBlockByHeight(request: _26.GetBlockByHeightRequest): Promise<_26.GetBlockByHeightResponse>;
+                    getLatestValidatorSet(request?: _26.GetLatestValidatorSetRequest): Promise<_26.GetLatestValidatorSetResponse>;
+                    getValidatorSetByHeight(request: _26.GetValidatorSetByHeightRequest): Promise<_26.GetValidatorSetByHeightResponse>;
                 };
                 LCDQueryClient: typeof _199.LCDQueryClient;
                 GetValidatorSetByHeightRequest: {
@@ -2023,7 +2023,7 @@ export declare namespace cosmos {
                 };
                 GetValidatorSetByHeightResponse: {
                     encode(message: _26.GetValidatorSetByHeightResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _26.GetValidatorSetByHeightResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _26.GetValidatorSetByHeightResponse;
                     fromPartial(object: {
                         blockHeight?: any;
                         validators?: {
@@ -2056,7 +2056,7 @@ export declare namespace cosmos {
                 };
                 GetLatestValidatorSetResponse: {
                     encode(message: _26.GetLatestValidatorSetResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _26.GetLatestValidatorSetResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _26.GetLatestValidatorSetResponse;
                     fromPartial(object: {
                         blockHeight?: any;
                         validators?: {
@@ -2096,7 +2096,7 @@ export declare namespace cosmos {
                 };
                 GetBlockByHeightResponse: {
                     encode(message: _26.GetBlockByHeightResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _26.GetBlockByHeightResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _26.GetBlockByHeightResponse;
                     fromPartial(object: {
                         blockId?: {
                             hash?: Uint8Array;
@@ -2283,7 +2283,7 @@ export declare namespace cosmos {
                 };
                 GetLatestBlockResponse: {
                     encode(message: _26.GetLatestBlockResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _26.GetLatestBlockResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _26.GetLatestBlockResponse;
                     fromPartial(object: {
                         blockId?: {
                             hash?: Uint8Array;
@@ -2470,7 +2470,7 @@ export declare namespace cosmos {
                 };
                 GetSyncingResponse: {
                     encode(message: _26.GetSyncingResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _26.GetSyncingResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _26.GetSyncingResponse;
                     fromPartial(object: {
                         syncing?: boolean;
                     }): _26.GetSyncingResponse;
@@ -2482,7 +2482,7 @@ export declare namespace cosmos {
                 };
                 GetNodeInfoResponse: {
                     encode(message: _26.GetNodeInfoResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _26.GetNodeInfoResponseSDKType;
+                    decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _26.GetNodeInfoResponse;
                     fromPartial(object: {
                         nodeInfo?: {
                             protocolVersion?: {
@@ -2688,7 +2688,7 @@ export declare namespace cosmos {
             };
             MsgVerifyInvariantResponse: {
                 encode(_: _31.MsgVerifyInvariantResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _31.MsgVerifyInvariantResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _31.MsgVerifyInvariantResponse;
                 fromPartial(_: {}): _31.MsgVerifyInvariantResponse;
             };
             GenesisState: {
@@ -2853,15 +2853,15 @@ export declare namespace cosmos {
             MsgClientImpl: typeof _234.MsgClientImpl;
             QueryClientImpl: typeof _218.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
-                params(request?: _40.QueryParamsRequest): Promise<_40.QueryParamsResponseSDKType>;
-                validatorOutstandingRewards(request: _40.QueryValidatorOutstandingRewardsRequest): Promise<_40.QueryValidatorOutstandingRewardsResponseSDKType>;
-                validatorCommission(request: _40.QueryValidatorCommissionRequest): Promise<_40.QueryValidatorCommissionResponseSDKType>;
-                validatorSlashes(request: _40.QueryValidatorSlashesRequest): Promise<_40.QueryValidatorSlashesResponseSDKType>;
-                delegationRewards(request: _40.QueryDelegationRewardsRequest): Promise<_40.QueryDelegationRewardsResponseSDKType>;
-                delegationTotalRewards(request: _40.QueryDelegationTotalRewardsRequest): Promise<_40.QueryDelegationTotalRewardsResponseSDKType>;
-                delegatorValidators(request: _40.QueryDelegatorValidatorsRequest): Promise<_40.QueryDelegatorValidatorsResponseSDKType>;
-                delegatorWithdrawAddress(request: _40.QueryDelegatorWithdrawAddressRequest): Promise<_40.QueryDelegatorWithdrawAddressResponseSDKType>;
-                communityPool(request?: _40.QueryCommunityPoolRequest): Promise<_40.QueryCommunityPoolResponseSDKType>;
+                params(request?: _40.QueryParamsRequest): Promise<_40.QueryParamsResponse>;
+                validatorOutstandingRewards(request: _40.QueryValidatorOutstandingRewardsRequest): Promise<_40.QueryValidatorOutstandingRewardsResponse>;
+                validatorCommission(request: _40.QueryValidatorCommissionRequest): Promise<_40.QueryValidatorCommissionResponse>;
+                validatorSlashes(request: _40.QueryValidatorSlashesRequest): Promise<_40.QueryValidatorSlashesResponse>;
+                delegationRewards(request: _40.QueryDelegationRewardsRequest): Promise<_40.QueryDelegationRewardsResponse>;
+                delegationTotalRewards(request: _40.QueryDelegationTotalRewardsRequest): Promise<_40.QueryDelegationTotalRewardsResponse>;
+                delegatorValidators(request: _40.QueryDelegatorValidatorsRequest): Promise<_40.QueryDelegatorValidatorsResponse>;
+                delegatorWithdrawAddress(request: _40.QueryDelegatorWithdrawAddressRequest): Promise<_40.QueryDelegatorWithdrawAddressResponse>;
+                communityPool(request?: _40.QueryCommunityPoolRequest): Promise<_40.QueryCommunityPoolResponse>;
             };
             LCDQueryClient: typeof _200.LCDQueryClient;
             registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
@@ -2982,7 +2982,7 @@ export declare namespace cosmos {
             };
             MsgSetWithdrawAddressResponse: {
                 encode(_: _41.MsgSetWithdrawAddressResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _41.MsgSetWithdrawAddressResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _41.MsgSetWithdrawAddressResponse;
                 fromPartial(_: {}): _41.MsgSetWithdrawAddressResponse;
             };
             MsgWithdrawDelegatorReward: {
@@ -2995,7 +2995,7 @@ export declare namespace cosmos {
             };
             MsgWithdrawDelegatorRewardResponse: {
                 encode(message: _41.MsgWithdrawDelegatorRewardResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _41.MsgWithdrawDelegatorRewardResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _41.MsgWithdrawDelegatorRewardResponse;
                 fromPartial(object: {
                     amount?: {
                         denom?: string;
@@ -3012,7 +3012,7 @@ export declare namespace cosmos {
             };
             MsgWithdrawValidatorCommissionResponse: {
                 encode(message: _41.MsgWithdrawValidatorCommissionResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _41.MsgWithdrawValidatorCommissionResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _41.MsgWithdrawValidatorCommissionResponse;
                 fromPartial(object: {
                     amount?: {
                         denom?: string;
@@ -3033,7 +3033,7 @@ export declare namespace cosmos {
             };
             MsgFundCommunityPoolResponse: {
                 encode(_: _41.MsgFundCommunityPoolResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _41.MsgFundCommunityPoolResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _41.MsgFundCommunityPoolResponse;
                 fromPartial(_: {}): _41.MsgFundCommunityPoolResponse;
             };
             QueryParamsRequest: {
@@ -3043,7 +3043,7 @@ export declare namespace cosmos {
             };
             QueryParamsResponse: {
                 encode(message: _40.QueryParamsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _40.QueryParamsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _40.QueryParamsResponse;
                 fromPartial(object: {
                     params?: {
                         communityTax?: string;
@@ -3062,7 +3062,7 @@ export declare namespace cosmos {
             };
             QueryValidatorOutstandingRewardsResponse: {
                 encode(message: _40.QueryValidatorOutstandingRewardsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _40.QueryValidatorOutstandingRewardsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _40.QueryValidatorOutstandingRewardsResponse;
                 fromPartial(object: {
                     rewards?: {
                         rewards?: {
@@ -3081,7 +3081,7 @@ export declare namespace cosmos {
             };
             QueryValidatorCommissionResponse: {
                 encode(message: _40.QueryValidatorCommissionResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _40.QueryValidatorCommissionResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _40.QueryValidatorCommissionResponse;
                 fromPartial(object: {
                     commission?: {
                         commission?: {
@@ -3109,7 +3109,7 @@ export declare namespace cosmos {
             };
             QueryValidatorSlashesResponse: {
                 encode(message: _40.QueryValidatorSlashesResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _40.QueryValidatorSlashesResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _40.QueryValidatorSlashesResponse;
                 fromPartial(object: {
                     slashes?: {
                         validatorPeriod?: any;
@@ -3131,7 +3131,7 @@ export declare namespace cosmos {
             };
             QueryDelegationRewardsResponse: {
                 encode(message: _40.QueryDelegationRewardsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _40.QueryDelegationRewardsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _40.QueryDelegationRewardsResponse;
                 fromPartial(object: {
                     rewards?: {
                         denom?: string;
@@ -3148,7 +3148,7 @@ export declare namespace cosmos {
             };
             QueryDelegationTotalRewardsResponse: {
                 encode(message: _40.QueryDelegationTotalRewardsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _40.QueryDelegationTotalRewardsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _40.QueryDelegationTotalRewardsResponse;
                 fromPartial(object: {
                     rewards?: {
                         validatorAddress?: string;
@@ -3172,7 +3172,7 @@ export declare namespace cosmos {
             };
             QueryDelegatorValidatorsResponse: {
                 encode(message: _40.QueryDelegatorValidatorsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _40.QueryDelegatorValidatorsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _40.QueryDelegatorValidatorsResponse;
                 fromPartial(object: {
                     validators?: string[];
                 }): _40.QueryDelegatorValidatorsResponse;
@@ -3186,7 +3186,7 @@ export declare namespace cosmos {
             };
             QueryDelegatorWithdrawAddressResponse: {
                 encode(message: _40.QueryDelegatorWithdrawAddressResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _40.QueryDelegatorWithdrawAddressResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _40.QueryDelegatorWithdrawAddressResponse;
                 fromPartial(object: {
                     withdrawAddress?: string;
                 }): _40.QueryDelegatorWithdrawAddressResponse;
@@ -3198,7 +3198,7 @@ export declare namespace cosmos {
             };
             QueryCommunityPoolResponse: {
                 encode(message: _40.QueryCommunityPoolResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _40.QueryCommunityPoolResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _40.QueryCommunityPoolResponse;
                 fromPartial(object: {
                     pool?: {
                         denom?: string;
@@ -3502,8 +3502,8 @@ export declare namespace cosmos {
             MsgClientImpl: typeof _235.MsgClientImpl;
             QueryClientImpl: typeof _219.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
-                evidence(request: _44.QueryEvidenceRequest): Promise<_44.QueryEvidenceResponseSDKType>;
-                allEvidence(request?: _44.QueryAllEvidenceRequest): Promise<_44.QueryAllEvidenceResponseSDKType>;
+                evidence(request: _44.QueryEvidenceRequest): Promise<_44.QueryEvidenceResponse>;
+                allEvidence(request?: _44.QueryAllEvidenceRequest): Promise<_44.QueryAllEvidenceResponse>;
             };
             LCDQueryClient: typeof _201.LCDQueryClient;
             registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
@@ -3560,7 +3560,7 @@ export declare namespace cosmos {
             };
             MsgSubmitEvidenceResponse: {
                 encode(message: _45.MsgSubmitEvidenceResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _45.MsgSubmitEvidenceResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _45.MsgSubmitEvidenceResponse;
                 fromPartial(object: {
                     hash?: Uint8Array;
                 }): _45.MsgSubmitEvidenceResponse;
@@ -3574,7 +3574,7 @@ export declare namespace cosmos {
             };
             QueryEvidenceResponse: {
                 encode(message: _44.QueryEvidenceResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _44.QueryEvidenceResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _44.QueryEvidenceResponse;
                 fromPartial(object: {
                     evidence?: {
                         typeUrl?: string;
@@ -3597,7 +3597,7 @@ export declare namespace cosmos {
             };
             QueryAllEvidenceResponse: {
                 encode(message: _44.QueryAllEvidenceResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _44.QueryAllEvidenceResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _44.QueryAllEvidenceResponse;
                 fromPartial(object: {
                     evidence?: {
                         typeUrl?: string;
@@ -3636,9 +3636,9 @@ export declare namespace cosmos {
             MsgClientImpl: typeof _236.MsgClientImpl;
             QueryClientImpl: typeof _220.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
-                allowance(request: _48.QueryAllowanceRequest): Promise<_48.QueryAllowanceResponseSDKType>;
-                allowances(request: _48.QueryAllowancesRequest): Promise<_48.QueryAllowancesResponseSDKType>;
-                allowancesByGranter(request: _48.QueryAllowancesByGranterRequest): Promise<_48.QueryAllowancesByGranterResponseSDKType>;
+                allowance(request: _48.QueryAllowanceRequest): Promise<_48.QueryAllowanceResponse>;
+                allowances(request: _48.QueryAllowancesRequest): Promise<_48.QueryAllowancesResponse>;
+                allowancesByGranter(request: _48.QueryAllowancesByGranterRequest): Promise<_48.QueryAllowancesByGranterResponse>;
             };
             LCDQueryClient: typeof _202.LCDQueryClient;
             registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
@@ -3721,7 +3721,7 @@ export declare namespace cosmos {
             };
             MsgGrantAllowanceResponse: {
                 encode(_: _49.MsgGrantAllowanceResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _49.MsgGrantAllowanceResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _49.MsgGrantAllowanceResponse;
                 fromPartial(_: {}): _49.MsgGrantAllowanceResponse;
             };
             MsgRevokeAllowance: {
@@ -3734,7 +3734,7 @@ export declare namespace cosmos {
             };
             MsgRevokeAllowanceResponse: {
                 encode(_: _49.MsgRevokeAllowanceResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _49.MsgRevokeAllowanceResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _49.MsgRevokeAllowanceResponse;
                 fromPartial(_: {}): _49.MsgRevokeAllowanceResponse;
             };
             QueryAllowanceRequest: {
@@ -3747,7 +3747,7 @@ export declare namespace cosmos {
             };
             QueryAllowanceResponse: {
                 encode(message: _48.QueryAllowanceResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _48.QueryAllowanceResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _48.QueryAllowanceResponse;
                 fromPartial(object: {
                     allowance?: {
                         granter?: string;
@@ -3775,7 +3775,7 @@ export declare namespace cosmos {
             };
             QueryAllowancesResponse: {
                 encode(message: _48.QueryAllowancesResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _48.QueryAllowancesResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _48.QueryAllowancesResponse;
                 fromPartial(object: {
                     allowances?: {
                         granter?: string;
@@ -3807,7 +3807,7 @@ export declare namespace cosmos {
             };
             QueryAllowancesByGranterResponse: {
                 encode(message: _48.QueryAllowancesByGranterResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _48.QueryAllowancesByGranterResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _48.QueryAllowancesByGranterResponse;
                 fromPartial(object: {
                     allowances?: {
                         granter?: string;
@@ -3915,14 +3915,14 @@ export declare namespace cosmos {
             MsgClientImpl: typeof _237.MsgClientImpl;
             QueryClientImpl: typeof _221.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
-                proposal(request: _53.QueryProposalRequest): Promise<_53.QueryProposalResponseSDKType>;
-                proposals(request: _53.QueryProposalsRequest): Promise<_53.QueryProposalsResponseSDKType>;
-                vote(request: _53.QueryVoteRequest): Promise<_53.QueryVoteResponseSDKType>;
-                votes(request: _53.QueryVotesRequest): Promise<_53.QueryVotesResponseSDKType>;
-                params(request: _53.QueryParamsRequest): Promise<_53.QueryParamsResponseSDKType>;
-                deposit(request: _53.QueryDepositRequest): Promise<_53.QueryDepositResponseSDKType>;
-                deposits(request: _53.QueryDepositsRequest): Promise<_53.QueryDepositsResponseSDKType>;
-                tallyResult(request: _53.QueryTallyResultRequest): Promise<_53.QueryTallyResultResponseSDKType>;
+                proposal(request: _53.QueryProposalRequest): Promise<_53.QueryProposalResponse>;
+                proposals(request: _53.QueryProposalsRequest): Promise<_53.QueryProposalsResponse>;
+                vote(request: _53.QueryVoteRequest): Promise<_53.QueryVoteResponse>;
+                votes(request: _53.QueryVotesRequest): Promise<_53.QueryVotesResponse>;
+                params(request: _53.QueryParamsRequest): Promise<_53.QueryParamsResponse>;
+                deposit(request: _53.QueryDepositRequest): Promise<_53.QueryDepositResponse>;
+                deposits(request: _53.QueryDepositsRequest): Promise<_53.QueryDepositsResponse>;
+                tallyResult(request: _53.QueryTallyResultRequest): Promise<_53.QueryTallyResultResponse>;
             };
             LCDQueryClient: typeof _203.LCDQueryClient;
             registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
@@ -4114,7 +4114,7 @@ export declare namespace cosmos {
             };
             MsgSubmitProposalResponse: {
                 encode(message: _54.MsgSubmitProposalResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _54.MsgSubmitProposalResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _54.MsgSubmitProposalResponse;
                 fromPartial(object: {
                     proposalId?: any;
                 }): _54.MsgSubmitProposalResponse;
@@ -4132,7 +4132,7 @@ export declare namespace cosmos {
             };
             MsgExecLegacyContentResponse: {
                 encode(_: _54.MsgExecLegacyContentResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _54.MsgExecLegacyContentResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _54.MsgExecLegacyContentResponse;
                 fromPartial(_: {}): _54.MsgExecLegacyContentResponse;
             };
             MsgVote: {
@@ -4147,7 +4147,7 @@ export declare namespace cosmos {
             };
             MsgVoteResponse: {
                 encode(_: _54.MsgVoteResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _54.MsgVoteResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _54.MsgVoteResponse;
                 fromPartial(_: {}): _54.MsgVoteResponse;
             };
             MsgVoteWeighted: {
@@ -4165,7 +4165,7 @@ export declare namespace cosmos {
             };
             MsgVoteWeightedResponse: {
                 encode(_: _54.MsgVoteWeightedResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _54.MsgVoteWeightedResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _54.MsgVoteWeightedResponse;
                 fromPartial(_: {}): _54.MsgVoteWeightedResponse;
             };
             MsgDeposit: {
@@ -4182,7 +4182,7 @@ export declare namespace cosmos {
             };
             MsgDepositResponse: {
                 encode(_: _54.MsgDepositResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _54.MsgDepositResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _54.MsgDepositResponse;
                 fromPartial(_: {}): _54.MsgDepositResponse;
             };
             QueryProposalRequest: {
@@ -4194,7 +4194,7 @@ export declare namespace cosmos {
             };
             QueryProposalResponse: {
                 encode(message: _53.QueryProposalResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _53.QueryProposalResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _53.QueryProposalResponse;
                 fromPartial(object: {
                     proposal?: {
                         id?: any;
@@ -4239,7 +4239,7 @@ export declare namespace cosmos {
             };
             QueryProposalsResponse: {
                 encode(message: _53.QueryProposalsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _53.QueryProposalsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _53.QueryProposalsResponse;
                 fromPartial(object: {
                     proposals?: {
                         id?: any;
@@ -4280,7 +4280,7 @@ export declare namespace cosmos {
             };
             QueryVoteResponse: {
                 encode(message: _53.QueryVoteResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _53.QueryVoteResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _53.QueryVoteResponse;
                 fromPartial(object: {
                     vote?: {
                         proposalId?: any;
@@ -4309,7 +4309,7 @@ export declare namespace cosmos {
             };
             QueryVotesResponse: {
                 encode(message: _53.QueryVotesResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _53.QueryVotesResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _53.QueryVotesResponse;
                 fromPartial(object: {
                     votes?: {
                         proposalId?: any;
@@ -4335,7 +4335,7 @@ export declare namespace cosmos {
             };
             QueryParamsResponse: {
                 encode(message: _53.QueryParamsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _53.QueryParamsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _53.QueryParamsResponse;
                 fromPartial(object: {
                     votingParams?: {
                         votingPeriod?: {
@@ -4370,7 +4370,7 @@ export declare namespace cosmos {
             };
             QueryDepositResponse: {
                 encode(message: _53.QueryDepositResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _53.QueryDepositResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _53.QueryDepositResponse;
                 fromPartial(object: {
                     deposit?: {
                         proposalId?: any;
@@ -4398,7 +4398,7 @@ export declare namespace cosmos {
             };
             QueryDepositsResponse: {
                 encode(message: _53.QueryDepositsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _53.QueryDepositsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _53.QueryDepositsResponse;
                 fromPartial(object: {
                     deposits?: {
                         proposalId?: any;
@@ -4423,7 +4423,7 @@ export declare namespace cosmos {
             };
             QueryTallyResultResponse: {
                 encode(message: _53.QueryTallyResultResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _53.QueryTallyResultResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _53.QueryTallyResultResponse;
                 fromPartial(object: {
                     tally?: {
                         yesCount?: string;
@@ -4617,14 +4617,14 @@ export declare namespace cosmos {
             MsgClientImpl: typeof _238.MsgClientImpl;
             QueryClientImpl: typeof _222.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
-                proposal(request: _57.QueryProposalRequest): Promise<_57.QueryProposalResponseSDKType>;
-                proposals(request: _57.QueryProposalsRequest): Promise<_57.QueryProposalsResponseSDKType>;
-                vote(request: _57.QueryVoteRequest): Promise<_57.QueryVoteResponseSDKType>;
-                votes(request: _57.QueryVotesRequest): Promise<_57.QueryVotesResponseSDKType>;
-                params(request: _57.QueryParamsRequest): Promise<_57.QueryParamsResponseSDKType>;
-                deposit(request: _57.QueryDepositRequest): Promise<_57.QueryDepositResponseSDKType>;
-                deposits(request: _57.QueryDepositsRequest): Promise<_57.QueryDepositsResponseSDKType>;
-                tallyResult(request: _57.QueryTallyResultRequest): Promise<_57.QueryTallyResultResponseSDKType>;
+                proposal(request: _57.QueryProposalRequest): Promise<_57.QueryProposalResponse>;
+                proposals(request: _57.QueryProposalsRequest): Promise<_57.QueryProposalsResponse>;
+                vote(request: _57.QueryVoteRequest): Promise<_57.QueryVoteResponse>;
+                votes(request: _57.QueryVotesRequest): Promise<_57.QueryVotesResponse>;
+                params(request: _57.QueryParamsRequest): Promise<_57.QueryParamsResponse>;
+                deposit(request: _57.QueryDepositRequest): Promise<_57.QueryDepositResponse>;
+                deposits(request: _57.QueryDepositsRequest): Promise<_57.QueryDepositsResponse>;
+                tallyResult(request: _57.QueryTallyResultRequest): Promise<_57.QueryTallyResultResponse>;
             };
             LCDQueryClient: typeof _204.LCDQueryClient;
             registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
@@ -4780,7 +4780,7 @@ export declare namespace cosmos {
             };
             MsgSubmitProposalResponse: {
                 encode(message: _58.MsgSubmitProposalResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _58.MsgSubmitProposalResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _58.MsgSubmitProposalResponse;
                 fromPartial(object: {
                     proposalId?: any;
                 }): _58.MsgSubmitProposalResponse;
@@ -4796,7 +4796,7 @@ export declare namespace cosmos {
             };
             MsgVoteResponse: {
                 encode(_: _58.MsgVoteResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _58.MsgVoteResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _58.MsgVoteResponse;
                 fromPartial(_: {}): _58.MsgVoteResponse;
             };
             MsgVoteWeighted: {
@@ -4813,7 +4813,7 @@ export declare namespace cosmos {
             };
             MsgVoteWeightedResponse: {
                 encode(_: _58.MsgVoteWeightedResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _58.MsgVoteWeightedResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _58.MsgVoteWeightedResponse;
                 fromPartial(_: {}): _58.MsgVoteWeightedResponse;
             };
             MsgDeposit: {
@@ -4830,7 +4830,7 @@ export declare namespace cosmos {
             };
             MsgDepositResponse: {
                 encode(_: _58.MsgDepositResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _58.MsgDepositResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _58.MsgDepositResponse;
                 fromPartial(_: {}): _58.MsgDepositResponse;
             };
             QueryProposalRequest: {
@@ -4842,7 +4842,7 @@ export declare namespace cosmos {
             };
             QueryProposalResponse: {
                 encode(message: _57.QueryProposalResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _57.QueryProposalResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _57.QueryProposalResponse;
                 fromPartial(object: {
                     proposal?: {
                         proposalId?: any;
@@ -4886,7 +4886,7 @@ export declare namespace cosmos {
             };
             QueryProposalsResponse: {
                 encode(message: _57.QueryProposalsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _57.QueryProposalsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _57.QueryProposalsResponse;
                 fromPartial(object: {
                     proposals?: {
                         proposalId?: any;
@@ -4926,7 +4926,7 @@ export declare namespace cosmos {
             };
             QueryVoteResponse: {
                 encode(message: _57.QueryVoteResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _57.QueryVoteResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _57.QueryVoteResponse;
                 fromPartial(object: {
                     vote?: {
                         proposalId?: any;
@@ -4955,7 +4955,7 @@ export declare namespace cosmos {
             };
             QueryVotesResponse: {
                 encode(message: _57.QueryVotesResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _57.QueryVotesResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _57.QueryVotesResponse;
                 fromPartial(object: {
                     votes?: {
                         proposalId?: any;
@@ -4981,7 +4981,7 @@ export declare namespace cosmos {
             };
             QueryParamsResponse: {
                 encode(message: _57.QueryParamsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _57.QueryParamsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _57.QueryParamsResponse;
                 fromPartial(object: {
                     votingParams?: {
                         votingPeriod?: {
@@ -5016,7 +5016,7 @@ export declare namespace cosmos {
             };
             QueryDepositResponse: {
                 encode(message: _57.QueryDepositResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _57.QueryDepositResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _57.QueryDepositResponse;
                 fromPartial(object: {
                     deposit?: {
                         proposalId?: any;
@@ -5044,7 +5044,7 @@ export declare namespace cosmos {
             };
             QueryDepositsResponse: {
                 encode(message: _57.QueryDepositsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _57.QueryDepositsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _57.QueryDepositsResponse;
                 fromPartial(object: {
                     deposits?: {
                         proposalId?: any;
@@ -5069,7 +5069,7 @@ export declare namespace cosmos {
             };
             QueryTallyResultResponse: {
                 encode(message: _57.QueryTallyResultResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _57.QueryTallyResultResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _57.QueryTallyResultResponse;
                 fromPartial(object: {
                     tally?: {
                         yes?: string;
@@ -5271,19 +5271,19 @@ export declare namespace cosmos {
             MsgClientImpl: typeof _239.MsgClientImpl;
             QueryClientImpl: typeof _223.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
-                groupInfo(request: _61.QueryGroupInfoRequest): Promise<_61.QueryGroupInfoResponseSDKType>;
-                groupPolicyInfo(request: _61.QueryGroupPolicyInfoRequest): Promise<_61.QueryGroupPolicyInfoResponseSDKType>;
-                groupMembers(request: _61.QueryGroupMembersRequest): Promise<_61.QueryGroupMembersResponseSDKType>;
-                groupsByAdmin(request: _61.QueryGroupsByAdminRequest): Promise<_61.QueryGroupsByAdminResponseSDKType>;
-                groupPoliciesByGroup(request: _61.QueryGroupPoliciesByGroupRequest): Promise<_61.QueryGroupPoliciesByGroupResponseSDKType>;
-                groupPoliciesByAdmin(request: _61.QueryGroupPoliciesByAdminRequest): Promise<_61.QueryGroupPoliciesByAdminResponseSDKType>;
-                proposal(request: _61.QueryProposalRequest): Promise<_61.QueryProposalResponseSDKType>;
-                proposalsByGroupPolicy(request: _61.QueryProposalsByGroupPolicyRequest): Promise<_61.QueryProposalsByGroupPolicyResponseSDKType>;
-                voteByProposalVoter(request: _61.QueryVoteByProposalVoterRequest): Promise<_61.QueryVoteByProposalVoterResponseSDKType>;
-                votesByProposal(request: _61.QueryVotesByProposalRequest): Promise<_61.QueryVotesByProposalResponseSDKType>;
-                votesByVoter(request: _61.QueryVotesByVoterRequest): Promise<_61.QueryVotesByVoterResponseSDKType>;
-                groupsByMember(request: _61.QueryGroupsByMemberRequest): Promise<_61.QueryGroupsByMemberResponseSDKType>;
-                tallyResult(request: _61.QueryTallyResultRequest): Promise<_61.QueryTallyResultResponseSDKType>;
+                groupInfo(request: _61.QueryGroupInfoRequest): Promise<_61.QueryGroupInfoResponse>;
+                groupPolicyInfo(request: _61.QueryGroupPolicyInfoRequest): Promise<_61.QueryGroupPolicyInfoResponse>;
+                groupMembers(request: _61.QueryGroupMembersRequest): Promise<_61.QueryGroupMembersResponse>;
+                groupsByAdmin(request: _61.QueryGroupsByAdminRequest): Promise<_61.QueryGroupsByAdminResponse>;
+                groupPoliciesByGroup(request: _61.QueryGroupPoliciesByGroupRequest): Promise<_61.QueryGroupPoliciesByGroupResponse>;
+                groupPoliciesByAdmin(request: _61.QueryGroupPoliciesByAdminRequest): Promise<_61.QueryGroupPoliciesByAdminResponse>;
+                proposal(request: _61.QueryProposalRequest): Promise<_61.QueryProposalResponse>;
+                proposalsByGroupPolicy(request: _61.QueryProposalsByGroupPolicyRequest): Promise<_61.QueryProposalsByGroupPolicyResponse>;
+                voteByProposalVoter(request: _61.QueryVoteByProposalVoterRequest): Promise<_61.QueryVoteByProposalVoterResponse>;
+                votesByProposal(request: _61.QueryVotesByProposalRequest): Promise<_61.QueryVotesByProposalResponse>;
+                votesByVoter(request: _61.QueryVotesByVoterRequest): Promise<_61.QueryVotesByVoterResponse>;
+                groupsByMember(request: _61.QueryGroupsByMemberRequest): Promise<_61.QueryGroupsByMemberResponse>;
+                tallyResult(request: _61.QueryTallyResultRequest): Promise<_61.QueryTallyResultResponse>;
             };
             LCDQueryClient: typeof _205.LCDQueryClient;
             registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
@@ -5925,7 +5925,7 @@ export declare namespace cosmos {
             };
             MsgCreateGroupResponse: {
                 encode(message: _62.MsgCreateGroupResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _62.MsgCreateGroupResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _62.MsgCreateGroupResponse;
                 fromPartial(object: {
                     groupId?: any;
                 }): _62.MsgCreateGroupResponse;
@@ -5946,7 +5946,7 @@ export declare namespace cosmos {
             };
             MsgUpdateGroupMembersResponse: {
                 encode(_: _62.MsgUpdateGroupMembersResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _62.MsgUpdateGroupMembersResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _62.MsgUpdateGroupMembersResponse;
                 fromPartial(_: {}): _62.MsgUpdateGroupMembersResponse;
             };
             MsgUpdateGroupAdmin: {
@@ -5960,7 +5960,7 @@ export declare namespace cosmos {
             };
             MsgUpdateGroupAdminResponse: {
                 encode(_: _62.MsgUpdateGroupAdminResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _62.MsgUpdateGroupAdminResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _62.MsgUpdateGroupAdminResponse;
                 fromPartial(_: {}): _62.MsgUpdateGroupAdminResponse;
             };
             MsgUpdateGroupMetadata: {
@@ -5974,7 +5974,7 @@ export declare namespace cosmos {
             };
             MsgUpdateGroupMetadataResponse: {
                 encode(_: _62.MsgUpdateGroupMetadataResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _62.MsgUpdateGroupMetadataResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _62.MsgUpdateGroupMetadataResponse;
                 fromPartial(_: {}): _62.MsgUpdateGroupMetadataResponse;
             };
             MsgCreateGroupPolicy: {
@@ -5992,7 +5992,7 @@ export declare namespace cosmos {
             };
             MsgCreateGroupPolicyResponse: {
                 encode(message: _62.MsgCreateGroupPolicyResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _62.MsgCreateGroupPolicyResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _62.MsgCreateGroupPolicyResponse;
                 fromPartial(object: {
                     address?: string;
                 }): _62.MsgCreateGroupPolicyResponse;
@@ -6028,7 +6028,7 @@ export declare namespace cosmos {
             };
             MsgCreateGroupWithPolicyResponse: {
                 encode(message: _62.MsgCreateGroupWithPolicyResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _62.MsgCreateGroupWithPolicyResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _62.MsgCreateGroupWithPolicyResponse;
                 fromPartial(object: {
                     groupId?: any;
                     groupPolicyAddress?: string;
@@ -6036,7 +6036,7 @@ export declare namespace cosmos {
             };
             MsgUpdateGroupPolicyAdminResponse: {
                 encode(_: _62.MsgUpdateGroupPolicyAdminResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _62.MsgUpdateGroupPolicyAdminResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _62.MsgUpdateGroupPolicyAdminResponse;
                 fromPartial(_: {}): _62.MsgUpdateGroupPolicyAdminResponse;
             };
             MsgUpdateGroupPolicyDecisionPolicy: {
@@ -6053,7 +6053,7 @@ export declare namespace cosmos {
             };
             MsgUpdateGroupPolicyDecisionPolicyResponse: {
                 encode(_: _62.MsgUpdateGroupPolicyDecisionPolicyResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _62.MsgUpdateGroupPolicyDecisionPolicyResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _62.MsgUpdateGroupPolicyDecisionPolicyResponse;
                 fromPartial(_: {}): _62.MsgUpdateGroupPolicyDecisionPolicyResponse;
             };
             MsgUpdateGroupPolicyMetadata: {
@@ -6067,7 +6067,7 @@ export declare namespace cosmos {
             };
             MsgUpdateGroupPolicyMetadataResponse: {
                 encode(_: _62.MsgUpdateGroupPolicyMetadataResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _62.MsgUpdateGroupPolicyMetadataResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _62.MsgUpdateGroupPolicyMetadataResponse;
                 fromPartial(_: {}): _62.MsgUpdateGroupPolicyMetadataResponse;
             };
             MsgSubmitProposal: {
@@ -6086,7 +6086,7 @@ export declare namespace cosmos {
             };
             MsgSubmitProposalResponse: {
                 encode(message: _62.MsgSubmitProposalResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _62.MsgSubmitProposalResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _62.MsgSubmitProposalResponse;
                 fromPartial(object: {
                     proposalId?: any;
                 }): _62.MsgSubmitProposalResponse;
@@ -6101,7 +6101,7 @@ export declare namespace cosmos {
             };
             MsgWithdrawProposalResponse: {
                 encode(_: _62.MsgWithdrawProposalResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _62.MsgWithdrawProposalResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _62.MsgWithdrawProposalResponse;
                 fromPartial(_: {}): _62.MsgWithdrawProposalResponse;
             };
             MsgVote: {
@@ -6117,7 +6117,7 @@ export declare namespace cosmos {
             };
             MsgVoteResponse: {
                 encode(_: _62.MsgVoteResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _62.MsgVoteResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _62.MsgVoteResponse;
                 fromPartial(_: {}): _62.MsgVoteResponse;
             };
             MsgExec: {
@@ -6130,7 +6130,7 @@ export declare namespace cosmos {
             };
             MsgExecResponse: {
                 encode(_: _62.MsgExecResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _62.MsgExecResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _62.MsgExecResponse;
                 fromPartial(_: {}): _62.MsgExecResponse;
             };
             MsgLeaveGroup: {
@@ -6143,7 +6143,7 @@ export declare namespace cosmos {
             };
             MsgLeaveGroupResponse: {
                 encode(_: _62.MsgLeaveGroupResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _62.MsgLeaveGroupResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _62.MsgLeaveGroupResponse;
                 fromPartial(_: {}): _62.MsgLeaveGroupResponse;
             };
             QueryGroupInfoRequest: {
@@ -6155,7 +6155,7 @@ export declare namespace cosmos {
             };
             QueryGroupInfoResponse: {
                 encode(message: _61.QueryGroupInfoResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _61.QueryGroupInfoResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _61.QueryGroupInfoResponse;
                 fromPartial(object: {
                     info?: {
                         id?: any;
@@ -6176,7 +6176,7 @@ export declare namespace cosmos {
             };
             QueryGroupPolicyInfoResponse: {
                 encode(message: _61.QueryGroupPolicyInfoResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _61.QueryGroupPolicyInfoResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _61.QueryGroupPolicyInfoResponse;
                 fromPartial(object: {
                     info?: {
                         address?: string;
@@ -6208,7 +6208,7 @@ export declare namespace cosmos {
             };
             QueryGroupMembersResponse: {
                 encode(message: _61.QueryGroupMembersResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _61.QueryGroupMembersResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _61.QueryGroupMembersResponse;
                 fromPartial(object: {
                     members?: {
                         groupId?: any;
@@ -6241,7 +6241,7 @@ export declare namespace cosmos {
             };
             QueryGroupsByAdminResponse: {
                 encode(message: _61.QueryGroupsByAdminResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _61.QueryGroupsByAdminResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _61.QueryGroupsByAdminResponse;
                 fromPartial(object: {
                     groups?: {
                         id?: any;
@@ -6273,7 +6273,7 @@ export declare namespace cosmos {
             };
             QueryGroupPoliciesByGroupResponse: {
                 encode(message: _61.QueryGroupPoliciesByGroupResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _61.QueryGroupPoliciesByGroupResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _61.QueryGroupPoliciesByGroupResponse;
                 fromPartial(object: {
                     groupPolicies?: {
                         address?: string;
@@ -6309,7 +6309,7 @@ export declare namespace cosmos {
             };
             QueryGroupPoliciesByAdminResponse: {
                 encode(message: _61.QueryGroupPoliciesByAdminResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _61.QueryGroupPoliciesByAdminResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _61.QueryGroupPoliciesByAdminResponse;
                 fromPartial(object: {
                     groupPolicies?: {
                         address?: string;
@@ -6338,7 +6338,7 @@ export declare namespace cosmos {
             };
             QueryProposalResponse: {
                 encode(message: _61.QueryProposalResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _61.QueryProposalResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _61.QueryProposalResponse;
                 fromPartial(object: {
                     proposal?: {
                         id?: any;
@@ -6381,7 +6381,7 @@ export declare namespace cosmos {
             };
             QueryProposalsByGroupPolicyResponse: {
                 encode(message: _61.QueryProposalsByGroupPolicyResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _61.QueryProposalsByGroupPolicyResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _61.QueryProposalsByGroupPolicyResponse;
                 fromPartial(object: {
                     proposals?: {
                         id?: any;
@@ -6422,7 +6422,7 @@ export declare namespace cosmos {
             };
             QueryVoteByProposalVoterResponse: {
                 encode(message: _61.QueryVoteByProposalVoterResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _61.QueryVoteByProposalVoterResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _61.QueryVoteByProposalVoterResponse;
                 fromPartial(object: {
                     vote?: {
                         proposalId?: any;
@@ -6449,7 +6449,7 @@ export declare namespace cosmos {
             };
             QueryVotesByProposalResponse: {
                 encode(message: _61.QueryVotesByProposalResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _61.QueryVotesByProposalResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _61.QueryVotesByProposalResponse;
                 fromPartial(object: {
                     votes?: {
                         proposalId?: any;
@@ -6480,7 +6480,7 @@ export declare namespace cosmos {
             };
             QueryVotesByVoterResponse: {
                 encode(message: _61.QueryVotesByVoterResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _61.QueryVotesByVoterResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _61.QueryVotesByVoterResponse;
                 fromPartial(object: {
                     votes?: {
                         proposalId?: any;
@@ -6511,7 +6511,7 @@ export declare namespace cosmos {
             };
             QueryGroupsByMemberResponse: {
                 encode(message: _61.QueryGroupsByMemberResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _61.QueryGroupsByMemberResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _61.QueryGroupsByMemberResponse;
                 fromPartial(object: {
                     groups?: {
                         id?: any;
@@ -6536,7 +6536,7 @@ export declare namespace cosmos {
             };
             QueryTallyResultResponse: {
                 encode(message: _61.QueryTallyResultResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _61.QueryTallyResultResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _61.QueryTallyResultResponse;
                 fromPartial(object: {
                     tally?: {
                         yesCount?: string;
@@ -6685,9 +6685,9 @@ export declare namespace cosmos {
         const v1beta1: {
             QueryClientImpl: typeof _224.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
-                params(request?: _66.QueryParamsRequest): Promise<_66.QueryParamsResponseSDKType>;
-                inflation(request?: _66.QueryInflationRequest): Promise<_66.QueryInflationResponseSDKType>;
-                annualProvisions(request?: _66.QueryAnnualProvisionsRequest): Promise<_66.QueryAnnualProvisionsResponseSDKType>;
+                params(request?: _66.QueryParamsRequest): Promise<_66.QueryParamsResponse>;
+                inflation(request?: _66.QueryInflationRequest): Promise<_66.QueryInflationResponse>;
+                annualProvisions(request?: _66.QueryAnnualProvisionsRequest): Promise<_66.QueryAnnualProvisionsResponse>;
             };
             LCDQueryClient: typeof _206.LCDQueryClient;
             QueryParamsRequest: {
@@ -6697,7 +6697,7 @@ export declare namespace cosmos {
             };
             QueryParamsResponse: {
                 encode(message: _66.QueryParamsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _66.QueryParamsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _66.QueryParamsResponse;
                 fromPartial(object: {
                     params?: {
                         mintDenom?: string;
@@ -6716,7 +6716,7 @@ export declare namespace cosmos {
             };
             QueryInflationResponse: {
                 encode(message: _66.QueryInflationResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _66.QueryInflationResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _66.QueryInflationResponse;
                 fromPartial(object: {
                     inflation?: Uint8Array;
                 }): _66.QueryInflationResponse;
@@ -6728,7 +6728,7 @@ export declare namespace cosmos {
             };
             QueryAnnualProvisionsResponse: {
                 encode(message: _66.QueryAnnualProvisionsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _66.QueryAnnualProvisionsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _66.QueryAnnualProvisionsResponse;
                 fromPartial(object: {
                     annualProvisions?: Uint8Array;
                 }): _66.QueryAnnualProvisionsResponse;
@@ -6781,13 +6781,13 @@ export declare namespace cosmos {
             MsgClientImpl: typeof _240.MsgClientImpl;
             QueryClientImpl: typeof _225.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
-                balance(request: _71.QueryBalanceRequest): Promise<_71.QueryBalanceResponseSDKType>;
-                owner(request: _71.QueryOwnerRequest): Promise<_71.QueryOwnerResponseSDKType>;
-                supply(request: _71.QuerySupplyRequest): Promise<_71.QuerySupplyResponseSDKType>;
-                nFTs(request: _71.QueryNFTsRequest): Promise<_71.QueryNFTsResponseSDKType>;
-                nFT(request: _71.QueryNFTRequest): Promise<_71.QueryNFTResponseSDKType>;
-                class(request: _71.QueryClassRequest): Promise<_71.QueryClassResponseSDKType>;
-                classes(request?: _71.QueryClassesRequest): Promise<_71.QueryClassesResponseSDKType>;
+                balance(request: _71.QueryBalanceRequest): Promise<_71.QueryBalanceResponse>;
+                owner(request: _71.QueryOwnerRequest): Promise<_71.QueryOwnerResponse>;
+                supply(request: _71.QuerySupplyRequest): Promise<_71.QuerySupplyResponse>;
+                nFTs(request: _71.QueryNFTsRequest): Promise<_71.QueryNFTsResponse>;
+                nFT(request: _71.QueryNFTRequest): Promise<_71.QueryNFTResponse>;
+                class(request: _71.QueryClassRequest): Promise<_71.QueryClassResponse>;
+                classes(request?: _71.QueryClassesRequest): Promise<_71.QueryClassesResponse>;
             };
             LCDQueryClient: typeof _207.LCDQueryClient;
             registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
@@ -6841,7 +6841,7 @@ export declare namespace cosmos {
             };
             MsgSendResponse: {
                 encode(_: _72.MsgSendResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _72.MsgSendResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _72.MsgSendResponse;
                 fromPartial(_: {}): _72.MsgSendResponse;
             };
             QueryBalanceRequest: {
@@ -6854,7 +6854,7 @@ export declare namespace cosmos {
             };
             QueryBalanceResponse: {
                 encode(message: _71.QueryBalanceResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _71.QueryBalanceResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _71.QueryBalanceResponse;
                 fromPartial(object: {
                     amount?: any;
                 }): _71.QueryBalanceResponse;
@@ -6869,7 +6869,7 @@ export declare namespace cosmos {
             };
             QueryOwnerResponse: {
                 encode(message: _71.QueryOwnerResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _71.QueryOwnerResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _71.QueryOwnerResponse;
                 fromPartial(object: {
                     owner?: string;
                 }): _71.QueryOwnerResponse;
@@ -6883,7 +6883,7 @@ export declare namespace cosmos {
             };
             QuerySupplyResponse: {
                 encode(message: _71.QuerySupplyResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _71.QuerySupplyResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _71.QuerySupplyResponse;
                 fromPartial(object: {
                     amount?: any;
                 }): _71.QuerySupplyResponse;
@@ -6905,7 +6905,7 @@ export declare namespace cosmos {
             };
             QueryNFTsResponse: {
                 encode(message: _71.QueryNFTsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _71.QueryNFTsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _71.QueryNFTsResponse;
                 fromPartial(object: {
                     nfts?: {
                         classId?: string;
@@ -6933,7 +6933,7 @@ export declare namespace cosmos {
             };
             QueryNFTResponse: {
                 encode(message: _71.QueryNFTResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _71.QueryNFTResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _71.QueryNFTResponse;
                 fromPartial(object: {
                     nft?: {
                         classId?: string;
@@ -6956,7 +6956,7 @@ export declare namespace cosmos {
             };
             QueryClassResponse: {
                 encode(message: _71.QueryClassResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _71.QueryClassResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _71.QueryClassResponse;
                 fromPartial(object: {
                     class?: {
                         id?: string;
@@ -6987,7 +6987,7 @@ export declare namespace cosmos {
             };
             QueryClassesResponse: {
                 encode(message: _71.QueryClassesResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _71.QueryClassesResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _71.QueryClassesResponse;
                 fromPartial(object: {
                     classes?: {
                         id?: string;
@@ -7190,8 +7190,8 @@ export declare namespace cosmos {
         const v1beta1: {
             QueryClientImpl: typeof _226.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
-                params(request: _76.QueryParamsRequest): Promise<_76.QueryParamsResponseSDKType>;
-                subspaces(request?: _76.QuerySubspacesRequest): Promise<_76.QuerySubspacesResponseSDKType>;
+                params(request: _76.QueryParamsRequest): Promise<_76.QueryParamsResponse>;
+                subspaces(request?: _76.QuerySubspacesRequest): Promise<_76.QuerySubspacesResponse>;
             };
             LCDQueryClient: typeof _208.LCDQueryClient;
             QueryParamsRequest: {
@@ -7204,7 +7204,7 @@ export declare namespace cosmos {
             };
             QueryParamsResponse: {
                 encode(message: _76.QueryParamsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _76.QueryParamsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _76.QueryParamsResponse;
                 fromPartial(object: {
                     param?: {
                         subspace?: string;
@@ -7220,7 +7220,7 @@ export declare namespace cosmos {
             };
             QuerySubspacesResponse: {
                 encode(message: _76.QuerySubspacesResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _76.QuerySubspacesResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _76.QuerySubspacesResponse;
                 fromPartial(object: {
                     subspaces?: {
                         subspace?: string;
@@ -7265,9 +7265,9 @@ export declare namespace cosmos {
             MsgClientImpl: typeof _241.MsgClientImpl;
             QueryClientImpl: typeof _227.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
-                params(request?: _78.QueryParamsRequest): Promise<_78.QueryParamsResponseSDKType>;
-                signingInfo(request: _78.QuerySigningInfoRequest): Promise<_78.QuerySigningInfoResponseSDKType>;
-                signingInfos(request?: _78.QuerySigningInfosRequest): Promise<_78.QuerySigningInfosResponseSDKType>;
+                params(request?: _78.QueryParamsRequest): Promise<_78.QueryParamsResponse>;
+                signingInfo(request: _78.QuerySigningInfoRequest): Promise<_78.QuerySigningInfoResponse>;
+                signingInfos(request?: _78.QuerySigningInfosRequest): Promise<_78.QuerySigningInfosResponse>;
             };
             LCDQueryClient: typeof _209.LCDQueryClient;
             registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
@@ -7312,7 +7312,7 @@ export declare namespace cosmos {
             };
             MsgUnjailResponse: {
                 encode(_: _80.MsgUnjailResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _80.MsgUnjailResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _80.MsgUnjailResponse;
                 fromPartial(_: {}): _80.MsgUnjailResponse;
             };
             ValidatorSigningInfo: {
@@ -7348,7 +7348,7 @@ export declare namespace cosmos {
             };
             QueryParamsResponse: {
                 encode(message: _78.QueryParamsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _78.QueryParamsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _78.QueryParamsResponse;
                 fromPartial(object: {
                     params?: {
                         signedBlocksWindow?: any;
@@ -7371,7 +7371,7 @@ export declare namespace cosmos {
             };
             QuerySigningInfoResponse: {
                 encode(message: _78.QuerySigningInfoResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _78.QuerySigningInfoResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _78.QuerySigningInfoResponse;
                 fromPartial(object: {
                     valSigningInfo?: {
                         address?: string;
@@ -7398,7 +7398,7 @@ export declare namespace cosmos {
             };
             QuerySigningInfosResponse: {
                 encode(message: _78.QuerySigningInfosResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _78.QuerySigningInfosResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _78.QuerySigningInfosResponse;
                 fromPartial(object: {
                     info?: {
                         address?: string;
@@ -7489,20 +7489,20 @@ export declare namespace cosmos {
             MsgClientImpl: typeof _242.MsgClientImpl;
             QueryClientImpl: typeof _228.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
-                validators(request: _83.QueryValidatorsRequest): Promise<_83.QueryValidatorsResponseSDKType>;
-                validator(request: _83.QueryValidatorRequest): Promise<_83.QueryValidatorResponseSDKType>;
-                validatorDelegations(request: _83.QueryValidatorDelegationsRequest): Promise<_83.QueryValidatorDelegationsResponseSDKType>;
-                validatorUnbondingDelegations(request: _83.QueryValidatorUnbondingDelegationsRequest): Promise<_83.QueryValidatorUnbondingDelegationsResponseSDKType>;
-                delegation(request: _83.QueryDelegationRequest): Promise<_83.QueryDelegationResponseSDKType>;
-                unbondingDelegation(request: _83.QueryUnbondingDelegationRequest): Promise<_83.QueryUnbondingDelegationResponseSDKType>;
-                delegatorDelegations(request: _83.QueryDelegatorDelegationsRequest): Promise<_83.QueryDelegatorDelegationsResponseSDKType>;
-                delegatorUnbondingDelegations(request: _83.QueryDelegatorUnbondingDelegationsRequest): Promise<_83.QueryDelegatorUnbondingDelegationsResponseSDKType>;
-                redelegations(request: _83.QueryRedelegationsRequest): Promise<_83.QueryRedelegationsResponseSDKType>;
-                delegatorValidators(request: _83.QueryDelegatorValidatorsRequest): Promise<_83.QueryDelegatorValidatorsResponseSDKType>;
-                delegatorValidator(request: _83.QueryDelegatorValidatorRequest): Promise<_83.QueryDelegatorValidatorResponseSDKType>;
-                historicalInfo(request: _83.QueryHistoricalInfoRequest): Promise<_83.QueryHistoricalInfoResponseSDKType>;
-                pool(request?: _83.QueryPoolRequest): Promise<_83.QueryPoolResponseSDKType>;
-                params(request?: _83.QueryParamsRequest): Promise<_83.QueryParamsResponseSDKType>;
+                validators(request: _83.QueryValidatorsRequest): Promise<_83.QueryValidatorsResponse>;
+                validator(request: _83.QueryValidatorRequest): Promise<_83.QueryValidatorResponse>;
+                validatorDelegations(request: _83.QueryValidatorDelegationsRequest): Promise<_83.QueryValidatorDelegationsResponse>;
+                validatorUnbondingDelegations(request: _83.QueryValidatorUnbondingDelegationsRequest): Promise<_83.QueryValidatorUnbondingDelegationsResponse>;
+                delegation(request: _83.QueryDelegationRequest): Promise<_83.QueryDelegationResponse>;
+                unbondingDelegation(request: _83.QueryUnbondingDelegationRequest): Promise<_83.QueryUnbondingDelegationResponse>;
+                delegatorDelegations(request: _83.QueryDelegatorDelegationsRequest): Promise<_83.QueryDelegatorDelegationsResponse>;
+                delegatorUnbondingDelegations(request: _83.QueryDelegatorUnbondingDelegationsRequest): Promise<_83.QueryDelegatorUnbondingDelegationsResponse>;
+                redelegations(request: _83.QueryRedelegationsRequest): Promise<_83.QueryRedelegationsResponse>;
+                delegatorValidators(request: _83.QueryDelegatorValidatorsRequest): Promise<_83.QueryDelegatorValidatorsResponse>;
+                delegatorValidator(request: _83.QueryDelegatorValidatorRequest): Promise<_83.QueryDelegatorValidatorResponse>;
+                historicalInfo(request: _83.QueryHistoricalInfoRequest): Promise<_83.QueryHistoricalInfoResponse>;
+                pool(request?: _83.QueryPoolRequest): Promise<_83.QueryPoolResponse>;
+                params(request?: _83.QueryParamsRequest): Promise<_83.QueryParamsResponse>;
             };
             LCDQueryClient: typeof _210.LCDQueryClient;
             registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
@@ -7747,7 +7747,7 @@ export declare namespace cosmos {
             };
             MsgCreateValidatorResponse: {
                 encode(_: _85.MsgCreateValidatorResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _85.MsgCreateValidatorResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _85.MsgCreateValidatorResponse;
                 fromPartial(_: {}): _85.MsgCreateValidatorResponse;
             };
             MsgEditValidator: {
@@ -7768,7 +7768,7 @@ export declare namespace cosmos {
             };
             MsgEditValidatorResponse: {
                 encode(_: _85.MsgEditValidatorResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _85.MsgEditValidatorResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _85.MsgEditValidatorResponse;
                 fromPartial(_: {}): _85.MsgEditValidatorResponse;
             };
             MsgDelegate: {
@@ -7785,7 +7785,7 @@ export declare namespace cosmos {
             };
             MsgDelegateResponse: {
                 encode(_: _85.MsgDelegateResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _85.MsgDelegateResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _85.MsgDelegateResponse;
                 fromPartial(_: {}): _85.MsgDelegateResponse;
             };
             MsgBeginRedelegate: {
@@ -7803,7 +7803,7 @@ export declare namespace cosmos {
             };
             MsgBeginRedelegateResponse: {
                 encode(message: _85.MsgBeginRedelegateResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _85.MsgBeginRedelegateResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _85.MsgBeginRedelegateResponse;
                 fromPartial(object: {
                     completionTime?: Date;
                 }): _85.MsgBeginRedelegateResponse;
@@ -7822,7 +7822,7 @@ export declare namespace cosmos {
             };
             MsgUndelegateResponse: {
                 encode(message: _85.MsgUndelegateResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _85.MsgUndelegateResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _85.MsgUndelegateResponse;
                 fromPartial(object: {
                     completionTime?: Date;
                 }): _85.MsgUndelegateResponse;
@@ -8152,7 +8152,7 @@ export declare namespace cosmos {
             };
             QueryValidatorsResponse: {
                 encode(message: _83.QueryValidatorsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _83.QueryValidatorsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _83.QueryValidatorsResponse;
                 fromPartial(object: {
                     validators?: {
                         operatorAddress?: string;
@@ -8198,7 +8198,7 @@ export declare namespace cosmos {
             };
             QueryValidatorResponse: {
                 encode(message: _83.QueryValidatorResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _83.QueryValidatorResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _83.QueryValidatorResponse;
                 fromPartial(object: {
                     validator?: {
                         operatorAddress?: string;
@@ -8247,7 +8247,7 @@ export declare namespace cosmos {
             };
             QueryValidatorDelegationsResponse: {
                 encode(message: _83.QueryValidatorDelegationsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _83.QueryValidatorDelegationsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _83.QueryValidatorDelegationsResponse;
                 fromPartial(object: {
                     delegationResponses?: {
                         delegation?: {
@@ -8282,7 +8282,7 @@ export declare namespace cosmos {
             };
             QueryValidatorUnbondingDelegationsResponse: {
                 encode(message: _83.QueryValidatorUnbondingDelegationsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _83.QueryValidatorUnbondingDelegationsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _83.QueryValidatorUnbondingDelegationsResponse;
                 fromPartial(object: {
                     unbondingResponses?: {
                         delegatorAddress?: string;
@@ -8310,7 +8310,7 @@ export declare namespace cosmos {
             };
             QueryDelegationResponse: {
                 encode(message: _83.QueryDelegationResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _83.QueryDelegationResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _83.QueryDelegationResponse;
                 fromPartial(object: {
                     delegationResponse?: {
                         delegation?: {
@@ -8335,7 +8335,7 @@ export declare namespace cosmos {
             };
             QueryUnbondingDelegationResponse: {
                 encode(message: _83.QueryUnbondingDelegationResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _83.QueryUnbondingDelegationResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _83.QueryUnbondingDelegationResponse;
                 fromPartial(object: {
                     unbond?: {
                         delegatorAddress?: string;
@@ -8365,7 +8365,7 @@ export declare namespace cosmos {
             };
             QueryDelegatorDelegationsResponse: {
                 encode(message: _83.QueryDelegatorDelegationsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _83.QueryDelegatorDelegationsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _83.QueryDelegatorDelegationsResponse;
                 fromPartial(object: {
                     delegationResponses?: {
                         delegation?: {
@@ -8400,7 +8400,7 @@ export declare namespace cosmos {
             };
             QueryDelegatorUnbondingDelegationsResponse: {
                 encode(message: _83.QueryDelegatorUnbondingDelegationsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _83.QueryDelegatorUnbondingDelegationsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _83.QueryDelegatorUnbondingDelegationsResponse;
                 fromPartial(object: {
                     unbondingResponses?: {
                         delegatorAddress?: string;
@@ -8436,7 +8436,7 @@ export declare namespace cosmos {
             };
             QueryRedelegationsResponse: {
                 encode(message: _83.QueryRedelegationsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _83.QueryRedelegationsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _83.QueryRedelegationsResponse;
                 fromPartial(object: {
                     redelegationResponses?: {
                         redelegation?: {
@@ -8482,7 +8482,7 @@ export declare namespace cosmos {
             };
             QueryDelegatorValidatorsResponse: {
                 encode(message: _83.QueryDelegatorValidatorsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _83.QueryDelegatorValidatorsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _83.QueryDelegatorValidatorsResponse;
                 fromPartial(object: {
                     validators?: {
                         operatorAddress?: string;
@@ -8529,7 +8529,7 @@ export declare namespace cosmos {
             };
             QueryDelegatorValidatorResponse: {
                 encode(message: _83.QueryDelegatorValidatorResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _83.QueryDelegatorValidatorResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _83.QueryDelegatorValidatorResponse;
                 fromPartial(object: {
                     validator?: {
                         operatorAddress?: string;
@@ -8571,7 +8571,7 @@ export declare namespace cosmos {
             };
             QueryHistoricalInfoResponse: {
                 encode(message: _83.QueryHistoricalInfoResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _83.QueryHistoricalInfoResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _83.QueryHistoricalInfoResponse;
                 fromPartial(object: {
                     hist?: {
                         header?: {
@@ -8638,7 +8638,7 @@ export declare namespace cosmos {
             };
             QueryPoolResponse: {
                 encode(message: _83.QueryPoolResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _83.QueryPoolResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _83.QueryPoolResponse;
                 fromPartial(object: {
                     pool?: {
                         notBondedTokens?: string;
@@ -8653,7 +8653,7 @@ export declare namespace cosmos {
             };
             QueryParamsResponse: {
                 encode(message: _83.QueryParamsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _83.QueryParamsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _83.QueryParamsResponse;
                 fromPartial(object: {
                     params?: {
                         unbondingTime?: {
@@ -8882,11 +8882,11 @@ export declare namespace cosmos {
         const v1beta1: {
             QueryClientImpl: typeof _229.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
-                simulate(request: _87.SimulateRequest): Promise<_87.SimulateResponseSDKType>;
-                getTx(request: _87.GetTxRequest): Promise<_87.GetTxResponseSDKType>;
-                broadcastTx(request: _87.BroadcastTxRequest): Promise<_87.BroadcastTxResponseSDKType>;
-                getTxsEvent(request: _87.GetTxsEventRequest): Promise<_87.GetTxsEventResponseSDKType>;
-                getBlockWithTxs(request: _87.GetBlockWithTxsRequest): Promise<_87.GetBlockWithTxsResponseSDKType>;
+                simulate(request: _87.SimulateRequest): Promise<_87.SimulateResponse>;
+                getTx(request: _87.GetTxRequest): Promise<_87.GetTxResponse>;
+                broadcastTx(request: _87.BroadcastTxRequest): Promise<_87.BroadcastTxResponse>;
+                getTxsEvent(request: _87.GetTxsEventRequest): Promise<_87.GetTxsEventResponse>;
+                getBlockWithTxs(request: _87.GetBlockWithTxsRequest): Promise<_87.GetBlockWithTxsResponse>;
             };
             LCDQueryClient: typeof _211.LCDQueryClient;
             Tx: {
@@ -9182,7 +9182,7 @@ export declare namespace cosmos {
             };
             GetTxsEventResponse: {
                 encode(message: _87.GetTxsEventResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _87.GetTxsEventResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _87.GetTxsEventResponse;
                 fromPartial(object: {
                     txs?: {
                         body?: {
@@ -9291,7 +9291,7 @@ export declare namespace cosmos {
             };
             BroadcastTxResponse: {
                 encode(message: _87.BroadcastTxResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _87.BroadcastTxResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _87.BroadcastTxResponse;
                 fromPartial(object: {
                     txResponse?: {
                         height?: any;
@@ -9395,7 +9395,7 @@ export declare namespace cosmos {
             };
             SimulateResponse: {
                 encode(message: _87.SimulateResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _87.SimulateResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _87.SimulateResponse;
                 fromPartial(object: {
                     gasInfo?: {
                         gasWanted?: any;
@@ -9428,7 +9428,7 @@ export declare namespace cosmos {
             };
             GetTxResponse: {
                 encode(message: _87.GetTxResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _87.GetTxResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _87.GetTxResponse;
                 fromPartial(object: {
                     tx?: {
                         body?: {
@@ -9539,7 +9539,7 @@ export declare namespace cosmos {
             };
             GetBlockWithTxsResponse: {
                 encode(message: _87.GetBlockWithTxsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _87.GetBlockWithTxsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _87.GetBlockWithTxsResponse;
                 fromPartial(object: {
                     txs?: {
                         body?: {
@@ -9786,11 +9786,11 @@ export declare namespace cosmos {
             MsgClientImpl: typeof _243.MsgClientImpl;
             QueryClientImpl: typeof _230.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
-                currentPlan(request?: _89.QueryCurrentPlanRequest): Promise<_89.QueryCurrentPlanResponseSDKType>;
-                appliedPlan(request: _89.QueryAppliedPlanRequest): Promise<_89.QueryAppliedPlanResponseSDKType>;
-                upgradedConsensusState(request: _89.QueryUpgradedConsensusStateRequest): Promise<_89.QueryUpgradedConsensusStateResponseSDKType>;
-                moduleVersions(request: _89.QueryModuleVersionsRequest): Promise<_89.QueryModuleVersionsResponseSDKType>;
-                authority(request?: _89.QueryAuthorityRequest): Promise<_89.QueryAuthorityResponseSDKType>;
+                currentPlan(request?: _89.QueryCurrentPlanRequest): Promise<_89.QueryCurrentPlanResponse>;
+                appliedPlan(request: _89.QueryAppliedPlanRequest): Promise<_89.QueryAppliedPlanResponse>;
+                upgradedConsensusState(request: _89.QueryUpgradedConsensusStateRequest): Promise<_89.QueryUpgradedConsensusStateResponse>;
+                moduleVersions(request: _89.QueryModuleVersionsRequest): Promise<_89.QueryModuleVersionsResponse>;
+                authority(request?: _89.QueryAuthorityRequest): Promise<_89.QueryAuthorityResponse>;
             };
             LCDQueryClient: typeof _212.LCDQueryClient;
             registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
@@ -9940,7 +9940,7 @@ export declare namespace cosmos {
             };
             MsgSoftwareUpgradeResponse: {
                 encode(_: _90.MsgSoftwareUpgradeResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _90.MsgSoftwareUpgradeResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _90.MsgSoftwareUpgradeResponse;
                 fromPartial(_: {}): _90.MsgSoftwareUpgradeResponse;
             };
             MsgCancelUpgrade: {
@@ -9952,7 +9952,7 @@ export declare namespace cosmos {
             };
             MsgCancelUpgradeResponse: {
                 encode(_: _90.MsgCancelUpgradeResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _90.MsgCancelUpgradeResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _90.MsgCancelUpgradeResponse;
                 fromPartial(_: {}): _90.MsgCancelUpgradeResponse;
             };
             QueryCurrentPlanRequest: {
@@ -9962,7 +9962,7 @@ export declare namespace cosmos {
             };
             QueryCurrentPlanResponse: {
                 encode(message: _89.QueryCurrentPlanResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _89.QueryCurrentPlanResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _89.QueryCurrentPlanResponse;
                 fromPartial(object: {
                     plan?: {
                         name?: string;
@@ -9985,7 +9985,7 @@ export declare namespace cosmos {
             };
             QueryAppliedPlanResponse: {
                 encode(message: _89.QueryAppliedPlanResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _89.QueryAppliedPlanResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _89.QueryAppliedPlanResponse;
                 fromPartial(object: {
                     height?: any;
                 }): _89.QueryAppliedPlanResponse;
@@ -9999,7 +9999,7 @@ export declare namespace cosmos {
             };
             QueryUpgradedConsensusStateResponse: {
                 encode(message: _89.QueryUpgradedConsensusStateResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _89.QueryUpgradedConsensusStateResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _89.QueryUpgradedConsensusStateResponse;
                 fromPartial(object: {
                     upgradedConsensusState?: Uint8Array;
                 }): _89.QueryUpgradedConsensusStateResponse;
@@ -10013,7 +10013,7 @@ export declare namespace cosmos {
             };
             QueryModuleVersionsResponse: {
                 encode(message: _89.QueryModuleVersionsResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _89.QueryModuleVersionsResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _89.QueryModuleVersionsResponse;
                 fromPartial(object: {
                     moduleVersions?: {
                         name?: string;
@@ -10028,7 +10028,7 @@ export declare namespace cosmos {
             };
             QueryAuthorityResponse: {
                 encode(message: _89.QueryAuthorityResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _89.QueryAuthorityResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _89.QueryAuthorityResponse;
                 fromPartial(object: {
                     address?: string;
                 }): _89.QueryAuthorityResponse;
@@ -10339,7 +10339,7 @@ export declare namespace cosmos {
             };
             MsgCreateVestingAccountResponse: {
                 encode(_: _92.MsgCreateVestingAccountResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _92.MsgCreateVestingAccountResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _92.MsgCreateVestingAccountResponse;
                 fromPartial(_: {}): _92.MsgCreateVestingAccountResponse;
             };
             MsgCreatePermanentLockedAccount: {
@@ -10356,7 +10356,7 @@ export declare namespace cosmos {
             };
             MsgCreatePermanentLockedAccountResponse: {
                 encode(_: _92.MsgCreatePermanentLockedAccountResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _92.MsgCreatePermanentLockedAccountResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _92.MsgCreatePermanentLockedAccountResponse;
                 fromPartial(_: {}): _92.MsgCreatePermanentLockedAccountResponse;
             };
             MsgCreatePeriodicVestingAccount: {
@@ -10377,7 +10377,7 @@ export declare namespace cosmos {
             };
             MsgCreatePeriodicVestingAccountResponse: {
                 encode(_: _92.MsgCreatePeriodicVestingAccountResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _92.MsgCreatePeriodicVestingAccountResponseSDKType;
+                decode(input: Uint8Array | import("protobufjs").Reader, length?: number): _92.MsgCreatePeriodicVestingAccountResponse;
                 fromPartial(_: {}): _92.MsgCreatePeriodicVestingAccountResponse;
             };
         };
@@ -10435,182 +10435,182 @@ export declare namespace cosmos {
             cosmos: {
                 app: {
                     v1alpha1: {
-                        config(request?: _4.QueryConfigRequest): Promise<_4.QueryConfigResponseSDKType>;
+                        config(request?: _4.QueryConfigRequest): Promise<_4.QueryConfigResponse>;
                     };
                 };
                 auth: {
                     v1beta1: {
-                        accounts(request?: _7.QueryAccountsRequest): Promise<_7.QueryAccountsResponseSDKType>;
-                        account(request: _7.QueryAccountRequest): Promise<_7.QueryAccountResponseSDKType>;
-                        params(request?: _7.QueryParamsRequest): Promise<_7.QueryParamsResponseSDKType>;
-                        moduleAccounts(request?: _7.QueryModuleAccountsRequest): Promise<_7.QueryModuleAccountsResponseSDKType>;
-                        bech32Prefix(request?: _7.Bech32PrefixRequest): Promise<_7.Bech32PrefixResponseSDKType>;
-                        addressBytesToString(request: _7.AddressBytesToStringRequest): Promise<_7.AddressBytesToStringResponseSDKType>;
-                        addressStringToBytes(request: _7.AddressStringToBytesRequest): Promise<_7.AddressStringToBytesResponseSDKType>;
+                        accounts(request?: _7.QueryAccountsRequest): Promise<_7.QueryAccountsResponse>;
+                        account(request: _7.QueryAccountRequest): Promise<_7.QueryAccountResponse>;
+                        params(request?: _7.QueryParamsRequest): Promise<_7.QueryParamsResponse>;
+                        moduleAccounts(request?: _7.QueryModuleAccountsRequest): Promise<_7.QueryModuleAccountsResponse>;
+                        bech32Prefix(request?: _7.Bech32PrefixRequest): Promise<_7.Bech32PrefixResponse>;
+                        addressBytesToString(request: _7.AddressBytesToStringRequest): Promise<_7.AddressBytesToStringResponse>;
+                        addressStringToBytes(request: _7.AddressStringToBytesRequest): Promise<_7.AddressStringToBytesResponse>;
                     };
                 };
                 authz: {
                     v1beta1: {
-                        grants(request: _11.QueryGrantsRequest): Promise<_11.QueryGrantsResponseSDKType>;
-                        granterGrants(request: _11.QueryGranterGrantsRequest): Promise<_11.QueryGranterGrantsResponseSDKType>;
-                        granteeGrants(request: _11.QueryGranteeGrantsRequest): Promise<_11.QueryGranteeGrantsResponseSDKType>;
+                        grants(request: _11.QueryGrantsRequest): Promise<_11.QueryGrantsResponse>;
+                        granterGrants(request: _11.QueryGranterGrantsRequest): Promise<_11.QueryGranterGrantsResponse>;
+                        granteeGrants(request: _11.QueryGranteeGrantsRequest): Promise<_11.QueryGranteeGrantsResponse>;
                     };
                 };
                 bank: {
                     v1beta1: {
-                        balance(request: _16.QueryBalanceRequest): Promise<_16.QueryBalanceResponseSDKType>;
-                        allBalances(request: _16.QueryAllBalancesRequest): Promise<_16.QueryAllBalancesResponseSDKType>;
-                        spendableBalances(request: _16.QuerySpendableBalancesRequest): Promise<_16.QuerySpendableBalancesResponseSDKType>;
-                        totalSupply(request?: _16.QueryTotalSupplyRequest): Promise<_16.QueryTotalSupplyResponseSDKType>;
-                        supplyOf(request: _16.QuerySupplyOfRequest): Promise<_16.QuerySupplyOfResponseSDKType>;
-                        params(request?: _16.QueryParamsRequest): Promise<_16.QueryParamsResponseSDKType>;
-                        denomMetadata(request: _16.QueryDenomMetadataRequest): Promise<_16.QueryDenomMetadataResponseSDKType>;
-                        denomsMetadata(request?: _16.QueryDenomsMetadataRequest): Promise<_16.QueryDenomsMetadataResponseSDKType>;
-                        denomOwners(request: _16.QueryDenomOwnersRequest): Promise<_16.QueryDenomOwnersResponseSDKType>;
+                        balance(request: _16.QueryBalanceRequest): Promise<_16.QueryBalanceResponse>;
+                        allBalances(request: _16.QueryAllBalancesRequest): Promise<_16.QueryAllBalancesResponse>;
+                        spendableBalances(request: _16.QuerySpendableBalancesRequest): Promise<_16.QuerySpendableBalancesResponse>;
+                        totalSupply(request?: _16.QueryTotalSupplyRequest): Promise<_16.QueryTotalSupplyResponse>;
+                        supplyOf(request: _16.QuerySupplyOfRequest): Promise<_16.QuerySupplyOfResponse>;
+                        params(request?: _16.QueryParamsRequest): Promise<_16.QueryParamsResponse>;
+                        denomMetadata(request: _16.QueryDenomMetadataRequest): Promise<_16.QueryDenomMetadataResponse>;
+                        denomsMetadata(request?: _16.QueryDenomsMetadataRequest): Promise<_16.QueryDenomsMetadataResponse>;
+                        denomOwners(request: _16.QueryDenomOwnersRequest): Promise<_16.QueryDenomOwnersResponse>;
                     };
                 };
                 base: {
                     tendermint: {
                         v1beta1: {
-                            getNodeInfo(request?: _26.GetNodeInfoRequest): Promise<_26.GetNodeInfoResponseSDKType>;
-                            getSyncing(request?: _26.GetSyncingRequest): Promise<_26.GetSyncingResponseSDKType>;
-                            getLatestBlock(request?: _26.GetLatestBlockRequest): Promise<_26.GetLatestBlockResponseSDKType>;
-                            getBlockByHeight(request: _26.GetBlockByHeightRequest): Promise<_26.GetBlockByHeightResponseSDKType>;
-                            getLatestValidatorSet(request?: _26.GetLatestValidatorSetRequest): Promise<_26.GetLatestValidatorSetResponseSDKType>;
-                            getValidatorSetByHeight(request: _26.GetValidatorSetByHeightRequest): Promise<_26.GetValidatorSetByHeightResponseSDKType>;
+                            getNodeInfo(request?: _26.GetNodeInfoRequest): Promise<_26.GetNodeInfoResponse>;
+                            getSyncing(request?: _26.GetSyncingRequest): Promise<_26.GetSyncingResponse>;
+                            getLatestBlock(request?: _26.GetLatestBlockRequest): Promise<_26.GetLatestBlockResponse>;
+                            getBlockByHeight(request: _26.GetBlockByHeightRequest): Promise<_26.GetBlockByHeightResponse>;
+                            getLatestValidatorSet(request?: _26.GetLatestValidatorSetRequest): Promise<_26.GetLatestValidatorSetResponse>;
+                            getValidatorSetByHeight(request: _26.GetValidatorSetByHeightRequest): Promise<_26.GetValidatorSetByHeightResponse>;
                         };
                     };
                 };
                 distribution: {
                     v1beta1: {
-                        params(request?: _40.QueryParamsRequest): Promise<_40.QueryParamsResponseSDKType>;
-                        validatorOutstandingRewards(request: _40.QueryValidatorOutstandingRewardsRequest): Promise<_40.QueryValidatorOutstandingRewardsResponseSDKType>;
-                        validatorCommission(request: _40.QueryValidatorCommissionRequest): Promise<_40.QueryValidatorCommissionResponseSDKType>;
-                        validatorSlashes(request: _40.QueryValidatorSlashesRequest): Promise<_40.QueryValidatorSlashesResponseSDKType>;
-                        delegationRewards(request: _40.QueryDelegationRewardsRequest): Promise<_40.QueryDelegationRewardsResponseSDKType>;
-                        delegationTotalRewards(request: _40.QueryDelegationTotalRewardsRequest): Promise<_40.QueryDelegationTotalRewardsResponseSDKType>;
-                        delegatorValidators(request: _40.QueryDelegatorValidatorsRequest): Promise<_40.QueryDelegatorValidatorsResponseSDKType>;
-                        delegatorWithdrawAddress(request: _40.QueryDelegatorWithdrawAddressRequest): Promise<_40.QueryDelegatorWithdrawAddressResponseSDKType>;
-                        communityPool(request?: _40.QueryCommunityPoolRequest): Promise<_40.QueryCommunityPoolResponseSDKType>;
+                        params(request?: _40.QueryParamsRequest): Promise<_40.QueryParamsResponse>;
+                        validatorOutstandingRewards(request: _40.QueryValidatorOutstandingRewardsRequest): Promise<_40.QueryValidatorOutstandingRewardsResponse>;
+                        validatorCommission(request: _40.QueryValidatorCommissionRequest): Promise<_40.QueryValidatorCommissionResponse>;
+                        validatorSlashes(request: _40.QueryValidatorSlashesRequest): Promise<_40.QueryValidatorSlashesResponse>;
+                        delegationRewards(request: _40.QueryDelegationRewardsRequest): Promise<_40.QueryDelegationRewardsResponse>;
+                        delegationTotalRewards(request: _40.QueryDelegationTotalRewardsRequest): Promise<_40.QueryDelegationTotalRewardsResponse>;
+                        delegatorValidators(request: _40.QueryDelegatorValidatorsRequest): Promise<_40.QueryDelegatorValidatorsResponse>;
+                        delegatorWithdrawAddress(request: _40.QueryDelegatorWithdrawAddressRequest): Promise<_40.QueryDelegatorWithdrawAddressResponse>;
+                        communityPool(request?: _40.QueryCommunityPoolRequest): Promise<_40.QueryCommunityPoolResponse>;
                     };
                 };
                 evidence: {
                     v1beta1: {
-                        evidence(request: _44.QueryEvidenceRequest): Promise<_44.QueryEvidenceResponseSDKType>;
-                        allEvidence(request?: _44.QueryAllEvidenceRequest): Promise<_44.QueryAllEvidenceResponseSDKType>;
+                        evidence(request: _44.QueryEvidenceRequest): Promise<_44.QueryEvidenceResponse>;
+                        allEvidence(request?: _44.QueryAllEvidenceRequest): Promise<_44.QueryAllEvidenceResponse>;
                     };
                 };
                 feegrant: {
                     v1beta1: {
-                        allowance(request: _48.QueryAllowanceRequest): Promise<_48.QueryAllowanceResponseSDKType>;
-                        allowances(request: _48.QueryAllowancesRequest): Promise<_48.QueryAllowancesResponseSDKType>;
-                        allowancesByGranter(request: _48.QueryAllowancesByGranterRequest): Promise<_48.QueryAllowancesByGranterResponseSDKType>;
+                        allowance(request: _48.QueryAllowanceRequest): Promise<_48.QueryAllowanceResponse>;
+                        allowances(request: _48.QueryAllowancesRequest): Promise<_48.QueryAllowancesResponse>;
+                        allowancesByGranter(request: _48.QueryAllowancesByGranterRequest): Promise<_48.QueryAllowancesByGranterResponse>;
                     };
                 };
                 gov: {
                     v1: {
-                        proposal(request: _53.QueryProposalRequest): Promise<_53.QueryProposalResponseSDKType>;
-                        proposals(request: _53.QueryProposalsRequest): Promise<_53.QueryProposalsResponseSDKType>;
-                        vote(request: _53.QueryVoteRequest): Promise<_53.QueryVoteResponseSDKType>;
-                        votes(request: _53.QueryVotesRequest): Promise<_53.QueryVotesResponseSDKType>;
-                        params(request: _53.QueryParamsRequest): Promise<_53.QueryParamsResponseSDKType>;
-                        deposit(request: _53.QueryDepositRequest): Promise<_53.QueryDepositResponseSDKType>;
-                        deposits(request: _53.QueryDepositsRequest): Promise<_53.QueryDepositsResponseSDKType>;
-                        tallyResult(request: _53.QueryTallyResultRequest): Promise<_53.QueryTallyResultResponseSDKType>;
+                        proposal(request: _53.QueryProposalRequest): Promise<_53.QueryProposalResponse>;
+                        proposals(request: _53.QueryProposalsRequest): Promise<_53.QueryProposalsResponse>;
+                        vote(request: _53.QueryVoteRequest): Promise<_53.QueryVoteResponse>;
+                        votes(request: _53.QueryVotesRequest): Promise<_53.QueryVotesResponse>;
+                        params(request: _53.QueryParamsRequest): Promise<_53.QueryParamsResponse>;
+                        deposit(request: _53.QueryDepositRequest): Promise<_53.QueryDepositResponse>;
+                        deposits(request: _53.QueryDepositsRequest): Promise<_53.QueryDepositsResponse>;
+                        tallyResult(request: _53.QueryTallyResultRequest): Promise<_53.QueryTallyResultResponse>;
                     };
                     v1beta1: {
-                        proposal(request: _57.QueryProposalRequest): Promise<_57.QueryProposalResponseSDKType>;
-                        proposals(request: _57.QueryProposalsRequest): Promise<_57.QueryProposalsResponseSDKType>;
-                        vote(request: _57.QueryVoteRequest): Promise<_57.QueryVoteResponseSDKType>;
-                        votes(request: _57.QueryVotesRequest): Promise<_57.QueryVotesResponseSDKType>;
-                        params(request: _57.QueryParamsRequest): Promise<_57.QueryParamsResponseSDKType>;
-                        deposit(request: _57.QueryDepositRequest): Promise<_57.QueryDepositResponseSDKType>;
-                        deposits(request: _57.QueryDepositsRequest): Promise<_57.QueryDepositsResponseSDKType>;
-                        tallyResult(request: _57.QueryTallyResultRequest): Promise<_57.QueryTallyResultResponseSDKType>;
+                        proposal(request: _57.QueryProposalRequest): Promise<_57.QueryProposalResponse>;
+                        proposals(request: _57.QueryProposalsRequest): Promise<_57.QueryProposalsResponse>;
+                        vote(request: _57.QueryVoteRequest): Promise<_57.QueryVoteResponse>;
+                        votes(request: _57.QueryVotesRequest): Promise<_57.QueryVotesResponse>;
+                        params(request: _57.QueryParamsRequest): Promise<_57.QueryParamsResponse>;
+                        deposit(request: _57.QueryDepositRequest): Promise<_57.QueryDepositResponse>;
+                        deposits(request: _57.QueryDepositsRequest): Promise<_57.QueryDepositsResponse>;
+                        tallyResult(request: _57.QueryTallyResultRequest): Promise<_57.QueryTallyResultResponse>;
                     };
                 };
                 group: {
                     v1: {
-                        groupInfo(request: _61.QueryGroupInfoRequest): Promise<_61.QueryGroupInfoResponseSDKType>;
-                        groupPolicyInfo(request: _61.QueryGroupPolicyInfoRequest): Promise<_61.QueryGroupPolicyInfoResponseSDKType>;
-                        groupMembers(request: _61.QueryGroupMembersRequest): Promise<_61.QueryGroupMembersResponseSDKType>;
-                        groupsByAdmin(request: _61.QueryGroupsByAdminRequest): Promise<_61.QueryGroupsByAdminResponseSDKType>;
-                        groupPoliciesByGroup(request: _61.QueryGroupPoliciesByGroupRequest): Promise<_61.QueryGroupPoliciesByGroupResponseSDKType>;
-                        groupPoliciesByAdmin(request: _61.QueryGroupPoliciesByAdminRequest): Promise<_61.QueryGroupPoliciesByAdminResponseSDKType>;
-                        proposal(request: _61.QueryProposalRequest): Promise<_61.QueryProposalResponseSDKType>;
-                        proposalsByGroupPolicy(request: _61.QueryProposalsByGroupPolicyRequest): Promise<_61.QueryProposalsByGroupPolicyResponseSDKType>;
-                        voteByProposalVoter(request: _61.QueryVoteByProposalVoterRequest): Promise<_61.QueryVoteByProposalVoterResponseSDKType>;
-                        votesByProposal(request: _61.QueryVotesByProposalRequest): Promise<_61.QueryVotesByProposalResponseSDKType>;
-                        votesByVoter(request: _61.QueryVotesByVoterRequest): Promise<_61.QueryVotesByVoterResponseSDKType>;
-                        groupsByMember(request: _61.QueryGroupsByMemberRequest): Promise<_61.QueryGroupsByMemberResponseSDKType>;
-                        tallyResult(request: _61.QueryTallyResultRequest): Promise<_61.QueryTallyResultResponseSDKType>;
+                        groupInfo(request: _61.QueryGroupInfoRequest): Promise<_61.QueryGroupInfoResponse>;
+                        groupPolicyInfo(request: _61.QueryGroupPolicyInfoRequest): Promise<_61.QueryGroupPolicyInfoResponse>;
+                        groupMembers(request: _61.QueryGroupMembersRequest): Promise<_61.QueryGroupMembersResponse>;
+                        groupsByAdmin(request: _61.QueryGroupsByAdminRequest): Promise<_61.QueryGroupsByAdminResponse>;
+                        groupPoliciesByGroup(request: _61.QueryGroupPoliciesByGroupRequest): Promise<_61.QueryGroupPoliciesByGroupResponse>;
+                        groupPoliciesByAdmin(request: _61.QueryGroupPoliciesByAdminRequest): Promise<_61.QueryGroupPoliciesByAdminResponse>;
+                        proposal(request: _61.QueryProposalRequest): Promise<_61.QueryProposalResponse>;
+                        proposalsByGroupPolicy(request: _61.QueryProposalsByGroupPolicyRequest): Promise<_61.QueryProposalsByGroupPolicyResponse>;
+                        voteByProposalVoter(request: _61.QueryVoteByProposalVoterRequest): Promise<_61.QueryVoteByProposalVoterResponse>;
+                        votesByProposal(request: _61.QueryVotesByProposalRequest): Promise<_61.QueryVotesByProposalResponse>;
+                        votesByVoter(request: _61.QueryVotesByVoterRequest): Promise<_61.QueryVotesByVoterResponse>;
+                        groupsByMember(request: _61.QueryGroupsByMemberRequest): Promise<_61.QueryGroupsByMemberResponse>;
+                        tallyResult(request: _61.QueryTallyResultRequest): Promise<_61.QueryTallyResultResponse>;
                     };
                 };
                 mint: {
                     v1beta1: {
-                        params(request?: _66.QueryParamsRequest): Promise<_66.QueryParamsResponseSDKType>;
-                        inflation(request?: _66.QueryInflationRequest): Promise<_66.QueryInflationResponseSDKType>;
-                        annualProvisions(request?: _66.QueryAnnualProvisionsRequest): Promise<_66.QueryAnnualProvisionsResponseSDKType>;
+                        params(request?: _66.QueryParamsRequest): Promise<_66.QueryParamsResponse>;
+                        inflation(request?: _66.QueryInflationRequest): Promise<_66.QueryInflationResponse>;
+                        annualProvisions(request?: _66.QueryAnnualProvisionsRequest): Promise<_66.QueryAnnualProvisionsResponse>;
                     };
                 };
                 nft: {
                     v1beta1: {
-                        balance(request: _71.QueryBalanceRequest): Promise<_71.QueryBalanceResponseSDKType>;
-                        owner(request: _71.QueryOwnerRequest): Promise<_71.QueryOwnerResponseSDKType>;
-                        supply(request: _71.QuerySupplyRequest): Promise<_71.QuerySupplyResponseSDKType>;
-                        nFTs(request: _71.QueryNFTsRequest): Promise<_71.QueryNFTsResponseSDKType>;
-                        nFT(request: _71.QueryNFTRequest): Promise<_71.QueryNFTResponseSDKType>;
-                        class(request: _71.QueryClassRequest): Promise<_71.QueryClassResponseSDKType>;
-                        classes(request?: _71.QueryClassesRequest): Promise<_71.QueryClassesResponseSDKType>;
+                        balance(request: _71.QueryBalanceRequest): Promise<_71.QueryBalanceResponse>;
+                        owner(request: _71.QueryOwnerRequest): Promise<_71.QueryOwnerResponse>;
+                        supply(request: _71.QuerySupplyRequest): Promise<_71.QuerySupplyResponse>;
+                        nFTs(request: _71.QueryNFTsRequest): Promise<_71.QueryNFTsResponse>;
+                        nFT(request: _71.QueryNFTRequest): Promise<_71.QueryNFTResponse>;
+                        class(request: _71.QueryClassRequest): Promise<_71.QueryClassResponse>;
+                        classes(request?: _71.QueryClassesRequest): Promise<_71.QueryClassesResponse>;
                     };
                 };
                 params: {
                     v1beta1: {
-                        params(request: _76.QueryParamsRequest): Promise<_76.QueryParamsResponseSDKType>;
-                        subspaces(request?: _76.QuerySubspacesRequest): Promise<_76.QuerySubspacesResponseSDKType>;
+                        params(request: _76.QueryParamsRequest): Promise<_76.QueryParamsResponse>;
+                        subspaces(request?: _76.QuerySubspacesRequest): Promise<_76.QuerySubspacesResponse>;
                     };
                 };
                 slashing: {
                     v1beta1: {
-                        params(request?: _78.QueryParamsRequest): Promise<_78.QueryParamsResponseSDKType>;
-                        signingInfo(request: _78.QuerySigningInfoRequest): Promise<_78.QuerySigningInfoResponseSDKType>;
-                        signingInfos(request?: _78.QuerySigningInfosRequest): Promise<_78.QuerySigningInfosResponseSDKType>;
+                        params(request?: _78.QueryParamsRequest): Promise<_78.QueryParamsResponse>;
+                        signingInfo(request: _78.QuerySigningInfoRequest): Promise<_78.QuerySigningInfoResponse>;
+                        signingInfos(request?: _78.QuerySigningInfosRequest): Promise<_78.QuerySigningInfosResponse>;
                     };
                 };
                 staking: {
                     v1beta1: {
-                        validators(request: _83.QueryValidatorsRequest): Promise<_83.QueryValidatorsResponseSDKType>;
-                        validator(request: _83.QueryValidatorRequest): Promise<_83.QueryValidatorResponseSDKType>;
-                        validatorDelegations(request: _83.QueryValidatorDelegationsRequest): Promise<_83.QueryValidatorDelegationsResponseSDKType>;
-                        validatorUnbondingDelegations(request: _83.QueryValidatorUnbondingDelegationsRequest): Promise<_83.QueryValidatorUnbondingDelegationsResponseSDKType>;
-                        delegation(request: _83.QueryDelegationRequest): Promise<_83.QueryDelegationResponseSDKType>;
-                        unbondingDelegation(request: _83.QueryUnbondingDelegationRequest): Promise<_83.QueryUnbondingDelegationResponseSDKType>;
-                        delegatorDelegations(request: _83.QueryDelegatorDelegationsRequest): Promise<_83.QueryDelegatorDelegationsResponseSDKType>;
-                        delegatorUnbondingDelegations(request: _83.QueryDelegatorUnbondingDelegationsRequest): Promise<_83.QueryDelegatorUnbondingDelegationsResponseSDKType>;
-                        redelegations(request: _83.QueryRedelegationsRequest): Promise<_83.QueryRedelegationsResponseSDKType>;
-                        delegatorValidators(request: _83.QueryDelegatorValidatorsRequest): Promise<_83.QueryDelegatorValidatorsResponseSDKType>;
-                        delegatorValidator(request: _83.QueryDelegatorValidatorRequest): Promise<_83.QueryDelegatorValidatorResponseSDKType>;
-                        historicalInfo(request: _83.QueryHistoricalInfoRequest): Promise<_83.QueryHistoricalInfoResponseSDKType>;
-                        pool(request?: _83.QueryPoolRequest): Promise<_83.QueryPoolResponseSDKType>;
-                        params(request?: _83.QueryParamsRequest): Promise<_83.QueryParamsResponseSDKType>;
+                        validators(request: _83.QueryValidatorsRequest): Promise<_83.QueryValidatorsResponse>;
+                        validator(request: _83.QueryValidatorRequest): Promise<_83.QueryValidatorResponse>;
+                        validatorDelegations(request: _83.QueryValidatorDelegationsRequest): Promise<_83.QueryValidatorDelegationsResponse>;
+                        validatorUnbondingDelegations(request: _83.QueryValidatorUnbondingDelegationsRequest): Promise<_83.QueryValidatorUnbondingDelegationsResponse>;
+                        delegation(request: _83.QueryDelegationRequest): Promise<_83.QueryDelegationResponse>;
+                        unbondingDelegation(request: _83.QueryUnbondingDelegationRequest): Promise<_83.QueryUnbondingDelegationResponse>;
+                        delegatorDelegations(request: _83.QueryDelegatorDelegationsRequest): Promise<_83.QueryDelegatorDelegationsResponse>;
+                        delegatorUnbondingDelegations(request: _83.QueryDelegatorUnbondingDelegationsRequest): Promise<_83.QueryDelegatorUnbondingDelegationsResponse>;
+                        redelegations(request: _83.QueryRedelegationsRequest): Promise<_83.QueryRedelegationsResponse>;
+                        delegatorValidators(request: _83.QueryDelegatorValidatorsRequest): Promise<_83.QueryDelegatorValidatorsResponse>;
+                        delegatorValidator(request: _83.QueryDelegatorValidatorRequest): Promise<_83.QueryDelegatorValidatorResponse>;
+                        historicalInfo(request: _83.QueryHistoricalInfoRequest): Promise<_83.QueryHistoricalInfoResponse>;
+                        pool(request?: _83.QueryPoolRequest): Promise<_83.QueryPoolResponse>;
+                        params(request?: _83.QueryParamsRequest): Promise<_83.QueryParamsResponse>;
                     };
                 };
                 tx: {
                     v1beta1: {
-                        simulate(request: _87.SimulateRequest): Promise<_87.SimulateResponseSDKType>;
-                        getTx(request: _87.GetTxRequest): Promise<_87.GetTxResponseSDKType>;
-                        broadcastTx(request: _87.BroadcastTxRequest): Promise<_87.BroadcastTxResponseSDKType>;
-                        getTxsEvent(request: _87.GetTxsEventRequest): Promise<_87.GetTxsEventResponseSDKType>;
-                        getBlockWithTxs(request: _87.GetBlockWithTxsRequest): Promise<_87.GetBlockWithTxsResponseSDKType>;
+                        simulate(request: _87.SimulateRequest): Promise<_87.SimulateResponse>;
+                        getTx(request: _87.GetTxRequest): Promise<_87.GetTxResponse>;
+                        broadcastTx(request: _87.BroadcastTxRequest): Promise<_87.BroadcastTxResponse>;
+                        getTxsEvent(request: _87.GetTxsEventRequest): Promise<_87.GetTxsEventResponse>;
+                        getBlockWithTxs(request: _87.GetBlockWithTxsRequest): Promise<_87.GetBlockWithTxsResponse>;
                     };
                 };
                 upgrade: {
                     v1beta1: {
-                        currentPlan(request?: _89.QueryCurrentPlanRequest): Promise<_89.QueryCurrentPlanResponseSDKType>;
-                        appliedPlan(request: _89.QueryAppliedPlanRequest): Promise<_89.QueryAppliedPlanResponseSDKType>;
-                        upgradedConsensusState(request: _89.QueryUpgradedConsensusStateRequest): Promise<_89.QueryUpgradedConsensusStateResponseSDKType>;
-                        moduleVersions(request: _89.QueryModuleVersionsRequest): Promise<_89.QueryModuleVersionsResponseSDKType>;
-                        authority(request?: _89.QueryAuthorityRequest): Promise<_89.QueryAuthorityResponseSDKType>;
+                        currentPlan(request?: _89.QueryCurrentPlanRequest): Promise<_89.QueryCurrentPlanResponse>;
+                        appliedPlan(request: _89.QueryAppliedPlanRequest): Promise<_89.QueryAppliedPlanResponse>;
+                        upgradedConsensusState(request: _89.QueryUpgradedConsensusStateRequest): Promise<_89.QueryUpgradedConsensusStateResponse>;
+                        moduleVersions(request: _89.QueryModuleVersionsRequest): Promise<_89.QueryModuleVersionsResponse>;
+                        authority(request?: _89.QueryAuthorityRequest): Promise<_89.QueryAuthorityResponse>;
                     };
                 };
             };

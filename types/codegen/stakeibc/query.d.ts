@@ -133,7 +133,7 @@ export declare const QueryInterchainAccountFromAddressRequest: {
 };
 export declare const QueryInterchainAccountFromAddressResponse: {
     encode(message: QueryInterchainAccountFromAddressResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryInterchainAccountFromAddressResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryInterchainAccountFromAddressResponse;
     fromPartial(object: DeepPartial<QueryInterchainAccountFromAddressResponse>): QueryInterchainAccountFromAddressResponse;
 };
 export declare const QueryParamsRequest: {
@@ -143,7 +143,7 @@ export declare const QueryParamsRequest: {
 };
 export declare const QueryParamsResponse: {
     encode(message: QueryParamsResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryParamsResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryParamsResponse;
     fromPartial(object: DeepPartial<QueryParamsResponse>): QueryParamsResponse;
 };
 export declare const QueryGetValidatorsRequest: {
@@ -153,7 +153,7 @@ export declare const QueryGetValidatorsRequest: {
 };
 export declare const QueryGetValidatorsResponse: {
     encode(message: QueryGetValidatorsResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetValidatorsResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetValidatorsResponse;
     fromPartial(object: DeepPartial<QueryGetValidatorsResponse>): QueryGetValidatorsResponse;
 };
 export declare const QueryGetICAAccountRequest: {
@@ -163,7 +163,7 @@ export declare const QueryGetICAAccountRequest: {
 };
 export declare const QueryGetICAAccountResponse: {
     encode(message: QueryGetICAAccountResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetICAAccountResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetICAAccountResponse;
     fromPartial(object: DeepPartial<QueryGetICAAccountResponse>): QueryGetICAAccountResponse;
 };
 export declare const QueryGetHostZoneRequest: {
@@ -173,7 +173,7 @@ export declare const QueryGetHostZoneRequest: {
 };
 export declare const QueryGetHostZoneResponse: {
     encode(message: QueryGetHostZoneResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetHostZoneResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetHostZoneResponse;
     fromPartial(object: DeepPartial<QueryGetHostZoneResponse>): QueryGetHostZoneResponse;
 };
 export declare const QueryAllHostZoneRequest: {
@@ -183,7 +183,7 @@ export declare const QueryAllHostZoneRequest: {
 };
 export declare const QueryAllHostZoneResponse: {
     encode(message: QueryAllHostZoneResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllHostZoneResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllHostZoneResponse;
     fromPartial(object: DeepPartial<QueryAllHostZoneResponse>): QueryAllHostZoneResponse;
 };
 export declare const QueryModuleAddressRequest: {
@@ -193,7 +193,7 @@ export declare const QueryModuleAddressRequest: {
 };
 export declare const QueryModuleAddressResponse: {
     encode(message: QueryModuleAddressResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryModuleAddressResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryModuleAddressResponse;
     fromPartial(object: DeepPartial<QueryModuleAddressResponse>): QueryModuleAddressResponse;
 };
 export declare const QueryGetEpochTrackerRequest: {
@@ -203,7 +203,7 @@ export declare const QueryGetEpochTrackerRequest: {
 };
 export declare const QueryGetEpochTrackerResponse: {
     encode(message: QueryGetEpochTrackerResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetEpochTrackerResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetEpochTrackerResponse;
     fromPartial(object: DeepPartial<QueryGetEpochTrackerResponse>): QueryGetEpochTrackerResponse;
 };
 export declare const QueryAllEpochTrackerRequest: {
@@ -213,6 +213,6 @@ export declare const QueryAllEpochTrackerRequest: {
 };
 export declare const QueryAllEpochTrackerResponse: {
     encode(message: QueryAllEpochTrackerResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllEpochTrackerResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllEpochTrackerResponse;
     fromPartial(object: DeepPartial<QueryAllEpochTrackerResponse>): QueryAllEpochTrackerResponse;
 };

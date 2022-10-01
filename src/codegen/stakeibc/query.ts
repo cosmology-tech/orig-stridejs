@@ -201,7 +201,7 @@ export const QueryInterchainAccountFromAddressResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): QueryInterchainAccountFromAddressResponseSDKType {
+  decode(input: _m0.Reader | Uint8Array, length?: number): QueryInterchainAccountFromAddressResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryInterchainAccountFromAddressResponse();
@@ -280,7 +280,7 @@ export const QueryParamsResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): QueryParamsResponseSDKType {
+  decode(input: _m0.Reader | Uint8Array, length?: number): QueryParamsResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryParamsResponse();
@@ -370,7 +370,7 @@ export const QueryGetValidatorsResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetValidatorsResponseSDKType {
+  decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetValidatorsResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetValidatorsResponse();
@@ -449,7 +449,7 @@ export const QueryGetICAAccountResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetICAAccountResponseSDKType {
+  decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetICAAccountResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetICAAccountResponse();
@@ -539,7 +539,7 @@ export const QueryGetHostZoneResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetHostZoneResponseSDKType {
+  decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetHostZoneResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetHostZoneResponse();
@@ -634,7 +634,7 @@ export const QueryAllHostZoneResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllHostZoneResponseSDKType {
+  decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllHostZoneResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryAllHostZoneResponse();
@@ -729,7 +729,7 @@ export const QueryModuleAddressResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): QueryModuleAddressResponseSDKType {
+  decode(input: _m0.Reader | Uint8Array, length?: number): QueryModuleAddressResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryModuleAddressResponse();
@@ -819,7 +819,7 @@ export const QueryGetEpochTrackerResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetEpochTrackerResponseSDKType {
+  decode(input: _m0.Reader | Uint8Array, length?: number): QueryGetEpochTrackerResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryGetEpochTrackerResponse();
@@ -914,7 +914,7 @@ export const QueryAllEpochTrackerResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllEpochTrackerResponseSDKType {
+  decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllEpochTrackerResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryAllEpochTrackerResponse();

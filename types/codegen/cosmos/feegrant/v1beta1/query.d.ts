@@ -85,7 +85,7 @@ export declare const QueryAllowanceRequest: {
 };
 export declare const QueryAllowanceResponse: {
     encode(message: QueryAllowanceResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllowanceResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllowanceResponse;
     fromPartial(object: DeepPartial<QueryAllowanceResponse>): QueryAllowanceResponse;
 };
 export declare const QueryAllowancesRequest: {
@@ -95,7 +95,7 @@ export declare const QueryAllowancesRequest: {
 };
 export declare const QueryAllowancesResponse: {
     encode(message: QueryAllowancesResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllowancesResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllowancesResponse;
     fromPartial(object: DeepPartial<QueryAllowancesResponse>): QueryAllowancesResponse;
 };
 export declare const QueryAllowancesByGranterRequest: {
@@ -105,6 +105,6 @@ export declare const QueryAllowancesByGranterRequest: {
 };
 export declare const QueryAllowancesByGranterResponse: {
     encode(message: QueryAllowancesByGranterResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllowancesByGranterResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAllowancesByGranterResponse;
     fromPartial(object: DeepPartial<QueryAllowancesByGranterResponse>): QueryAllowancesByGranterResponse;
 };

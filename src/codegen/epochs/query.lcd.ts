@@ -1,15 +1,18 @@
 import { setPaginationParams } from "@osmonauts/helpers";
 import { LCDClient } from "@osmonauts/lcd";
 import { QueryEpochsInfoRequest, QueryEpochsInfoResponseSDKType, QueryCurrentEpochRequest, QueryCurrentEpochResponseSDKType, QueryEpochInfoRequest, QueryEpochInfoResponseSDKType } from "./query";
-export class LCDQueryClient extends LCDClient {
+export class LCDQueryClient {
+  req: LCDClient;
+
   constructor({
-    restEndpoint
+    requestClient
   }: {
-    restEndpoint: string;
+    requestClient: LCDClient;
   }) {
-    super({
-      restEndpoint
-    });
+    this.req = requestClient;
+    this.epochInfos = this.epochInfos.bind(this);
+    this.currentEpoch = this.currentEpoch.bind(this);
+    this.epochInfo = this.epochInfo.bind(this);
   }
   /* EpochInfos provide running epochInfos */
 
@@ -26,7 +29,7 @@ export class LCDQueryClient extends LCDClient {
     }
 
     const endpoint = `Stridelabs/stride/epochs`;
-    return await this.get<QueryEpochsInfoResponseSDKType>(endpoint, options);
+    return await this.req.get<QueryEpochsInfoResponseSDKType>(endpoint, options);
   }
   /* CurrentEpoch provide current epoch of specified identifier */
 
@@ -41,7 +44,7 @@ export class LCDQueryClient extends LCDClient {
     }
 
     const endpoint = `Stridelabs/stride/epochs/current_epoch`;
-    return await this.get<QueryCurrentEpochResponseSDKType>(endpoint, options);
+    return await this.req.get<QueryCurrentEpochResponseSDKType>(endpoint, options);
   }
   /* CurrentEpoch provide current epoch of specified identifier */
 
@@ -56,7 +59,7 @@ export class LCDQueryClient extends LCDClient {
     }
 
     const endpoint = `Stridelabs/stride/epochs/epoch_info`;
-    return await this.get<QueryEpochInfoResponseSDKType>(endpoint, options);
+    return await this.req.get<QueryEpochInfoResponseSDKType>(endpoint, options);
   }
 
 }

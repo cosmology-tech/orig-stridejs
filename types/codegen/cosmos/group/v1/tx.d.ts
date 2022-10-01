@@ -445,7 +445,7 @@ export declare const MsgCreateGroup: {
 };
 export declare const MsgCreateGroupResponse: {
     encode(message: MsgCreateGroupResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgCreateGroupResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgCreateGroupResponse;
     fromPartial(object: DeepPartial<MsgCreateGroupResponse>): MsgCreateGroupResponse;
 };
 export declare const MsgUpdateGroupMembers: {
@@ -455,7 +455,7 @@ export declare const MsgUpdateGroupMembers: {
 };
 export declare const MsgUpdateGroupMembersResponse: {
     encode(_: MsgUpdateGroupMembersResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgUpdateGroupMembersResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgUpdateGroupMembersResponse;
     fromPartial(_: DeepPartial<MsgUpdateGroupMembersResponse>): MsgUpdateGroupMembersResponse;
 };
 export declare const MsgUpdateGroupAdmin: {
@@ -465,7 +465,7 @@ export declare const MsgUpdateGroupAdmin: {
 };
 export declare const MsgUpdateGroupAdminResponse: {
     encode(_: MsgUpdateGroupAdminResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgUpdateGroupAdminResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgUpdateGroupAdminResponse;
     fromPartial(_: DeepPartial<MsgUpdateGroupAdminResponse>): MsgUpdateGroupAdminResponse;
 };
 export declare const MsgUpdateGroupMetadata: {
@@ -475,7 +475,7 @@ export declare const MsgUpdateGroupMetadata: {
 };
 export declare const MsgUpdateGroupMetadataResponse: {
     encode(_: MsgUpdateGroupMetadataResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgUpdateGroupMetadataResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgUpdateGroupMetadataResponse;
     fromPartial(_: DeepPartial<MsgUpdateGroupMetadataResponse>): MsgUpdateGroupMetadataResponse;
 };
 export declare const MsgCreateGroupPolicy: {
@@ -485,7 +485,7 @@ export declare const MsgCreateGroupPolicy: {
 };
 export declare const MsgCreateGroupPolicyResponse: {
     encode(message: MsgCreateGroupPolicyResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgCreateGroupPolicyResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgCreateGroupPolicyResponse;
     fromPartial(object: DeepPartial<MsgCreateGroupPolicyResponse>): MsgCreateGroupPolicyResponse;
 };
 export declare const MsgUpdateGroupPolicyAdmin: {
@@ -500,12 +500,12 @@ export declare const MsgCreateGroupWithPolicy: {
 };
 export declare const MsgCreateGroupWithPolicyResponse: {
     encode(message: MsgCreateGroupWithPolicyResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgCreateGroupWithPolicyResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgCreateGroupWithPolicyResponse;
     fromPartial(object: DeepPartial<MsgCreateGroupWithPolicyResponse>): MsgCreateGroupWithPolicyResponse;
 };
 export declare const MsgUpdateGroupPolicyAdminResponse: {
     encode(_: MsgUpdateGroupPolicyAdminResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgUpdateGroupPolicyAdminResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgUpdateGroupPolicyAdminResponse;
     fromPartial(_: DeepPartial<MsgUpdateGroupPolicyAdminResponse>): MsgUpdateGroupPolicyAdminResponse;
 };
 export declare const MsgUpdateGroupPolicyDecisionPolicy: {
@@ -515,7 +515,7 @@ export declare const MsgUpdateGroupPolicyDecisionPolicy: {
 };
 export declare const MsgUpdateGroupPolicyDecisionPolicyResponse: {
     encode(_: MsgUpdateGroupPolicyDecisionPolicyResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgUpdateGroupPolicyDecisionPolicyResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgUpdateGroupPolicyDecisionPolicyResponse;
     fromPartial(_: DeepPartial<MsgUpdateGroupPolicyDecisionPolicyResponse>): MsgUpdateGroupPolicyDecisionPolicyResponse;
 };
 export declare const MsgUpdateGroupPolicyMetadata: {
@@ -525,7 +525,7 @@ export declare const MsgUpdateGroupPolicyMetadata: {
 };
 export declare const MsgUpdateGroupPolicyMetadataResponse: {
     encode(_: MsgUpdateGroupPolicyMetadataResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgUpdateGroupPolicyMetadataResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgUpdateGroupPolicyMetadataResponse;
     fromPartial(_: DeepPartial<MsgUpdateGroupPolicyMetadataResponse>): MsgUpdateGroupPolicyMetadataResponse;
 };
 export declare const MsgSubmitProposal: {
@@ -535,7 +535,7 @@ export declare const MsgSubmitProposal: {
 };
 export declare const MsgSubmitProposalResponse: {
     encode(message: MsgSubmitProposalResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgSubmitProposalResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgSubmitProposalResponse;
     fromPartial(object: DeepPartial<MsgSubmitProposalResponse>): MsgSubmitProposalResponse;
 };
 export declare const MsgWithdrawProposal: {
@@ -545,7 +545,7 @@ export declare const MsgWithdrawProposal: {
 };
 export declare const MsgWithdrawProposalResponse: {
     encode(_: MsgWithdrawProposalResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgWithdrawProposalResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgWithdrawProposalResponse;
     fromPartial(_: DeepPartial<MsgWithdrawProposalResponse>): MsgWithdrawProposalResponse;
 };
 export declare const MsgVote: {
@@ -555,7 +555,7 @@ export declare const MsgVote: {
 };
 export declare const MsgVoteResponse: {
     encode(_: MsgVoteResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgVoteResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgVoteResponse;
     fromPartial(_: DeepPartial<MsgVoteResponse>): MsgVoteResponse;
 };
 export declare const MsgExec: {
@@ -565,7 +565,7 @@ export declare const MsgExec: {
 };
 export declare const MsgExecResponse: {
     encode(_: MsgExecResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgExecResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgExecResponse;
     fromPartial(_: DeepPartial<MsgExecResponse>): MsgExecResponse;
 };
 export declare const MsgLeaveGroup: {
@@ -575,6 +575,6 @@ export declare const MsgLeaveGroup: {
 };
 export declare const MsgLeaveGroupResponse: {
     encode(_: MsgLeaveGroupResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgLeaveGroupResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgLeaveGroupResponse;
     fromPartial(_: DeepPartial<MsgLeaveGroupResponse>): MsgLeaveGroupResponse;
 };

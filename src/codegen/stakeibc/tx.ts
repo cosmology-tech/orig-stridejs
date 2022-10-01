@@ -246,7 +246,7 @@ export const MsgLiquidStakeResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgLiquidStakeResponseSDKType {
+  decode(input: _m0.Reader | Uint8Array, length?: number): MsgLiquidStakeResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgLiquidStakeResponse();
@@ -355,7 +355,7 @@ export const MsgClearBalanceResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgClearBalanceResponseSDKType {
+  decode(input: _m0.Reader | Uint8Array, length?: number): MsgClearBalanceResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgClearBalanceResponse();
@@ -464,7 +464,7 @@ export const MsgRedeemStakeResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgRedeemStakeResponseSDKType {
+  decode(input: _m0.Reader | Uint8Array, length?: number): MsgRedeemStakeResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgRedeemStakeResponse();
@@ -603,7 +603,7 @@ export const MsgRegisterHostZoneResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgRegisterHostZoneResponseSDKType {
+  decode(input: _m0.Reader | Uint8Array, length?: number): MsgRegisterHostZoneResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgRegisterHostZoneResponse();
@@ -712,7 +712,7 @@ export const MsgClaimUndelegatedTokensResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgClaimUndelegatedTokensResponseSDKType {
+  decode(input: _m0.Reader | Uint8Array, length?: number): MsgClaimUndelegatedTokensResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgClaimUndelegatedTokensResponse();
@@ -811,7 +811,7 @@ export const MsgRebalanceValidatorsResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgRebalanceValidatorsResponseSDKType {
+  decode(input: _m0.Reader | Uint8Array, length?: number): MsgRebalanceValidatorsResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgRebalanceValidatorsResponse();
@@ -940,7 +940,7 @@ export const MsgAddValidatorResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgAddValidatorResponseSDKType {
+  decode(input: _m0.Reader | Uint8Array, length?: number): MsgAddValidatorResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgAddValidatorResponse();
@@ -1049,7 +1049,7 @@ export const MsgChangeValidatorWeightResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgChangeValidatorWeightResponseSDKType {
+  decode(input: _m0.Reader | Uint8Array, length?: number): MsgChangeValidatorWeightResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgChangeValidatorWeightResponse();
@@ -1148,7 +1148,7 @@ export const MsgDeleteValidatorResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgDeleteValidatorResponseSDKType {
+  decode(input: _m0.Reader | Uint8Array, length?: number): MsgDeleteValidatorResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgDeleteValidatorResponse();
@@ -1247,7 +1247,7 @@ export const MsgRestoreInterchainAccountResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgRestoreInterchainAccountResponseSDKType {
+  decode(input: _m0.Reader | Uint8Array, length?: number): MsgRestoreInterchainAccountResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgRestoreInterchainAccountResponse();
@@ -1346,7 +1346,7 @@ export const MsgUpdateValidatorSharesExchRateResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgUpdateValidatorSharesExchRateResponseSDKType {
+  decode(input: _m0.Reader | Uint8Array, length?: number): MsgUpdateValidatorSharesExchRateResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgUpdateValidatorSharesExchRateResponse();

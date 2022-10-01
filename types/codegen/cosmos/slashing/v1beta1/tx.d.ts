@@ -21,6 +21,6 @@ export declare const MsgUnjail: {
 };
 export declare const MsgUnjailResponse: {
     encode(_: MsgUnjailResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgUnjailResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgUnjailResponse;
     fromPartial(_: DeepPartial<MsgUnjailResponse>): MsgUnjailResponse;
 };

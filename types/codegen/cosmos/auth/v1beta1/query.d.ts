@@ -146,7 +146,7 @@ export declare const QueryAccountsRequest: {
 };
 export declare const QueryAccountsResponse: {
     encode(message: QueryAccountsResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAccountsResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAccountsResponse;
     fromPartial(object: DeepPartial<QueryAccountsResponse>): QueryAccountsResponse;
 };
 export declare const QueryAccountRequest: {
@@ -161,12 +161,12 @@ export declare const QueryModuleAccountsRequest: {
 };
 export declare const QueryParamsResponse: {
     encode(message: QueryParamsResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryParamsResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryParamsResponse;
     fromPartial(object: DeepPartial<QueryParamsResponse>): QueryParamsResponse;
 };
 export declare const QueryAccountResponse: {
     encode(message: QueryAccountResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAccountResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAccountResponse;
     fromPartial(object: DeepPartial<QueryAccountResponse>): QueryAccountResponse;
 };
 export declare const QueryParamsRequest: {
@@ -176,7 +176,7 @@ export declare const QueryParamsRequest: {
 };
 export declare const QueryModuleAccountsResponse: {
     encode(message: QueryModuleAccountsResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryModuleAccountsResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryModuleAccountsResponse;
     fromPartial(object: DeepPartial<QueryModuleAccountsResponse>): QueryModuleAccountsResponse;
 };
 export declare const Bech32PrefixRequest: {
@@ -186,7 +186,7 @@ export declare const Bech32PrefixRequest: {
 };
 export declare const Bech32PrefixResponse: {
     encode(message: Bech32PrefixResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): Bech32PrefixResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): Bech32PrefixResponse;
     fromPartial(object: DeepPartial<Bech32PrefixResponse>): Bech32PrefixResponse;
 };
 export declare const AddressBytesToStringRequest: {
@@ -196,7 +196,7 @@ export declare const AddressBytesToStringRequest: {
 };
 export declare const AddressBytesToStringResponse: {
     encode(message: AddressBytesToStringResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): AddressBytesToStringResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): AddressBytesToStringResponse;
     fromPartial(object: DeepPartial<AddressBytesToStringResponse>): AddressBytesToStringResponse;
 };
 export declare const AddressStringToBytesRequest: {
@@ -206,6 +206,6 @@ export declare const AddressStringToBytesRequest: {
 };
 export declare const AddressStringToBytesResponse: {
     encode(message: AddressStringToBytesResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): AddressStringToBytesResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): AddressStringToBytesResponse;
     fromPartial(object: DeepPartial<AddressStringToBytesResponse>): AddressStringToBytesResponse;
 };

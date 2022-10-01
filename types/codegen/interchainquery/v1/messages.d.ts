@@ -38,6 +38,6 @@ export declare const MsgSubmitQueryResponse: {
 };
 export declare const MsgSubmitQueryResponseResponse: {
     encode(_: MsgSubmitQueryResponseResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgSubmitQueryResponseResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): MsgSubmitQueryResponseResponse;
     fromPartial(_: DeepPartial<MsgSubmitQueryResponseResponse>): MsgSubmitQueryResponseResponse;
 };

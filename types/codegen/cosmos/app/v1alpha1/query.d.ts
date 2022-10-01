@@ -24,6 +24,6 @@ export declare const QueryConfigRequest: {
 };
 export declare const QueryConfigResponse: {
     encode(message: QueryConfigResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryConfigResponseSDKType;
+    decode(input: _m0.Reader | Uint8Array, length?: number): QueryConfigResponse;
     fromPartial(object: DeepPartial<QueryConfigResponse>): QueryConfigResponse;
 };

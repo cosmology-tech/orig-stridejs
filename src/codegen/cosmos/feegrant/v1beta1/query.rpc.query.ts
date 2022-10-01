@@ -1,17 +1,17 @@
 import { Rpc } from "@osmonauts/helpers";
 import * as _m0 from "protobufjs/minimal";
 import { QueryClient, createProtobufRpcClient } from "@cosmjs/stargate";
-import { QueryAllowanceRequest, QueryAllowanceResponse, QueryAllowanceResponseSDKType, QueryAllowancesRequest, QueryAllowancesResponse, QueryAllowancesResponseSDKType, QueryAllowancesByGranterRequest, QueryAllowancesByGranterResponse, QueryAllowancesByGranterResponseSDKType } from "./query";
+import { QueryAllowanceRequest, QueryAllowanceResponse, QueryAllowancesRequest, QueryAllowancesResponse, QueryAllowancesByGranterRequest, QueryAllowancesByGranterResponse } from "./query";
 /** Query defines the RPC service */
 
 export interface Query {
-  allowance(request: QueryAllowanceRequest): Promise<QueryAllowanceResponseSDKType>;
+  allowance(request: QueryAllowanceRequest): Promise<QueryAllowanceResponse>;
   /*Allowance returns fee granted to the grantee by the granter.*/
 
-  allowances(request: QueryAllowancesRequest): Promise<QueryAllowancesResponseSDKType>;
+  allowances(request: QueryAllowancesRequest): Promise<QueryAllowancesResponse>;
   /*Allowances returns all the grants for address.*/
 
-  allowancesByGranter(request: QueryAllowancesByGranterRequest): Promise<QueryAllowancesByGranterResponseSDKType>;
+  allowancesByGranter(request: QueryAllowancesByGranterRequest): Promise<QueryAllowancesByGranterResponse>;
   /*AllowancesByGranter returns all the grants given by an address
   Since v0.46*/
 
@@ -26,19 +26,19 @@ export class QueryClientImpl implements Query {
     this.allowancesByGranter = this.allowancesByGranter.bind(this);
   }
 
-  allowance(request: QueryAllowanceRequest): Promise<QueryAllowanceResponseSDKType> {
+  allowance(request: QueryAllowanceRequest): Promise<QueryAllowanceResponse> {
     const data = QueryAllowanceRequest.encode(request).finish();
     const promise = this.rpc.request("cosmos.feegrant.v1beta1.Query", "Allowance", data);
     return promise.then(data => QueryAllowanceResponse.decode(new _m0.Reader(data)));
   }
 
-  allowances(request: QueryAllowancesRequest): Promise<QueryAllowancesResponseSDKType> {
+  allowances(request: QueryAllowancesRequest): Promise<QueryAllowancesResponse> {
     const data = QueryAllowancesRequest.encode(request).finish();
     const promise = this.rpc.request("cosmos.feegrant.v1beta1.Query", "Allowances", data);
     return promise.then(data => QueryAllowancesResponse.decode(new _m0.Reader(data)));
   }
 
-  allowancesByGranter(request: QueryAllowancesByGranterRequest): Promise<QueryAllowancesByGranterResponseSDKType> {
+  allowancesByGranter(request: QueryAllowancesByGranterRequest): Promise<QueryAllowancesByGranterResponse> {
     const data = QueryAllowancesByGranterRequest.encode(request).finish();
     const promise = this.rpc.request("cosmos.feegrant.v1beta1.Query", "AllowancesByGranter", data);
     return promise.then(data => QueryAllowancesByGranterResponse.decode(new _m0.Reader(data)));
@@ -49,15 +49,15 @@ export const createRpcQueryExtension = (base: QueryClient) => {
   const rpc = createProtobufRpcClient(base);
   const queryService = new QueryClientImpl(rpc);
   return {
-    allowance(request: QueryAllowanceRequest): Promise<QueryAllowanceResponseSDKType> {
+    allowance(request: QueryAllowanceRequest): Promise<QueryAllowanceResponse> {
       return queryService.allowance(request);
     },
 
-    allowances(request: QueryAllowancesRequest): Promise<QueryAllowancesResponseSDKType> {
+    allowances(request: QueryAllowancesRequest): Promise<QueryAllowancesResponse> {
       return queryService.allowances(request);
     },
 
-    allowancesByGranter(request: QueryAllowancesByGranterRequest): Promise<QueryAllowancesByGranterResponseSDKType> {
+    allowancesByGranter(request: QueryAllowancesByGranterRequest): Promise<QueryAllowancesByGranterResponse> {
       return queryService.allowancesByGranter(request);
     }
 

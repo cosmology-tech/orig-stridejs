@@ -138,7 +138,7 @@ export const MsgSubmitQueryResponseResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgSubmitQueryResponseResponseSDKType {
+  decode(input: _m0.Reader | Uint8Array, length?: number): MsgSubmitQueryResponseResponse {
     const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSubmitQueryResponseResponse();
